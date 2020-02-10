@@ -44,6 +44,12 @@ public class Crocodile : MonoBehaviour
         }
     }
 
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawLine(new Vector3(smallerPointX, transform.position.y - .5f, 0), new Vector3(biggerPointX, transform.position.y - .5f, 0));
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         hit.CrocHit(collision);

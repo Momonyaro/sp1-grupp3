@@ -4,22 +4,34 @@ using UnityEngine;
 
 public class Hit : MonoBehaviour
 {
+    BoatMovementV01 boat;
     bool croc = false;
-    // Start is called before the first frame update
+    string player = "Player";
+
     void Start()
     {
-        
+        boat = FindObjectOfType<BoatMovementV01>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
 
+    public void StoneHit(Collider2D collision, GameObject stone) //knockback lite, sten dör
+    {
+        if(collision.tag == player)
+        {
+            Destroy(stone);
+            //animation sten går sönder
+            
+            Debug.Log("Hit by stone");
+        }
+    }
+
     public void CrocHit(Collider2D collision)
     {
-        if(collision.tag == "Player")
+        if(collision.tag == player)
         {
             croc = true;
             Debug.Log("Player hit by croc");
