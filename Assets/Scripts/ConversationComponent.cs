@@ -33,7 +33,7 @@ public class ConversationComponent : MonoBehaviour
     private int _currentLineIndex = 0;
     [SerializeField] private List<PortraitBlock> portraits = new List<PortraitBlock>();
     [SerializeField] private List<DialogueBlock> npcLines = new List<DialogueBlock>();
-    bool _finishedBuilding = false;
+    private bool _finishedBuilding = false;
     [SerializeField] private Text textBox;
     [SerializeField] private Text nameBox;
     [SerializeField] private Image portraitFrame;
@@ -41,11 +41,6 @@ public class ConversationComponent : MonoBehaviour
     private void Awake()
     {
         _timer = scrollSpeed;
-        ClearTextBox();
-        nameBox.text = npcName;
-        portraitFrame.sprite = FetchPortrait(npcLines[_currentLineIndex].portraitExpression);
-        if (currentDialogueLanguage == Language.English) _currentString = npcLines[_currentLineIndex].englishText;
-        else if (currentDialogueLanguage == Language.Swedish) _currentString = npcLines[_currentLineIndex].swedishText;
     }
 
 
@@ -64,24 +59,22 @@ public class ConversationComponent : MonoBehaviour
 
     public void StartBuildingNextString(bool trigger)
     {
-        if (trigger)
+        if (!trigger) return;
+        if (_currentLineIndex < npcLines.Count)
         {
-            _currentLineIndex++;
-            if (_currentLineIndex < npcLines.Count)
-            {
-                ClearTextBox();
-                _finishedBuilding = false;
-                nameBox.text = npcName;
-                portraitFrame.sprite = FetchPortrait(npcLines[_currentLineIndex].portraitExpression);
-                if (currentDialogueLanguage == Language.English) _currentString = npcLines[_currentLineIndex].englishText;
-                else if (currentDialogueLanguage == Language.Swedish) _currentString = npcLines[_currentLineIndex].swedishText;
-                _stringIndex = 0;
-            }
-            else
-            {
-                textBox.gameObject.SetActive(false);
-            }
+            ClearTextBox();
+            _finishedBuilding = false;
+            nameBox.text = npcName;
+            portraitFrame.sprite = FetchPortrait(npcLines[_currentLineIndex].portraitExpression);
+            if (currentDialogueLanguage == Language.English) _currentString = npcLines[_currentLineIndex].englishText;
+            else if (currentDialogueLanguage == Language.Swedish) _currentString = npcLines[_currentLineIndex].swedishText;
+            _stringIndex = 0;
         }
+        else
+        {
+            textBox.gameObject.SetActive(false);
+        }
+        _currentLineIndex++;
     }
 
     private void ClearTextBox()
@@ -104,7 +97,7 @@ public class ConversationComponent : MonoBehaviour
 
     private void PlaceNextChar()
     {
-        if (_stringIndex < _currentString.Length)
+        if (_currentString != null && _stringIndex < _currentString.Length)
         {
             textBox.text += GetNextChar(_stringIndex);
         }
