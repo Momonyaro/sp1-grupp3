@@ -1,39 +1,64 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
+
+public enum Language
+{
+    Swedish,
+    English
+}
+
+public enum PortraitExpression
+{
+    Happy,
+    Angry,
+    Sad,
+    Surprised
+}
 
 public class ConversationComponent : MonoBehaviour
 {
-    [SerializeField] Sprite npcSprite;
     [SerializeField] string npcName;
+    public Language currentDialogueLanguage = Language.English;
+    [FormerlySerializedAs("ScrollSpeed")]
     [Range(0, 0.4f)]
-    [SerializeField] float scrollSpeed = 0.03f;
-    private float timer;
-    private string currentString;
-    private int stringIndex;
-    private int currentLineIndex = 0;
-    [SerializeField] List<string> npcLines = new List<string>();
-    bool finishedBuilding = false;
-    [SerializeField] Text textBox;
+    [SerializeField] private float scrollSpeed = 0.03f;
+    private float _timer;
+    private string _currentString;
+    private int _stringIndex;
+    private int _currentLineIndex = 0;
+    [SerializeField] private List<PortraitBlock> portraits = new List<PortraitBlock>();
+    [SerializeField] private List<DialogueBlock> npcLines = new List<DialogueBlock>();
+    bool _finishedBuilding = false;
+    [SerializeField] private Text textBox;
+    [SerializeField] private Text nameBox;
+    [SerializeField] private Image portraitFrame;
 
     private void Awake()
     {
-        timer = scrollSpeed;
+        _timer = scrollSpeed;
         ClearTextBox();
-        currentString = npcLines[currentLineIndex];
+        nameBox.text = npcName;
+        portraitFrame.sprite = FetchPortrait(npcLines[_currentLineIndex].portraitExpression);
+        if (currentDialogueLanguage == Language.English) _currentString = npcLines[_currentLineIndex].englishText;
+        else if (currentDialogueLanguage == Language.Swedish) _currentString = npcLines[_currentLineIndex].swedishText;
     }
+
 
     private void Update()
     {
-        if (timer <= 0 && !finishedBuilding)
+        if (_timer <= 0 && !_finishedBuilding)
         {
             PlaceNextChar();
-            timer = scrollSpeed;
+            _timer = scrollSpeed;
         }
         else
         {
-            timer -= Time.deltaTime;
+            _timer -= Time.deltaTime;
         }
     }
 
@@ -41,13 +66,16 @@ public class ConversationComponent : MonoBehaviour
     {
         if (trigger)
         {
-            currentLineIndex++;
-            if (currentLineIndex < npcLines.Count)
+            _currentLineIndex++;
+            if (_currentLineIndex < npcLines.Count)
             {
                 ClearTextBox();
-                finishedBuilding = false;
-                currentString = npcLines[currentLineIndex];
-                stringIndex = 0;
+                _finishedBuilding = false;
+                nameBox.text = npcName;
+                portraitFrame.sprite = FetchPortrait(npcLines[_currentLineIndex].portraitExpression);
+                if (currentDialogueLanguage == Language.English) _currentString = npcLines[_currentLineIndex].englishText;
+                else if (currentDialogueLanguage == Language.Swedish) _currentString = npcLines[_currentLineIndex].swedishText;
+                _stringIndex = 0;
             }
             else
             {
@@ -61,21 +89,51 @@ public class ConversationComponent : MonoBehaviour
         textBox.text = "";
     }
 
+    private Sprite FetchPortrait(PortraitExpression expression)
+    {
+        if (portraits.Count <= 0)
+            Debug.LogError("No Portraits Found! Please Check: " + npcName);
+
+        foreach (var portraitBlock in portraits.Where(portraitBlock => portraitBlock.portraitExpression == expression))
+        {
+            return portraitBlock.portraitSprite;
+        }
+
+        return portraits[0].portraitSprite;
+    }
+
     private void PlaceNextChar()
     {
-        if (stringIndex < currentString.Length)
+        if (_stringIndex < _currentString.Length)
         {
-            textBox.text += GetNextChar(stringIndex);
+            textBox.text += GetNextChar(_stringIndex);
         }
         else
         {
-            finishedBuilding = true;
+            _finishedBuilding = true;
         }
     }
 
     private string GetNextChar(int index)
     {
-        stringIndex++;
-        return currentString.Substring(index, 1);
+        _stringIndex++;
+        return _currentString.Substring(index, 1);
     }
+}
+
+[System.Serializable]
+public struct PortraitBlock
+{
+    public PortraitExpression portraitExpression;
+    public Sprite portraitSprite;
+}
+
+[System.Serializable]
+public struct DialogueBlock
+{
+    [TextArea(0, 5)]
+    public string swedishText;
+    [TextArea(0, 5)]
+    public string englishText;
+    public PortraitExpression portraitExpression;
 }
