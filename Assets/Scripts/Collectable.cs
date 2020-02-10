@@ -2,28 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum CollectableType
+{
+    Common,
+    Mission
+}
+
 public class Collectable : MonoBehaviour
 {
-    CollectableHandeler ch;
-    // Start is called before the first frame update
-    void Start()
-    {
-        ch = GetComponent<CollectableHandeler>();
-        ch.setDown();
-    }
+    public AudioSource commonCollectSound;
+    public AudioSource missionCollectSound;
+    public int collectableScore = 1;
+    public CollectableType type;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
+        if (other.tag == "Player")
         {
-            ch.pickedUp();
-            Destroy(this);
+            if(type == CollectableType.Common)
+            {
+                if (commonCollectSound != null)
+                {
+                    commonCollectSound.Play();
+                }
+                TextManager.score += collectableScore;
+                Destroy(gameObject);
+            }
+            if (type == CollectableType.Mission)
+            {
+                if (missionCollectSound != null)
+                {
+                    missionCollectSound.Play();
+                }
+                TextManager.missionAmount += collectableScore;
+                Destroy(gameObject);
+            }
         }
     }
 }
