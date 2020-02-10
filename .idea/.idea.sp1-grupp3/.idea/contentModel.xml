@@ -140,7 +140,6 @@
           <e p="BoatMovementV01.cs" t="Include" />
           <e p="CameraMovement.cs" t="Include" />
           <e p="Collectable.cs" t="Include" />
-          <e p="CollectableHandeler.cs" t="Include" />
           <e p="ConversationComponent.cs" t="Include" />
           <e p="Dangers" t="Include">
             <e p="Crocodile.cs" t="Include" />
@@ -148,6 +147,7 @@
           </e>
           <e p="FrogMovement.cs" t="Include" />
           <e p="Hit.cs" t="Include" />
+          <e p="TextManager.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
