@@ -1,11 +1,14 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Hit : MonoBehaviour
 {
+    [SerializeField] float knockbackPower = 500f;
+    [Tooltip("In seconds")]
+    [SerializeField] float knockbackTime = 2f;
     BoatMovementV01 boat;
-    bool croc = false;
     string player = "Player";
 
     void Start()
@@ -15,16 +18,16 @@ public class Hit : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
-    public void StoneHit(Collider2D collision, GameObject stone) //knockback lite, sten dör
+    public void StoneHit(Collider2D collision, GameObject stone)
     {
         if(collision.tag == player)
         {
             Destroy(stone);
-            //animation sten går sönder
-            
+            boat.knockbackBoolSwitch();
+            StartCoroutine(Knockback());
             Debug.Log("Hit by stone");
         }
     }
@@ -33,8 +36,16 @@ public class Hit : MonoBehaviour
     {
         if(collision.tag == player)
         {
-            croc = true;
+            boat.knockbackBoolSwitch();
+            StartCoroutine(Knockback());
             Debug.Log("Player hit by croc");
         }
+    }
+
+    IEnumerator Knockback()
+    {
+        boat.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -knockbackPower));
+        yield return new WaitForSeconds(knockbackTime);
+        boat.knockbackBoolSwitch();
     }
 }

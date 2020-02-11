@@ -9,7 +9,9 @@ public class BoatMovementV01 : MonoBehaviour
     public float breakSpeed = 1.0f;
     public float rowSpeed = 8.0f;
     public float rowPower = 500.0f;
+    [Tooltip("Value not used (yet at least)")]
     [SerializeField] float currentSpeedY = 0;
+    bool knockback = false;
 
     public static int maxHealth = 3;
     private int currentHealth;
@@ -26,7 +28,7 @@ public class BoatMovementV01 : MonoBehaviour
 
     void Update()
     {
-        if (!GameOver)
+        if (!GameOver && knockback == false)
         {
             float horizontal = Input.GetAxis("Horizontal");
             currentSpeedY = rigidb.velocity.y;
@@ -60,12 +62,18 @@ public class BoatMovementV01 : MonoBehaviour
         }
     }
 
+    public void knockbackBoolSwitch()
+    {
+        knockback = !knockback;
+        Debug.Log("knockback bool: " + knockback);
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Dangerous")
+        if(other.tag == "Dangerous") //+ timer så man ej kan ta skada när man knockas tillbaka?
         {
             currentHealth -= 1;
-            Debug.Log("Lost helth. Current helath:" + currentHealth);
+            Debug.Log("Lost health. Current health:" + currentHealth);
             TextManager.health -= 1;
 
             if(currentHealth <= 0)
