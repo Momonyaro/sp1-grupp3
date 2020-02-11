@@ -9,6 +9,7 @@ public class BoatMovementV01 : MonoBehaviour
     public float breakSpeed = 1.0f;
     public float rowSpeed = 8.0f;
     public float rowPower = 500.0f;
+    [Tooltip("Value not used (yet at least)")]
     [SerializeField] float currentSpeedY = 0;
     bool knockback = false;
 
@@ -69,7 +70,7 @@ public class BoatMovementV01 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Dangerous")
+        if(other.tag == "Dangerous") //+ timer så man ej kan ta skada när man knockas tillbaka?
         {
             currentHealth -= 1;
             Debug.Log("Lost health. Current health:" + currentHealth);
