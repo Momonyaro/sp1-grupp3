@@ -28,7 +28,7 @@ public class Hit : MonoBehaviour
             Destroy(stone);
             boat.knockbackBoolSwitch();
             StartCoroutine(Knockback());
-            Debug.Log("Hit by stone");
+            Debug.Log("Hit stone");
         }
     }
 
@@ -38,7 +38,7 @@ public class Hit : MonoBehaviour
         {
             boat.knockbackBoolSwitch();
             StartCoroutine(Knockback());
-            Debug.Log("Player hit by croc");
+            Debug.Log("Hit croc");
         }
     }
 
