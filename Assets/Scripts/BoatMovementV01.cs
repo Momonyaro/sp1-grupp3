@@ -12,6 +12,7 @@ public class BoatMovementV01 : MonoBehaviour
     [Tooltip("Value not used (yet at least)")]
     [SerializeField] float currentSpeedY = 0;
     bool knockback = false;
+    bool stunned = false;
 
     public static int maxHealth = 3;
     private int currentHealth;
@@ -33,15 +34,15 @@ public class BoatMovementV01 : MonoBehaviour
             float horizontal = Input.GetAxis("Horizontal");
             currentSpeedY = rigidb.velocity.y;
 
-            if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+            if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) && stunned == false)
             {
                 autoSpeed = breakSpeed;
-                Debug.Log("S i pressed");
+                //Debug.Log("S i pressed");
             }
-            else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+            else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) && stunned == false)
             {
                 autoSpeed = rowSpeed;
-                Debug.Log("W is pressed");
+                //Debug.Log("W is pressed");
             }
             else
             {
@@ -49,7 +50,14 @@ public class BoatMovementV01 : MonoBehaviour
             }
 
             Vector2 position = transform.position;
-            position.x = position.x + tiltSpeed * horizontal * Time.deltaTime;
+            if(stunned)
+            {
+                position.x = position.x + tiltSpeed * -horizontal * Time.deltaTime;
+            }
+            else
+            {
+                position.x = position.x + tiltSpeed * horizontal * Time.deltaTime;
+            }
 
             position.y = position.y + 1.0f * autoSpeed * Time.deltaTime;
 
@@ -62,10 +70,20 @@ public class BoatMovementV01 : MonoBehaviour
         }
     }
 
-    public void knockbackBoolSwitch()
+    public void KnockbackBoolSwitch()
     {
         knockback = !knockback;
-        Debug.Log("knockback bool: " + knockback);
+        //Debug.Log("knockback bool: " + knockback);
+    }
+
+    public bool StunStatus()
+    {
+        return stunned;
+    }
+    public void StunnedBoolSwitch()
+    {
+        stunned = !stunned;
+        Debug.Log("Stunned bool: " + stunned);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

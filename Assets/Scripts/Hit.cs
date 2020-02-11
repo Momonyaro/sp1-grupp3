@@ -8,6 +8,7 @@ public class Hit : MonoBehaviour
     [SerializeField] float knockbackPower = 500f;
     [Tooltip("In seconds")]
     [SerializeField] float knockbackTime = 2f;
+    [SerializeField] float stunTime = 2f;
     BoatMovementV01 boat;
     string player = "Player";
 
@@ -26,7 +27,7 @@ public class Hit : MonoBehaviour
         if(collision.tag == player)
         {
             Destroy(stone);
-            boat.knockbackBoolSwitch();
+            boat.KnockbackBoolSwitch();
             StartCoroutine(Knockback());
             Debug.Log("Hit stone");
         }
@@ -36,9 +37,18 @@ public class Hit : MonoBehaviour
     {
         if(collision.tag == player)
         {
-            boat.knockbackBoolSwitch();
+            boat.KnockbackBoolSwitch();
             StartCoroutine(Knockback());
             Debug.Log("Hit croc");
+        }
+    }
+
+    public void EelHit(Collider2D collision)
+    {
+        if(collision.tag == "Player" && boat.StunStatus() == false)
+        {
+            boat.StunnedBoolSwitch();
+            StartCoroutine(Stunned());
         }
     }
 
@@ -46,6 +56,12 @@ public class Hit : MonoBehaviour
     {
         boat.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -knockbackPower));
         yield return new WaitForSeconds(knockbackTime);
-        boat.knockbackBoolSwitch();
+        boat.KnockbackBoolSwitch();
+    }
+    IEnumerator Stunned()
+    {
+        boat.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 0));
+        yield return new WaitForSeconds(stunTime);
+        boat.StunnedBoolSwitch();
     }
 }
