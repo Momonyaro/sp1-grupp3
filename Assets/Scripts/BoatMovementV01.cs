@@ -8,52 +8,71 @@ public class BoatMovementV01 : MonoBehaviour
     public float tiltSpeed = 5.0f;
     public float breakSpeed = 1.0f;
     public float rowSpeed = 8.0f;
-    //public float rowTime = 2.0f;
     public float rowPower = 500.0f;
     [SerializeField] float currentSpeedY = 0;
 
+    public static int maxHealth = 3;
+    private int currentHealth;
+
+    public bool GameOver = false;
+
     Rigidbody2D rigidb;
-    // Start is called before the first frame update
+
     void Start()
     {
         rigidb = GetComponent<Rigidbody2D>();
+        currentHealth = maxHealth;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        currentSpeedY = rigidb.velocity.y;
-
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        if (!GameOver)
         {
-            autoSpeed = breakSpeed;
-            Debug.Log("S i pressed");
+            float horizontal = Input.GetAxis("Horizontal");
+            currentSpeedY = rigidb.velocity.y;
+
+            if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+            {
+                autoSpeed = breakSpeed;
+                Debug.Log("S i pressed");
+            }
+            else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+            {
+                autoSpeed = rowSpeed;
+                Debug.Log("W is pressed");
+            }
+            else
+            {
+                autoSpeed = 3.0f;
+            }
+
+            Vector2 position = transform.position;
+            position.x = position.x + tiltSpeed * horizontal * Time.deltaTime;
+
+            position.y = position.y + 1.0f * autoSpeed * Time.deltaTime;
+
+            rigidb.MovePosition(position);
         }
-        else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+
+        if (GameOver)
         {
-            //StartCoroutine(StartCounting(rowTime));
-            //rigidb.AddForce(new Vector2(0, rowPower), ForceMode2D.Force);
-            //rigidb.MovePosition(Vector2.up * rowPower);
-            autoSpeed = rowSpeed;
-            Debug.Log("W is pressed");
+            autoSpeed = 0;
         }
-        else
-        {
-            autoSpeed = 3.0f;
-        }
-
-        Vector2 position = transform.position;
-        position.x = position.x + tiltSpeed * horizontal * Time.deltaTime;
-
-        position.y = position.y + 1.0f * autoSpeed * Time.deltaTime;
-
-        rigidb.MovePosition(position);
     }
 
-    /*public IEnumerator StartCounting(float rowTime)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Counting down");
-        yield return new WaitForSeconds(rowTime);
-    }*/
+        if(other.tag == "Dangerous")
+        {
+            currentHealth -= 1;
+            Debug.Log("Lost helth. Current helath:" + currentHealth);
+            TextManager.health -= 1;
+
+            if(currentHealth <= 0)
+            {
+                GameOver = true;
+                TextManager.gameOver = true;
+            }
+        }
+    }
 }
