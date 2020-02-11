@@ -13,6 +13,7 @@ public class BoatMovementV01 : MonoBehaviour
     [SerializeField] float currentSpeedY = 0;
     bool knockback = false;
     bool stunned = false;
+    bool shield = false;
 
     public static int maxHealth = 3;
     private int currentHealth;
@@ -73,7 +74,11 @@ public class BoatMovementV01 : MonoBehaviour
     public void KnockbackBoolSwitch()
     {
         knockback = !knockback;
-        //Debug.Log("knockback bool: " + knockback);
+    }
+
+    public void ShieldBoolTrue()
+    {
+        shield = true;
     }
 
     public bool StunStatus()
@@ -88,7 +93,7 @@ public class BoatMovementV01 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Dangerous") //+ timer så man ej kan ta skada när man knockas tillbaka?
+        if(other.tag == "Dangerous" && shield == false) //+ timer så man ej kan ta skada när man knockas tillbaka?
         {
             currentHealth -= 1;
             Debug.Log("Lost health. Current health:" + currentHealth);
@@ -99,6 +104,10 @@ public class BoatMovementV01 : MonoBehaviour
                 GameOver = true;
                 TextManager.gameOver = true;
             }
+        }
+        if (shield)
+        {
+            shield = false;
         }
     }
 }
