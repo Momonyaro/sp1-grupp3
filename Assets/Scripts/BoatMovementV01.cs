@@ -12,6 +12,8 @@ public class BoatMovementV01 : MonoBehaviour
     [Tooltip("Value not used (yet at least)")]
     [SerializeField] float currentSpeedY = 0;
     bool knockback = false;
+    bool stunned = false;
+    bool shield = false;
 
     public static int maxHealth = 3;
     [SerializeField] int currentHealth;
@@ -33,15 +35,15 @@ public class BoatMovementV01 : MonoBehaviour
             float horizontal = Input.GetAxis("Horizontal");
             currentSpeedY = rigidb.velocity.y;
 
-            if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+            if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) && stunned == false)
             {
                 autoSpeed = breakSpeed;
-                Debug.Log("S i pressed");
+                //Debug.Log("S i pressed");
             }
-            else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+            else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) && stunned == false)
             {
                 autoSpeed = rowSpeed;
-                Debug.Log("W is pressed");
+                //Debug.Log("W is pressed");
             }
             else
             {
@@ -49,7 +51,14 @@ public class BoatMovementV01 : MonoBehaviour
             }
 
             Vector2 position = transform.position;
-            position.x = position.x + tiltSpeed * horizontal * Time.deltaTime;
+            if(stunned)
+            {
+                position.x = position.x + tiltSpeed * -horizontal * Time.deltaTime;
+            }
+            else
+            {
+                position.x = position.x + tiltSpeed * horizontal * Time.deltaTime;
+            }
 
             position.y = position.y + 1.0f * autoSpeed * Time.deltaTime;
 
@@ -62,15 +71,29 @@ public class BoatMovementV01 : MonoBehaviour
         }
     }
 
-    public void knockbackBoolSwitch()
+    public void KnockbackBoolSwitch()
     {
         knockback = !knockback;
-        Debug.Log("knockback bool: " + knockback);
+    }
+
+    public void ShieldBoolTrue()
+    {
+        shield = true;
+    }
+
+    public bool StunStatus()
+    {
+        return stunned;
+    }
+    public void StunnedBoolSwitch()
+    {
+        stunned = !stunned;
+        Debug.Log("Stunned bool: " + stunned);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Dangerous") //+ timer så man ej kan ta skada när man knockas tillbaka?
+        if(other.tag == "Dangerous" && shield == false) //+ timer så man ej kan ta skada när man knockas tillbaka?
         {
             currentHealth -= 1;
             Debug.Log("Lost health. Current health:" + currentHealth);
@@ -81,6 +104,10 @@ public class BoatMovementV01 : MonoBehaviour
                 GameOver = true;
                 TextManager.gameOver = true;
             }
+        }
+        if (shield)
+        {
+            shield = false;
         }
     }
 }

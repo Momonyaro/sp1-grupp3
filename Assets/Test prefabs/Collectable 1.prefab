@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1896719917412589564}
   - component: {fileID: 1896719917412589538}
   - component: {fileID: 3195694784399366406}
+  - component: {fileID: 5790862239759639445}
   m_Layer: 0
   m_Name: Collectable 1
   m_TagString: Untagged
@@ -120,5 +121,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 777b600e5b3038e47b09a0ac4cee3e39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectSound: {fileID: 0}
-  collectibleScore: 1
+  commonCollectSound: {fileID: 0}
+  missionCollectSound: {fileID: 0}
+  collectableScore: 1
+  type: 0
+--- !u!50 &5790862239759639445
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896719917412589565}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
