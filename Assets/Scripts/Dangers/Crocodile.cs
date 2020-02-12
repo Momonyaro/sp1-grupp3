@@ -36,11 +36,11 @@ public class Crocodile : MonoBehaviour
 
         if (x)
         {
-            transform.Translate(-Vector2.right * Time.deltaTime * crocSpeed, 0);
+            transform.Translate(-Vector2.right * (Time.deltaTime * crocSpeed), 0);
         }
         else
         {
-            transform.Translate(Vector2.right * Time.deltaTime * crocSpeed, 0);
+            transform.Translate(Vector2.right * (Time.deltaTime * crocSpeed), 0);
         }
     }
 
