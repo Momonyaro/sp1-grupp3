@@ -143,10 +143,17 @@
           <e p="ConversationComponent.cs" t="Include" />
           <e p="Dangers" t="Include">
             <e p="Crocodile.cs" t="Include" />
+            <e p="ElectricEel.cs" t="Include" />
+            <e p="Hit.cs" t="Include" />
             <e p="Stone.cs" t="Include" />
           </e>
+          <e p="FinishLine.cs" t="Include" />
           <e p="FrogMovement.cs" t="Include" />
-          <e p="Hit.cs" t="Include" />
+          <e p="FrogTongue.cs" t="Include" />
+          <e p="Powerups" t="Include">
+            <e p="PowerupController.cs" t="Include" />
+            <e p="Shield.cs" t="Include" />
+          </e>
           <e p="TextManager.cs" t="Include" />
         </e>
       </e>

@@ -11,13 +11,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dangers/Crocodile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ConversationComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Cinemachine/Base/Editor/Windows/CinemachineSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dangers/Hit.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FrogTongue.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/ConversationComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dangers/Crocodile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FrogTongue.cs" />
       </list>
     </option>
   </component>
@@ -70,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1581338131190</updated>
       <workItem from="1581338144202" duration="5106000" />
-      <workItem from="1581345953842" duration="1216000" />
+      <workItem from="1581345953842" duration="6523000" />
     </task>
     <servers />
   </component>
@@ -93,9 +98,9 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1581338827740">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1581509009268">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581338827740" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581509009268" />
   </component>
 </project>
