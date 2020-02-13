@@ -8,52 +8,106 @@ public class BoatMovementV01 : MonoBehaviour
     public float tiltSpeed = 5.0f;
     public float breakSpeed = 1.0f;
     public float rowSpeed = 8.0f;
-    //public float rowTime = 2.0f;
     public float rowPower = 500.0f;
+    [Tooltip("Value not used (yet at least)")]
     [SerializeField] float currentSpeedY = 0;
+    bool knockback = false;
+    bool stunned = false;
+    bool shield = false;
+
+    public static int maxHealth = 3;
+    [SerializeField] int currentHealth;
+
+    public bool GameOver = false;
 
     Rigidbody2D rigidb;
-    // Start is called before the first frame update
+
     void Start()
     {
         rigidb = GetComponent<Rigidbody2D>();
+        currentHealth = maxHealth;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        currentSpeedY = rigidb.velocity.y;
-
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        if (!GameOver && knockback == false)
         {
-            autoSpeed = breakSpeed;
-            Debug.Log("S i pressed");
+            float horizontal = Input.GetAxis("Horizontal");
+            currentSpeedY = rigidb.velocity.y;
+
+            if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) && stunned == false)
+            {
+                autoSpeed = breakSpeed;
+                //Debug.Log("S i pressed");
+            }
+            else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) && stunned == false)
+            {
+                autoSpeed = rowSpeed;
+                //Debug.Log("W is pressed");
+            }
+            else
+            {
+                autoSpeed = 3.0f;
+            }
+
+            Vector2 position = transform.position;
+            if(stunned)
+            {
+                position.x = position.x + tiltSpeed * -horizontal * Time.deltaTime;
+            }
+            else
+            {
+                position.x = position.x + tiltSpeed * horizontal * Time.deltaTime;
+            }
+
+            position.y = position.y + 1.0f * autoSpeed * Time.deltaTime;
+
+            rigidb.MovePosition(position);
         }
-        else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+
+        if (GameOver)
         {
-            //StartCoroutine(StartCounting(rowTime));
-            //rigidb.AddForce(new Vector2(0, rowPower), ForceMode2D.Force);
-            //rigidb.MovePosition(Vector2.up * rowPower);
-            autoSpeed = rowSpeed;
-            Debug.Log("W is pressed");
+            autoSpeed = 0;
         }
-        else
-        {
-            autoSpeed = 3.0f;
-        }
-
-        Vector2 position = transform.position;
-        position.x = position.x + tiltSpeed * horizontal * Time.deltaTime;
-
-        position.y = position.y + 1.0f * autoSpeed * Time.deltaTime;
-
-        rigidb.MovePosition(position);
     }
 
-    /*public IEnumerator StartCounting(float rowTime)
+    public void KnockbackBoolSwitch()
     {
-        Debug.Log("Counting down");
-        yield return new WaitForSeconds(rowTime);
-    }*/
+        knockback = !knockback;
+    }
+
+    public void ShieldBoolTrue()
+    {
+        shield = true;
+    }
+
+    public bool StunStatus()
+    {
+        return stunned;
+    }
+    public void StunnedBoolSwitch()
+    {
+        stunned = !stunned;
+        Debug.Log("Stunned bool: " + stunned);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag == "Dangerous" && shield == false) //+ timer så man ej kan ta skada när man knockas tillbaka?
+        {
+            currentHealth -= 1;
+            Debug.Log("Lost health. Current health:" + currentHealth);
+            TextManager.health -= 1;
+
+            if(currentHealth <= 0)
+            {
+                GameOver = true;
+                TextManager.gameOver = true;
+            }
+        }
+        if (shield)
+        {
+            shield = false;
+        }
+    }
 }
