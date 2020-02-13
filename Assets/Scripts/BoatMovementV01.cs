@@ -16,7 +16,7 @@ public class BoatMovementV01 : MonoBehaviour
     bool shield = false;
 
     public static int maxHealth = 3;
-    private int currentHealth;
+    [SerializeField] int currentHealth;
 
     public bool GameOver = false;
 
