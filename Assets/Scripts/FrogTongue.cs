@@ -75,6 +75,6 @@ public class FrogTongue : MonoBehaviour
 
         tongueSpeed = _grabbedItem ? reelSpeed : throwSpeed;
         
-        tongueTip.transform.position = Vector2.MoveTowards(tongueTip.transform.position, _targetPos, tongueSpeed);
+        tongueTip.transform.position = Vector2.MoveTowards(tongueTip.transform.position, _targetPos, tongueSpeed * Time.deltaTime * 100);
     }
 }
