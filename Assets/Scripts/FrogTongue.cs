@@ -25,9 +25,6 @@ public class FrogTongue : MonoBehaviour
     {
         _mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         
-        tongueBody.positionCount = 2;
-        Vector3[] positions = new[] { transform.position, tongueTip.transform.position };
-        tongueBody.SetPositions(positions);
 
         if (Input.GetMouseButtonDown(0) && !_thrownTongue)
         {
@@ -47,6 +44,11 @@ public class FrogTongue : MonoBehaviour
             _grabbedItem = false;
             _thrownTongue = false;
         }
+        
+        
+        tongueBody.positionCount = 2;
+        Vector3[] positions = new[] { transform.position, tongueTip.transform.position };
+        tongueBody.SetPositions(positions);
     }
 
     private void SetTargetPosition(Vector2 newPos)
