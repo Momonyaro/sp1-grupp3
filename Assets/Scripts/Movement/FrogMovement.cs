@@ -9,10 +9,6 @@ public class FrogMovement : MonoBehaviour
     string horizontal = "Horizontal";
     float x;
     
-    void Start()
-    {
-
-    }
 
     void Update()
     {
