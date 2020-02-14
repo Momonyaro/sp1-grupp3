@@ -26,6 +26,7 @@ public class BoatMovementV01 : MonoBehaviour
     {
         rigidb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
+	Time.timeScale = 1;
     }
 
     void Update()
