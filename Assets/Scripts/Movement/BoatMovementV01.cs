@@ -16,7 +16,8 @@ public class BoatMovementV01 : MonoBehaviour
     bool shield = false;
 
     public static int maxHealth = 3;
-    [SerializeField] int currentHealth;
+    public static int currentHealth;
+    public SignalThingy playerHealthSignal;
 
     public bool GameOver = false;
 
@@ -96,6 +97,7 @@ public class BoatMovementV01 : MonoBehaviour
     {
         if(other.tag == "Dangerous" && shield == false) //+ timer så man ej kan ta skada när man knockas tillbaka?
         {
+            playerHealthSignal.Raise();
             currentHealth -= 1;
             Debug.Log("Lost health. Current health:" + currentHealth);
             TextManager.health -= 1;
