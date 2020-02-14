@@ -99,7 +99,7 @@ public class BoatMovementV01 : MonoBehaviour
             playerHealthSignal.Raise();
             currentHealth -= 1;
             Debug.Log("Lost health. Current health:" + currentHealth);
-            TextManager.health -= 1;
+            //TextManager.health -= 1;
 
             if(currentHealth <= 0)
             {
