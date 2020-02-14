@@ -150,9 +150,14 @@
           <e p="FinishLine.cs" t="Include" />
           <e p="FrogMovement.cs" t="Include" />
           <e p="FrogTongue.cs" t="Include" />
+          <e p="HealthManager.cs" t="Include" />
           <e p="Powerups" t="Include">
             <e p="PowerupController.cs" t="Include" />
             <e p="Shield.cs" t="Include" />
+          </e>
+          <e p="ScriptableObjectsScripts" t="Include">
+            <e p="SignalListener.cs" t="Include" />
+            <e p="SignalThingy.cs" t="Include" />
           </e>
           <e p="TextManager.cs" t="Include" />
         </e>
