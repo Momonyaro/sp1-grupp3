@@ -4,35 +4,15 @@ using UnityEngine;
 
 public class wirlpool : MonoBehaviour
 {
-    BoatMovementV01 boat;
-    bool whirl = false;
-    public float intoWhirlSpeed = 8f;
-    bool activated = false;
-
+    // Start is called before the first frame update
     void Start()
     {
-        boat = FindObjectOfType<BoatMovementV01>();
+        
     }
 
+    // Update is called once per frame
     void Update()
     {
-        if (activated)
-        {
-            MoveBoat();
-        }
-    }
-
-    public void MoveBoat()
-    {
-        boat.transform.position = Vector3.MoveTowards(boat.transform.position, transform.position, intoWhirlSpeed * Time.deltaTime);
-        if (transform.position == boat.transform.position)
-        {
-            boat.StopBoatSwitchBool();
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        activated = true;
+        
     }
 }
