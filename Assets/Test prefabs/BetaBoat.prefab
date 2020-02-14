@@ -103,6 +103,7 @@ MonoBehaviour:
   rowPower: 40
   currentSpeedY: 0
   currentHealth: 0
+  playerHealthSignal: {fileID: 11400000, guid: 364592fee10a0de4db165cb72b4afe91, type: 2}
   GameOver: 0
 --- !u!58 &1066851939220517695
 CircleCollider2D:
