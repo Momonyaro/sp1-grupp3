@@ -27,7 +27,7 @@ public class BoatMovementV01 : MonoBehaviour
     {
         rigidb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
     }
 
     void Update()
@@ -54,14 +54,14 @@ public class BoatMovementV01 : MonoBehaviour
 
             if(stunned)
             {
-                position.x = position.x + tiltSpeed * -horizontal * Time.unscaledDeltaTime;
+                position.x = position.x + tiltSpeed * -horizontal * Time.deltaTime;
             }
             else
             {
-                position.x = position.x + tiltSpeed * horizontal * Time.unscaledDeltaTime;
+                position.x = position.x + tiltSpeed * horizontal * Time.deltaTime;
             }
 
-            position.y = position.y + 1.0f * autoSpeed * Time.unscaledDeltaTime;
+            position.y = position.y + 1.0f * autoSpeed * Time.deltaTime;
 
             rigidb.MovePosition(position);
         }
