@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum CollectableType
 {
@@ -14,6 +15,8 @@ public class Collectable : MonoBehaviour
     public AudioSource missionCollectSound;
     public int collectableScore = 1;
     public CollectableType type;
+    public GameObject fullMissionIcon;
+    public GameObject emptyMissionIcon;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -35,6 +38,8 @@ public class Collectable : MonoBehaviour
                     missionCollectSound.Play();
                 }
                 TextManager.missionAmount += collectableScore;
+                emptyMissionIcon.SetActive(false);
+                fullMissionIcon.SetActive(true);
                 Destroy(gameObject);
             }
         }
