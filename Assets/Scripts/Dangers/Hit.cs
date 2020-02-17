@@ -22,11 +22,10 @@ public class Hit : MonoBehaviour
 
     }
 
-    public void StoneHit(Collider2D collision, GameObject stone)
+    public void StoneHit(Collider2D collision)
     {
         if(collision.tag == player)
         {
-            Destroy(stone);
             boat.KnockbackBoolSwitch();
             StartCoroutine(Knockback());
             Debug.Log("Hit stone");
@@ -53,15 +52,18 @@ public class Hit : MonoBehaviour
         }
     }
 
+
     IEnumerator Knockback()
     {
         boat.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -knockbackPower));
         yield return new WaitForSeconds(knockbackTime);
         boat.KnockbackBoolSwitch();
+        boat.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
+
     IEnumerator Stunned()
     {
-        boat.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 0));
+        //boat.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 0));
         yield return new WaitForSeconds(stunTime);
         boat.StunnedBoolSwitch();
         //boat.StopBoatSwitchBool();
