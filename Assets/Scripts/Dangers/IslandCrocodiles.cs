@@ -6,11 +6,13 @@ public class IslandCrocodiles : MonoBehaviour
 {
     [SerializeField] List<Transform> waypoints;
     [SerializeField] float moveSpeed = 5f;
+    Hit hit;
     int currentWaypoint = 0;
 
     void Start()
     {
         transform.position = waypoints[currentWaypoint].transform.position;
+        hit = FindObjectOfType<Hit>();
     }
 
     void Update()
@@ -34,5 +36,9 @@ public class IslandCrocodiles : MonoBehaviour
         {
             currentWaypoint = 0;
         }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        hit.CrocHit(collision);
     }
 }
