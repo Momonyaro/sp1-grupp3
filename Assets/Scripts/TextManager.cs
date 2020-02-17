@@ -11,7 +11,6 @@ public class TextManager : MonoBehaviour
     public GameObject gameOverText;
     public static bool gameOver = false;
 
-    public GameObject healthText;
     public static int health;
 
     public GameObject missionText;
@@ -30,8 +29,6 @@ public class TextManager : MonoBehaviour
         {
             gameOverText.SetActive(true);
         }
-
-        healthText.GetComponent<Text>().text = ":" + health;
 
         missionText.GetComponent<Text>().text = ":" + missionAmount;
     }
