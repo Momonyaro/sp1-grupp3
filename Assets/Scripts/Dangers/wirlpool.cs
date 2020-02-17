@@ -7,6 +7,10 @@ public class wirlpool : MonoBehaviour
 {
     BoatMovementV01 boat;
     public float intoWhirlSpeed = 8f;
+    public float knockForwardTime = 1f;
+    public float knockForwardPower = 100f;
+    [Header(" ")]
+
     public int clicksForRelease = 10;
     public int clicksClicked = 0;
     [Tooltip("Seconds until the click counter reset")]
@@ -35,15 +39,6 @@ public class wirlpool : MonoBehaviour
     public void MoveBoat()
     {
         boat.transform.position = Vector3.MoveTowards(boat.transform.position, transform.position, intoWhirlSpeed * Time.deltaTime);
-
-        if (transform.position == boat.transform.position && clicksClicked < clicksForRelease)
-        {
-            boat.transform.position = transform.position;
-        }
-        if(clicksClicked >= clicksForRelease)
-        {
-            activated = false;
-        }
     }
 
     private void CountClicks()
@@ -63,12 +58,29 @@ public class wirlpool : MonoBehaviour
         }
         if(autoRelease <= autoReleaseCounter)
         {
+            StartCoroutine(PushOut());
+            activated = false;
+        }
+        if (clicksClicked >= clicksForRelease)
+        {
+            StartCoroutine(PushOut());
             activated = false;
         }
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        activated = true;
+        if (collision.tag == "Player")
+        {
+            activated = true;
+            boat.KnockbackBoolSwitch();
+        }
+    }
+
+    IEnumerator PushOut()
+    {
+        boat.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, knockForwardPower));
+        yield return new WaitForSeconds(knockForwardTime);
+        boat.KnockbackBoolSwitch();
+        boat.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
 }
