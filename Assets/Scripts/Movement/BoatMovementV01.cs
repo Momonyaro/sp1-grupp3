@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BoatMovementV01 : MonoBehaviour
 {
+    //lets hope this works
     public float autoSpeed = 3.0f;
     public float tiltSpeed = 5.0f;
     public float breakSpeed = 1.0f;
