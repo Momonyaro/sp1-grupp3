@@ -1664,12 +1664,12 @@ PrefabInstance:
     - target: {fileID: 1340922252388265670, guid: 669dc3899122d27489924e986bf7e6a3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.73
+      value: 6.89
       objectReference: {fileID: 0}
     - target: {fileID: 1340922252388265670, guid: 669dc3899122d27489924e986bf7e6a3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.15
+      value: -3.22
       objectReference: {fileID: 0}
     - target: {fileID: 1340922252388265670, guid: 669dc3899122d27489924e986bf7e6a3,
         type: 3}
@@ -1924,7 +1924,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 811710907}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.73, y: -2.8802977, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 288044531}
@@ -3331,11 +3331,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18dad76e7cfca504c9a67a51bcdb9583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 1432041554}
-  - {fileID: 364221872}
-  - {fileID: 1069120304}
+  waypoints: []
   moveSpeed: 5
+  path: {fileID: 1165603334}
 --- !u!212 &1943034658
 SpriteRenderer:
   m_ObjectHideFlags: 0

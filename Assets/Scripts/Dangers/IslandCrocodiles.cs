@@ -6,11 +6,13 @@ public class IslandCrocodiles : MonoBehaviour
 {
     [SerializeField] List<Transform> waypoints;
     [SerializeField] float moveSpeed = 5f;
+    [SerializeField] GameObject path = null;
     Hit hit;
     int currentWaypoint = 0;
 
     void Start()
     {
+        GetWaypoints();
         transform.position = waypoints[currentWaypoint].transform.position;
         hit = FindObjectOfType<Hit>();
     }
@@ -18,6 +20,14 @@ public class IslandCrocodiles : MonoBehaviour
     void Update()
     {
         Move();
+    }
+
+    public void GetWaypoints()
+    {
+        foreach(Transform child in path.transform)
+        {
+            waypoints.Add(child);
+        }
     }
 
     private void Move()
