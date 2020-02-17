@@ -9,11 +9,12 @@ public class BoatMovementV01 : MonoBehaviour
     public float breakSpeed = 1.0f;
     public float rowSpeed = 8.0f;
     public float rowPower = 500.0f;
-    [Tooltip("Value not used (yet at least)")]
+    public float intoWhirlSpeed = 10f;
     [SerializeField] float currentSpeedY = 0;
     bool knockback = false;
     bool stunned = false;
     bool shield = false;
+    bool stopBoat = false;
 
     public static int maxHealth = 3;
     public static int currentHealth;
@@ -27,6 +28,7 @@ public class BoatMovementV01 : MonoBehaviour
     {
         rigidb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
+        //Time.timeScale = 1;
     }
 
     void Update()
@@ -39,12 +41,10 @@ public class BoatMovementV01 : MonoBehaviour
             if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) && stunned == false)
             {
                 autoSpeed = breakSpeed;
-                //Debug.Log("S i pressed");
             }
             else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) && stunned == false)
             {
                 autoSpeed = rowSpeed;
-                //Debug.Log("W is pressed");
             }
             else
             {
@@ -52,6 +52,7 @@ public class BoatMovementV01 : MonoBehaviour
             }
 
             Vector2 position = transform.position;
+
             if(stunned)
             {
                 position.x = position.x + tiltSpeed * -horizontal * Time.deltaTime;
@@ -70,6 +71,15 @@ public class BoatMovementV01 : MonoBehaviour
         {
             autoSpeed = 0;
         }
+        if (stopBoat)
+        {
+            autoSpeed = 0;
+        }
+    }
+
+    public void StopBoatSwitchBool()
+    {
+        stopBoat = !stopBoat;
     }
 
     public void KnockbackBoolSwitch()

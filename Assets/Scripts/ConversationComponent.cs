@@ -20,7 +20,8 @@ public enum PortraitExpression
     Surprised
 }
 
-public class ConversationComponent : MonoBehaviour
+[System.Serializable]
+public class ConversationComponent
 {
     [SerializeField] string npcName;
     public Language currentDialogueLanguage = Language.English;
@@ -29,26 +30,23 @@ public class ConversationComponent : MonoBehaviour
     [SerializeField] private float scrollSpeed = 0.03f;
     private float _timer;
     private string _currentString;
-    private int _stringIndex;
-    private int _currentLineIndex = 0;
+    [SerializeField]private int _stringIndex;
+    [SerializeField] private int _currentLineIndex = 0;
     [SerializeField] private List<PortraitBlock> portraits = new List<PortraitBlock>();
     [SerializeField] private List<DialogueBlock> npcLines = new List<DialogueBlock>();
-    private bool _finishedBuilding = false;
-    [SerializeField] private Text textBox;
-    [SerializeField] private Text nameBox;
-    [SerializeField] private Image portraitFrame;
-
-    private void Awake()
-    {
-        _timer = scrollSpeed;
-    }
+    [SerializeField]private bool _finishedBuilding = true;
+    private TextBox _textBoxObject;
+    private Text _textBox;
+    private Text _nameBox;
+    private Image _portraitFrame;
 
 
-    private void Update()
+    public void Update()
     {
         if (_timer <= 0 && !_finishedBuilding)
         {
             PlaceNextChar();
+            Debug.Log("timer reset");
             _timer = scrollSpeed;
         }
         else
@@ -57,29 +55,43 @@ public class ConversationComponent : MonoBehaviour
         }
     }
 
+    public void TetherToTextbox(TextBox textBoxObject)
+    {
+        this._textBoxObject = textBoxObject;
+        this._textBox = textBoxObject.textBox;
+        this._nameBox = textBoxObject.nameBox;
+        this._portraitFrame = textBoxObject.portraitFrame;
+        _timer = scrollSpeed;
+        textBoxObject.SetDialogueWindowVisibility(true);
+        
+        StartBuildingNextString(true);
+    }
+
     public void StartBuildingNextString(bool trigger)
     {
+        Debug.Log("Starting new string");
         if (!trigger) return;
         if (_currentLineIndex < npcLines.Count)
         {
             ClearTextBox();
             _finishedBuilding = false;
-            nameBox.text = npcName;
-            portraitFrame.sprite = FetchPortrait(npcLines[_currentLineIndex].portraitExpression);
+            _nameBox.text = npcName;
+            _portraitFrame.sprite = FetchPortrait(npcLines[_currentLineIndex].portraitExpression);
             if (currentDialogueLanguage == Language.English) _currentString = npcLines[_currentLineIndex].englishText;
             else if (currentDialogueLanguage == Language.Swedish) _currentString = npcLines[_currentLineIndex].swedishText;
             _stringIndex = 0;
+            _currentLineIndex++;
         }
         else
         {
-            textBox.gameObject.SetActive(false);
+            Debug.Log("Hiding dialogue window.");
+            _textBoxObject.SetDialogueWindowVisibility(false);
         }
-        _currentLineIndex++;
     }
 
     private void ClearTextBox()
     {
-        textBox.text = "";
+        _textBox.text = "";
     }
 
     private Sprite FetchPortrait(PortraitExpression expression)
@@ -99,7 +111,8 @@ public class ConversationComponent : MonoBehaviour
     {
         if (_currentString != null && _stringIndex < _currentString.Length)
         {
-            textBox.text += GetNextChar(_stringIndex);
+            Debug.Log("placing character");
+            _textBox.text += GetNextChar(_stringIndex);
         }
         else
         {

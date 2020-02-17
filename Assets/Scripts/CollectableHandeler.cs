@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shield : MonoBehaviour
+public class CollectableHandeler : MonoBehaviour
 {
-    PowerupController pwrctr;
+    int counter;
     // Start is called before the first frame update
     void Start()
     {
-        pwrctr = FindObjectOfType<PowerupController>();
+        
     }
 
     // Update is called once per frame
@@ -16,9 +16,16 @@ public class Shield : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    public void setDown()
     {
-        pwrctr.ShieldActivation(collision);
-        Destroy(gameObject);
+        counter += 1;
+        Debug.Log(counter);
+    }
+
+    public void pickedUp()
+    {
+        counter -= 1;
+        Debug.Log(counter);
     }
 }

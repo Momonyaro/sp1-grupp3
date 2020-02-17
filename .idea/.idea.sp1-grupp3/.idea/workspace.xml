@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="842d752a-5a69-460c-b38f-753b4f88d7c6" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="28913f0d-8893-41af-b799-81defbd8b6e5" name="Default Changelist" comment="" />
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< Updated upstream
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+=======
+>>>>>>> Stashed changes
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dangers/Crocodile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ConversationComponent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -20,12 +27,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< Updated upstream
         <option value="$PROJECT_DIR$/Assets/Scripts/ConversationComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Dangers/Crocodile.cs" />
+=======
+>>>>>>> Stashed changes
         <option value="$PROJECT_DIR$/Assets/Scripts/FrogTongue.cs" />
       </list>
     </option>
   </component>
+<<<<<<< Updated upstream
   <component name="ProjectId" id="1XcGmQllkyWJjKG8lPm4r2zc3hy" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -52,6 +63,8 @@
       <method v="2" />
     </configuration>
   </component>
+=======
+>>>>>>> Stashed changes
   <component name="ServiceViewManager">
     <option name="viewStates">
       <list>
@@ -68,6 +81,7 @@
     <configuration />
   </component>
   <component name="TaskManager">
+<<<<<<< Updated upstream
     <task active="true" id="Default" summary="Default task">
       <changelist id="842d752a-5a69-460c-b38f-753b4f88d7c6" name="Default Changelist" comment="" />
       <created>1581338131190</created>
@@ -75,7 +89,8 @@
       <option name="presentableId" value="Default" />
       <updated>1581338131190</updated>
       <workItem from="1581338144202" duration="5106000" />
-      <workItem from="1581345953842" duration="6523000" />
+      <workItem from="1581345953842" duration="6832000" />
+      <workItem from="1581586141364" duration="429000" />
     </task>
     <servers />
   </component>
@@ -103,4 +118,10 @@
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581509009268" />
   </component>
+=======
+    <servers />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+>>>>>>> Stashed changes
 </project>
