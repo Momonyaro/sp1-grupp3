@@ -1,0 +1,27 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class HealthCollectable : MonoBehaviour
+{
+    public AudioSource collectSound;
+    public int healing = 1;
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            if (collectSound != null)
+            {
+                collectSound.Play();
+            }
+
+            if(BoatMovementV01.currentHealth < BoatMovementV01.maxHealth)
+            {
+                BoatMovementV01.currentHealth += healing;
+            }
+
+            Destroy(gameObject);
+        }
+    }
+}
