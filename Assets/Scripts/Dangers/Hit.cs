@@ -47,7 +47,7 @@ public class Hit : MonoBehaviour
         if(collision.tag == "Player" && boat.StunStatus() == false)
         {
             boat.StunnedBoolSwitch();
-            //boat.StopBoatSwitchBool();
+            boat.GetComponent<SpriteRenderer>().color = Color.white;
             StartCoroutine(Stunned());
         }
     }
@@ -63,9 +63,8 @@ public class Hit : MonoBehaviour
 
     IEnumerator Stunned()
     {
-        //boat.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 0));
         yield return new WaitForSeconds(stunTime);
+        boat.GetComponent<SpriteRenderer>().color = Color.green; //new Color(85, 217, 125, 255);
         boat.StunnedBoolSwitch();
-        //boat.StopBoatSwitchBool();
     }
 }

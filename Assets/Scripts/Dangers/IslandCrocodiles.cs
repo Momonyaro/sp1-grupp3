@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,16 +7,31 @@ public class IslandCrocodiles : MonoBehaviour
 {
     [SerializeField] List<Transform> waypoints;
     [SerializeField] float moveSpeed = 5f;
+    [SerializeField] GameObject path = null;
+    public Transform target;
+    Hit hit;
     int currentWaypoint = 0;
 
     void Start()
     {
+        GetWaypoints();
+        //target = waypoints[currentWaypoint];
         transform.position = waypoints[currentWaypoint].transform.position;
+        hit = FindObjectOfType<Hit>();
+    }
+
+    public void GetWaypoints()
+    {
+        foreach (Transform child in path.transform)
+        {
+            waypoints.Add(child);
+        }
     }
 
     void Update()
     {
         Move();
+        //Rotating();
     }
 
     private void Move()
@@ -28,11 +44,24 @@ public class IslandCrocodiles : MonoBehaviour
             if (transform.position == targetPos)
             {
                 currentWaypoint++;
+                //target = waypoints[currentWaypoint];
             }
         }
         else
         {
             currentWaypoint = 0;
+            //target = waypoints[currentWaypoint];
         }
+    }
+    //private void Rotating() //https://www.youtube.com/watch?v=mKLp-2iseDc
+    //{
+    //    Vector2 direction = target.position - transform.position;
+    //    float angle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
+    //    Quaternion rot = Quaternion.AngleAxis(angle)
+    //}
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        hit.CrocHit(collision);
     }
 }
