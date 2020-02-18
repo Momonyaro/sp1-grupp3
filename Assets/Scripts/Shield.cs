@@ -1,14 +1,17 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Shield : MonoBehaviour
 {
     BoatMovementV01 boat;
+    Hit hit;
 
     void Start()
     {
         boat = FindObjectOfType<BoatMovementV01>();
+        hit = FindObjectOfType<Hit>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -16,8 +19,8 @@ public class Shield : MonoBehaviour
         if (collision.tag == "Player")
         {
             boat.ShieldBoolTrue();
+            hit.ShieldSwitchBool();
             Destroy(gameObject);
-
         }
     }
 }

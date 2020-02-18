@@ -20,6 +20,7 @@ public class BoatMovementV01 : MonoBehaviour
     public static int maxHealth = 3;
     public static int currentHealth;
     public SignalThingy playerHealthSignal;
+    Hit hit;
 
     public bool GameOver = false;
 
@@ -28,6 +29,7 @@ public class BoatMovementV01 : MonoBehaviour
     void Start()
     {
         rigidb = GetComponent<Rigidbody2D>();
+        hit = FindObjectOfType<Hit>();
         currentHealth = maxHealth;
         //Time.timeScale = 1;
     }
@@ -121,6 +123,7 @@ public class BoatMovementV01 : MonoBehaviour
         if (shield)
         {
             shield = false;
+            hit.ShieldSwitchBool();
         }
     }
 }

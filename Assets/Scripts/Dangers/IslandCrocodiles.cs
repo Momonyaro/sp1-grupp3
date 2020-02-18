@@ -8,7 +8,7 @@ public class IslandCrocodiles : MonoBehaviour
     [SerializeField] List<Transform> waypoints;
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] GameObject path = null;
-    public Transform target;
+    Transform target;
     Hit hit;
     int currentWaypoint = 0;
 
