@@ -9,8 +9,11 @@ public class Hit : MonoBehaviour
     [Tooltip("In seconds")]
     [SerializeField] float knockbackTime = 2f;
     [SerializeField] float stunTime = 2f;
+    [SerializeField] GameObject shieldSprite = null;
+    GameObject myShield;
     BoatMovementV01 boat;
     string player = "Player";
+    bool shield = false;
 
     void Start()
     {
@@ -19,9 +22,25 @@ public class Hit : MonoBehaviour
 
     void Update()
     {
-
+        if (shield)
+        {
+            myShield.transform.position = boat.transform.position;
+        }
     }
 
+    public void ShieldSwitchBool()
+    {
+        shield = !shield;
+        if (shield)
+        {
+            myShield = Instantiate(shieldSprite, boat.transform.position, Quaternion.identity);
+        }
+        else
+        {
+            Destroy(myShield);
+            Debug.Log("Shield destroyed");
+        }
+    }
     public void StoneHit(Collider2D collision)
     {
         if(collision.tag == player)

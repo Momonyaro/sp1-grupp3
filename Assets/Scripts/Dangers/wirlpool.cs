@@ -17,7 +17,7 @@ public class wirlpool : MonoBehaviour
     public float secLimit = 3f;
     [Tooltip("How many times the clock resets before auto-release")]
     public int autoRelease = 4;
-    [Tooltip("How many times the clock has restarted")]
+    [Tooltip("How many times the clock has reset")]
     public int autoReleaseCounter = 0;
     float counter = 0f;
     bool activated = false;
