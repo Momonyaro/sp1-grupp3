@@ -35,12 +35,19 @@ public class Hit : MonoBehaviour
         {
             myShield = Instantiate(shieldSprite, boat.transform.position, Quaternion.identity);
         }
-        else
-        {
-            Destroy(myShield);
-            Debug.Log("Shield destroyed");
-        }
+        //else
+        //{
+        //    Destroy(myShield);
+        //    Debug.Log("Shield destroyed");
+        //}
     }
+
+    public void DestroyShield()
+    {
+        Destroy(myShield);
+        Debug.Log("Shield destroyed");
+    }
+
     public void StoneHit(Collider2D collision)
     {
         if(collision.tag == player)
