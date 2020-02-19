@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BoatMovementV01 : MonoBehaviour
 {
-    //lets hope this works
     public float autoSpeed = 3.0f;
     public float tiltSpeed = 5.0f;
     public float breakSpeed = 1.0f;
@@ -21,6 +20,7 @@ public class BoatMovementV01 : MonoBehaviour
 
     public Color hurtColor = Color.red;
     public Color defaultColor = Color.green;
+    public Color deadColor = Color.gray;
 
     bool gotHit = false;
     float counter = 0f;
@@ -91,11 +91,15 @@ public class BoatMovementV01 : MonoBehaviour
             counter += Time.deltaTime;
             GetComponent<SpriteRenderer>().color = hurtColor;
         }
-        if(counter > immortalTime)
+        if (counter > immortalTime)
         {
             gotHit = false;
             counter = 0f;
             GetComponent<SpriteRenderer>().color = defaultColor;
+        }
+        if (currentHealth <= 0)
+        {
+            GetComponent<SpriteRenderer>().color = deadColor;
         }
     }
 

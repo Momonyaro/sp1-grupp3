@@ -2195,7 +2195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackPower: 200
-  knockbackTime: 1
+  knockbackTime: 0.3
   stunTime: 2
   shieldSprite: {fileID: 0}
 --- !u!4 &981248475
@@ -2775,6 +2775,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 598438771}
     m_Modifications:
+    - target: {fileID: 5954389605047153952, guid: 83ede395178d90246bc7e8c0a0295da9,
+        type: 3}
+      propertyPath: m_Name
+      value: BetaMissionCol (1)
+      objectReference: {fileID: 0}
     - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
         type: 3}
       propertyPath: fullHealthImage
@@ -2785,11 +2790,6 @@ PrefabInstance:
       propertyPath: emptyHealthImage
       value: 
       objectReference: {fileID: 9125508}
-    - target: {fileID: 5954389605047153952, guid: 83ede395178d90246bc7e8c0a0295da9,
-        type: 3}
-      propertyPath: m_Name
-      value: BetaMissionCol (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 8890016668769801934, guid: 83ede395178d90246bc7e8c0a0295da9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2944,6 +2944,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 598438771}
     m_Modifications:
+    - target: {fileID: 5954389605047153952, guid: 83ede395178d90246bc7e8c0a0295da9,
+        type: 3}
+      propertyPath: m_Name
+      value: BetaMissionCol
+      objectReference: {fileID: 0}
     - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
         type: 3}
       propertyPath: fullHealthImage
@@ -2954,11 +2959,6 @@ PrefabInstance:
       propertyPath: emptyHealthImage
       value: 
       objectReference: {fileID: 554839306}
-    - target: {fileID: 5954389605047153952, guid: 83ede395178d90246bc7e8c0a0295da9,
-        type: 3}
-      propertyPath: m_Name
-      value: BetaMissionCol
-      objectReference: {fileID: 0}
     - target: {fileID: 8890016668769801934, guid: 83ede395178d90246bc7e8c0a0295da9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4028,6 +4028,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 598438771}
     m_Modifications:
+    - target: {fileID: 5954389605047153952, guid: 83ede395178d90246bc7e8c0a0295da9,
+        type: 3}
+      propertyPath: m_Name
+      value: BetaMissionCol (2)
+      objectReference: {fileID: 0}
     - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
         type: 3}
       propertyPath: fullHealthImage
@@ -4038,11 +4043,6 @@ PrefabInstance:
       propertyPath: emptyHealthImage
       value: 
       objectReference: {fileID: 212973203}
-    - target: {fileID: 5954389605047153952, guid: 83ede395178d90246bc7e8c0a0295da9,
-        type: 3}
-      propertyPath: m_Name
-      value: BetaMissionCol (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 8890016668769801934, guid: 83ede395178d90246bc7e8c0a0295da9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4177,6 +4177,11 @@ PrefabInstance:
         type: 3}
       propertyPath: boatMaxHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066851939220517664, guid: 2826b3b5b346ef644b5063c5c6631bca,
+        type: 3}
+      propertyPath: immortalTime
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2826b3b5b346ef644b5063c5c6631bca, type: 3}
@@ -4790,7 +4795,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2119894242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.670534, y: 0.854157, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 134787903}
