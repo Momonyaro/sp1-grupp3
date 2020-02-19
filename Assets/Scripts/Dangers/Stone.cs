@@ -13,7 +13,6 @@ public class Stone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
-        hit.StoneHit(collision);
+        hit.StoneHit(collision, gameObject);
     }
 }
