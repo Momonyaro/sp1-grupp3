@@ -48,10 +48,11 @@ public class Hit : MonoBehaviour
         Debug.Log("Shield destroyed");
     }
 
-    public void StoneHit(Collider2D collision)
+    public void StoneHit(Collider2D collision, GameObject stone)
     {
         if(collision.tag == player)
         {
+            Destroy(stone);
             boat.KnockbackBoolSwitch();
             StartCoroutine(Knockback());
             Debug.Log("Hit stone");
