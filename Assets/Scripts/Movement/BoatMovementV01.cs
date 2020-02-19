@@ -19,6 +19,9 @@ public class BoatMovementV01 : MonoBehaviour
     bool shield = false;
     bool stopBoat = false;
 
+    public Color hurtColor = Color.red;
+    public Color defaultColor = Color.green;
+
     bool gotHit = false;
     float counter = 0f;
 
@@ -86,13 +89,13 @@ public class BoatMovementV01 : MonoBehaviour
         if (gotHit)
         {
             counter += Time.deltaTime;
-            GetComponent<SpriteRenderer>().color = Color.red;
+            GetComponent<SpriteRenderer>().color = hurtColor;
         }
         if(counter > immortalTime)
         {
             gotHit = false;
             counter = 0f;
-            GetComponent<SpriteRenderer>().color = Color.green;
+            GetComponent<SpriteRenderer>().color = defaultColor;
         }
     }
 
