@@ -15,8 +15,16 @@ public class MissionCollectableScript : Collectable
             {
                 collectSound.Play();
             }
-            fullHealthImage.SetActive(true);
-            emptyHealthImage.SetActive(false);
+            if(fullHealthImage && emptyHealthImage != null)
+            {
+                fullHealthImage.SetActive(true);
+                emptyHealthImage.SetActive(false);
+            }
+            else
+            {
+                fullHealthImage = Resources.Load<GameObject>("stop");
+                emptyHealthImage = Resources.Load<GameObject>("stop");
+            }
             Destroy(gameObject);
         }
     }
