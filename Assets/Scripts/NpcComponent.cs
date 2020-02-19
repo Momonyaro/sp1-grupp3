@@ -1,27 +1,40 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Experimental.PlayerLoop;
-using UnityEngine.Serialization;
+﻿using UnityEngine;
 
 public class NpcComponent : MonoBehaviour
 {
+    [Header("Conversation Properties")]
     public ConversationComponent conversationComponent;
+    private bool _canTalk = false;
+    [Space]
+    [Header("Mission Properties")]
     [Space]
     public bool startsMission = true;
     public MissionComponent missionComponent;
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E) && _canTalk)
+        {
+            if (!conversationComponent.StartConversation(FindObjectOfType<TextBox>()))
+                missionComponent.TetherAndSetNewMission(FindObjectOfType<MissionBox>(), conversationComponent.npcName);
+        }
+        
         conversationComponent.Update();
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
+        _canTalk = other.CompareTag("Player");
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
         {
-            conversationComponent.TetherToTextbox(FindObjectOfType<TextBox>());
+            _canTalk = false;
+            conversationComponent.ResetDialogue();
+            if (conversationComponent.textBoxObject != null)
+                conversationComponent.textBoxObject.SetDialogueWindowVisibility(false);
         }
     }
 }
