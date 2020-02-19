@@ -137,20 +137,28 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="Collectable.cs" t="Include" />
           <e p="CollectableHandeler.cs" t="Include" />
+          <e p="CollectableTypes" t="Include">
+            <e p="Collectable.cs" t="Include" />
+            <e p="HealthCollectable.cs" t="Include" />
+            <e p="MissionCollectableScript.cs" t="Include" />
+            <e p="PlankCollectableScript.cs" t="Include" />
+          </e>
           <e p="ConversationComponent.cs" t="Include" />
           <e p="Dangers" t="Include">
             <e p="Crocodile.cs" t="Include" />
             <e p="ElectricEel.cs" t="Include" />
             <e p="Hit.cs" t="Include" />
+            <e p="IslandCrocodiles.cs" t="Include" />
             <e p="Stone.cs" t="Include" />
-            <e p="Whirlpool.cs" t="Include" />
-            <e p="Wirl.cs" t="Include" />
+            <e p="wirlpool.cs" t="Include" />
           </e>
           <e p="FinishLine.cs" t="Include" />
           <e p="FrogTongue.cs" t="Include" />
-          <e p="HealthManager.cs" t="Include" />
+          <e p="HealthRelatedScripts" t="Include">
+            <e p="HealthManager.cs" t="Include" />
+          </e>
+          <e p="MissionBox.cs" t="Include" />
           <e p="MissionComponent.cs" t="Include" />
           <e p="Movement" t="Include">
             <e p="BoatMovementV01.cs" t="Include" />
@@ -163,6 +171,7 @@
             <e p="SignalThingy.cs" t="Include" />
           </e>
           <e p="Shield.cs" t="Include" />
+          <e p="StartMissionBtn.cs" t="Include" />
           <e p="TextBox.cs" t="Include" />
           <e p="TextManager.cs" t="Include" />
         </e>
