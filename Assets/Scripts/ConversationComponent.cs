@@ -23,30 +23,32 @@ public enum PortraitExpression
 [System.Serializable]
 public class ConversationComponent
 {
-    [SerializeField] string npcName;
+    public string npcName;
     public Language currentDialogueLanguage = Language.English;
     [FormerlySerializedAs("ScrollSpeed")]
     [Range(0, 0.4f)]
     [SerializeField] private float scrollSpeed = 0.03f;
     private float _timer;
     private string _currentString;
-    [SerializeField]private int _stringIndex;
-    [SerializeField] private int _currentLineIndex = 0;
+    private int _stringIndex;
+    private int _currentLineIndex = 0;
     [SerializeField] private List<PortraitBlock> portraits = new List<PortraitBlock>();
     [SerializeField] private List<DialogueBlock> npcLines = new List<DialogueBlock>();
-    [SerializeField]private bool _finishedBuilding = true;
-    private TextBox _textBoxObject;
+    private bool _finishedBuilding = true;
+    private bool _dialogueComplete = false;
+    [HideInInspector] public TextBox textBoxObject;
     private Text _textBox;
     private Text _nameBox;
     private Image _portraitFrame;
 
+
+    private const string PlayerCharName = "Poly";
 
     public void Update()
     {
         if (_timer <= 0 && !_finishedBuilding)
         {
             PlaceNextChar();
-            Debug.Log("timer reset");
             _timer = scrollSpeed;
         }
         else
@@ -55,43 +57,73 @@ public class ConversationComponent
         }
     }
 
+    public bool StartConversation(TextBox textBoxObject)
+    {
+        TetherToTextbox(textBoxObject);
+        if (_dialogueComplete == false)
+        {
+            StartBuildingNextString();
+            return true;
+        }
+        else
+        {
+            textBoxObject.SetDialogueWindowVisibility(false);
+            ResetDialogue();
+            return false;
+        }
+        
+    }
+
     public void TetherToTextbox(TextBox textBoxObject)
     {
-        this._textBoxObject = textBoxObject;
+        this.textBoxObject = textBoxObject;
         this._textBox = textBoxObject.textBox;
         this._nameBox = textBoxObject.nameBox;
         this._portraitFrame = textBoxObject.portraitFrame;
         _timer = scrollSpeed;
         textBoxObject.SetDialogueWindowVisibility(true);
-        
-        StartBuildingNextString(true);
     }
 
-    public void StartBuildingNextString(bool trigger)
+    public void StartBuildingNextString()
     {
         Debug.Log("Starting new string");
-        if (!trigger) return;
         if (_currentLineIndex < npcLines.Count)
         {
             ClearTextBox();
             _finishedBuilding = false;
-            _nameBox.text = npcName;
-            _portraitFrame.sprite = FetchPortrait(npcLines[_currentLineIndex].portraitExpression);
+            if (npcLines[_currentLineIndex].playerSays)
+            {
+                _nameBox.text = PlayerCharName;
+            }
+            else
+            {
+                _nameBox.text = npcName;
+                _portraitFrame.sprite = FetchPortrait(npcLines[_currentLineIndex].portraitExpression);
+            }
             if (currentDialogueLanguage == Language.English) _currentString = npcLines[_currentLineIndex].englishText;
             else if (currentDialogueLanguage == Language.Swedish) _currentString = npcLines[_currentLineIndex].swedishText;
             _stringIndex = 0;
             _currentLineIndex++;
         }
-        else
+        
+        if (_currentLineIndex >= npcLines.Count)
         {
-            Debug.Log("Hiding dialogue window.");
-            _textBoxObject.SetDialogueWindowVisibility(false);
+            _dialogueComplete = true;
         }
     }
 
     private void ClearTextBox()
     {
-        _textBox.text = "";
+        if (_textBox != null)
+            _textBox.text = "";
+    }
+
+    public void ResetDialogue()
+    {
+        ClearTextBox();
+        _currentLineIndex = 0;
+        _stringIndex = 0;
+        _dialogueComplete = false;
     }
 
     private Sprite FetchPortrait(PortraitExpression expression)
@@ -111,7 +143,6 @@ public class ConversationComponent
     {
         if (_currentString != null && _stringIndex < _currentString.Length)
         {
-            Debug.Log("placing character");
             _textBox.text += GetNextChar(_stringIndex);
         }
         else
@@ -141,5 +172,7 @@ public struct DialogueBlock
     public string swedishText;
     [TextArea(0, 5)]
     public string englishText;
+
+    public bool playerSays;
     public PortraitExpression portraitExpression;
 }
