@@ -20,6 +20,7 @@ public class HealthManager : MonoBehaviour
     private void Update()
     {
         healthAmount = BoatMovementV01.currentHealth;
+        UpdateContainers();
     }
 
     public void CreateHealth()
@@ -37,7 +38,7 @@ public class HealthManager : MonoBehaviour
         {
             healthIcons[i].sprite = emptyContainer;
         }
-        for(int i = 0; i < healthAmount - 1; i++)
+        for(int i = 0; i < healthAmount; i++)
         {
             healthIcons[i].sprite = fullContainer;
         }

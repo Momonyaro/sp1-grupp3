@@ -11,14 +11,14 @@ public class TextManager : MonoBehaviour
     public GameObject gameOverText;
     public static bool gameOver = false;
 
-    public static int health;
-
     public GameObject missionText;
+    public GameObject missionRequiredText;
     public static int missionAmount;
+    public int requiredAmount = 10;
 
     private void Start()
     {
-        health = BoatMovementV01.maxHealth;
+        missionRequiredText.GetComponent<Text>().text = "/ " + requiredAmount;
     }
 
     private void Update()
@@ -30,6 +30,6 @@ public class TextManager : MonoBehaviour
             gameOverText.SetActive(true);
         }
 
-        missionText.GetComponent<Text>().text = ":" + missionAmount;
+        missionText.GetComponent<Text>().text = "" + missionAmount;
     }
 }
