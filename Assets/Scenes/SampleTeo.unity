@@ -1987,7 +1987,6 @@ GameObject:
   - component: {fileID: 931771135}
   - component: {fileID: 931771134}
   - component: {fileID: 931771133}
-  - component: {fileID: 931771132}
   - component: {fileID: 931771131}
   - component: {fileID: 931771130}
   m_Layer: 0
@@ -2040,21 +2039,6 @@ MonoBehaviour:
     FarClipPlane: 5000
     Dutch: 0
   m_ComponentOwner: {fileID: 1120901980}
---- !u!114 &931771132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 931771129}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c9dd8289c3857642a076e9dba31a564, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deadzone: 0.53
-  player: {fileID: 0}
-  looks: 73.39
 --- !u!81 &931771133
 AudioListener:
   m_ObjectHideFlags: 0
@@ -4042,7 +4026,7 @@ Transform:
   - {fileID: 532387420}
   - {fileID: 2036579311}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1670630596
 GameObject:
