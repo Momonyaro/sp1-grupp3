@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BoatMovementV01 : MonoBehaviour
 {
-    //lets hope this works
     public float autoSpeed = 3.0f;
     public float tiltSpeed = 5.0f;
     public float breakSpeed = 1.0f;
@@ -12,14 +11,24 @@ public class BoatMovementV01 : MonoBehaviour
     public float rowPower = 500.0f;
     public float intoWhirlSpeed = 10f;
     [SerializeField] float currentSpeedY = 0;
+    [Tooltip("How long after a collision the frog will be immortal (in seconds)")]
+    public float immortalTime = 1f;
     bool knockback = false;
     bool stunned = false;
     bool shield = false;
     bool stopBoat = false;
 
+    public Color hurtColor = Color.red;
+    public Color defaultColor = Color.green;
+    public Color deadColor = Color.gray;
+
+    bool gotHit = false;
+    float counter = 0f;
+
     public static int maxHealth = 3;
     public static int currentHealth;
     public SignalThingy playerHealthSignal;
+    Hit hit;
 
     public bool GameOver = false;
 
@@ -28,6 +37,7 @@ public class BoatMovementV01 : MonoBehaviour
     void Start()
     {
         rigidb = GetComponent<Rigidbody2D>();
+        hit = FindObjectOfType<Hit>();
         currentHealth = maxHealth;
         //Time.timeScale = 1;
     }
@@ -76,6 +86,21 @@ public class BoatMovementV01 : MonoBehaviour
         {
             autoSpeed = 0;
         }
+        if (gotHit)
+        {
+            counter += Time.deltaTime;
+            GetComponent<SpriteRenderer>().color = hurtColor;
+        }
+        if (counter > immortalTime)
+        {
+            gotHit = false;
+            counter = 0f;
+            GetComponent<SpriteRenderer>().color = defaultColor;
+        }
+        if (currentHealth <= 0)
+        {
+            GetComponent<SpriteRenderer>().color = deadColor;
+        }
     }
 
     public void StopBoatSwitchBool()
@@ -100,17 +125,16 @@ public class BoatMovementV01 : MonoBehaviour
     public void StunnedBoolSwitch()
     {
         stunned = !stunned;
-        Debug.Log("Stunned bool: " + stunned);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Dangerous" && shield == false) //+ timer så man ej kan ta skada när man knockas tillbaka?
+        if(other.tag == "Dangerous" && shield == false && gotHit == false) //+ timer så man ej kan ta skada när man knockas tillbaka
         {
+            gotHit = true;
             playerHealthSignal.Raise();
             currentHealth -= 1;
             Debug.Log("Lost health. Current health:" + currentHealth);
-            //TextManager.health -= 1;
 
             if(currentHealth <= 0)
             {
@@ -118,9 +142,11 @@ public class BoatMovementV01 : MonoBehaviour
                 TextManager.gameOver = true;
             }
         }
-        if (shield)
+        if (shield && gotHit == false)
         {
             shield = false;
+            hit.ShieldSwitchBool();
+            hit.DestroyShield();
         }
     }
 }

@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8890016668769801934}
   - component: {fileID: 6258954502600056379}
-  - component: {fileID: 9059245061467999965}
   - component: {fileID: 7035276733069234756}
   - component: {fileID: 8155376832604216771}
+  - component: {fileID: -6498718299154928866}
   m_Layer: 0
   m_Name: BetaMissionCol
   m_TagString: Untagged
@@ -83,22 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &9059245061467999965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5954389605047153952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 777b600e5b3038e47b09a0ac4cee3e39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  commonCollectSound: {fileID: 0}
-  missionCollectSound: {fileID: 0}
-  collectableScore: 1
-  type: 1
 --- !u!61 &7035276733069234756
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -146,3 +130,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-6498718299154928866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5954389605047153952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a16910b8be09b41ad0fcbaa898bfa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectSound: {fileID: 0}
+  collectableScore: 1
+  fullHealthImage: {fileID: 0}
+  emptyHealthImage: {fileID: 0}
