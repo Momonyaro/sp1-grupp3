@@ -78,9 +78,23 @@ public class BoatMovementV01 : MonoBehaviour
             rigidb.MovePosition(position);
         }
 
+        if (currentHealth <= 0)
+        {
+            GameOver = true;
+        }
+        else
+        {
+            GameOver = false;
+        }
+
         if (GameOver)
         {
+            TextManager.gameOver = true;
             autoSpeed = 0;
+        }
+        else
+        {
+            TextManager.gameOver = false;
         }
         if (stopBoat)
         {
@@ -136,11 +150,11 @@ public class BoatMovementV01 : MonoBehaviour
             currentHealth -= 1;
             Debug.Log("Lost health. Current health:" + currentHealth);
 
-            if(currentHealth <= 0)
-            {
-                GameOver = true;
-                TextManager.gameOver = true;
-            }
+            //if(currentHealth <= 0)
+            //{
+            //    GameOver = true;
+            //    TextManager.gameOver = true;
+            //}
         }
         if (shield && gotHit == false)
         {
