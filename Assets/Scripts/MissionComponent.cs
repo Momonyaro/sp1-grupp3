@@ -25,6 +25,11 @@ public class MissionComponent
         else 
             this.missionBox.CreateMissionScreen(englishInfo.missionName, englishInfo.missionDescription, missionPortrait, targetSceneName, npcName);
     }
+
+    public bool MissionBoxActive()
+    {
+        return missionBox != null && missionBox.panel.activeInHierarchy;
+    }
 }
 
 [System.Serializable]

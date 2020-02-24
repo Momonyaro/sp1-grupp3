@@ -24,6 +24,7 @@ public class StartMissionBtn : MonoBehaviour
     {
         if (clicked && timer <= 0)
         {
+            OptionManager.SetIntPreference(_missionBox.NextSceneName, 0);
             SceneManager.LoadScene(_missionBox.NextSceneName);
         }
         else if (clicked && timer > 0)
