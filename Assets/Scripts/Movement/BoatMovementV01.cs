@@ -143,7 +143,7 @@ public class BoatMovementV01 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Dangerous" && shield == false && gotHit == false) //+ timer så man ej kan ta skada när man knockas tillbaka
+        if(other.tag == "Dangerous" && shield == false && gotHit == false)
         {
             gotHit = true;
             playerHealthSignal.Raise();
@@ -160,7 +160,6 @@ public class BoatMovementV01 : MonoBehaviour
         {
             shield = false;
             hit.ShieldSwitchBool();
-            hit.DestroyShield();
         }
     }
 }
