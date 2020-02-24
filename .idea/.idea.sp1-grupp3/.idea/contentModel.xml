@@ -140,6 +140,7 @@
           <e p="CollectableHandeler.cs" t="Include" />
           <e p="CollectableTypes" t="Include">
             <e p="Collectable.cs" t="Include" />
+            <e p="CommonCollectable.cs" t="Include" />
             <e p="HealthCollectable.cs" t="Include" />
             <e p="MissionCollectableScript.cs" t="Include" />
             <e p="PlankCollectableScript.cs" t="Include" />
@@ -166,6 +167,7 @@
             <e p="FrogMovement.cs" t="Include" />
           </e>
           <e p="NpcComponent.cs" t="Include" />
+          <e p="OptionManager.cs" t="Include" />
           <e p="ScriptableObjectsScripts" t="Include">
             <e p="SignalListener.cs" t="Include" />
             <e p="SignalThingy.cs" t="Include" />

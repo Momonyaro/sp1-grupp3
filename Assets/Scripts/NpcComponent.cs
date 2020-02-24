@@ -13,9 +13,14 @@ public class NpcComponent : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.L))
+            OptionManager.SetIntPreference(missionComponent.targetSceneName, 1);
+        if (Input.GetKeyDown(KeyCode.K))
+            OptionManager.ClearSavedInfo();
+        
         if (Input.GetKeyDown(KeyCode.E) && _canTalk)
         {
-            if (!conversationComponent.StartConversation(FindObjectOfType<TextBox>()))
+            if (!missionComponent.MissionBoxActive() &&!conversationComponent.StartConversation(FindObjectOfType<TextBox>()) && OptionManager.GetIntIfExists(missionComponent.targetSceneName) != 1)
                 missionComponent.TetherAndSetNewMission(FindObjectOfType<MissionBox>(), conversationComponent.npcName);
         }
         
