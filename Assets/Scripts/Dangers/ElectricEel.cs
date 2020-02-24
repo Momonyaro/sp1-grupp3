@@ -6,26 +6,33 @@ using UnityEngine;
 public class ElectricEel : MonoBehaviour
 {
     [SerializeField] float eelSpeed = 2f;
-    Hit hit;
-    // Start is called before the first frame update
+    public float stunTime = 2f;
+    BoatMovementV01 boat;
+
     void Start()
     {
-        hit = FindObjectOfType<Hit>();
+        boat = FindObjectOfType<BoatMovementV01>();
     }
 
-    // Update is called once per frame
     void Update()
-    {
-        Move();
-    }
-
-    private void Move()
     {
         transform.Translate(Vector2.up * Time.deltaTime * eelSpeed, 0);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        hit.EelHit(collision);
+        if (collision.tag == "Player" && boat.StunStatus() == false)
+        {
+            boat.StunnedBoolSwitch();
+            boat.GetComponent<SpriteRenderer>().color = Color.white;
+            StartCoroutine(Stunned());
+        }
+    }
+
+    IEnumerator Stunned()
+    {
+        yield return new WaitForSeconds(stunTime);
+        boat.GetComponent<SpriteRenderer>().color = Color.green;
+        boat.StunnedBoolSwitch();
     }
 }

@@ -2381,26 +2381,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7051893862150489170, guid: 054c63f8caa58b74796cdaae1ff72952,
-        type: 3}
-      propertyPath: clicksForRelease
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7051893862150489170, guid: 054c63f8caa58b74796cdaae1ff72952,
-        type: 3}
-      propertyPath: secLimit
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7051893862150489170, guid: 054c63f8caa58b74796cdaae1ff72952,
-        type: 3}
-      propertyPath: knockForwardPower
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 7051893862150489170, guid: 054c63f8caa58b74796cdaae1ff72952,
-        type: 3}
-      propertyPath: knockForwardTime
-      value: 0.25
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 054c63f8caa58b74796cdaae1ff72952, type: 3}
 --- !u!1 &1276474450
@@ -2892,7 +2872,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackPower: 200
   knockbackTime: 0.25
-  stunTime: 2
   shieldSprite: {fileID: 6698772308270311666, guid: 32359c5ef99806244925a6b4df46063f,
     type: 3}
 --- !u!4 &1783128430
@@ -3302,21 +3281,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1066851939220517664, guid: 2826b3b5b346ef644b5063c5c6631bca,
-        type: 3}
-      propertyPath: defaultColor.r
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 1066851939220517664, guid: 2826b3b5b346ef644b5063c5c6631bca,
-        type: 3}
-      propertyPath: defaultColor.g
-      value: 0.8509804
-      objectReference: {fileID: 0}
-    - target: {fileID: 1066851939220517664, guid: 2826b3b5b346ef644b5063c5c6631bca,
-        type: 3}
-      propertyPath: defaultColor.b
-      value: 0.49019608
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2826b3b5b346ef644b5063c5c6631bca, type: 3}
@@ -3870,6 +3834,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5562129444835062398, guid: feede32cbe0d54b4dacbcbceb13d85fc,
+        type: 3}
+      propertyPath: stunTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5562129444835062398, guid: feede32cbe0d54b4dacbcbceb13d85fc,
+        type: 3}
+      propertyPath: stunnedColor.r
+      value: 0.1432894
+      objectReference: {fileID: 0}
+    - target: {fileID: 5562129444835062398, guid: feede32cbe0d54b4dacbcbceb13d85fc,
+        type: 3}
+      propertyPath: stunnedColor.g
+      value: 0.20830609
+      objectReference: {fileID: 0}
+    - target: {fileID: 5562129444835062398, guid: feede32cbe0d54b4dacbcbceb13d85fc,
+        type: 3}
+      propertyPath: stunnedColor.b
+      value: 0.8679245
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: feede32cbe0d54b4dacbcbceb13d85fc, type: 3}
