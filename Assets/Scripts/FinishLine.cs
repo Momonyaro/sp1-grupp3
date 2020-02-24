@@ -6,16 +6,24 @@ using UnityEngine.SceneManagement;
 public class FinishLine : MonoBehaviour
 {
     [SerializeField] string loadScene;
-    // Start is called before the first frame update
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
+    }
+
+
+
+    public void LoadMap(string mapName)
+    {
+        var thisScene = mapName;
+        if (mapName.Equals("this")) thisScene = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(thisScene);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
