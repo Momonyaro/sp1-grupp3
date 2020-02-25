@@ -20,7 +20,7 @@ public class NpcComponent : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.E) && _canTalk)
         {
-            if (!missionComponent.MissionBoxActive() &&!conversationComponent.StartConversation(FindObjectOfType<TextBox>()) && OptionManager.GetIntIfExists(missionComponent.targetSceneName) != 1)
+            if (OptionManager.GetIntIfExists(missionComponent.targetSceneName) != 1 && !missionComponent.MissionBoxActive() && !conversationComponent.StartConversation(FindObjectOfType<TextBox>()))
                 missionComponent.TetherAndSetNewMission(FindObjectOfType<MissionBox>(), conversationComponent.npcName);
         }
         

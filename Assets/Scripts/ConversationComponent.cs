@@ -63,12 +63,14 @@ public class ConversationComponent
         if (_dialogueComplete == false)
         {
             StartBuildingNextString();
+            FrogMovement.frozen = true;
             return true;
         }
         else
         {
             textBoxObject.SetDialogueWindowVisibility(false);
             ResetDialogue();
+            FrogMovement.frozen = false;
             return false;
         }
         
