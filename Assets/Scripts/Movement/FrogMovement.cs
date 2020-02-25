@@ -7,12 +7,14 @@ public class FrogMovement : MonoBehaviour
 {
     [SerializeField] float frogSpeedX = 12f;
     string horizontal = "Horizontal";
+    public static bool frozen = false;
     float x;
     
 
     void Update()
     {
-        Move();
+        if (!frozen)
+            Move();
     }
 
     private void Move()
