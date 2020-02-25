@@ -5,7 +5,7 @@ using UnityEngine;
 public class Stone : MonoBehaviour
 {
     Hit hit;
-    public Animator anim;
+    Animator anim;
 
     void Start()
     {
@@ -18,7 +18,9 @@ public class Stone : MonoBehaviour
         if(collision.tag == "Player")
         {
             anim.SetBool("Hit", true);
-            hit.StoneHit(collision, gameObject);
+            Destroy(GetComponent<Collider2D>());
+            hit.KnockingBack();
+            Debug.Log("Hit stone");
         }
     }
 }
