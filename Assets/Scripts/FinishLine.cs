@@ -15,6 +15,7 @@ public class FinishLine : MonoBehaviour
 
     public AudioSource goalJingle;
 
+    public GameObject successText;
     public GameObject commonParent;
     public GameObject missionParent;
     public GameObject plankParent;
@@ -30,17 +31,18 @@ public class FinishLine : MonoBehaviour
 
             if (timeChecker > victoryTime)
             {
-                commonParent.transform.parent = resultParent.transform;
-                commonParent.transform.position = resultParent.transform.position + new Vector3(0, 120, 0);
+                commonParent.transform.SetParent(resultParent.transform);
+                commonParent.transform.position = resultParent.transform.position + new Vector3(50, 90, 0);
 
-                missionParent.transform.parent = resultParent.transform;
-                missionParent.transform.position = resultParent.transform.position + new Vector3(80, 0, 0);
+                missionParent.transform.SetParent(resultParent.transform);
+                missionParent.transform.position = resultParent.transform.position + new Vector3(50, 0, 0);
 
-                plankParent.transform.parent = resultParent.transform;
+                plankParent.transform.SetParent(resultParent.transform);
                 plankParent.transform.position = resultParent.transform.position + new Vector3(0, -40, 0);
 
                 healthParent.SetActive(false);
                 resultBack.SetActive(true);
+                successText.SetActive(true);
 
                 finished = true;
             }
@@ -48,6 +50,7 @@ public class FinishLine : MonoBehaviour
         if (finished && Input.anyKeyDown)
         {
             timeChecker = 0;
+            OptionManager.SetIntPreference(SceneManager.GetActiveScene().name, 1);
             SceneManager.LoadScene(loadScene);
         }
     }
