@@ -15,6 +15,7 @@ public class FinishLine : MonoBehaviour
 
     public AudioSource goalJingle;
 
+    public GameObject successText;
     public GameObject commonParent;
     public GameObject missionParent;
     public GameObject plankParent;
@@ -41,6 +42,7 @@ public class FinishLine : MonoBehaviour
 
                 healthParent.SetActive(false);
                 resultBack.SetActive(true);
+                successText.SetActive(true);
 
                 finished = true;
             }
