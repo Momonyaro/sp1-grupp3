@@ -1925,7 +1925,7 @@ MonoBehaviour:
         vad som \xE4r kvar i alla fall..."
     missionPortrait: {fileID: 6346041710244282177, guid: 40605aadca547ac45a05549bcaed56cd,
       type: 3}
-    targetSceneName: Level 1 (Verktyg)
+    targetSceneName: SampleTeo
     missionBox: {fileID: 0}
   alertSprite: {fileID: 1874925251}
   missionSprite: {fileID: 8618328087971562094, guid: 6747887bfec288149bb861ed925612f8,
