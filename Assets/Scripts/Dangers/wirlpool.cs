@@ -54,7 +54,7 @@ public class wirlpool : MonoBehaviour
             clicksClicked = 0;
             counter = 0f;
             autoReleaseCounter++;
-            Debug.Log("autoReleaseCounter: " + autoReleaseCounter);
+            Debug.Log("autoReleaseCounter: " + autoReleaseCounter + " / " + autoRelease);
         }
         if(autoRelease <= autoReleaseCounter)
         {
