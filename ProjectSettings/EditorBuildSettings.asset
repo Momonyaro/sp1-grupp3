@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Stad.unity
     guid: 24c6a05207d1b9748a0110767557c619
   - enabled: 1
-    path: Assets/Scenes/Bana_1-AL.unity
+    path: Assets/Scenes/Level0_tutorial.unity
     guid: 58b2472920c1340e4bb5c71de2b8190c
   - enabled: 0
     path: 
