@@ -9,7 +9,6 @@ public class Hit : MonoBehaviour
     [Tooltip("In seconds")]
     [SerializeField] float knockbackTime = 2f;
     [SerializeField] GameObject shieldSprite = null;
-    //public Animation anim;
     GameObject myShield;
 
     BoatMovementV01 boat;
@@ -19,7 +18,6 @@ public class Hit : MonoBehaviour
     void Start()
     {
         boat = FindObjectOfType<BoatMovementV01>();
-        //anim = GetComponent<Animation>();
     }
 
     void Update()
@@ -44,22 +42,10 @@ public class Hit : MonoBehaviour
         }
     }
 
-    public void StoneHit(Collider2D collision, GameObject stone)
+    public void KnockingBack()
     {
-        Destroy(stone.GetComponent<Collider2D>());
         boat.KnockbackBoolSwitch();
         StartCoroutine(Knockback());
-        Debug.Log("Hit stone");
-    }
-
-    public void CrocHit(Collider2D collision)
-    {
-        if(collision.tag == player)
-        {
-            boat.KnockbackBoolSwitch();
-            StartCoroutine(Knockback());
-            Debug.Log("Hit croc");
-        }
     }
 
     IEnumerator Knockback()

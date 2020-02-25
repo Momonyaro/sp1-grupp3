@@ -5,7 +5,9 @@ using UnityEngine;
 public class Stone : MonoBehaviour
 {
     Hit hit;
-    public Animator anim;
+    Animator anim;
+    [Tooltip("How long until deleted after the falling animation is triggered")]
+    public float deleteTimer = 1f;
 
     void Start()
     {
@@ -18,7 +20,10 @@ public class Stone : MonoBehaviour
         if(collision.tag == "Player")
         {
             anim.SetBool("Hit", true);
-            hit.StoneHit(collision, gameObject);
+            Destroy(GetComponent<Collider2D>());
+            Destroy(gameObject, deleteTimer);
+            hit.KnockingBack();
+            Debug.Log("Hit stone");
         }
     }
 }
