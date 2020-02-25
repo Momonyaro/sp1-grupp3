@@ -29,6 +29,10 @@ public class TextManager : MonoBehaviour
         {
             gameOverText.SetActive(true);
         }
+        else
+        {
+            gameOverText.SetActive(false);
+        }
 
         missionText.GetComponent<Text>().text = "" + missionAmount;
     }

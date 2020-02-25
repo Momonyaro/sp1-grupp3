@@ -8,7 +8,7 @@ public class Hit : MonoBehaviour
     [SerializeField] float knockbackPower = 500f;
     [Tooltip("In seconds")]
     [SerializeField] float knockbackTime = 2f;
-    [SerializeField] float stunTime = 2f;
+    //[SerializeField] float stunTime = 2f;
     [SerializeField] GameObject shieldSprite = null;
     GameObject myShield;
     BoatMovementV01 boat;
@@ -35,18 +35,18 @@ public class Hit : MonoBehaviour
         {
             myShield = Instantiate(shieldSprite, boat.transform.position, Quaternion.identity);
         }
-        //else
-        //{
-        //    Destroy(myShield);
-        //    Debug.Log("Shield destroyed");
-        //}
+        else if (!shield)
+        {
+            Destroy(myShield);
+            Debug.Log("Shield destroyed");
+        }
     }
 
-    public void DestroyShield()
-    {
-        Destroy(myShield);
-        Debug.Log("Shield destroyed");
-    }
+    //public void DestroyShield()
+    //{
+    //    Destroy(myShield);
+    //    Debug.Log("Shield destroyed");
+    //}
 
     public void StoneHit(Collider2D collision, GameObject stone)
     {
@@ -69,15 +69,15 @@ public class Hit : MonoBehaviour
         }
     }
 
-    public void EelHit(Collider2D collision)
-    {
-        if(collision.tag == "Player" && boat.StunStatus() == false)
-        {
-            boat.StunnedBoolSwitch();
-            boat.GetComponent<SpriteRenderer>().color = Color.white;
-            StartCoroutine(Stunned());
-        }
-    }
+    //public void EelHit(Collider2D collision)
+    //{
+    //    if(collision.tag == "Player" && boat.StunStatus() == false)
+    //    {
+    //        boat.StunnedBoolSwitch();
+    //        boat.GetComponent<SpriteRenderer>().color = Color.white;
+    //        StartCoroutine(Stunned());
+    //    }
+    //}
 
 
     IEnumerator Knockback()
@@ -88,10 +88,10 @@ public class Hit : MonoBehaviour
         boat.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
 
-    IEnumerator Stunned()
-    {
-        yield return new WaitForSeconds(stunTime);
-        boat.GetComponent<SpriteRenderer>().color = Color.green; //new Color(85, 217, 125, 255);
-        boat.StunnedBoolSwitch();
-    }
+    //IEnumerator Stunned()
+    //{
+    //    yield return new WaitForSeconds(stunTime);
+    //    boat.GetComponent<SpriteRenderer>().color = Color.green;
+    //    boat.StunnedBoolSwitch();
+    //}
 }

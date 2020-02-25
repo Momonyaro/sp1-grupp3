@@ -78,9 +78,23 @@ public class BoatMovementV01 : MonoBehaviour
             rigidb.MovePosition(position);
         }
 
+        if (currentHealth <= 0)
+        {
+            GameOver = true;
+        }
+        else
+        {
+            GameOver = false;
+        }
+
         if (GameOver)
         {
+            TextManager.gameOver = true;
             autoSpeed = 0;
+        }
+        else
+        {
+            TextManager.gameOver = false;
         }
         if (stopBoat)
         {
@@ -129,24 +143,23 @@ public class BoatMovementV01 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Dangerous" && shield == false && gotHit == false) //+ timer så man ej kan ta skada när man knockas tillbaka
+        if(other.tag == "Dangerous" && shield == false && gotHit == false)
         {
             gotHit = true;
             playerHealthSignal.Raise();
             currentHealth -= 1;
             Debug.Log("Lost health. Current health:" + currentHealth);
 
-            if(currentHealth <= 0)
-            {
-                GameOver = true;
-                TextManager.gameOver = true;
-            }
+            //if(currentHealth <= 0)
+            //{
+            //    GameOver = true;
+            //    TextManager.gameOver = true;
+            //}
         }
         if (shield && gotHit == false)
         {
             shield = false;
             hit.ShieldSwitchBool();
-            hit.DestroyShield();
         }
     }
 }

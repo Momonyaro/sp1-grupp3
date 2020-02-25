@@ -569,7 +569,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &810543502
 RectTransform:
   m_ObjectHideFlags: 0
@@ -684,7 +684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2ae81880254c745bdbab2beb4ff709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadTimeMax: 1
+  loadTimeMax: 13
 --- !u!114 &857504130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1360,7 +1360,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320161729}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.3854985, y: 134.1652, z: -10}
+  m_LocalPosition: {x: 7.4, y: 131.46, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459601753}
@@ -1872,35 +1872,60 @@ MonoBehaviour:
     - portraitExpression: 0
       portraitSprite: {fileID: 6069553380104649068, guid: 40605aadca547ac45a05549bcaed56cd,
         type: 3}
+    - portraitExpression: 1
+      portraitSprite: {fileID: -1597837895231669957, guid: 40605aadca547ac45a05549bcaed56cd,
+        type: 3}
+    - portraitExpression: 2
+      portraitSprite: {fileID: 5707561616188705196, guid: 40605aadca547ac45a05549bcaed56cd,
+        type: 3}
+    - portraitExpression: 3
+      portraitSprite: {fileID: 6346041710244282177, guid: 40605aadca547ac45a05549bcaed56cd,
+        type: 3}
     npcLines:
-    - swedishText: "detta \xE4r test text"
-      englishText: this is test text
+    - swedishText: '...'
+      englishText: '...'
       playerSays: 0
       portraitExpression: 0
-    - swedishText: "detta \xE4r test text"
-      englishText: this is test text
+    - swedishText: "Urs\xE4kta mig?"
+      englishText: Excuse me?
       playerSays: 1
       portraitExpression: 0
-    - swedishText: "detta \xE4r test text"
-      englishText: this is test text
+    - swedishText: Ahhh!
+      englishText: Ahhh!
       playerSays: 0
-      portraitExpression: 0
-    - swedishText: "detta \xE4r test text"
-      englishText: this is test text
+      portraitExpression: 3
+    - swedishText: "Skr\xE4m mig inte s\xE5! H\xF6ll p\xE5 att f\xE5 en hj\xE4rtattack!"
+      englishText: Don't scare me like that, I almost had a heart attack!
       playerSays: 0
+      portraitExpression: 1
+    - swedishText: "F\xF6rl\xE5t men jag f\xF6rs\xF6ker hj\xE4lpa alla nu efter \xF6versv\xE4mningen...
+        Du s\xE5g lite distant ut s\xE5 jag t\xE4nkte kolla hur du l\xE5g till."
+      englishText: I'm sorry but I am trying to help everyone after the flood... You
+        looked a bit distant so I was just making sure you were okay.
+      playerSays: 1
       portraitExpression: 0
+    - swedishText: "\xC5h. Ja jag f\xF6rlorade en av min pappas sista m\xE5lningar
+        till str\xF6mmen och jag vet inte riktigt vad jag ska ta mig \xE5t."
+      englishText: Oh. I lost one of my father's last paintings to the stream and
+        I don't really know what to do.
+      playerSays: 0
+      portraitExpression: 2
     textBoxObject: {fileID: 0}
   startsMission: 1
   missionComponent:
     englishInfo:
-      missionName: TEST:MISSION:NAME
-      missionDescription: TEST:MISSION:DESCRIPTION
+      missionName: Locate the missing painting!
+      missionDescription: A painting done by Sebastian's father was washed away during
+        the flood and would like my help in retriving it; or what's left of it at
+        least...
     swedishInfo:
-      missionName: 
-      missionDescription: 
+      missionName: "Hitta den bortspolade m\xE5lningen!"
+      missionDescription: "En m\xE5lning som Sebastians pappa m\xE5lat spolades bort
+        under \xF6versv\xE4mningen och skulle vilja ha hj\xE4lp att hitta den; eller
+        vad som \xE4r kvar i alla fall..."
     missionPortrait: {fileID: 6346041710244282177, guid: 40605aadca547ac45a05549bcaed56cd,
       type: 3}
-    targetSceneName: Bana 1
+    targetSceneName: Bana 2
     missionBox: {fileID: 0}
 --- !u!4 &1735822891
 Transform:
