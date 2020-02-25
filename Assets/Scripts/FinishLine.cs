@@ -32,7 +32,7 @@ public class FinishLine : MonoBehaviour
             if (timeChecker > victoryTime)
             {
                 commonParent.transform.parent = resultParent.transform;
-                commonParent.transform.position = resultParent.transform.position + new Vector3(0, 120, 0);
+                commonParent.transform.position = resultParent.transform.position + new Vector3(0, 150, 0);
 
                 missionParent.transform.parent = resultParent.transform;
                 missionParent.transform.position = resultParent.transform.position + new Vector3(80, 0, 0);
