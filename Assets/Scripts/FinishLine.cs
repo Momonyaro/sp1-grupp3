@@ -30,13 +30,13 @@ public class FinishLine : MonoBehaviour
 
             if (timeChecker > victoryTime)
             {
-                commonParent.transform.parent = resultParent.transform;
+                commonParent.transform.SetParent(resultParent.transform);
                 commonParent.transform.position = resultParent.transform.position + new Vector3(0, 120, 0);
 
-                missionParent.transform.parent = resultParent.transform;
+                missionParent.transform.SetParent(resultParent.transform);
                 missionParent.transform.position = resultParent.transform.position + new Vector3(80, 0, 0);
 
-                plankParent.transform.parent = resultParent.transform;
+                plankParent.transform.SetParent(resultParent.transform);
                 plankParent.transform.position = resultParent.transform.position + new Vector3(0, -40, 0);
 
                 healthParent.SetActive(false);
@@ -48,6 +48,7 @@ public class FinishLine : MonoBehaviour
         if (finished && Input.anyKeyDown)
         {
             timeChecker = 0;
+            OptionManager.SetIntPreference(SceneManager.GetActiveScene().name, 1);
             SceneManager.LoadScene(loadScene);
         }
     }
