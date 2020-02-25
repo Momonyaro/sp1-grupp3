@@ -15,6 +15,7 @@ public class FinishLine : MonoBehaviour
 
     public AudioSource goalJingle;
 
+    public GameObject successText;
     public GameObject commonParent;
     public GameObject missionParent;
     public GameObject plankParent;
@@ -31,7 +32,7 @@ public class FinishLine : MonoBehaviour
             if (timeChecker > victoryTime)
             {
                 commonParent.transform.parent = resultParent.transform;
-                commonParent.transform.position = resultParent.transform.position + new Vector3(0, 120, 0);
+                commonParent.transform.position = resultParent.transform.position + new Vector3(0, 150, 0);
 
                 missionParent.transform.parent = resultParent.transform;
                 missionParent.transform.position = resultParent.transform.position + new Vector3(80, 0, 0);
@@ -41,6 +42,7 @@ public class FinishLine : MonoBehaviour
 
                 healthParent.SetActive(false);
                 resultBack.SetActive(true);
+                successText.SetActive(true);
 
                 finished = true;
             }
