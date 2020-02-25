@@ -6,7 +6,7 @@ public class Stone : MonoBehaviour
 {
     Hit hit;
     public Animator anim;
-    // Start is called before the first frame update
+
     void Start()
     {
         hit = FindObjectOfType<Hit>();
@@ -15,7 +15,10 @@ public class Stone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        anim.SetBool("Hit", true);
-        hit.StoneHit(collision, gameObject);
+        if(collision.tag == "Player")
+        {
+            anim.SetBool("Hit", true);
+            hit.StoneHit(collision, gameObject);
+        }
     }
 }

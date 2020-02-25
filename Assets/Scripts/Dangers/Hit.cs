@@ -46,13 +46,10 @@ public class Hit : MonoBehaviour
 
     public void StoneHit(Collider2D collision, GameObject stone)
     {
-        if(collision.tag == player)
-        {
-            Destroy(stone.GetComponent<Collider2D>());
-            boat.KnockbackBoolSwitch();
-            StartCoroutine(Knockback());
-            Debug.Log("Hit stone");
-        }
+        Destroy(stone.GetComponent<Collider2D>());
+        boat.KnockbackBoolSwitch();
+        StartCoroutine(Knockback());
+        Debug.Log("Hit stone");
     }
 
     public void CrocHit(Collider2D collision)
