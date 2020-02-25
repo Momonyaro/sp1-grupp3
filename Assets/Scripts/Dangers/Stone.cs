@@ -6,6 +6,8 @@ public class Stone : MonoBehaviour
 {
     Hit hit;
     Animator anim;
+    [Tooltip("How long until deleted after the falling animation is triggered")]
+    public float deleteTimer = 1f;
 
     void Start()
     {
@@ -19,6 +21,7 @@ public class Stone : MonoBehaviour
         {
             anim.SetBool("Hit", true);
             Destroy(GetComponent<Collider2D>());
+            Destroy(gameObject, deleteTimer);
             hit.KnockingBack();
             Debug.Log("Hit stone");
         }
