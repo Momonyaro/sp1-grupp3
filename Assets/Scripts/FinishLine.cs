@@ -31,11 +31,11 @@ public class FinishLine : MonoBehaviour
 
             if (timeChecker > victoryTime)
             {
-                commonParent.transform.position = resultParent.transform.position + new Vector3(0, 150, 0);
                 commonParent.transform.SetParent(resultParent.transform);
+                commonParent.transform.position = resultParent.transform.position + new Vector3(50, 90, 0);
 
                 missionParent.transform.SetParent(resultParent.transform);
-                missionParent.transform.position = resultParent.transform.position + new Vector3(80, 0, 0);
+                missionParent.transform.position = resultParent.transform.position + new Vector3(50, 0, 0);
 
                 plankParent.transform.SetParent(resultParent.transform);
                 plankParent.transform.position = resultParent.transform.position + new Vector3(0, -40, 0);
