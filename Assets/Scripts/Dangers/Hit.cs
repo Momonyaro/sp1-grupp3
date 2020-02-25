@@ -8,9 +8,9 @@ public class Hit : MonoBehaviour
     [SerializeField] float knockbackPower = 500f;
     [Tooltip("In seconds")]
     [SerializeField] float knockbackTime = 2f;
-    //[SerializeField] float stunTime = 2f;
     [SerializeField] GameObject shieldSprite = null;
     GameObject myShield;
+
     BoatMovementV01 boat;
     string player = "Player";
     bool shield = false;
@@ -42,43 +42,11 @@ public class Hit : MonoBehaviour
         }
     }
 
-    //public void DestroyShield()
-    //{
-    //    Destroy(myShield);
-    //    Debug.Log("Shield destroyed");
-    //}
-
-    public void StoneHit(Collider2D collision, GameObject stone)
+    public void KnockingBack()
     {
-        if(collision.tag == player)
-        {
-            Destroy(stone);
-            boat.KnockbackBoolSwitch();
-            StartCoroutine(Knockback());
-            Debug.Log("Hit stone");
-        }
+        boat.KnockbackBoolSwitch();
+        StartCoroutine(Knockback());
     }
-
-    public void CrocHit(Collider2D collision)
-    {
-        if(collision.tag == player)
-        {
-            boat.KnockbackBoolSwitch();
-            StartCoroutine(Knockback());
-            Debug.Log("Hit croc");
-        }
-    }
-
-    //public void EelHit(Collider2D collision)
-    //{
-    //    if(collision.tag == "Player" && boat.StunStatus() == false)
-    //    {
-    //        boat.StunnedBoolSwitch();
-    //        boat.GetComponent<SpriteRenderer>().color = Color.white;
-    //        StartCoroutine(Stunned());
-    //    }
-    //}
-
 
     IEnumerator Knockback()
     {
@@ -87,11 +55,4 @@ public class Hit : MonoBehaviour
         boat.KnockbackBoolSwitch();
         boat.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
-
-    //IEnumerator Stunned()
-    //{
-    //    yield return new WaitForSeconds(stunTime);
-    //    boat.GetComponent<SpriteRenderer>().color = Color.green;
-    //    boat.StunnedBoolSwitch();
-    //}
 }

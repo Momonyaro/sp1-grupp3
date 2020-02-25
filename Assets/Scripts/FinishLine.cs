@@ -6,18 +6,51 @@ using UnityEngine.SceneManagement;
 public class FinishLine : MonoBehaviour
 {
     [SerializeField] string loadScene;
+    public GameObject smartCamera;
+    public float victoryTime = 2;
+    [SerializeField] float timeChecker = 0;
 
-    void Start()
+    private bool finished = false;
+    private bool reachedGoal = false;
+
+    public AudioSource goalJingle;
+
+    public GameObject commonParent;
+    public GameObject missionParent;
+    public GameObject plankParent;
+    public GameObject healthParent;
+    public GameObject resultParent;
+    public GameObject resultBack;
+
+    private void Update()
     {
-        
+        if (reachedGoal && timeChecker < victoryTime)
+        {
+            timeChecker += Time.deltaTime;
+
+            if (timeChecker > victoryTime)
+            {
+                commonParent.transform.parent = resultParent.transform;
+                commonParent.transform.position = resultParent.transform.position + new Vector3(0, 120, 0);
+
+                missionParent.transform.parent = resultParent.transform;
+                missionParent.transform.position = resultParent.transform.position + new Vector3(80, 0, 0);
+
+                plankParent.transform.parent = resultParent.transform;
+                plankParent.transform.position = resultParent.transform.position + new Vector3(0, -40, 0);
+
+                healthParent.SetActive(false);
+                resultBack.SetActive(true);
+
+                finished = true;
+            }
+        }
+        if (finished && Input.anyKeyDown)
+        {
+            timeChecker = 0;
+            SceneManager.LoadScene(loadScene);
+        }
     }
-
-    void Update()
-    {
-        
-    }
-
-
 
     public void LoadMap(string mapName)
     {
@@ -30,7 +63,12 @@ public class FinishLine : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            SceneManager.LoadScene(loadScene);
+            smartCamera.SetActive(false);
+            if(goalJingle != null)
+            {
+                goalJingle.Play();
+            }
+            reachedGoal = true;
         }
     }
 }

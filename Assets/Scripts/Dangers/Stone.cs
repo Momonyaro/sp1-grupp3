@@ -5,14 +5,22 @@ using UnityEngine;
 public class Stone : MonoBehaviour
 {
     Hit hit;
-    // Start is called before the first frame update
+    Animator anim;
+
     void Start()
     {
         hit = FindObjectOfType<Hit>();
+        anim = GetComponent<Animator>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        hit.StoneHit(collision, gameObject);
+        if(collision.tag == "Player")
+        {
+            anim.SetBool("Hit", true);
+            Destroy(GetComponent<Collider2D>());
+            hit.KnockingBack();
+            Debug.Log("Hit stone");
+        }
     }
 }

@@ -8,14 +8,12 @@ public class IslandCrocodiles : MonoBehaviour
     [SerializeField] List<Transform> waypoints;
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] GameObject path = null;
-    Transform target;
     Hit hit;
     int currentWaypoint = 0;
 
     void Start()
     {
         GetWaypoints();
-        //target = waypoints[currentWaypoint];
         transform.position = waypoints[currentWaypoint].transform.position;
         hit = FindObjectOfType<Hit>();
     }
@@ -44,13 +42,11 @@ public class IslandCrocodiles : MonoBehaviour
             if (transform.position == targetPos)
             {
                 currentWaypoint++;
-                //target = waypoints[currentWaypoint];
             }
         }
         else
         {
             currentWaypoint = 0;
-            //target = waypoints[currentWaypoint];
         }
     }
     //private void Rotating() //https://www.youtube.com/watch?v=mKLp-2iseDc
@@ -62,6 +58,10 @@ public class IslandCrocodiles : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        hit.CrocHit(collision);
+        if(collision.tag == "Player")
+        {
+            hit.KnockingBack();
+            Debug.Log("Hit islandcroc");
+        }
     }
 }
