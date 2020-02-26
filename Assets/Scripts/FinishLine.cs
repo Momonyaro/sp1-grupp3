@@ -16,6 +16,8 @@ public class FinishLine : MonoBehaviour
     public AudioSource goalJingle;
 
     public GameObject successText;
+    public GameObject lostText;
+    [Space]
     public GameObject commonParent;
     public GameObject missionParent;
     public GameObject plankParent;
@@ -26,6 +28,12 @@ public class FinishLine : MonoBehaviour
     public GameObject commonResultPos;
     public GameObject missionResultPos;
     public GameObject plankResultPos;
+
+    TextManager textm;
+    private void Start()
+    {
+        textm = FindObjectOfType<TextManager>();
+    }
 
     private void Update()
     {
@@ -49,16 +57,30 @@ public class FinishLine : MonoBehaviour
 
                 healthParent.SetActive(false);
                 resultBack.SetActive(true);
-                successText.SetActive(true);
+
+                if(textm.requiredAmount <= TextManager.missionAmount)
+                {
+                    successText.SetActive(true);
+                    Debug.Log(textm.requiredAmount);
+                }
+                else if (textm.requiredAmount > TextManager.missionAmount)
+                {
+                    lostText.SetActive(true);
+                }
 
                 finished = true;
             }
+        }
+        if (finished)
+        {
+            Time.timeScale = 0.3f;
         }
         if (finished && Input.anyKeyDown)
         {
             timeChecker = 0;
             OptionManager.SetIntPreference(SceneManager.GetActiveScene().name, 1);
             SceneManager.LoadScene(loadScene);
+            Time.timeScale = 1f;
         }
     }
 
