@@ -22,6 +22,10 @@ public class FinishLine : MonoBehaviour
     public GameObject healthParent;
     public GameObject resultParent;
     public GameObject resultBack;
+    [Space]
+    public GameObject commonResultPos;
+    public GameObject missionResultPos;
+    public GameObject plankResultPos;
 
     private void Update()
     {
@@ -31,14 +35,17 @@ public class FinishLine : MonoBehaviour
 
             if (timeChecker > victoryTime)
             {
-                commonParent.transform.SetParent(resultParent.transform);
-                commonParent.transform.position = resultParent.transform.position + new Vector3(50, 90, 0);
+                //commonParent.transform.SetParent(resultParent.transform);
+                commonParent.transform.position = commonResultPos.transform.position;
+                //commonParent.transform.position = resultParent.transform.position + new Vector3(50, 90, 0);
 
-                missionParent.transform.SetParent(resultParent.transform);
-                missionParent.transform.position = resultParent.transform.position + new Vector3(50, 0, 0);
+                //missionParent.transform.SetParent(resultParent.transform);
+                missionParent.transform.position = missionResultPos.transform.position;
+                //missionParent.transform.position = resultParent.transform.position + new Vector3(50, 0, 0);
 
-                plankParent.transform.SetParent(resultParent.transform);
-                plankParent.transform.position = resultParent.transform.position + new Vector3(0, -40, 0);
+                //plankParent.transform.SetParent(resultParent.transform);
+                plankParent.transform.position = plankResultPos.transform.position;
+                //plankParent.transform.position = resultParent.transform.position + new Vector3(0, -40, 0);
 
                 healthParent.SetActive(false);
                 resultBack.SetActive(true);
