@@ -10,9 +10,13 @@ public class Crocodile : MonoBehaviour
     [SerializeField] float smallerPointX = 4f;
     [Tooltip("Det x-värde där krokodilen börjar åka till vänster")]
     [SerializeField] float biggerPointX = 7f;
+    [SerializeField] AudioSource growl;
     Hit hit;
     bool x = false;
-    
+    float basicTimer = 3f;
+
+    public object UnityEgnine { get; private set; }
+
     void Start()
     {
         hit = FindObjectOfType<Hit>();
@@ -21,6 +25,7 @@ public class Crocodile : MonoBehaviour
     void Update()
     {
         Move();
+        MakingSounds();
     }
 
     private void Move()
@@ -41,6 +46,19 @@ public class Crocodile : MonoBehaviour
         else
         {
             transform.Translate(Vector2.right * (Time.deltaTime * crocSpeed), 0);
+        }
+    }
+    private void MakingSounds()
+    {
+        basicTimer -= Time.deltaTime;
+        if(basicTimer <= 0)
+        {
+            float timer = UnityEngine.Random.Range(1, 4); Debug.Log("Timer: " + timer);
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+
+            }
         }
     }
 
