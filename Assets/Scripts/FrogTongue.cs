@@ -72,7 +72,7 @@ public class FrogTongue : MonoBehaviour
                 var sound = Instantiate(catchSound, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
                 Destroy(sound, 1f);
 
-                GetComponent<Collider2D>().transform.parent = tongueTip.transform;
+                transform.parent = tongueTip.transform;
                 _grabbedItem = true;
                 break;
 
