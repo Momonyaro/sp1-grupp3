@@ -61,11 +61,11 @@ public class FrogTongue : MonoBehaviour
 
     private void CheckForItemAtTip()
     {
-        foreach (var collider in Physics2D.OverlapBoxAll(tongueTip.transform.position, new Vector2(.3f, .3f), 0))
+        foreach (var c in Physics2D.OverlapBoxAll(tongueTip.transform.position, new Vector2(.3f, .3f), 0))
         {
-            if (collider.GetComponent<Collectable>())
+            if (c.GetComponent<Collectable>())
             {
-                collider.transform.parent = tongueTip.transform;
+                c.transform.parent = tongueTip.transform;
                 _grabbedItem = true;
                 break;
             }
