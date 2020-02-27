@@ -9,4 +9,9 @@ public class SwitchScene : MonoBehaviour
     {
         SceneManager.LoadScene(scene);
     }
+
+    public void ClearSavedData()
+    {
+        OptionManager.ClearSavedInfo();
+    }
 }
