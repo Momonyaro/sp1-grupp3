@@ -11,6 +11,7 @@ public class FrogTongue : MonoBehaviour
     public float reelSpeed = .5f;
     [SerializeField] private GameObject tongueTip;
     [SerializeField] private LineRenderer tongueBody;
+    [SerializeField] AudioSource sound;
     private Vector2 _targetPos;
     private Vector2 _mousePos;
     private bool _thrownTongue = false;
@@ -30,6 +31,8 @@ public class FrogTongue : MonoBehaviour
         {
             _thrownTongue = true;
             SetTargetPosition(_mousePos);
+            var newSound = Instantiate(sound, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+            Destroy(newSound, 3f);
         }
         
         MoveTongueToTarget();
