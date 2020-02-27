@@ -78,6 +78,7 @@ public class FinishLine : MonoBehaviour
         if (finished && Input.anyKeyDown)
         {
             timeChecker = 0;
+            Debug.Log("Set the saved state of scene [" + SceneManager.GetActiveScene().name + "] to 1");
             OptionManager.SetIntPreference(SceneManager.GetActiveScene().name, 1);
             SceneManager.LoadScene(loadScene);
             Time.timeScale = 1f;
