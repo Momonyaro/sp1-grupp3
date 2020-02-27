@@ -10,9 +10,14 @@ public class Crocodile : MonoBehaviour
     [SerializeField] float smallerPointX = 4f;
     [Tooltip("Det x-värde där krokodilen börjar åka till vänster")]
     [SerializeField] float biggerPointX = 7f;
+    [SerializeField] AudioSource growl;
+    [SerializeField] AudioSource bite;
     Hit hit;
     bool x = false;
-    
+    float basicTimer = 3f;
+
+    public object UnityEgnine { get; private set; }
+
     void Start()
     {
         hit = FindObjectOfType<Hit>();
@@ -21,6 +26,7 @@ public class Crocodile : MonoBehaviour
     void Update()
     {
         Move();
+        //MakingSounds();
     }
 
     private void Move()
@@ -29,7 +35,7 @@ public class Crocodile : MonoBehaviour
         {
             x = true;
         }
-        if (transform.position.x <= smallerPointX)
+        else if (transform.position.x <= smallerPointX)
         {
             x = false;
         }
@@ -43,6 +49,23 @@ public class Crocodile : MonoBehaviour
             transform.Translate(Vector2.right * (Time.deltaTime * crocSpeed), 0);
         }
     }
+    private void MakingSounds()
+    {
+        //basicTimer -= Time.deltaTime;
+        //if(basicTimer <= 0)
+        //{
+        //    basicTimer = 10f;
+        //    float timer = UnityEngine.Random.Range(1, 4); Debug.Log("Timer: " + timer);
+        //    timer -= Time.deltaTime;
+        //    Debug.Log("In first one");
+        //    if (timer <= 0)
+        //    {
+        //        Instantiate(growl, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+        //        Destroy(growl, 3f);
+        //        Debug.Log("sound playing");
+        //    }
+        //}
+    }
 
     private void OnDrawGizmosSelected()
     {
@@ -55,6 +78,8 @@ public class Crocodile : MonoBehaviour
         if(collision.tag == "Player")
         {
             hit.KnockingBack();
+            var sound = Instantiate(bite, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+            Destroy(sound, 3f);
             Debug.Log("Hit croc");
         }
     }
