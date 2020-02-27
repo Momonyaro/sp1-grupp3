@@ -53,7 +53,7 @@ public class ConversationComponent
         }
         else
         {
-            _timer -= Time.deltaTime;
+            _timer -= Time.fixedDeltaTime;
         }
     }
 
