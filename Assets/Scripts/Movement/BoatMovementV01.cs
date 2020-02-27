@@ -147,8 +147,8 @@ public class BoatMovementV01 : MonoBehaviour
         if(other.tag == "Dangerous" && shield == false && gotHit == false)
         {
             gotHit = true;
-            var sound = Instantiate(crash, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
-            Destroy(sound, 2f);
+            //var sound = Instantiate(crash, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+            //Destroy(sound, 2f);
             playerHealthSignal.Raise();
             currentHealth -= 1;
             Debug.Log("Lost health. Current health:" + currentHealth);
