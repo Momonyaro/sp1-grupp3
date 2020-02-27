@@ -11,7 +11,8 @@ public class FrogTongue : MonoBehaviour
     public float reelSpeed = .5f;
     [SerializeField] private GameObject tongueTip;
     [SerializeField] private LineRenderer tongueBody;
-    [SerializeField] AudioSource sound;
+    [SerializeField] AudioSource launchSound;
+    [SerializeField] AudioSource catchSound;
     private Vector2 _targetPos;
     private Vector2 _mousePos;
     private bool _thrownTongue = false;
@@ -31,17 +32,19 @@ public class FrogTongue : MonoBehaviour
         {
             _thrownTongue = true;
             SetTargetPosition(_mousePos);
-            var newSound = Instantiate(sound, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
-            Destroy(newSound, 3f);
+            var newSound = Instantiate(launchSound, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+            Destroy(newSound, 1f);
         }
         
         MoveTongueToTarget();
         CheckForItemAtTip();
 
         if (_grabbedItem || Vector2.Distance(tongueTip.transform.position, _targetPos) <= .05f)
+        {
             _targetPos = transform.position;
+        }
 
-        
+
         if (Vector2.Distance(transform.position, tongueTip.transform.position) <= .2f)
         {
             _grabbedItem = false;
@@ -65,9 +68,13 @@ public class FrogTongue : MonoBehaviour
         {
             if (collider.GetComponent<Collectable>())
             {
+                var sound = Instantiate(catchSound, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+                Destroy(sound, 1f);
+
                 collider.transform.parent = tongueTip.transform;
                 _grabbedItem = true;
                 break;
+
             }
         }
     }

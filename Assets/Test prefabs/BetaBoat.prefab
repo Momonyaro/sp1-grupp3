@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1066851939220517664}
   - component: {fileID: 1066851939220517695}
   - component: {fileID: 1066851939220517692}
+  - component: {fileID: 40799159}
   m_Layer: 0
   m_Name: BetaBoat
   m_TagString: Player
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1066851939220517693}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.81, y: -3.18, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 1886219952400126234}
   m_Father: {fileID: 0}
@@ -73,8 +74,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 70dd7d01b7224864883ff51a103023e4, type: 3}
-  m_Color: {r: 0.33241364, g: 0.8490566, b: 0.4884582, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 0d5feb07e338568448909a749da447cc, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -103,9 +104,10 @@ MonoBehaviour:
   rowPower: 40
   intoWhirlSpeed: 10
   currentSpeedY: 0
+  crash: {fileID: 6506557957283363968, guid: c37bfd5313fcb674a8c56df862f0d660, type: 3}
   immortalTime: 1
   hurtColor: {r: 1, g: 0, b: 0, a: 1}
-  defaultColor: {r: 0.33333334, g: 0.8509804, b: 0.49019608, a: 1}
+  defaultColor: {r: 1, g: 1, b: 1, a: 1}
   deadColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   playerHealthSignal: {fileID: 11400000, guid: 364592fee10a0de4db165cb72b4afe91, type: 2}
   GameOver: 0
@@ -116,7 +118,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066851939220517693}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -144,8 +146,34 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
+--- !u!61 &40799159
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066851939220517693}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.10741913, y: -0.03577304}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8, y: 8}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.2045727, y: 6.139873}
+  m_EdgeRadius: 0
 --- !u!1 &1497626236337491424
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,6 +353,10 @@ MonoBehaviour:
   reelSpeed: 0.5
   tongueTip: {fileID: 1497626236337491424}
   tongueBody: {fileID: 3153023838362454335}
+  launchSound: {fileID: 4346003375959316680, guid: 0c77ef97f5d71ff41a5c55643f6fe855,
+    type: 3}
+  catchSound: {fileID: 3316907849812010718, guid: 252e7dc78df1bd9418f9f53a8265781e,
+    type: 3}
 --- !u!120 &3153023838362454335
 LineRenderer:
   m_ObjectHideFlags: 0

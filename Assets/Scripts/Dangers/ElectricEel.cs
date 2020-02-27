@@ -24,7 +24,7 @@ public class ElectricEel : MonoBehaviour
         if (collision.tag == "Player" && boat.StunStatus() == false)
         {
             boat.StunnedBoolSwitch();
-            boat.GetComponent<SpriteRenderer>().color = Color.white;
+            boat.GetComponent<SpriteRenderer>().color = Color.yellow;
             StartCoroutine(Stunned());
         }
     }
@@ -32,7 +32,7 @@ public class ElectricEel : MonoBehaviour
     IEnumerator Stunned()
     {
         yield return new WaitForSeconds(stunTime);
-        boat.GetComponent<SpriteRenderer>().color = Color.green;
+        boat.GetComponent<SpriteRenderer>().color = Color.white;
         boat.StunnedBoolSwitch();
     }
 }
