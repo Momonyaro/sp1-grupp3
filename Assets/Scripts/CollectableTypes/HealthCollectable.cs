@@ -12,7 +12,6 @@ public class HealthCollectable : Collectable
         {
             if (collectSound != null)
             {
-                Debug.Log("sound playing");
                 var sound = Instantiate(collectSound, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
                 Destroy(sound, 2f);
                 //collectSound.Play();
