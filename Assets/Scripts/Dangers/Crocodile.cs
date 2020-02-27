@@ -14,8 +14,7 @@ public class Crocodile : MonoBehaviour
     [SerializeField] AudioSource bite;
     Hit hit;
     public bool direction = false;
-    float basicTimer = 1f;
-    bool x = false;
+    float crocTimer = 0.5f;
 
     void Start()
     {
@@ -24,24 +23,25 @@ public class Crocodile : MonoBehaviour
 
     void Update()
     {
+        crocTimer -= Time.deltaTime;
         Move();
         //MakingSounds();
     }
 
     private void Move()
     {
-        if (transform.position.x >= biggerPointX)
+        if (transform.position.x >= biggerPointX && crocTimer <= 0f)
         {
             direction = true;
-            x = true;
-            Rotate();
+            transform.Rotate(0, 180, 0);
+            crocTimer = 0.5f;
             
         }
-        else if (transform.position.x <= smallerPointX)
+        if (transform.position.x <= smallerPointX && crocTimer <= 0f)
         {
             direction = false;
-            x = true;
-            Rotate();
+            transform.Rotate(0, 180, 0);
+            crocTimer = 0.5f;
         }
 
         if (direction)
@@ -51,15 +51,6 @@ public class Crocodile : MonoBehaviour
         else
         {
             transform.Translate(Vector2.right * (Time.deltaTime * crocSpeed), 0);
-        }
-    }
-
-    private void Rotate()
-    {
-        if(x)
-        {
-            transform.Rotate(0, 180, 0);
-            x = false;
         }
     }
 
