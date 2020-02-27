@@ -154,7 +154,7 @@ public class BoatMovementV01 : MonoBehaviour
             Debug.Log("Lost health. Current health:" + currentHealth);
 
         }
-        if (shield && gotHit == false)
+        if (other.tag == "Dangerous" && shield && gotHit == false)
         {
             shield = false;
             hit.ShieldSwitchBool();
