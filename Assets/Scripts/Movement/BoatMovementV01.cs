@@ -11,6 +11,7 @@ public class BoatMovementV01 : MonoBehaviour
     public float rowPower = 500.0f;
     public float intoWhirlSpeed = 10f;
     [SerializeField] float currentSpeedY = 0;
+    [SerializeField] AudioSource crash = null;
     [Tooltip("How long after a collision the frog will be immortal (in seconds)")]
     public float immortalTime = 1f;
     bool knockback = false;
@@ -146,17 +147,14 @@ public class BoatMovementV01 : MonoBehaviour
         if(other.tag == "Dangerous" && shield == false && gotHit == false)
         {
             gotHit = true;
+            //var sound = Instantiate(crash, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+            //Destroy(sound, 2f);
             playerHealthSignal.Raise();
             currentHealth -= 1;
             Debug.Log("Lost health. Current health:" + currentHealth);
 
-            //if(currentHealth <= 0)
-            //{
-            //    GameOver = true;
-            //    TextManager.gameOver = true;
-            //}
         }
-        if (shield && gotHit == false)
+        if (other.tag == "Dangerous" && shield && gotHit == false)
         {
             shield = false;
             hit.ShieldSwitchBool();

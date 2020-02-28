@@ -166,6 +166,7 @@
             <e p="CameraMovement.cs" t="Include" />
             <e p="FrogMovement.cs" t="Include" />
           </e>
+          <e p="MusicHandeler.cs" t="Include" />
           <e p="NpcComponent.cs" t="Include" />
           <e p="OptionManager.cs" t="Include" />
           <e p="ScriptableObjectsScripts" t="Include">
@@ -174,6 +175,7 @@
           </e>
           <e p="Shield.cs" t="Include" />
           <e p="StartMissionBtn.cs" t="Include" />
+          <e p="SwitchScene.cs" t="Include" />
           <e p="TextBox.cs" t="Include" />
           <e p="TextManager.cs" t="Include" />
           <e p="WaterLayer.cs" t="Include" />
