@@ -49,14 +49,14 @@ public class IslandCrocodiles : MonoBehaviour
             {
                 lastWaypoint = currentWaypoint;
                 currentWaypoint++;
-                Debug.Log("Last waypoint: " + lastWaypoint + ". Current waypoint: " + currentWaypoint + ".");
+                //Debug.Log("Last waypoint: " + lastWaypoint + ". Current waypoint: " + currentWaypoint + ".");
             }
         }
         else
         {
             lastWaypoint = currentWaypoint;
             currentWaypoint = 0;
-            Debug.Log("Last waypoint: " + lastWaypoint + ". Current waypoint: " + currentWaypoint + ".");
+            //Debug.Log("Last waypoint: " + lastWaypoint + ". Current waypoint: " + currentWaypoint + ".");
         }
 
         if(currentWaypoint == waypoints.Count)
