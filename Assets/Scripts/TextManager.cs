@@ -10,15 +10,18 @@ public class TextManager : MonoBehaviour
 
     public GameObject gameOverText;
     public static bool gameOver = false;
-
-    public GameObject missionText;
-    public GameObject missionRequiredText;
+    [Space]
+    public GameObject plankText;
+    public GameObject plankRequiredText;
+    public static int plankAmount;
+    public int requiredPlankAmount = 10;
+    [Space]
     public static int missionAmount;
-    public int requiredAmount = 10;
+    public int requiredMissionAmount = 3;
 
     private void Start()
     {
-        missionRequiredText.GetComponent<Text>().text = "/ " + requiredAmount;
+        plankRequiredText.GetComponent<Text>().text = "/ " + requiredPlankAmount;
     }
 
     private void Update()
@@ -34,6 +37,6 @@ public class TextManager : MonoBehaviour
             gameOverText.SetActive(false);
         }
 
-        missionText.GetComponent<Text>().text = "" + missionAmount;
+        plankText.GetComponent<Text>().text = "" + plankAmount;
     }
 }

@@ -25,6 +25,7 @@ public class MissionCollectableScript : Collectable
                 fullHealthImage = Resources.Load<GameObject>("stop");
                 emptyHealthImage = Resources.Load<GameObject>("stop");
             }
+            TextManager.missionAmount += 1;
             Destroy(gameObject);
         }
     }

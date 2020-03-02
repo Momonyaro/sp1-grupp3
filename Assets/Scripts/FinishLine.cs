@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class FinishLine : MonoBehaviour
 {
+    public enum GoalType
+    {
+        ReachGoal, CollectMission, CollectPlanks
+    }
+    public GoalType goalType;
+    [Space]
     [SerializeField] string loadScene;
     public GameObject smartCamera;
     public float victoryTime = 2;
@@ -52,15 +58,37 @@ public class FinishLine : MonoBehaviour
                 healthParent.SetActive(false);
                 resultBack.SetActive(true);
 
-                if(textm.requiredAmount <= TextManager.missionAmount)
+                if (goalType == GoalType.ReachGoal)
                 {
                     successText.SetActive(true);
-                    Debug.Log(textm.requiredAmount);
                 }
-                else if (textm.requiredAmount > TextManager.missionAmount)
+
+                if (goalType == GoalType.CollectMission)
                 {
-                    lostText.SetActive(true);
+                    if (textm.requiredMissionAmount <= TextManager.missionAmount)
+                    {
+                        successText.SetActive(true);
+                        Debug.Log(textm.requiredMissionAmount);
+                    }
+                    else if (textm.requiredMissionAmount > TextManager.missionAmount)
+                    {
+                        lostText.SetActive(true);
+                    }
                 }
+
+                if (goalType == GoalType.CollectPlanks)
+                {
+                    if(textm.requiredPlankAmount <= TextManager.plankAmount)
+                    {
+                        successText.SetActive(true);
+                        Debug.Log(textm.requiredPlankAmount);
+                    }
+                    else if (textm.requiredPlankAmount > TextManager.plankAmount)
+                    {
+                        lostText.SetActive(true);
+                    }
+                }
+                
 
                 finished = true;
             }
