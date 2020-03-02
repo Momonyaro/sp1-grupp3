@@ -8,7 +8,7 @@ public class IslandCrocodiles : MonoBehaviour
     [SerializeField] List<Transform> waypoints;
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] GameObject path = null;
-    [SerializeField] GameObject bite = null;
+    [SerializeField] AudioClip biteClipSound = null;
     Hit hit;
     int currentWaypoint = 0;
     float timer = 0f;
@@ -71,8 +71,7 @@ public class IslandCrocodiles : MonoBehaviour
         if (collision.tag == "Player" && timer <= 0)
         {
             hit.KnockingBack();
-            var sound = Instantiate(bite, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
-            Destroy(sound, 3f);
+            AudioSource.PlayClipAtPoint(biteClipSound, new Vector3(transform.position.x, transform.position.y, transform.position.z));
             Debug.Log("Hit islandcroc");
             timer = 1f;
         }

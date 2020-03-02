@@ -98,7 +98,7 @@ MonoBehaviour:
   waypoints: []
   moveSpeed: 5
   path: {fileID: 0}
-  bite: {fileID: 2369525358388908473, guid: 69c431f2cb8bea0418b5c709834b0326, type: 3}
+  biteClipSound: {fileID: 8300000, guid: 424fa0b5f7848ae4cad0d2fbb476d184, type: 3}
 --- !u!61 &3646256276902541415
 BoxCollider2D:
   m_ObjectHideFlags: 0
