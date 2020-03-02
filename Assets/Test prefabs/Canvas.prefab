@@ -1258,6 +1258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f975a8b2cd502d4d826e29c760d1aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goalType: 0
   loadScene: 
   smartCamera: {fileID: 0}
   victoryTime: 2
@@ -1483,7 +1484,7 @@ GameObject:
   - component: {fileID: 4573882398992761053}
   - component: {fileID: 1353977035191234667}
   m_Layer: 0
-  m_Name: RequiredAmountText
+  m_Name: RequiredPlankAmountText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1562,7 +1563,7 @@ GameObject:
   - component: {fileID: 8821744843926767848}
   - component: {fileID: 2869754314860031082}
   m_Layer: 0
-  m_Name: MissionAmountText
+  m_Name: PlankAmountText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1796,9 +1797,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 4590974683585428358}
   gameOverText: {fileID: 4590974683296065824}
-  missionText: {fileID: 3003494469060932283}
-  missionRequiredText: {fileID: 2206596313831048924}
-  requiredAmount: 2
+  plankText: {fileID: 3003494469060932283}
+  plankRequiredText: {fileID: 2206596313831048924}
+  requiredPlankAmount: 10
 --- !u!1 &4590974683296065824
 GameObject:
   m_ObjectHideFlags: 0
@@ -3386,6 +3387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f975a8b2cd502d4d826e29c760d1aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goalType: 0
   loadScene: 
   smartCamera: {fileID: 0}
   victoryTime: 2

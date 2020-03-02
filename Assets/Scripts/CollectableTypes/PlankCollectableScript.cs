@@ -12,7 +12,7 @@ public class PlankCollectableScript : Collectable
             {
                 collectSound.Play();
             }
-            TextManager.missionAmount += collectableScore;
+            TextManager.plankAmount += collectableScore;
             Destroy(gameObject);
         }
     }

@@ -3272,6 +3272,11 @@ PrefabInstance:
       propertyPath: lostText
       value: 
       objectReference: {fileID: 831616230}
+    - target: {fileID: 30915994852092669, guid: c72708d1cbc1f5e439b7ce098f8bfaeb,
+        type: 3}
+      propertyPath: goalType
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c72708d1cbc1f5e439b7ce098f8bfaeb, type: 3}
 --- !u!1 &1229327907 stripped
@@ -5511,7 +5516,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2119894242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.670534, y: 0.854157, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 134787903}
@@ -5653,6 +5658,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 931771134}
+    - target: {fileID: 6880116646330552459, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
+        type: 3}
+      propertyPath: requiredPlankAmount
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba1bd1b28b3a5904b8a89e80c645f3d8, type: 3}
 --- !u!1 &4590974683353048897 stripped
