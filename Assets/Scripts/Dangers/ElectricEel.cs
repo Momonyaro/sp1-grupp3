@@ -16,6 +16,7 @@ public class ElectricEel : MonoBehaviour
 
     void Update()
     {
+        //wpm.Move();
         transform.Translate(Vector2.up * Time.deltaTime * eelSpeed, 0);
     }
 
