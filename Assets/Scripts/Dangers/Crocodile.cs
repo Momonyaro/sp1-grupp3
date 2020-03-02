@@ -11,7 +11,7 @@ public class Crocodile : MonoBehaviour
     [Tooltip("Det x-värde där krokodilen börjar åka till vänster")]
     [SerializeField] float biggerPointX = 7f;
     [SerializeField] AudioSource growl;
-    [SerializeField] AudioSource bite;
+    [SerializeField] AudioClip biteClipSound;
     Hit hit;
     public bool direction = false;
     float crocTimer = 0.5f;
@@ -83,8 +83,7 @@ public class Crocodile : MonoBehaviour
         if(collision.tag == "Player")
         {
             hit.KnockingBack();
-            var sound = Instantiate(bite, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
-            Destroy(sound, 3f);
+            AudioSource.PlayClipAtPoint(biteClipSound, new Vector3(transform.position.x, transform.position.y, transform.position.z));
             Debug.Log("Hit croc");
         }
     }

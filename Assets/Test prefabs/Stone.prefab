@@ -113,7 +113,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deleteTimer: 1.1
-  falling: {fileID: 2730737577098498130, guid: 3c4d22236b31f9440a7b157d665807c2, type: 3}
+  falling: {fileID: 8300000, guid: 6e39f5e01e196e94eae98bd2e058483c, type: 3}
+  crashing: {fileID: 8300000, guid: 7196de7be6019f744ac9f131f50c6b93, type: 3}
 --- !u!95 &679935478138733752
 Animator:
   serializedVersion: 3
