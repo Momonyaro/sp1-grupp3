@@ -9,8 +9,8 @@ public class wirlpool : MonoBehaviour
     public float intoWhirlSpeed = 8f;
     public float knockForwardTime = 1f;
     public float knockForwardPower = 100f;
-    [Header(" ")]
-
+    public float rotateSpeed = 10;
+    [Space]
     public int clicksForRelease = 10;
     public int clicksClicked = 0;
     [Tooltip("Seconds until the click counter reset")]
@@ -39,6 +39,7 @@ public class wirlpool : MonoBehaviour
     public void MoveBoat()
     {
         boat.transform.position = Vector3.MoveTowards(boat.transform.position, transform.position, intoWhirlSpeed * Time.deltaTime);
+        boat.transform.Rotate(new Vector3(0, 0, rotateSpeed));
     }
 
     private void CountClicks()
@@ -60,11 +61,13 @@ public class wirlpool : MonoBehaviour
         {
             StartCoroutine(PushOut());
             activated = false;
+            boat.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         if (clicksClicked >= clicksForRelease)
         {
             StartCoroutine(PushOut());
             activated = false;
+            boat.transform.rotation = Quaternion.Euler(0,0,0);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

@@ -684,7 +684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2ae81880254c745bdbab2beb4ff709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadTimeMax: 13
+  loadTimeMax: 2
 --- !u!114 &857504130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1282,6 +1282,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1182791140}
   m_CullTransparentMesh: 0
+--- !u!1001 &1193772795
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 66693367719468005, guid: c4482772be21d6d4e968b1aa0185b7bd,
+        type: 3}
+      propertyPath: m_Name
+      value: Out With Grandfrogger
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641848720444320876, guid: c4482772be21d6d4e968b1aa0185b7bd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.056211174
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641848720444320876, guid: c4482772be21d6d4e968b1aa0185b7bd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.2848515
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641848720444320876, guid: c4482772be21d6d4e968b1aa0185b7bd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.484375
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641848720444320876, guid: c4482772be21d6d4e968b1aa0185b7bd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641848720444320876, guid: c4482772be21d6d4e968b1aa0185b7bd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641848720444320876, guid: c4482772be21d6d4e968b1aa0185b7bd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641848720444320876, guid: c4482772be21d6d4e968b1aa0185b7bd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641848720444320876, guid: c4482772be21d6d4e968b1aa0185b7bd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641848720444320876, guid: c4482772be21d6d4e968b1aa0185b7bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641848720444320876, guid: c4482772be21d6d4e968b1aa0185b7bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641848720444320876, guid: c4482772be21d6d4e968b1aa0185b7bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c4482772be21d6d4e968b1aa0185b7bd, type: 3}
 --- !u!1 &1320161729
 GameObject:
   m_ObjectHideFlags: 0
@@ -1925,7 +1994,7 @@ MonoBehaviour:
         vad som \xE4r kvar i alla fall..."
     missionPortrait: {fileID: 6346041710244282177, guid: 40605aadca547ac45a05549bcaed56cd,
       type: 3}
-    targetSceneName: SampleTeo
+    targetSceneName: Level0_tutorial
     missionBox: {fileID: 0}
   alertSprite: {fileID: 1874925251}
   missionSprite: {fileID: 8618328087971562094, guid: 6747887bfec288149bb861ed925612f8,

@@ -11,6 +11,8 @@ public class FrogTongue : MonoBehaviour
     public float reelSpeed = .5f;
     [SerializeField] private GameObject tongueTip;
     [SerializeField] private LineRenderer tongueBody;
+    [SerializeField] AudioSource launchSound;
+    [SerializeField] AudioSource catchSound;
     private Vector2 _targetPos;
     private Vector2 _mousePos;
     private bool _thrownTongue = false;
@@ -30,15 +32,19 @@ public class FrogTongue : MonoBehaviour
         {
             _thrownTongue = true;
             SetTargetPosition(_mousePos);
+            var newSound = Instantiate(launchSound, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+            Destroy(newSound, 1f);
         }
         
         MoveTongueToTarget();
         CheckForItemAtTip();
 
         if (_grabbedItem || Vector2.Distance(tongueTip.transform.position, _targetPos) <= .05f)
+        {
             _targetPos = transform.position;
+        }
 
-        
+
         if (Vector2.Distance(transform.position, tongueTip.transform.position) <= .2f)
         {
             _grabbedItem = false;
@@ -58,13 +64,18 @@ public class FrogTongue : MonoBehaviour
 
     private void CheckForItemAtTip()
     {
-        foreach (var collider in Physics2D.OverlapBoxAll(tongueTip.transform.position, new Vector2(.3f, .3f), 0))
+        foreach (var c in Physics2D.OverlapBoxAll(tongueTip.transform.position, new Vector2(.3f, .3f), 0))
         {
-            if (collider.GetComponent<Collectable>())
+            if (c.GetComponent<Collectable>())
             {
-                collider.transform.parent = tongueTip.transform;
+                c.transform.parent = tongueTip.transform;
+                var sound = Instantiate(catchSound, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+                Destroy(sound, 1f);
+
+                transform.parent = tongueTip.transform;
                 _grabbedItem = true;
                 break;
+
             }
         }
     }

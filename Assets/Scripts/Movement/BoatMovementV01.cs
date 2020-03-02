@@ -9,7 +9,6 @@ public class BoatMovementV01 : MonoBehaviour
     public float breakSpeed = 1.0f;
     public float rowSpeed = 8.0f;
     public float rowPower = 500.0f;
-    public float intoWhirlSpeed = 10f;
     [SerializeField] float currentSpeedY = 0;
     [Tooltip("How long after a collision the frog will be immortal (in seconds)")]
     public float immortalTime = 1f;
@@ -150,13 +149,8 @@ public class BoatMovementV01 : MonoBehaviour
             currentHealth -= 1;
             Debug.Log("Lost health. Current health:" + currentHealth);
 
-            //if(currentHealth <= 0)
-            //{
-            //    GameOver = true;
-            //    TextManager.gameOver = true;
-            //}
         }
-        if (shield && gotHit == false)
+        if (other.tag == "Dangerous" && shield && gotHit == false)
         {
             shield = false;
             hit.ShieldSwitchBool();

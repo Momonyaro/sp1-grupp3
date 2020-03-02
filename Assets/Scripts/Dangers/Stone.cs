@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,9 @@ public class Stone : MonoBehaviour
     Animator anim;
     [Tooltip("How long until deleted after the falling animation is triggered")]
     public float deleteTimer = 1f;
+    //[SerializeField] AudioSource falling = null;
+    [SerializeField] AudioClip falling = null;
+    [SerializeField] AudioClip crashing = null;
 
     void Start()
     {
@@ -23,7 +27,14 @@ public class Stone : MonoBehaviour
             Destroy(GetComponent<Collider2D>());
             Destroy(gameObject, deleteTimer);
             hit.KnockingBack();
+            Sound();
             Debug.Log("Hit stone");
         }
+    }
+
+    private void Sound()
+    {
+        AudioSource.PlayClipAtPoint(falling, new Vector3(transform.position.x, transform.position.y, transform.position.z));
+        AudioSource.PlayClipAtPoint(crashing, new Vector3(transform.position.x, transform.position.y, transform.position.z));
     }
 }

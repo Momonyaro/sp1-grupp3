@@ -12,7 +12,9 @@ public class HealthCollectable : Collectable
         {
             if (collectSound != null)
             {
-                collectSound.Play();
+                var sound = Instantiate(collectSound, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+                Destroy(sound, 2f);
+                //collectSound.Play();
             }
 
             if(BoatMovementV01.currentHealth < BoatMovementV01.maxHealth)
