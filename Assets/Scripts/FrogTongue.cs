@@ -11,12 +11,13 @@ public class FrogTongue : MonoBehaviour
     public float reelSpeed = .5f;
     [SerializeField] private GameObject tongueTip;
     [SerializeField] private LineRenderer tongueBody;
-    [SerializeField] AudioSource launchSound;
-    [SerializeField] AudioSource catchSound;
+    [SerializeField] AudioClip launchSound;
+    [SerializeField] AudioClip catchSound;
     private Vector2 _targetPos;
     private Vector2 _mousePos;
     private bool _thrownTongue = false;
     private bool _grabbedItem = false;
+    bool soundBool = false;
 
     private void Start()
     {
@@ -32,8 +33,8 @@ public class FrogTongue : MonoBehaviour
         {
             _thrownTongue = true;
             SetTargetPosition(_mousePos);
-            var newSound = Instantiate(launchSound, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
-            Destroy(newSound, 1f);
+            AudioSource.PlayClipAtPoint(launchSound, new Vector3(transform.position.x, transform.position.y, transform.position.z));
+            soundBool = true;
         }
         
         MoveTongueToTarget();
@@ -49,9 +50,14 @@ public class FrogTongue : MonoBehaviour
         {
             _grabbedItem = false;
             _thrownTongue = false;
+            if (soundBool)
+            {
+                AudioSource.PlayClipAtPoint(catchSound, new Vector3(transform.position.x, transform.position.y, transform.position.z));
+                soundBool = false;
+            }
         }
-        
-        
+
+
         tongueBody.positionCount = 2;
         Vector3[] positions = new[] { transform.position, tongueTip.transform.position };
         tongueBody.SetPositions(positions);
@@ -69,9 +75,6 @@ public class FrogTongue : MonoBehaviour
             if (c.GetComponent<Collectable>())
             {
                 c.transform.parent = tongueTip.transform;
-                var sound = Instantiate(catchSound, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
-                Destroy(sound, 1f);
-
                 transform.parent = tongueTip.transform;
                 _grabbedItem = true;
                 break;
