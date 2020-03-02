@@ -14,7 +14,6 @@ public class IslandCrocodiles : MonoBehaviour
     int lastWaypoint;
     float timer = 0f;
     bool rotating = false;
-    bool wayp = false;
 
     void Start()
     {
@@ -34,6 +33,7 @@ public class IslandCrocodiles : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
+        
         Move();
     }
 
@@ -44,53 +44,35 @@ public class IslandCrocodiles : MonoBehaviour
             var targetPos = waypoints[currentWaypoint].transform.position;
             var moving = moveSpeed * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, targetPos, moving);
-            HandleWaypoints(targetPos);
-            HandleRotation();
-        }
-        else
-        {
-            currentWaypoint = 0;
-            lastWaypoint = waypoints.Count;
-            Debug.Log("Last waypoint: " + lastWaypoint + ". Current waypoint: " + currentWaypoint + ".");
-        }
-    }
 
-    private void HandleWaypoints(Vector3 targetPos)
-    {
-        if (transform.position == targetPos)
-        {
-            if (lastWaypoint < 0 && wayp == false)
-            {
-                lastWaypoint = waypoints.Count;
-                wayp = true;
-            }
-            else if (lastWaypoint == 6 && wayp)
-            {
-                lastWaypoint = 0;
-                wayp = false;
-            }
-            else
+            if (transform.position == targetPos)
             {
                 lastWaypoint = currentWaypoint;
                 currentWaypoint++;
+                Debug.Log("Last waypoint: " + lastWaypoint + ". Current waypoint: " + currentWaypoint + ".");
             }
-
+        }
+        else
+        {
+            lastWaypoint = currentWaypoint;
+            currentWaypoint = 0;
             Debug.Log("Last waypoint: " + lastWaypoint + ". Current waypoint: " + currentWaypoint + ".");
         }
-    }
 
-    private void HandleRotation()
-    {
-        if (waypoints[lastWaypoint].transform.position.x < waypoints[currentWaypoint].transform.position.x && rotating == false)
+        if(currentWaypoint == waypoints.Count)
         {
-            transform.Rotate(new Vector3(0, 180, 0));
+            currentWaypoint = 0;
+        }
+
+        if (waypoints[lastWaypoint].transform.position.x < waypoints[currentWaypoint].transform.position.x)
+        {
             rotating = true;
         }
-        else if (waypoints[lastWaypoint].transform.position.x > waypoints[currentWaypoint].transform.position.x && rotating)
+        else if (waypoints[lastWaypoint].transform.position.x > waypoints[currentWaypoint].transform.position.x)
         {
-            transform.rotation = Quaternion.Euler(0, 0, 0);
             rotating = false;
         }
+        GetComponent<SpriteRenderer>().flipX = rotating;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
