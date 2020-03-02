@@ -9,7 +9,9 @@ public class Stone : MonoBehaviour
     Animator anim;
     [Tooltip("How long until deleted after the falling animation is triggered")]
     public float deleteTimer = 1f;
-    [SerializeField] AudioSource falling = null;
+    //[SerializeField] AudioSource falling = null;
+    [SerializeField] AudioClip falling = null;
+    [SerializeField] AudioClip crashing = null;
 
     void Start()
     {
@@ -32,7 +34,7 @@ public class Stone : MonoBehaviour
 
     private void Sound()
     {
-        var sound = Instantiate(falling, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
-        Destroy(sound, 1f);
+        AudioSource.PlayClipAtPoint(falling, new Vector3(transform.position.x, transform.position.y, transform.position.z));
+        AudioSource.PlayClipAtPoint(crashing, new Vector3(transform.position.x, transform.position.y, transform.position.z));
     }
 }
