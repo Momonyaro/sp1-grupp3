@@ -124,5 +124,5 @@ MonoBehaviour:
   smallerPointX: -10
   biggerPointX: 8
   growl: {fileID: 1684956086045624727, guid: 607d551f2993ae54099de50206c598a2, type: 3}
-  bite: {fileID: 8776050571422178598, guid: 69c431f2cb8bea0418b5c709834b0326, type: 3}
+  biteClipSound: {fileID: 8300000, guid: 424fa0b5f7848ae4cad0d2fbb476d184, type: 3}
   direction: 1
