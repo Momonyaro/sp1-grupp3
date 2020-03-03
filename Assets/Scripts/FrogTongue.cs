@@ -29,7 +29,7 @@ public class FrogTongue : MonoBehaviour
         _mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         
 
-        if (Input.GetMouseButtonDown(0) && !_thrownTongue)
+        if (Input.GetMouseButtonDown(0) && !_thrownTongue && BoatMovementV01.currentHealth > 0)
         {
             _thrownTongue = true;
             SetTargetPosition(_mousePos);

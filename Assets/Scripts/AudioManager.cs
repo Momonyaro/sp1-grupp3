@@ -11,7 +11,8 @@ namespace Managers
         BoatCrash, StoneCrash,
         CrocodileGrowl, CrocodileBite,
         PickupEgg, PickupPlank, PickupFly,
-        Tongue, TongueCatch
+        Tongue, TongueCatch,
+        Dash, Brake
     }
 
     public delegate void RequestSoundDelegate(Sounds sound);
