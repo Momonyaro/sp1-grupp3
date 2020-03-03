@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Managers;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ public class PlankCollectableScript : Collectable
         {
             if (collectSound != null)
             {
-                collectSound.Play();
+                FindObjectOfType<AudioManager>().requestSoundDelegate("pickupEgg");
             }
             TextManager.missionAmount += collectableScore;
             Destroy(gameObject);
