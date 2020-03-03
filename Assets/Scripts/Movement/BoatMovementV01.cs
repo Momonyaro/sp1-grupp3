@@ -156,4 +156,9 @@ public class BoatMovementV01 : MonoBehaviour
             hit.ShieldSwitchBool();
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        hit.KnockingBack();
+    }
 }
