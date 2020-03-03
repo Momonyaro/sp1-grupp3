@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Managers;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +14,7 @@ public class MissionCollectableScript : Collectable
         {
             if (collectSound != null)
             {
-                collectSound.Play();
+                FindObjectOfType<AudioManager>().requestSoundDelegate("pickupEgg");
             }
             if(fullHealthImage && emptyHealthImage != null)
             {

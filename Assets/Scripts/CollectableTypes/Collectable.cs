@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
-    public AudioSource collectSound;
+    public AudioClip collectSound;
     public int collectableScore = 1;
     [Tooltip("Use a negative number to rotate the other way")]
     public float rotationSpeed = 0;

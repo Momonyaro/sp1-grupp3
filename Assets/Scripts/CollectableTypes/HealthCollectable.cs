@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Managers;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,9 +13,7 @@ public class HealthCollectable : Collectable
         {
             if (collectSound != null)
             {
-                var sound = Instantiate(collectSound, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
-                Destroy(sound, 2f);
-                //collectSound.Play();
+                FindObjectOfType<AudioManager>().requestSoundDelegate("pickupEgg");
             }
 
             if(BoatMovementV01.currentHealth < BoatMovementV01.maxHealth)
