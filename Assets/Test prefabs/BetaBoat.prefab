@@ -186,10 +186,11 @@ MonoBehaviour:
   rowSpeed: 5
   rowPower: 40
   currentSpeedY: 0
-  immortalTime: 1
+  immortalTime: 0.4
   hurtColor: {r: 1, g: 0, b: 0, a: 1}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   deadColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  maxHealth: 3
   playerHealthSignal: {fileID: 11400000, guid: 364592fee10a0de4db165cb72b4afe91, type: 2}
   headRenderer: {fileID: 7837907146340304967}
   GameOver: 0
