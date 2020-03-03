@@ -6,7 +6,15 @@ using UnityEngine;
 
 namespace Managers
 {
-    public delegate void RequestSoundDelegate(string soundName);
+    public enum Sounds
+    {
+        BoatCrash, StoneCrash,
+        CrocodileGrowl, CrocodileBite,
+        PickupEgg, PickupPlank, PickupFly,
+        Tongue, TongueCatch
+    }
+
+    public delegate void RequestSoundDelegate(Sounds sound);
 
     public class AudioManager : MonoBehaviour
     {
@@ -29,9 +37,10 @@ namespace Managers
             }
         }
 
-        private void AttemptToPlaySound(string soundName)
+        private void AttemptToPlaySound(Sounds sound)
         {
-            foreach (var soundObject in soundObjects.Where(soundObject => soundObject.name.Equals(soundName)))
+            Debug.Log("Recieved request to play " + sound.ToString());
+            foreach (var soundObject in soundObjects.Where(soundObject => soundObject.soundName == sound))
             {
                 TetherAudio(AttemptAudioTether(soundObject), soundObject);
             }
@@ -73,6 +82,6 @@ namespace Managers
     public struct AudioObject
     {
         public AudioClip soundClip;
-        public string name;
+        public Sounds soundName;
     }
 }

@@ -11,10 +11,7 @@ public class HealthCollectable : Collectable
     {
         if (other.tag == "Player")
         {
-            if (collectSound != null)
-            {
-                FindObjectOfType<AudioManager>().requestSoundDelegate("pickupEgg");
-            }
+            FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.PickupFly);
 
             if(BoatMovementV01.currentHealth < BoatMovementV01.maxHealth)
             {
