@@ -10,6 +10,7 @@ public class wirlpool : MonoBehaviour
     public float knockForwardTime = 1f;
     public float knockForwardPower = 100f;
     public float rotateSpeed = 10;
+    public float insideWhirlSpeed = 4f;
     [Space]
     public int clicksForRelease = 10;
     public int clicksClicked = 0;
@@ -21,6 +22,9 @@ public class wirlpool : MonoBehaviour
     public int autoReleaseCounter = 0;
     float counter = 0f;
     bool activated = false;
+    public GameObject leftPoint = null;
+    public GameObject rightPoint = null;
+    bool direction = false;
 
     void Start()
     {
@@ -38,8 +42,30 @@ public class wirlpool : MonoBehaviour
 
     public void MoveBoat()
     {
-        boat.transform.position = Vector3.MoveTowards(boat.transform.position, transform.position, intoWhirlSpeed * Time.deltaTime);
+        //boat.transform.position = Vector3.MoveTowards(boat.transform.position, transform.position, intoWhirlSpeed * Time.deltaTime);
         boat.transform.Rotate(new Vector3(0, 0, rotateSpeed));
+        RotatingBoat();
+    }
+
+    private void RotatingBoat()
+    {
+        if(leftPoint.transform.position == boat.transform.position)
+        {
+            direction = false;
+        }
+        else if(rightPoint.transform.position == boat.transform.position)
+        {
+            direction = true;
+        }
+
+        if (direction)
+        {
+            boat.transform.position = Vector3.MoveTowards(boat.transform.position, leftPoint.transform.position, insideWhirlSpeed * Time.deltaTime);
+        }
+        else
+        {
+            boat.transform.position = Vector3.MoveTowards(boat.transform.position, rightPoint.transform.position, insideWhirlSpeed * Time.deltaTime);
+        }
     }
 
     private void CountClicks()
