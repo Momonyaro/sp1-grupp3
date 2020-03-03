@@ -25,6 +25,7 @@ public class BoatMovementV01 : MonoBehaviour
     bool gotHit = false;
     float counter = 0f;
     [Tooltip("Only between 1 and 5 so far. Consult Teo for upgrades")]
+    [Range(1, 5)]
     public int maxHealth = 3;
     public static int currentHealth;
     public SignalThingy playerHealthSignal;

@@ -2768,19 +2768,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2303f59b3d36a94c964ac079b88b99b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundVolume: 0.8
   soundObjects:
   - soundClip: {fileID: 8300000, guid: 7196de7be6019f744ac9f131f50c6b93, type: 3}
+    soundVolume: 1
     soundName: 0
   - soundClip: {fileID: 8300000, guid: afc408fec5782ce4f83172d58f0a18ca, type: 3}
+    soundVolume: 0.2
     soundName: 4
   - soundClip: {fileID: 8300000, guid: 94d8e9f1b3d22124bbb4adf13f24c9f9, type: 3}
+    soundVolume: 0.2
     soundName: 6
   - soundClip: {fileID: 8300000, guid: 08df77eae6178ee42826c691d06b0626, type: 3}
+    soundVolume: 0.2
     soundName: 5
   - soundClip: {fileID: 8300000, guid: 3495ffdb942cf0347a2a836d66027079, type: 3}
+    soundVolume: 0.2
     soundName: 9
   - soundClip: {fileID: 8300000, guid: 83008187bec7eb64c9948d0b32b45b76, type: 3}
+    soundVolume: 0.2
     soundName: 10
   audioChannels:
   - {fileID: 3690241972359736703}
