@@ -12,10 +12,7 @@ public class MissionCollectableScript : Collectable
     {
         if (other.tag == "Player")
         {
-            if (collectSound != null)
-            {
-                FindObjectOfType<AudioManager>().requestSoundDelegate("pickupEgg");
-            }
+            FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.PickupEgg);
             if(fullHealthImage && emptyHealthImage != null)
             {
                 fullHealthImage.SetActive(true);
