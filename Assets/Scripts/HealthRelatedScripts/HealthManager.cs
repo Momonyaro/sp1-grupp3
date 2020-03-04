@@ -9,11 +9,11 @@ public class HealthManager : MonoBehaviour
     public Sprite fullContainer;
     public Sprite emptyContainer;
     [HideInInspector] public int healthAmount;
-    //[HideInInspector] public int playerCurrentHealth;
+    BoatMovementV01 boatMv;
 
     void Start()
     {
-        healthAmount = BoatMovementV01.maxHealth;
+        healthAmount = boatMv.maxHealth;
         CreateHealth();
     }
 
