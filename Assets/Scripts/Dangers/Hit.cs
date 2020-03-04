@@ -41,18 +41,4 @@ public class Hit : MonoBehaviour
             Debug.Log("Shield destroyed");
         }
     }
-
-    public void KnockingBack()
-    {
-        boat.KnockbackBoolSwitch();
-        StartCoroutine(Knockback());
-    }
-
-    IEnumerator Knockback()
-    {
-        boat.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -knockbackPower));
-        yield return new WaitForSeconds(knockbackTime);
-        boat.KnockbackBoolSwitch();
-        boat.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-    }
 }

@@ -13,7 +13,7 @@ public class TextManager : MonoBehaviour
     [Space]
     public GameObject plankText;
     public GameObject plankRequiredText;
-    public static int plankAmount;
+    public static int plankAmount = 0;
     public int requiredPlankAmount = 10;
     [Space]
     public static int missionAmount;
@@ -21,7 +21,8 @@ public class TextManager : MonoBehaviour
 
     private void Start()
     {
-        plankRequiredText.GetComponent<Text>().text = "/ " + requiredPlankAmount;
+        if (plankRequiredText != null)
+            plankRequiredText.GetComponent<Text>().text = "/ " + requiredPlankAmount;
     }
 
     private void Update()
@@ -37,6 +38,7 @@ public class TextManager : MonoBehaviour
             gameOverText.SetActive(false);
         }
 
-        plankText.GetComponent<Text>().text = "" + plankAmount;
+        if (plankText != null)
+            plankText.GetComponent<Text>().text = "" + plankAmount;
     }
 }
