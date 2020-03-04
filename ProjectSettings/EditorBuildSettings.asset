@@ -11,16 +11,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level0_tutorial.unity
     guid: 58b2472920c1340e4bb5c71de2b8190c
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Level1_Verktyg.unity
     guid: 84a06f50fdef599468d54a4605bf92eb
   - enabled: 1
+    path: Assets/Scenes/Level2_Eggs.unity
+    guid: 75435d0c8a4376247acef88ca010c14b
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
     path: Assets/Scenes/SampleTeo.unity
     guid: 228016f954e8c9349aeb03952f1204a7
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
