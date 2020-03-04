@@ -91,7 +91,6 @@ GameObject:
   - component: {fileID: 1066851939220517665}
   - component: {fileID: 1066851939220517694}
   - component: {fileID: 1066851939220517664}
-  - component: {fileID: 1066851939220517695}
   - component: {fileID: 1066851939220517692}
   - component: {fileID: 40799159}
   m_Layer: 0
@@ -189,6 +188,7 @@ MonoBehaviour:
   immortalTime: 0.4
   knockbackTime: 0.2
   knockbackPower: 300
+  boatCollider: {fileID: 0}
   hurtColor: {r: 1, g: 0, b: 0, a: 1}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   deadColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -196,22 +196,6 @@ MonoBehaviour:
   playerHealthSignal: {fileID: 11400000, guid: 364592fee10a0de4db165cb72b4afe91, type: 2}
   headRenderer: {fileID: 7837907146340304967}
   GameOver: 0
---- !u!58 &1066851939220517695
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1066851939220517693}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!50 &1066851939220517692
 Rigidbody2D:
   serializedVersion: 4

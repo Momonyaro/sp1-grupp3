@@ -44,7 +44,7 @@ public class BoatMovementV01 : MonoBehaviour
         rigidb = GetComponent<Rigidbody2D>();
         hit = FindObjectOfType<Hit>();
         currentHealth = maxHealth;
-        //Time.timeScale = 1;
+        //GetComponent<Collider2D>().enabled = true;
     }
 
     void Update()
@@ -105,6 +105,7 @@ public class BoatMovementV01 : MonoBehaviour
         {
             TextManager.gameOver = true;
             autoSpeed = 0;
+            GetComponent<Collider2D>().enabled = false;
         }
         else
         {
@@ -157,6 +158,12 @@ public class BoatMovementV01 : MonoBehaviour
     public void StunnedBoolSwitch()
     {
         stunned = !stunned;
+    }
+
+    public void LostHealth()
+    {
+        currentHealth--;
+        Debug.Log("Lost health. Current health:" + currentHealth);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
