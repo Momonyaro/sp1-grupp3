@@ -137,6 +137,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="AudioManager.cs" t="Include" />
           <e p="CollectableHandeler.cs" t="Include" />
           <e p="CollectableTypes" t="Include">
             <e p="Collectable.cs" t="Include" />
@@ -168,6 +169,7 @@
           </e>
           <e p="NpcComponent.cs" t="Include" />
           <e p="OptionManager.cs" t="Include" />
+          <e p="Riverfront.cs" t="Include" />
           <e p="ScriptableObjectsScripts" t="Include">
             <e p="SignalListener.cs" t="Include" />
             <e p="SignalThingy.cs" t="Include" />

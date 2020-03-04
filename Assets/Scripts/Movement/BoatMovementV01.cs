@@ -13,6 +13,8 @@ public class BoatMovementV01 : MonoBehaviour
     [SerializeField] float currentSpeedY = 0;
     [Tooltip("How long after a collision the frog will be immortal (in seconds)")]
     public float immortalTime = 1f;
+    public float knockbackTime = .5f;
+    [SerializeField] float knockbackPower = 300f;
     bool knockback = false;
     bool stunned = false;
     bool shield = false;
@@ -24,6 +26,7 @@ public class BoatMovementV01 : MonoBehaviour
 
     bool gotHit = false;
     float counter = 0f;
+    float timer = .5f;
     [Tooltip("Only between 1 and 5 so far. Consult Teo for upgrades")]
     [Range(1, 5)]
     public int maxHealth = 3;
@@ -129,6 +132,8 @@ public class BoatMovementV01 : MonoBehaviour
             headRenderer.color = deadColor;
             GetComponent<SpriteRenderer>().color = deadColor;
         }
+
+        timer -= Time.deltaTime;
     }
 
     public void StopBoatSwitchBool()
@@ -141,6 +146,15 @@ public class BoatMovementV01 : MonoBehaviour
         knockback = !knockback;
     }
 
+    public void KnockbackBoolTrue()
+    {
+        knockback = true;
+    }
+
+    public void SetKnockbackBool(bool set)
+    {
+        knockback = set;
+    }
     public void ShieldBoolTrue()
     {
         shield = true;
@@ -167,13 +181,47 @@ public class BoatMovementV01 : MonoBehaviour
         }
         if (other.tag == "Dangerous" && shield && gotHit == false)
         {
+            gotHit = true;
             shield = false;
             hit.ShieldSwitchBool();
+            KnockbackDangers(other);
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        hit.KnockingBack();
+        Knockback(collision);
+    }
+
+    public void Knockback(Collision2D danger)
+    {
+        if (timer < 0)
+        {
+            timer = .3f;
+            var newDistance = GetComponent<Rigidbody2D>().transform.position - danger.transform.position;
+            knockback = true;
+            StartCoroutine(AccurateKnockback(newDistance));
+
+        }
+    }
+
+    public void KnockbackDangers(Collider2D danger)
+    {
+        if (timer < 0)
+        {
+            timer = 1f;
+            var newDistance = GetComponent<Rigidbody2D>().transform.position - danger.transform.position;
+            knockback = true;
+            StartCoroutine(AccurateKnockback(newDistance));
+
+        }
+    }
+
+    IEnumerator AccurateKnockback(Vector3 newDistance)
+    {
+        GetComponent<Rigidbody2D>().AddForce(newDistance.normalized * knockbackPower);
+        yield return new WaitForSeconds(knockbackTime);
+        knockback = false;
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
 }

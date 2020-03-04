@@ -6,6 +6,7 @@ using UnityEngine;
 public class wirlpool : MonoBehaviour
 {
     BoatMovementV01 boat;
+    Hit hit;
     public float intoWhirlSpeed = 8f;
     public float knockForwardTime = 1f;
     public float knockForwardPower = 100f;
@@ -29,6 +30,7 @@ public class wirlpool : MonoBehaviour
     void Start()
     {
         boat = FindObjectOfType<BoatMovementV01>();
+        hit = FindObjectOfType<Hit>();
     }
 
     void Update()
@@ -101,7 +103,7 @@ public class wirlpool : MonoBehaviour
         if (collision.tag == "Player")
         {
             activated = true;
-            boat.KnockbackBoolSwitch();
+            boat.SetKnockbackBool(true);
         }
     }
 
@@ -109,7 +111,7 @@ public class wirlpool : MonoBehaviour
     {
         boat.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, knockForwardPower));
         yield return new WaitForSeconds(knockForwardTime);
-        boat.KnockbackBoolSwitch();
+        boat.SetKnockbackBool(false);
         boat.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
 }

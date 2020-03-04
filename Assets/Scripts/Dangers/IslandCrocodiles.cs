@@ -10,6 +10,7 @@ public class IslandCrocodiles : MonoBehaviour
     [SerializeField] GameObject path = null;
     [SerializeField] AudioClip biteClipSound = null;
     Hit hit;
+    BoatMovementV01 boat;
     int currentWaypoint = 0;
     int lastWaypoint;
     float timer = 0f;
@@ -20,6 +21,7 @@ public class IslandCrocodiles : MonoBehaviour
         GetWaypoints();
         transform.position = waypoints[currentWaypoint].transform.position;
         hit = FindObjectOfType<Hit>();
+        boat = FindObjectOfType<BoatMovementV01>();
     }
 
     public void GetWaypoints()
@@ -79,7 +81,7 @@ public class IslandCrocodiles : MonoBehaviour
     {
         if (collision.tag == "Player" && timer <= 0)
         {
-            hit.KnockingBack();
+            boat.KnockbackDangers(GetComponent<Collider2D>());
             AudioSource.PlayClipAtPoint(biteClipSound, new Vector3(transform.position.x, transform.position.y, transform.position.z));
             Debug.Log("Hit islandcroc");
             timer = 1f;
