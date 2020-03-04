@@ -11,14 +11,14 @@ namespace Managers
         BoatCrash, StoneCrash,
         CrocodileGrowl, CrocodileBite,
         PickupEgg, PickupPlank, PickupFly,
-        Tongue, TongueCatch
+        Tongue, TongueCatch,
+        Dash, Brake
     }
 
     public delegate void RequestSoundDelegate(Sounds sound);
 
     public class AudioManager : MonoBehaviour
     {
-        public double soundVolume = 0.8;
         [SerializeField] private List<AudioObject> soundObjects = new List<AudioObject>();
         [SerializeField] public List<GameObject> audioChannels = new List<GameObject>();
         public RequestSoundDelegate requestSoundDelegate;
@@ -26,15 +26,6 @@ namespace Managers
         private void Awake()
         {
             requestSoundDelegate = AttemptToPlaySound;
-        }
-
-        private void Update()
-        {
-            if (soundVolume > 1) soundVolume = 1;
-            foreach(GameObject channel in audioChannels)
-            {
-                channel.GetComponent<AudioSource>().volume = (float)soundVolume;
-            }
         }
 
         private void AttemptToPlaySound(Sounds sound)
@@ -72,6 +63,7 @@ namespace Managers
         {
             if (channelSource != null)
             {
+                channelSource.volume = soundObject.soundVolume;
                 channelSource.clip = soundObject.soundClip;
                 channelSource.Play();
             }
@@ -82,6 +74,8 @@ namespace Managers
     public struct AudioObject
     {
         public AudioClip soundClip;
+        [Range(0, 1)]
+        public float soundVolume;
         public Sounds soundName;
     }
 }

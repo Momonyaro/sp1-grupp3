@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Managers;
 
 public class BoatMovementV01 : MonoBehaviour
 {
@@ -23,10 +24,12 @@ public class BoatMovementV01 : MonoBehaviour
 
     bool gotHit = false;
     float counter = 0f;
-
-    public static int maxHealth = 3;
+    [Tooltip("Only between 1 and 5 so far. Consult Teo for upgrades")]
+    [Range(1, 5)]
+    public int maxHealth = 3;
     public static int currentHealth;
     public SignalThingy playerHealthSignal;
+    public SpriteRenderer headRenderer;
     Hit hit;
 
     public bool GameOver = false;
@@ -47,6 +50,15 @@ public class BoatMovementV01 : MonoBehaviour
         {
             float horizontal = Input.GetAxis("Horizontal");
             currentSpeedY = rigidb.velocity.y;
+
+            if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow) && stunned == false)
+            {
+                FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.Brake);
+            }
+            else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) && stunned == false)
+            {
+                FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.Dash);
+            }
 
             if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) && stunned == false)
             {
@@ -102,16 +114,19 @@ public class BoatMovementV01 : MonoBehaviour
         if (gotHit)
         {
             counter += Time.deltaTime;
+            headRenderer.color = hurtColor;
             GetComponent<SpriteRenderer>().color = hurtColor;
         }
         if (counter > immortalTime)
         {
             gotHit = false;
             counter = 0f;
+            headRenderer.color = defaultColor;
             GetComponent<SpriteRenderer>().color = defaultColor;
         }
         if (currentHealth <= 0)
         {
+            headRenderer.color = deadColor;
             GetComponent<SpriteRenderer>().color = deadColor;
         }
     }
@@ -155,5 +170,10 @@ public class BoatMovementV01 : MonoBehaviour
             shield = false;
             hit.ShieldSwitchBool();
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        hit.KnockingBack();
     }
 }
