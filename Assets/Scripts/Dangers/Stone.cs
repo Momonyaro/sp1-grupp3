@@ -26,7 +26,7 @@ public class Stone : MonoBehaviour
             anim.SetBool("Hit", true);
             Destroy(GetComponent<Collider2D>());
             Destroy(gameObject, deleteTimer);
-            hit.KnockingBack();
+            hit.KnockingBack(GetComponent<Collider2D>());
             Sound();
             Debug.Log("Hit stone");
         }

@@ -79,7 +79,7 @@ public class IslandCrocodiles : MonoBehaviour
     {
         if (collision.tag == "Player" && timer <= 0)
         {
-            hit.KnockingBack();
+            hit.KnockingBack(GetComponent<Collider2D>());
             AudioSource.PlayClipAtPoint(biteClipSound, new Vector3(transform.position.x, transform.position.y, transform.position.z));
             Debug.Log("Hit islandcroc");
             timer = 1f;
