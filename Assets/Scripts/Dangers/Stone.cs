@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Stone : MonoBehaviour
 {
-    Hit hit;
-    Animator anim;
+    Hit hit;    Animator anim;
+    BoatMovementV01 boat;
     [Tooltip("How long until deleted after the falling animation is triggered")]
     public float deleteTimer = 1f;
     //[SerializeField] AudioSource falling = null;
@@ -16,6 +16,7 @@ public class Stone : MonoBehaviour
     void Start()
     {
         hit = FindObjectOfType<Hit>();
+        boat = FindObjectOfType<BoatMovementV01>();
         anim = GetComponent<Animator>();
     }
 
@@ -26,7 +27,7 @@ public class Stone : MonoBehaviour
             anim.SetBool("Hit", true);
             Destroy(GetComponent<Collider2D>());
             Destroy(gameObject, deleteTimer);
-            hit.KnockingBack(GetComponent<Collider2D>());
+            boat.KnockbackDangers(GetComponent<Collider2D>());
             Sound();
             Debug.Log("Hit stone");
         }
