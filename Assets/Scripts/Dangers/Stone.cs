@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Stone : MonoBehaviour
 {
-    Hit hit;    Animator anim;
+    Animator anim;
     BoatMovementV01 boat;
     [Tooltip("How long until deleted after the falling animation is triggered")]
     public float deleteTimer = 1f;
@@ -15,7 +15,6 @@ public class Stone : MonoBehaviour
 
     void Start()
     {
-        hit = FindObjectOfType<Hit>();
         boat = FindObjectOfType<BoatMovementV01>();
         anim = GetComponent<Animator>();
     }

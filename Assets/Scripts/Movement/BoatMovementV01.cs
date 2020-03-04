@@ -141,16 +141,6 @@ public class BoatMovementV01 : MonoBehaviour
         stopBoat = !stopBoat;
     }
 
-    public void KnockbackBoolSwitch()
-    {
-        knockback = !knockback;
-    }
-
-    public void KnockbackBoolTrue()
-    {
-        knockback = true;
-    }
-
     public void SetKnockbackBool(bool set)
     {
         knockback = set;
