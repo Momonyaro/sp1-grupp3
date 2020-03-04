@@ -13,12 +13,14 @@ public class Crocodile : MonoBehaviour
     [SerializeField] AudioSource growl;
     [SerializeField] AudioClip biteClipSound;
     Hit hit;
+    BoatMovementV01 boat;
     public bool direction = false;
     float crocTimer = 0.5f;
 
     void Start()
     {
         hit = FindObjectOfType<Hit>();
+        boat = FindObjectOfType<BoatMovementV01>();
     }
 
     void Update()
@@ -82,7 +84,7 @@ public class Crocodile : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            hit.KnockingBack(GetComponent<Collider2D>());
+            boat.KnockbackDangers(GetComponent<Collider2D>());
             AudioSource.PlayClipAtPoint(biteClipSound, new Vector3(transform.position.x, transform.position.y, transform.position.z));
             Debug.Log("Hit croc");
         }

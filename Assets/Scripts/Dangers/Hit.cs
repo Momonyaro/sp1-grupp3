@@ -41,36 +41,4 @@ public class Hit : MonoBehaviour
             Debug.Log("Shield destroyed");
         }
     }
-
-    public void KnockingBack(Collider2D enemy)
-    {
-        boat.KnockbackDangers(enemy);
-        //boat.KnockbackBoolSwitch();
-        //StartCoroutine(Knockback());
-    }
-
-    //public void Knockback(Collision2D frog)
-    //{
-    //    var newDistance = frog.transform.position - transform.position;
-    //    boat.KnockbackBoolSwitch();
-    //    StartCoroutine(AccurateKnockback(newDistance));
-    //}
-
-
-    //IEnumerator AccurateKnockback(Vector3 newDistance)
-    //{
-    //    //boat.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -knockbackPower));
-    //    boat.GetComponent<Rigidbody2D>().AddForce(newDistance);
-    //    yield return new WaitForSeconds(knockbackTime);
-    //    boat.KnockbackBoolSwitch();
-    //    boat.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-    //}
-
-    IEnumerator Knockback()
-    {
-        boat.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -knockbackPower));
-        yield return new WaitForSeconds(knockbackTime);
-        boat.KnockbackBoolSwitch();
-        boat.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-    }
 }

@@ -26,6 +26,7 @@ public class BoatMovementV01 : MonoBehaviour
 
     bool gotHit = false;
     float counter = 0f;
+    float timer = .5f;
     [Tooltip("Only between 1 and 5 so far. Consult Teo for upgrades")]
     [Range(1, 5)]
     public int maxHealth = 3;
@@ -131,6 +132,8 @@ public class BoatMovementV01 : MonoBehaviour
             headRenderer.color = deadColor;
             GetComponent<SpriteRenderer>().color = deadColor;
         }
+
+        timer -= Time.deltaTime;
     }
 
     public void StopBoatSwitchBool()
@@ -143,6 +146,15 @@ public class BoatMovementV01 : MonoBehaviour
         knockback = !knockback;
     }
 
+    public void KnockbackBoolTrue()
+    {
+        knockback = true;
+    }
+
+    public void SetKnockbackBool(bool set)
+    {
+        knockback = set;
+    }
     public void ShieldBoolTrue()
     {
         shield = true;
@@ -181,28 +193,35 @@ public class BoatMovementV01 : MonoBehaviour
         Knockback(collision);
     }
 
-    private void Knockback(Collision2D danger)
+    public void Knockback(Collision2D danger)
     {
-        //Debug.Log("In i flodkanten");
-        var newDistance = GetComponent<Rigidbody2D>().transform.position - danger.transform.position;
-        KnockbackBoolSwitch();
-        StartCoroutine(AccurateKnockback(newDistance));
+        if (timer < 0)
+        {
+            timer = .3f;
+            var newDistance = GetComponent<Rigidbody2D>().transform.position - danger.transform.position;
+            knockback = true;
+            StartCoroutine(AccurateKnockback(newDistance));
+
+        }
     }
 
     public void KnockbackDangers(Collider2D danger)
     {
-        //Debug.Log("In i flodkanten");
-        var newDistance = GetComponent<Rigidbody2D>().transform.position - danger.transform.position;
-        KnockbackBoolSwitch();
-        StartCoroutine(AccurateKnockback(newDistance));
+        if (timer < 0)
+        {
+            timer = 1f;
+            var newDistance = GetComponent<Rigidbody2D>().transform.position - danger.transform.position;
+            knockback = true;
+            StartCoroutine(AccurateKnockback(newDistance));
+
+        }
     }
 
     IEnumerator AccurateKnockback(Vector3 newDistance)
     {
-        //boat.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -knockbackPower));
         GetComponent<Rigidbody2D>().AddForce(newDistance.normalized * knockbackPower);
         yield return new WaitForSeconds(knockbackTime);
-        KnockbackBoolSwitch();
+        knockback = false;
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
 }
