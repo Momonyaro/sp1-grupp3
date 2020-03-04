@@ -13,6 +13,7 @@ public class HealthManager : MonoBehaviour
 
     void Start()
     {
+        boatMv = FindObjectOfType<BoatMovementV01>();
         healthAmount = boatMv.maxHealth;
         CreateHealth();
     }
