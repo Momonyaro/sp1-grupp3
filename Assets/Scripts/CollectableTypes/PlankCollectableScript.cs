@@ -10,7 +10,7 @@ public class PlankCollectableScript : Collectable
         if (other.tag == "Player")
         {
             FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.PickupPlank);
-            TextManager.missionAmount += collectableScore;
+            TextManager.plankAmount += collectableScore;
             Destroy(gameObject);
         }
     }
