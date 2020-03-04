@@ -88,6 +88,7 @@ public class wirlpool : MonoBehaviour
             StartCoroutine(PushOut());
             activated = false;
             boat.transform.rotation = Quaternion.Euler(0, 0, 0);
+            boat.LostHealth();
         }
         if (clicksClicked >= clicksForRelease)
         {
