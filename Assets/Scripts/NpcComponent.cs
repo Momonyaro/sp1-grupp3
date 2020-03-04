@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿using System;
+using UnityEditor;
 using UnityEngine;
 
 public class NpcComponent : MonoBehaviour
@@ -16,6 +17,11 @@ public class NpcComponent : MonoBehaviour
     public Sprite missionInteractSprite;
     
     private const float CompletedAlpha = 0.9f;
+
+    private void Awake()
+    {
+        conversationComponent.vocalSource = GetComponent<AudioSource>();
+    }
 
     private void Update()
     {
