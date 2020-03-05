@@ -179,6 +179,7 @@ public class BoatMovementV01 : MonoBehaviour
         currentHealth--;
         Debug.Log("Lost health. Current health:" + currentHealth);
         InsertFreezeFrames(6);
+        FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.BoatCrash);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
