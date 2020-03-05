@@ -8,6 +8,7 @@ public class HealthManager : MonoBehaviour
     public Image[] healthIcons;
     public Sprite fullContainer;
     public Sprite emptyContainer;
+    public ParticleSystem popEffect;
     [HideInInspector] public int healthAmount;
     BoatMovementV01 boatMv;
 
@@ -38,6 +39,7 @@ public class HealthManager : MonoBehaviour
         for (int i = 0; i < healthIcons.Length; i++)
         {
             healthIcons[i].sprite = emptyContainer;
+            popEffect.Emit(40);
         }
         for(int i = 0; i < healthAmount; i++)
         {
