@@ -34,6 +34,7 @@ public class BoatMovementV01 : MonoBehaviour
     public SignalThingy playerHealthSignal;
     public SpriteRenderer headRenderer;
     Hit hit;
+    Shaker shaker;
 
     public bool GameOver = false;
 
@@ -43,6 +44,7 @@ public class BoatMovementV01 : MonoBehaviour
     {
         rigidb = GetComponent<Rigidbody2D>();
         hit = FindObjectOfType<Hit>();
+        shaker = FindObjectOfType<Shaker>();
         currentHealth = maxHealth;
         //GetComponent<Collider2D>().enabled = true;
     }
@@ -195,6 +197,7 @@ public class BoatMovementV01 : MonoBehaviour
         if (timer < 0)
         {
             timer = .3f;
+            StartCoroutine(shaker.Shake());
             var newDistance = GetComponent<Rigidbody2D>().transform.position - danger.transform.position;
             knockback = true;
             StartCoroutine(AccurateKnockback(newDistance));
@@ -207,6 +210,7 @@ public class BoatMovementV01 : MonoBehaviour
         if (timer < 0)
         {
             timer = 1f;
+            StartCoroutine(shaker.Shake());
             var newDistance = GetComponent<Rigidbody2D>().transform.position - danger.transform.position;
             knockback = true;
             StartCoroutine(AccurateKnockback(newDistance));
