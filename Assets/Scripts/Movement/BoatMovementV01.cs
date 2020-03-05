@@ -34,6 +34,8 @@ public class BoatMovementV01 : MonoBehaviour
     public SignalThingy playerHealthSignal;
     public SpriteRenderer headRenderer;
     Hit hit;
+    Shaker shaker;
+    private int freezeFrames = 0;
 
     public bool GameOver = false;
 
@@ -43,12 +45,24 @@ public class BoatMovementV01 : MonoBehaviour
     {
         rigidb = GetComponent<Rigidbody2D>();
         hit = FindObjectOfType<Hit>();
+        shaker = FindObjectOfType<Shaker>();
         currentHealth = maxHealth;
-        //Time.timeScale = 1;
+        //GetComponent<Collider2D>().enabled = true;
     }
 
     void Update()
     {
+        if (freezeFrames > 0)
+        {
+            Time.timeScale = 0;
+            freezeFrames--;
+        }
+        else if (freezeFrames == 0)
+        {
+            Time.timeScale = 1;
+            freezeFrames--;
+        }
+        
         if (!GameOver && knockback == false)
         {
             float horizontal = Input.GetAxis("Horizontal");
@@ -105,6 +119,7 @@ public class BoatMovementV01 : MonoBehaviour
         {
             TextManager.gameOver = true;
             autoSpeed = 0;
+            GetComponent<Collider2D>().enabled = false;
         }
         else
         {
@@ -141,16 +156,6 @@ public class BoatMovementV01 : MonoBehaviour
         stopBoat = !stopBoat;
     }
 
-    public void KnockbackBoolSwitch()
-    {
-        knockback = !knockback;
-    }
-
-    public void KnockbackBoolTrue()
-    {
-        knockback = true;
-    }
-
     public void SetKnockbackBool(bool set)
     {
         knockback = set;
@@ -169,14 +174,20 @@ public class BoatMovementV01 : MonoBehaviour
         stunned = !stunned;
     }
 
+    public void LostHealth()
+    {
+        currentHealth--;
+        Debug.Log("Lost health. Current health:" + currentHealth);
+        InsertFreezeFrames(6);
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Dangerous" && shield == false && gotHit == false)
         {
             gotHit = true;
             playerHealthSignal.Raise();
-            currentHealth -= 1;
-            Debug.Log("Lost health. Current health:" + currentHealth);
+            LostHealth();
 
         }
         if (other.tag == "Dangerous" && shield && gotHit == false)
@@ -198,6 +209,7 @@ public class BoatMovementV01 : MonoBehaviour
         if (timer < 0)
         {
             timer = .3f;
+            StartCoroutine(shaker.Shake());
             var newDistance = GetComponent<Rigidbody2D>().transform.position - danger.transform.position;
             knockback = true;
             StartCoroutine(AccurateKnockback(newDistance));
@@ -210,6 +222,7 @@ public class BoatMovementV01 : MonoBehaviour
         if (timer < 0)
         {
             timer = 1f;
+            StartCoroutine(shaker.Shake());
             var newDistance = GetComponent<Rigidbody2D>().transform.position - danger.transform.position;
             knockback = true;
             StartCoroutine(AccurateKnockback(newDistance));
@@ -223,5 +236,11 @@ public class BoatMovementV01 : MonoBehaviour
         yield return new WaitForSeconds(knockbackTime);
         knockback = false;
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+    }
+
+    private void InsertFreezeFrames(int amount)
+    {
+        Debug.Log("[Za Warudo] Froze time for " + amount + " frames.");
+        freezeFrames = amount;
     }
 }
