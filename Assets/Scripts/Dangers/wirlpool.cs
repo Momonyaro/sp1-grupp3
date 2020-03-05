@@ -6,7 +6,6 @@ using UnityEngine;
 public class wirlpool : MonoBehaviour
 {
     BoatMovementV01 boat;
-    Hit hit;
     public float intoWhirlSpeed = 8f;
     public float knockForwardTime = 1f;
     public float knockForwardPower = 100f;
@@ -30,7 +29,6 @@ public class wirlpool : MonoBehaviour
     void Start()
     {
         boat = FindObjectOfType<BoatMovementV01>();
-        hit = FindObjectOfType<Hit>();
     }
 
     void Update()
@@ -90,6 +88,7 @@ public class wirlpool : MonoBehaviour
             StartCoroutine(PushOut());
             activated = false;
             boat.transform.rotation = Quaternion.Euler(0, 0, 0);
+            boat.LostHealth();
         }
         if (clicksClicked >= clicksForRelease)
         {
