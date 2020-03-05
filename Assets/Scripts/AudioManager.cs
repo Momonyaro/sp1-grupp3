@@ -74,7 +74,7 @@ namespace Managers
     public struct AudioObject
     {
         public AudioClip soundClip;
-        [Range(0, 1)]
+        //[Range(0, 3)]
         public float soundVolume;
         public Sounds soundName;
     }
