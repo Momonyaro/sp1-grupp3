@@ -9,7 +9,6 @@ public class IslandCrocodiles : MonoBehaviour
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] GameObject path = null;
     [SerializeField] AudioClip biteClipSound = null;
-    Hit hit;
     BoatMovementV01 boat;
     int currentWaypoint = 0;
     int lastWaypoint;
@@ -20,7 +19,6 @@ public class IslandCrocodiles : MonoBehaviour
     {
         GetWaypoints();
         transform.position = waypoints[currentWaypoint].transform.position;
-        hit = FindObjectOfType<Hit>();
         boat = FindObjectOfType<BoatMovementV01>();
     }
 

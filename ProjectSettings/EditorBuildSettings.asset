@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level1_Verktyg.unity
     guid: 84a06f50fdef599468d54a4605bf92eb
   - enabled: 1
+    path: Assets/Scenes/Level2_Eggs_LIMBO.unity
+    guid: 84d93c6f0b12faa418743a3d3e3e412b
+  - enabled: 0
     path: Assets/Scenes/Level2_Eggs.unity
     guid: 75435d0c8a4376247acef88ca010c14b
   - enabled: 0
