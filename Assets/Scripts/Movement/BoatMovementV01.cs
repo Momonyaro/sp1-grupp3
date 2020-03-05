@@ -35,6 +35,7 @@ public class BoatMovementV01 : MonoBehaviour
     public SpriteRenderer headRenderer;
     Hit hit;
     Shaker shaker;
+    private int freezeFrames = 0;
 
     public bool GameOver = false;
 
@@ -51,6 +52,17 @@ public class BoatMovementV01 : MonoBehaviour
 
     void Update()
     {
+        if (freezeFrames > 0)
+        {
+            Time.timeScale = 0;
+            freezeFrames--;
+        }
+        else if (freezeFrames == 0)
+        {
+            Time.timeScale = 1;
+            freezeFrames--;
+        }
+        
         if (!GameOver && knockback == false)
         {
             float horizontal = Input.GetAxis("Horizontal");
@@ -166,6 +178,7 @@ public class BoatMovementV01 : MonoBehaviour
     {
         currentHealth--;
         Debug.Log("Lost health. Current health:" + currentHealth);
+        InsertFreezeFrames(6);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -174,8 +187,7 @@ public class BoatMovementV01 : MonoBehaviour
         {
             gotHit = true;
             playerHealthSignal.Raise();
-            currentHealth -= 1;
-            Debug.Log("Lost health. Current health:" + currentHealth);
+            LostHealth();
 
         }
         if (other.tag == "Dangerous" && shield && gotHit == false)
@@ -224,5 +236,11 @@ public class BoatMovementV01 : MonoBehaviour
         yield return new WaitForSeconds(knockbackTime);
         knockback = false;
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+    }
+
+    private void InsertFreezeFrames(int amount)
+    {
+        Debug.Log("[Za Warudo] Froze time for " + amount + " frames.");
+        freezeFrames = amount;
     }
 }
