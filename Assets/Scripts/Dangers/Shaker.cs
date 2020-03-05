@@ -21,9 +21,4 @@ public class Shaker : MonoBehaviour
         }
         transform.localPosition = originalpos;
     }
-
-    internal void StartCoruotine(object p)
-    {
-        throw new NotImplementedException();
-    }
 }
