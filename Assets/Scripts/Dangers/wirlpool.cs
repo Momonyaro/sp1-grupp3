@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Managers;
 
 public class wirlpool : MonoBehaviour
 {
@@ -20,7 +21,8 @@ public class wirlpool : MonoBehaviour
     public int autoRelease = 4;
     [Tooltip("How many times the clock has reset")]
     public int autoReleaseCounter = 0;
-    float counter = 0f;
+    float whirlCounter = 0f;
+    float timeCounter = 0f;
     bool activated = false;
     public GameObject leftPoint = null;
     public GameObject rightPoint = null;
@@ -37,11 +39,24 @@ public class wirlpool : MonoBehaviour
         {
             MoveBoat();
             CountClicks();
+            timeCounter -= Time.deltaTime;
+            if(timeCounter < 0)
+            {
+                timeCounter = 1f;
+                FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.Whirlpool);
+            }
         }
     }
 
+    IEnumerator Sound()
+    {
+        FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.Whirlpool);
+        yield return new WaitForSeconds(1f);
+    }
     public void MoveBoat()
     {
+        //FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.Whirlpool);
+
         //boat.transform.position = Vector3.MoveTowards(boat.transform.position, transform.position, intoWhirlSpeed * Time.deltaTime);
         boat.transform.Rotate(new Vector3(0, 0, rotateSpeed));
         RotatingBoat();
@@ -70,16 +85,18 @@ public class wirlpool : MonoBehaviour
 
     private void CountClicks()
     {
-        counter += Time.deltaTime;
+        //FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.Whirlpool);
+
+        whirlCounter += Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.Space))
         {
             clicksClicked++;
             Debug.Log("clicks clicked: " + clicksClicked);
         }
-        if(counter >= secLimit)
+        if(whirlCounter >= secLimit)
         {
             clicksClicked = 0;
-            counter = 0f;
+            whirlCounter = 0f;
             autoReleaseCounter++;
             Debug.Log("autoReleaseCounter: " + autoReleaseCounter + " / " + autoRelease);
         }
@@ -87,7 +104,7 @@ public class wirlpool : MonoBehaviour
         {
             StartCoroutine(PushOut());
             activated = false;
-            boat.transform.rotation = Quaternion.Euler(0, 0, 0);
+            boat.transform.rotation = Quaternion.identity;
             boat.LostHealth();
         }
         if (clicksClicked >= clicksForRelease)

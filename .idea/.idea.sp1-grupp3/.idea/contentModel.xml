@@ -152,11 +152,13 @@
             <e p="ElectricEel.cs" t="Include" />
             <e p="Hit.cs" t="Include" />
             <e p="IslandCrocodiles.cs" t="Include" />
+            <e p="Shaker.cs" t="Include" />
             <e p="Stone.cs" t="Include" />
             <e p="wirlpool.cs" t="Include" />
           </e>
           <e p="FinishLine.cs" t="Include" />
           <e p="FrogTongue.cs" t="Include" />
+          <e p="GameStart.cs" t="Include" />
           <e p="HealthRelatedScripts" t="Include">
             <e p="HealthManager.cs" t="Include" />
           </e>
@@ -169,7 +171,6 @@
           </e>
           <e p="NpcComponent.cs" t="Include" />
           <e p="OptionManager.cs" t="Include" />
-          <e p="Riverfront.cs" t="Include" />
           <e p="ScriptableObjectsScripts" t="Include">
             <e p="SignalListener.cs" t="Include" />
             <e p="SignalThingy.cs" t="Include" />
@@ -185,6 +186,7 @@
           <e p="SwitchScene.cs" t="Include" />
           <e p="TextBox.cs" t="Include" />
           <e p="TextManager.cs" t="Include" />
+          <e p="TriggerSound.cs" t="Include" />
           <e p="UIShake.cs" t="Include" />
           <e p="WaterLayer.cs" t="Include" />
         </e>
