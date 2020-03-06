@@ -9,10 +9,10 @@ namespace Managers
     public enum Sounds
     {
         BoatCrash, StoneCrash,
-        CrocodileGrowl, CrocodileBite,
+        CrocodileGrowl, CrocodileBite, Whirlpool,
         PickupEgg, PickupPlank, PickupFly,
         Tongue, TongueCatch,
-        Dash, Brake
+        Dash, Brake, Whirlpool
     }
 
     public delegate void RequestSoundDelegate(Sounds sound);
