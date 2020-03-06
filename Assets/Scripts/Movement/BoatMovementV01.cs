@@ -133,8 +133,6 @@ public class BoatMovementV01 : MonoBehaviour
         if (gotHit)
         {
             counter += Time.deltaTime;
-            //headRenderer.color = hurtColor;
-            //GetComponent<SpriteRenderer>().color = hurtColor;
         }
         if (counter > immortalTime)
         {
@@ -190,16 +188,12 @@ public class BoatMovementV01 : MonoBehaviour
     {
         if(other.tag == "Dangerous" && shield == false && gotHit == false)
         {
-            gotHit = true;
             playerHealthSignal.Raise();
             LostHealth();
-            headRenderer.color = hurtColor;
-            GetComponent<SpriteRenderer>().color = hurtColor;
         }
 
-        if (other.tag == "Dangerous" && shield && gotHit == false)
+        else if (other.tag == "Dangerous" && shield && gotHit == false)
         {
-            gotHit = true;
             shield = false;
             hit.ShieldSwitchBool();
             KnockbackDangers(other);
