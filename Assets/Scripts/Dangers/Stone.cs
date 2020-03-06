@@ -20,11 +20,11 @@ public class Stone : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
+            Sound();
             anim.SetBool("Hit", true);
             Destroy(GetComponent<Collider2D>());
             Destroy(gameObject, deleteTimer);
             boat.KnockbackDangers(GetComponent<Collider2D>());
-            Sound();
             Debug.Log("Hit stone");
         }
     }

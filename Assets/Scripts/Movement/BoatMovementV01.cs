@@ -179,6 +179,7 @@ public class BoatMovementV01 : MonoBehaviour
         currentHealth--;
         Debug.Log("Lost health. Current health:" + currentHealth);
         InsertFreezeFrames(6);
+        
         //FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.BoatCrash);
     }
 
@@ -189,8 +190,8 @@ public class BoatMovementV01 : MonoBehaviour
             gotHit = true;
             playerHealthSignal.Raise();
             LostHealth();
-
         }
+
         if (other.tag == "Dangerous" && shield && gotHit == false)
         {
             gotHit = true;

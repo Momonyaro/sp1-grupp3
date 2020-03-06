@@ -2805,24 +2805,24 @@ MonoBehaviour:
     soundName: 0
   - soundClip: {fileID: 8300000, guid: afc408fec5782ce4f83172d58f0a18ca, type: 3}
     soundVolume: 0.2
-    soundName: 4
+    soundName: 5
   - soundClip: {fileID: 8300000, guid: 94d8e9f1b3d22124bbb4adf13f24c9f9, type: 3}
     soundVolume: 0.2
-    soundName: 6
+    soundName: 7
   - soundClip: {fileID: 8300000, guid: 08df77eae6178ee42826c691d06b0626, type: 3}
     soundVolume: 0.2
-    soundName: 5
+    soundName: 6
   - soundClip: {fileID: 8300000, guid: 3495ffdb942cf0347a2a836d66027079, type: 3}
     soundVolume: 0.2
-    soundName: 9
+    soundName: 10
   - soundClip: {fileID: 8300000, guid: 83008187bec7eb64c9948d0b32b45b76, type: 3}
     soundVolume: 0.2
-    soundName: 10
+    soundName: 11
   - soundClip: {fileID: 8300000, guid: 424fa0b5f7848ae4cad0d2fbb476d184, type: 3}
     soundVolume: 0.2
     soundName: 3
   - soundClip: {fileID: 8300000, guid: 6e39f5e01e196e94eae98bd2e058483c, type: 3}
-    soundVolume: 0.2
+    soundVolume: 0.848
     soundName: 1
   - soundClip: {fileID: 8300000, guid: ac4d80bd2046860429748c88d91bce87, type: 3}
     soundVolume: 0.2
@@ -3610,8 +3610,7 @@ MonoBehaviour:
   signalEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4590974685118830498, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
-          type: 3}
+      - m_Target: {fileID: 0}
         m_MethodName: UpdateContainers
         m_Mode: 1
         m_Arguments:
