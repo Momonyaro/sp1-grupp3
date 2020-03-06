@@ -19,6 +19,6 @@ public class Shaker : MonoBehaviour
             timer += Time.deltaTime;
             yield return null; //vänta till nästa frame
         }
-        transform.localPosition = originalpos;
+        //transform.localPosition = originalpos;
     }
 }
