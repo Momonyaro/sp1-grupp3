@@ -45,7 +45,8 @@ namespace Managers
                 AudioSource channelSource = channel.GetComponent<AudioSource>();
                 if (channelSource.isPlaying && channelSource.clip != null)
                 {
-                    return null;
+                    if (channelSource.clip.name.Equals(sound.soundClip.name))
+                        return null;
                 }
                 else
                     toReturn = channelSource;
