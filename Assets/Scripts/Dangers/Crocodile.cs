@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Managers;
 
 public class Crocodile : MonoBehaviour
 {
@@ -10,8 +11,6 @@ public class Crocodile : MonoBehaviour
     [SerializeField] float smallerPointX = 4f;
     [Tooltip("Det x-värde där krokodilen börjar åka till vänster")]
     [SerializeField] float biggerPointX = 7f;
-    [SerializeField] AudioSource growl;
-    [SerializeField] AudioClip biteClipSound;
     Hit hit;
     BoatMovementV01 boat;
     public bool direction = false;
@@ -27,7 +26,6 @@ public class Crocodile : MonoBehaviour
     {
         crocTimer -= Time.deltaTime;
         Move();
-        //MakingSounds();
     }
 
     private void Move()
@@ -85,7 +83,8 @@ public class Crocodile : MonoBehaviour
         if(collision.tag == "Player")
         {
             boat.KnockbackDangers(GetComponent<Collider2D>());
-            AudioSource.PlayClipAtPoint(biteClipSound, new Vector3(transform.position.x, transform.position.y, transform.position.z));
+            FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.CrocodileBite);
+
             Debug.Log("Hit croc");
         }
     }

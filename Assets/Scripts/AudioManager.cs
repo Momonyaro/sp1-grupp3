@@ -9,10 +9,10 @@ namespace Managers
     public enum Sounds
     {
         BoatCrash, StoneCrash,
-        CrocodileGrowl, CrocodileBite,
+        CrocodileGrowl, CrocodileBite, Whirlpool,
         PickupEgg, PickupPlank, PickupFly,
         Tongue, TongueCatch,
-        Dash, Brake
+        Dash, Brake,
     }
 
     public delegate void RequestSoundDelegate(Sounds sound);
@@ -46,11 +46,7 @@ namespace Managers
                 if (channelSource.isPlaying && channelSource.clip != null)
                 {
                     if (channelSource.clip.name.Equals(sound.soundClip.name))
-                    {
                         return null;
-                    }
-                    else
-                        toReturn = channelSource;
                 }
                 else
                     toReturn = channelSource;
