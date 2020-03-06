@@ -24,6 +24,7 @@ public class BoatMovementV01 : MonoBehaviour
     public Color defaultColor = Color.green;
     public Color deadColor = Color.gray;
 
+    public GameObject hurtEffect;
     bool gotHit = false;
     float counter = 0f;
     float timer = .5f;
@@ -176,13 +177,11 @@ public class BoatMovementV01 : MonoBehaviour
     {
         currentHealth--;
         Debug.Log("Lost health. Current health:" + currentHealth);
+        GameObject effect = Instantiate(hurtEffect, transform.position, Quaternion.identity);
         InsertFreezeFrames(6);
-        if (!shield)
-        {
-            gotHit = true;
-            headRenderer.color = hurtColor;
-            GetComponent<SpriteRenderer>().color = hurtColor;
-        }
+
+        
+        //FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.BoatCrash);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
