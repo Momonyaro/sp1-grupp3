@@ -2037,6 +2037,61 @@ PrefabInstance:
       propertyPath: emptyContainer
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7217510374742159600, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
+        type: 3}
+      propertyPath: soundObjects.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7217510374742159600, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
+        type: 3}
+      propertyPath: soundObjects.Array.data[6].soundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 424fa0b5f7848ae4cad0d2fbb476d184, type: 3}
+    - target: {fileID: 7217510374742159600, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
+        type: 3}
+      propertyPath: soundObjects.Array.data[6].soundVolume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7217510374742159600, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
+        type: 3}
+      propertyPath: soundObjects.Array.data[6].soundName
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7217510374742159600, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
+        type: 3}
+      propertyPath: soundObjects.Array.data[0].soundVolume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7217510374742159600, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
+        type: 3}
+      propertyPath: soundObjects.Array.data[7].soundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6e39f5e01e196e94eae98bd2e058483c, type: 3}
+    - target: {fileID: 7217510374742159600, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
+        type: 3}
+      propertyPath: soundObjects.Array.data[7].soundVolume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7217510374742159600, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
+        type: 3}
+      propertyPath: soundObjects.Array.data[7].soundName
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7217510374742159600, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
+        type: 3}
+      propertyPath: soundObjects.Array.data[8].soundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ac4d80bd2046860429748c88d91bce87, type: 3}
+    - target: {fileID: 7217510374742159600, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
+        type: 3}
+      propertyPath: soundObjects.Array.data[8].soundVolume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7217510374742159600, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
+        type: 3}
+      propertyPath: soundObjects.Array.data[8].soundName
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4590974685118830498, guid: ba1bd1b28b3a5904b8a89e80c645f3d8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ba1bd1b28b3a5904b8a89e80c645f3d8, type: 3}
@@ -2357,6 +2412,7 @@ MonoBehaviour:
   - {fileID: 1931450303}
   fullContainer: {fileID: 21300000, guid: 8adf2fcfd7a93e046850b5476910eba9, type: 3}
   emptyContainer: {fileID: 21300000, guid: d2a50e17608b3db4ea4a23b7c1818c66, type: 3}
+  popEffect: {fileID: 0}
   healthAmount: 0
 --- !u!1 &1008180770 stripped
 GameObject:

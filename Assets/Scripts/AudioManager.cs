@@ -9,7 +9,7 @@ namespace Managers
     public enum Sounds
     {
         BoatCrash, StoneCrash,
-        CrocodileGrowl, CrocodileBite,
+        CrocodileGrowl, CrocodileBite, Whirlpool,
         PickupEgg, PickupPlank, PickupFly,
         Tongue, TongueCatch,
         Dash, Brake, Whirlpool

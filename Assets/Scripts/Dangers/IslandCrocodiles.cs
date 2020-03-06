@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Managers;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,7 @@ public class IslandCrocodiles : MonoBehaviour
     [SerializeField] List<Transform> waypoints;
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] GameObject path = null;
-    [SerializeField] AudioClip biteClipSound = null;
+    //[SerializeField] AudioClip biteClipSound = null;
     BoatMovementV01 boat;
     int currentWaypoint = 0;
     int lastWaypoint;
@@ -80,7 +81,9 @@ public class IslandCrocodiles : MonoBehaviour
         if (collision.tag == "Player" && timer <= 0)
         {
             boat.KnockbackDangers(GetComponent<Collider2D>());
-            AudioSource.PlayClipAtPoint(biteClipSound, new Vector3(transform.position.x, transform.position.y, transform.position.z));
+            FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.CrocodileBite);
+
+            //AudioSource.PlayClipAtPoint(biteClipSound, new Vector3(transform.position.x, transform.position.y, transform.position.z));
             Debug.Log("Hit islandcroc");
             timer = 1f;
         }
