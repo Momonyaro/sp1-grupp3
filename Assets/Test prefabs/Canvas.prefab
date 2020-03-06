@@ -2585,7 +2585,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b9c6f74ea1f81f649bc2a9fae4cbd48e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d2a50e17608b3db4ea4a23b7c1818c66, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2801,7 +2801,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundObjects:
   - soundClip: {fileID: 8300000, guid: a9e3e6b97c676e84ba363f89d07b4945, type: 3}
-    soundVolume: 1
+    soundVolume: 0.2
     soundName: 0
   - soundClip: {fileID: 8300000, guid: afc408fec5782ce4f83172d58f0a18ca, type: 3}
     soundVolume: 0.2
@@ -2818,6 +2818,21 @@ MonoBehaviour:
   - soundClip: {fileID: 8300000, guid: 83008187bec7eb64c9948d0b32b45b76, type: 3}
     soundVolume: 0.2
     soundName: 10
+  - soundClip: {fileID: 8300000, guid: 424fa0b5f7848ae4cad0d2fbb476d184, type: 3}
+    soundVolume: 0.2
+    soundName: 3
+  - soundClip: {fileID: 8300000, guid: 6e39f5e01e196e94eae98bd2e058483c, type: 3}
+    soundVolume: 0.2
+    soundName: 1
+  - soundClip: {fileID: 8300000, guid: ac4d80bd2046860429748c88d91bce87, type: 3}
+    soundVolume: 0.2
+    soundName: 4
+  - soundClip: {fileID: 8300000, guid: 824f69c54a5b1844288fb4603e5c4acd, type: 3}
+    soundVolume: 0.2
+    soundName: 8
+  - soundClip: {fileID: 8300000, guid: a7c18cc1399acd54aa5f4f93dbb3f554, type: 3}
+    soundVolume: 0.2
+    soundName: 9
   audioChannels:
   - {fileID: 3690241972359736703}
   - {fileID: 3954890251404529007}
@@ -3117,7 +3132,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b9c6f74ea1f81f649bc2a9fae4cbd48e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d2a50e17608b3db4ea4a23b7c1818c66, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3267,7 +3282,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b9c6f74ea1f81f649bc2a9fae4cbd48e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d2a50e17608b3db4ea4a23b7c1818c66, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3417,7 +3432,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b9c6f74ea1f81f649bc2a9fae4cbd48e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d2a50e17608b3db4ea4a23b7c1818c66, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3595,7 +3610,8 @@ MonoBehaviour:
   signalEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4590974685118830498}
+      - m_Target: {fileID: 4590974685118830498, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
+          type: 3}
         m_MethodName: UpdateContainers
         m_Mode: 1
         m_Arguments:
@@ -3748,7 +3764,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b9c6f74ea1f81f649bc2a9fae4cbd48e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d2a50e17608b3db4ea4a23b7c1818c66, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3768,7 +3784,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4590974685118830496}
   - component: {fileID: 4590974685118830497}
-  - component: {fileID: 4590974685118830498}
+  - component: {fileID: 985008073}
   m_Layer: 5
   m_Name: HealthContainers
   m_TagString: Untagged
@@ -3825,7 +3841,7 @@ MonoBehaviour:
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
---- !u!114 &4590974685118830498
+--- !u!114 &985008073
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3845,8 +3861,7 @@ MonoBehaviour:
   - {fileID: 4590974684790849709}
   fullContainer: {fileID: 21300000, guid: 8adf2fcfd7a93e046850b5476910eba9, type: 3}
   emptyContainer: {fileID: 21300000, guid: d2a50e17608b3db4ea4a23b7c1818c66, type: 3}
-  popEffect: {fileID: 4793634037549316341, guid: 395de6f823f5cbe40a9502c9ae5f94eb,
-    type: 3}
+  popEffect: {fileID: 0}
   healthAmount: 0
 --- !u!1 &5069052837949476756
 GameObject:
