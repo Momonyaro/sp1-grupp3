@@ -132,8 +132,8 @@ public class BoatMovementV01 : MonoBehaviour
         if (gotHit)
         {
             counter += Time.deltaTime;
-            headRenderer.color = hurtColor;
-            GetComponent<SpriteRenderer>().color = hurtColor;
+            //headRenderer.color = hurtColor;
+            //GetComponent<SpriteRenderer>().color = hurtColor;
         }
         if (counter > immortalTime)
         {
@@ -179,6 +179,7 @@ public class BoatMovementV01 : MonoBehaviour
         currentHealth--;
         Debug.Log("Lost health. Current health:" + currentHealth);
         InsertFreezeFrames(6);
+        
         //FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.BoatCrash);
     }
 
@@ -189,8 +190,10 @@ public class BoatMovementV01 : MonoBehaviour
             gotHit = true;
             playerHealthSignal.Raise();
             LostHealth();
-
+            headRenderer.color = hurtColor;
+            GetComponent<SpriteRenderer>().color = hurtColor;
         }
+
         if (other.tag == "Dangerous" && shield && gotHit == false)
         {
             gotHit = true;

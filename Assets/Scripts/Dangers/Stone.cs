@@ -9,9 +9,6 @@ public class Stone : MonoBehaviour
     BoatMovementV01 boat;
     [Tooltip("How long until deleted after the falling animation is triggered")]
     public float deleteTimer = 1f;
-    //[SerializeField] AudioSource falling = null;
-    //[SerializeField] AudioClip falling = null;
-    //[SerializeField] AudioClip crashing = null;
 
     void Start()
     {
@@ -23,11 +20,11 @@ public class Stone : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
+            Sound();
             anim.SetBool("Hit", true);
             Destroy(GetComponent<Collider2D>());
             Destroy(gameObject, deleteTimer);
             boat.KnockbackDangers(GetComponent<Collider2D>());
-            Sound();
             Debug.Log("Hit stone");
         }
     }
@@ -36,8 +33,5 @@ public class Stone : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.StoneCrash);
         FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.BoatCrash);
-
-        //AudioSource.PlayClipAtPoint(falling, new Vector3(transform.position.x, transform.position.y, transform.position.z));
-        //AudioSource.PlayClipAtPoint(crashing, new Vector3(transform.position.x, transform.position.y, transform.position.z));
     }
 }

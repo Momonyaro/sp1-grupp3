@@ -11,8 +11,6 @@ public class Crocodile : MonoBehaviour
     [SerializeField] float smallerPointX = 4f;
     [Tooltip("Det x-värde där krokodilen börjar åka till vänster")]
     [SerializeField] float biggerPointX = 7f;
-    //[SerializeField] AudioSource growl;
-    //[SerializeField] AudioClip biteClipSound;
     Hit hit;
     BoatMovementV01 boat;
     public bool direction = false;
@@ -28,7 +26,6 @@ public class Crocodile : MonoBehaviour
     {
         crocTimer -= Time.deltaTime;
         Move();
-        //MakingSounds();
     }
 
     private void Move()
@@ -88,7 +85,6 @@ public class Crocodile : MonoBehaviour
             boat.KnockbackDangers(GetComponent<Collider2D>());
             FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.CrocodileBite);
 
-            //AudioSource.PlayClipAtPoint(biteClipSound, new Vector3(transform.position.x, transform.position.y, transform.position.z));
             Debug.Log("Hit croc");
         }
     }
