@@ -39,7 +39,6 @@ public class HealthManager : MonoBehaviour
         for (int i = 0; i < healthIcons.Length; i++)
         {
             healthIcons[i].sprite = emptyContainer;
-            popEffect.Emit(40);
         }
         for(int i = 0; i < healthAmount; i++)
         {

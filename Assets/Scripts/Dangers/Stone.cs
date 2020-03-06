@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Managers;
 public class Stone : MonoBehaviour
 {
     Animator anim;
@@ -10,8 +10,8 @@ public class Stone : MonoBehaviour
     [Tooltip("How long until deleted after the falling animation is triggered")]
     public float deleteTimer = 1f;
     //[SerializeField] AudioSource falling = null;
-    [SerializeField] AudioClip falling = null;
-    [SerializeField] AudioClip crashing = null;
+    //[SerializeField] AudioClip falling = null;
+    //[SerializeField] AudioClip crashing = null;
 
     void Start()
     {
@@ -34,7 +34,10 @@ public class Stone : MonoBehaviour
 
     private void Sound()
     {
-        AudioSource.PlayClipAtPoint(falling, new Vector3(transform.position.x, transform.position.y, transform.position.z));
-        AudioSource.PlayClipAtPoint(crashing, new Vector3(transform.position.x, transform.position.y, transform.position.z));
+        FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.StoneCrash);
+        FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.BoatCrash);
+
+        //AudioSource.PlayClipAtPoint(falling, new Vector3(transform.position.x, transform.position.y, transform.position.z));
+        //AudioSource.PlayClipAtPoint(crashing, new Vector3(transform.position.x, transform.position.y, transform.position.z));
     }
 }

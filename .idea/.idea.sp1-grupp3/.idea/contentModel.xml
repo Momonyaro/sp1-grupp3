@@ -152,11 +152,13 @@
             <e p="ElectricEel.cs" t="Include" />
             <e p="Hit.cs" t="Include" />
             <e p="IslandCrocodiles.cs" t="Include" />
+            <e p="Shaker.cs" t="Include" />
             <e p="Stone.cs" t="Include" />
             <e p="wirlpool.cs" t="Include" />
           </e>
           <e p="FinishLine.cs" t="Include" />
           <e p="FrogTongue.cs" t="Include" />
+          <e p="GameStart.cs" t="Include" />
           <e p="HealthRelatedScripts" t="Include">
             <e p="HealthManager.cs" t="Include" />
           </e>
