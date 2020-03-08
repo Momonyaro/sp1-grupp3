@@ -23,6 +23,7 @@ public class TextManager : MonoBehaviour
     {
         if (plankRequiredText != null)
             plankRequiredText.GetComponent<Text>().text = "/ " + requiredPlankAmount;
+        score = 0;
     }
 
     private void Update()
