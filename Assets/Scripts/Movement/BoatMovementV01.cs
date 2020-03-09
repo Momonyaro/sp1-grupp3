@@ -24,6 +24,7 @@ public class BoatMovementV01 : MonoBehaviour
     public Color defaultColor = Color.green;
     public Color deadColor = Color.gray;
 
+    public GameObject hurtEffect;
     bool gotHit = false;
     float counter = 0f;
     float timer = .5f;
@@ -132,8 +133,6 @@ public class BoatMovementV01 : MonoBehaviour
         if (gotHit)
         {
             counter += Time.deltaTime;
-            headRenderer.color = hurtColor;
-            GetComponent<SpriteRenderer>().color = hurtColor;
         }
         if (counter > immortalTime)
         {
@@ -178,7 +177,15 @@ public class BoatMovementV01 : MonoBehaviour
     {
         currentHealth--;
         Debug.Log("Lost health. Current health:" + currentHealth);
+        GetComponent<SpriteRenderer>().color = hurtColor;
+        headRenderer.color = hurtColor;
+        if(hurtEffect != null)
+        {
+            Instantiate(hurtEffect, transform.position, Quaternion.identity);
+        }
         InsertFreezeFrames(6);
+
+        
         //FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.BoatCrash);
     }
 
@@ -186,15 +193,15 @@ public class BoatMovementV01 : MonoBehaviour
     {
         if(other.tag == "Dangerous" && shield == false && gotHit == false)
         {
-            gotHit = true;
             playerHealthSignal.Raise();
-            LostHealth();
-
-        }
-        if (other.tag == "Dangerous" && shield && gotHit == false)
-        {
             gotHit = true;
+            LostHealth();
+        }
+
+        else if (other.tag == "Dangerous" && shield && gotHit == false)
+        {
             shield = false;
+            gotHit = true;
             hit.ShieldSwitchBool();
             KnockbackDangers(other);
         }
