@@ -200,6 +200,7 @@ public class BoatMovementV01 : MonoBehaviour
         else if (other.tag == "Dangerous" && shield && gotHit == false)
         {
             shield = false;
+            gotHit = true;
             hit.ShieldSwitchBool();
             KnockbackDangers(other);
         }
