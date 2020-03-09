@@ -177,10 +177,11 @@ public class BoatMovementV01 : MonoBehaviour
     {
         currentHealth--;
         Debug.Log("Lost health. Current health:" + currentHealth);
+        GetComponent<SpriteRenderer>().color = hurtColor;
+        headRenderer.color = hurtColor;
         if(hurtEffect != null)
         {
             Instantiate(hurtEffect, transform.position, Quaternion.identity);
-
         }
         InsertFreezeFrames(6);
 
