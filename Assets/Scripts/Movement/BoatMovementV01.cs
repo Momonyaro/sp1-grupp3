@@ -177,7 +177,11 @@ public class BoatMovementV01 : MonoBehaviour
     {
         currentHealth--;
         Debug.Log("Lost health. Current health:" + currentHealth);
-        GameObject effect = Instantiate(hurtEffect, transform.position, Quaternion.identity);
+        if(hurtEffect != null)
+        {
+            Instantiate(hurtEffect, transform.position, Quaternion.identity);
+
+        }
         InsertFreezeFrames(6);
 
         
@@ -189,12 +193,14 @@ public class BoatMovementV01 : MonoBehaviour
         if(other.tag == "Dangerous" && shield == false && gotHit == false)
         {
             playerHealthSignal.Raise();
+            gotHit = true;
             LostHealth();
         }
 
         else if (other.tag == "Dangerous" && shield && gotHit == false)
         {
             shield = false;
+            gotHit = true;
             hit.ShieldSwitchBool();
             KnockbackDangers(other);
         }
