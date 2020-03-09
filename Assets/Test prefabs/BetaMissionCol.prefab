@@ -144,5 +144,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectSound: {fileID: 0}
   collectableScore: 1
+  rotationSpeed: 0
   fullHealthImage: {fileID: 0}
   emptyHealthImage: {fileID: 0}
