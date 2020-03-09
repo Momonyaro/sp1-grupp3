@@ -14916,6 +14916,18 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1066851939220517664, guid: 2826b3b5b346ef644b5063c5c6631bca,
+        type: 3}
+      propertyPath: hurtEffect
+      value: 
+      objectReference: {fileID: 4793634037549316343, guid: 395de6f823f5cbe40a9502c9ae5f94eb,
+        type: 3}
+    - target: {fileID: 1066851939220517664, guid: 2826b3b5b346ef644b5063c5c6631bca,
+        type: 3}
+      propertyPath: bittenEffect
+      value: 
+      objectReference: {fileID: 6460837289345822914, guid: 2c5530d777b6ca84da9191b91c0c8909,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2826b3b5b346ef644b5063c5c6631bca, type: 3}
 --- !u!1001 &1877108431
@@ -15744,7 +15756,7 @@ PrefabInstance:
     - target: {fileID: 5241212745445732628, guid: 86dc87fdb7b8aec4d9e406bc3011ad7b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5241212745445732628, guid: 86dc87fdb7b8aec4d9e406bc3011ad7b,
         type: 3}
