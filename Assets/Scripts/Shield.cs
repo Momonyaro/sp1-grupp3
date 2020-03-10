@@ -18,7 +18,7 @@ public class Shield : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            boat.ShieldBoolTrue();
+            boat.shield = true;
             hit.ShieldSwitchBool();
             Destroy(gameObject);
         }
