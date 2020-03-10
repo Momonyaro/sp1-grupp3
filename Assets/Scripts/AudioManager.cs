@@ -23,6 +23,9 @@ namespace Managers
         [SerializeField] public List<GameObject> audioChannels = new List<GameObject>();
         public RequestSoundDelegate requestSoundDelegate;
 
+        [Range(0, 1)]
+        public float generalVolume = 1f;
+
         private void Awake()
         {
             requestSoundDelegate = AttemptToPlaySound;
@@ -59,10 +62,15 @@ namespace Managers
         {
             if (channelSource != null)
             {
-                channelSource.volume = soundObject.soundVolume;
+                channelSource.volume = soundObject.soundVolume * generalVolume;
                 channelSource.clip = soundObject.soundClip;
                 channelSource.Play();
             }
+        }
+
+        public void SetVolume(float newVolume)
+        {
+            generalVolume = newVolume;
         }
     }
 
