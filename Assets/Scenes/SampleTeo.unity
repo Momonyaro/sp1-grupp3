@@ -311,7 +311,7 @@ PrefabInstance:
     - target: {fileID: 7051893862150489168, guid: 054c63f8caa58b74796cdaae1ff72952,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7051893862150489168, guid: 054c63f8caa58b74796cdaae1ff72952,
         type: 3}
@@ -10566,7 +10566,7 @@ Transform:
   m_Children:
   - {fileID: 931771135}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &525708171 stripped
 Transform:
@@ -11363,7 +11363,7 @@ PrefabInstance:
     - target: {fileID: 5241212745445732628, guid: 86dc87fdb7b8aec4d9e406bc3011ad7b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5241212745445732628, guid: 86dc87fdb7b8aec4d9e406bc3011ad7b,
         type: 3}
@@ -15519,7 +15519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2515e47baa749c04f92d737cb3a93100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ShowDebugText: 0
+  m_ShowDebugText: 1
   m_ShowCameraFrustum: 1
   m_IgnoreTimeScale: 0
   m_WorldUpOverride: {fileID: 0}
@@ -15552,7 +15552,7 @@ Transform:
   - {fileID: 134787903}
   - {fileID: 558823592}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1592274707261675003 stripped
 GameObject:
@@ -15698,6 +15698,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 931771134}
+    - target: {fileID: 6554719871652771920, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
+        type: 3}
+      propertyPath: sceneName
+      value: SampleTeo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba1bd1b28b3a5904b8a89e80c645f3d8, type: 3}
 --- !u!1 &4590974683353048897 stripped
