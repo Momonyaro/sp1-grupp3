@@ -129,5 +129,7 @@ public class wirlpool : MonoBehaviour
         yield return new WaitForSeconds(knockForwardTime);
         boat.knockback = false;
         boat.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        boat.GetComponent<SpriteRenderer>().color = boat.defaultColor;
+        boat.headRenderer.color = boat.defaultColor;
     }
 }
