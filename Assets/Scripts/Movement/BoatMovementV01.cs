@@ -34,6 +34,10 @@ public class BoatMovementV01 : MonoBehaviour
     public static int currentHealth;
     public SignalThingy playerHealthSignal;
     public SpriteRenderer headRenderer;
+    [Space]
+    [SerializeField] float pushbackPower = 10f;
+    [Tooltip("Vilken riktning tile-knockbacken pushar grodan")]
+    public bool knockbackDirection = false;
     Hit hit;
     Shaker shaker;
     private int freezeFrames = 0;
@@ -209,7 +213,30 @@ public class BoatMovementV01 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Knockback(collision);
+        //Knockback(collision);
+        if (collision.transform.CompareTag("Tilemap"))
+        {
+            stopBoat = true;
+            //knockbackTime -= Time.deltaTime;
+            Debug.Log("Knocked into the tilemap. Knockback Time: " + knockbackTime);
+            if (collision.transform.position.x <= transform.position.x && knockbackTime > 0)
+            {
+                Debug.Log("In first one");
+                knockbackDirection = true;
+                //rigidb.AddForce(new Vector2(pushbackPower, -pushbackPower));
+                rigidb.velocity = new Vector2(-pushbackPower, -pushbackPower);
+            }
+            else if(collision.transform.position.x > transform.position.x && knockbackTime > 0)
+            {
+                Debug.Log("In second one");
+
+                knockbackDirection = false;
+                //rigidb.AddForce(new Vector2(pushbackPower, -pushbackPower));
+                rigidb.velocity = new Vector2(pushbackPower, -pushbackPower);
+            }
+            stopBoat = false;
+        }
+
     }
 
     public void Knockback(Collision2D danger)
