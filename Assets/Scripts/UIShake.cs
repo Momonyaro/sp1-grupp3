@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIShake : MonoBehaviour
+public class UIShake
 {
-    public float moveStep = .4f;
+    public float moveStep = .7f;
     
     private Vector3 _startPos;
     private Vector3 _targetPos;
@@ -14,7 +14,7 @@ public class UIShake : MonoBehaviour
     private bool _boomerang = false;
     private bool _returning = false;
 
-    private void Update()
+    public void Update()
     {
         if (_blinked)
         {

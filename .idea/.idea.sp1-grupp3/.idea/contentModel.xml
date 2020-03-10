@@ -138,7 +138,6 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="AudioManager.cs" t="Include" />
-          <e p="CollectableHandeler.cs" t="Include" />
           <e p="CollectableTypes" t="Include">
             <e p="Collectable.cs" t="Include" />
             <e p="CommonCollectable.cs" t="Include" />
@@ -152,8 +151,10 @@
             <e p="ElectricEel.cs" t="Include" />
             <e p="Hit.cs" t="Include" />
             <e p="IslandCrocodiles.cs" t="Include" />
+            <e p="RandomSounds.cs" t="Include" />
             <e p="Shaker.cs" t="Include" />
             <e p="Stone.cs" t="Include" />
+            <e p="WaypointMovement.cs" t="Include" />
             <e p="wirlpool.cs" t="Include" />
           </e>
           <e p="FinishLine.cs" t="Include" />
@@ -171,6 +172,7 @@
           </e>
           <e p="NpcComponent.cs" t="Include" />
           <e p="OptionManager.cs" t="Include" />
+          <e p="Riverfront.cs" t="Include" />
           <e p="ScriptableObjectsScripts" t="Include">
             <e p="SignalListener.cs" t="Include" />
             <e p="SignalThingy.cs" t="Include" />
@@ -190,6 +192,12 @@
           <e p="UIShake.cs" t="Include" />
           <e p="WaterLayer.cs" t="Include" />
         </e>
+        <e p="Test prefabs" t="Include">
+          <e p="Particle Effects" t="Include">
+            <e p="TimeBomb.cs" t="Include" />
+          </e>
+        </e>
+        <e p="TilemapKnockback.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
