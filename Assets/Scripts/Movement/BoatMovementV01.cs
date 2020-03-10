@@ -238,7 +238,7 @@ public class BoatMovementV01 : MonoBehaviour
         }
     }
 
-    IEnumerator AccurateKnockback(Vector3 newDistance)
+    public IEnumerator AccurateKnockback(Vector3 newDistance)
     {
         GetComponent<Rigidbody2D>().AddForce(newDistance.normalized * knockbackPower);
         yield return new WaitForSeconds(knockbackTime);
