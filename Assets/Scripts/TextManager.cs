@@ -24,6 +24,8 @@ public class TextManager : MonoBehaviour
         if (plankRequiredText != null)
             plankRequiredText.GetComponent<Text>().text = "/ " + requiredPlankAmount;
         score = 0;
+        plankAmount = 0;
+        missionAmount = 0;
     }
 
     private void Update()

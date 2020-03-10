@@ -15683,11 +15683,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4590974683630779377, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 931771134}
     - target: {fileID: 7217510374742159600, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
         type: 3}
       propertyPath: soundObjects.Array.data[5].soundVolume
@@ -15698,6 +15693,11 @@ PrefabInstance:
       propertyPath: soundObjects.Array.data[0].soundVolume
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4590974683630779377, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 931771134}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba1bd1b28b3a5904b8a89e80c645f3d8, type: 3}
 --- !u!1 &4590974683353048897 stripped
@@ -15756,7 +15756,7 @@ PrefabInstance:
     - target: {fileID: 5241212745445732628, guid: 86dc87fdb7b8aec4d9e406bc3011ad7b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5241212745445732628, guid: 86dc87fdb7b8aec4d9e406bc3011ad7b,
         type: 3}
