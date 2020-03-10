@@ -119,7 +119,7 @@ public class wirlpool : MonoBehaviour
         if (collision.tag == "Player")
         {
             activated = true;
-            boat.SetKnockbackBool(true);
+            boat.knockback = true;
         }
     }
 
@@ -127,7 +127,7 @@ public class wirlpool : MonoBehaviour
     {
         boat.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, knockForwardPower));
         yield return new WaitForSeconds(knockForwardTime);
-        boat.SetKnockbackBool(false);
+        boat.knockback = false;
         boat.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
 }
