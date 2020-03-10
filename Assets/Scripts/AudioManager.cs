@@ -6,11 +6,19 @@ using UnityEngine;
 
 namespace Managers
 {
-    public delegate void RequestSoundDelegate(string soundName);
+    public enum Sounds
+    {
+        BoatCrash, StoneCrash,
+        CrocodileGrowl, CrocodileBite, Whirlpool,
+        PickupEgg, PickupPlank, PickupFly,
+        Tongue, TongueCatch,
+        Dash, Brake,
+    }
+
+    public delegate void RequestSoundDelegate(Sounds sound);
 
     public class AudioManager : MonoBehaviour
     {
-        public double soundVolume = 0.8;
         [SerializeField] private List<AudioObject> soundObjects = new List<AudioObject>();
         [SerializeField] public List<GameObject> audioChannels = new List<GameObject>();
         public RequestSoundDelegate requestSoundDelegate;
@@ -20,18 +28,10 @@ namespace Managers
             requestSoundDelegate = AttemptToPlaySound;
         }
 
-        private void Update()
+        private void AttemptToPlaySound(Sounds sound)
         {
-            if (soundVolume > 1) soundVolume = 1;
-            foreach(GameObject channel in audioChannels)
-            {
-                channel.GetComponent<AudioSource>().volume = (float)soundVolume;
-            }
-        }
-
-        private void AttemptToPlaySound(string soundName)
-        {
-            foreach (var soundObject in soundObjects.Where(soundObject => soundObject.name.Equals(soundName)))
+            Debug.Log("Recieved request to play " + sound.ToString());
+            foreach (var soundObject in soundObjects.Where(soundObject => soundObject.soundName == sound))
             {
                 TetherAudio(AttemptAudioTether(soundObject), soundObject);
             }
@@ -46,11 +46,7 @@ namespace Managers
                 if (channelSource.isPlaying && channelSource.clip != null)
                 {
                     if (channelSource.clip.name.Equals(sound.soundClip.name))
-                    {
                         return null;
-                    }
-                    else
-                        toReturn = channelSource;
                 }
                 else
                     toReturn = channelSource;
@@ -63,6 +59,7 @@ namespace Managers
         {
             if (channelSource != null)
             {
+                channelSource.volume = soundObject.soundVolume;
                 channelSource.clip = soundObject.soundClip;
                 channelSource.Play();
             }
@@ -73,6 +70,8 @@ namespace Managers
     public struct AudioObject
     {
         public AudioClip soundClip;
-        public string name;
+        [Range(0, 1)]
+        public float soundVolume;
+        public Sounds soundName;
     }
 }

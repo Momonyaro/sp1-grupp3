@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Managers;
 
 public class FrogTongue : MonoBehaviour
 {
@@ -11,8 +12,6 @@ public class FrogTongue : MonoBehaviour
     public float reelSpeed = .5f;
     [SerializeField] private GameObject tongueTip;
     [SerializeField] private LineRenderer tongueBody;
-    [SerializeField] AudioClip launchSound;
-    [SerializeField] AudioClip catchSound;
     private Vector2 _targetPos;
     private Vector2 _mousePos;
     private bool _thrownTongue = false;
@@ -29,11 +28,11 @@ public class FrogTongue : MonoBehaviour
         _mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         
 
-        if (Input.GetMouseButtonDown(0) && !_thrownTongue)
+        if (Input.GetMouseButtonDown(0) && !_thrownTongue && BoatMovementV01.currentHealth > 0)
         {
             _thrownTongue = true;
             SetTargetPosition(_mousePos);
-            AudioSource.PlayClipAtPoint(launchSound, new Vector3(transform.position.x, transform.position.y, transform.position.z));
+            FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.Tongue);
             soundBool = true;
         }
         
@@ -52,7 +51,7 @@ public class FrogTongue : MonoBehaviour
             _thrownTongue = false;
             if (soundBool)
             {
-                AudioSource.PlayClipAtPoint(catchSound, new Vector3(transform.position.x, transform.position.y, transform.position.z));
+                FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.TongueCatch);
                 soundBool = false;
             }
         }

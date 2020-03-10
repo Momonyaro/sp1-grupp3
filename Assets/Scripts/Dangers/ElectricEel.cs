@@ -22,18 +22,5 @@ public class ElectricEel : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player" && boat.StunStatus() == false)
-        {
-            boat.StunnedBoolSwitch();
-            boat.GetComponent<SpriteRenderer>().color = Color.yellow;
-            StartCoroutine(Stunned());
-        }
-    }
-
-    IEnumerator Stunned()
-    {
-        yield return new WaitForSeconds(stunTime);
-        boat.GetComponent<SpriteRenderer>().color = Color.white;
-        boat.StunnedBoolSwitch();
     }
 }
