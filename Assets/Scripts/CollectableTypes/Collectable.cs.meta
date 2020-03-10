@@ -3,7 +3,9 @@ guid: 777b600e5b3038e47b09a0ac4cee3e39
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - collectSound: {instanceID: 0}
+  - shine: {fileID: 7755148332838020773, guid: d7e67d9eae81fa140b16f024f10a2e4a, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
