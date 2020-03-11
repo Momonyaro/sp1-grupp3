@@ -14,6 +14,7 @@ public class FrogMovement : MonoBehaviour
     private void Awake()
     {
         Time.timeScale = 1;
+        frozen = false;
     }
 
     void Update()

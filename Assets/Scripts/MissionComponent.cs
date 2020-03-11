@@ -29,7 +29,9 @@ public class MissionComponent
     public void Update()
     {
         if (missionBox != null)
+        {
             FrogMovement.frozen = missionBox.panel.activeInHierarchy;
+        }
     }
 
     public bool MissionBoxActive()
