@@ -91,23 +91,24 @@ public class BoatMovementV01 : MonoBehaviour
                     _pressedS = true;
                     FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.Brake);
                 }
-                else
-                    _pressedS = false;
                 
                 _autoSpeed = breakSpeed;
             }
-            else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) && !stunned)
+            else
+                _pressedS = false;
+
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) && !stunned)
             {
                 if (!_pressedW)
                 {
                     _pressedW = true;
                     FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.Dash);
                 }
-                else
-                    _pressedW = false;
                 
                 _autoSpeed = rowSpeed;
             }
+            else
+                _pressedW = false;
 
             Vector2 position = transform.position;
             position.y += + 1.0f * _autoSpeed * Time.deltaTime;
