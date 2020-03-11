@@ -15,6 +15,8 @@ public class IslandCrocodiles : MonoBehaviour
     int lastWaypoint;
     float timer = 0f;
     bool rotating = false;
+    public GameObject target;
+    public float distance;
 
     void Start()
     {
@@ -39,6 +41,8 @@ public class IslandCrocodiles : MonoBehaviour
 
     void Update()
     {
+        distance = Vector3.Distance(target.transform.position, transform.position);
+
         timer -= Time.deltaTime;
         
         Move();
