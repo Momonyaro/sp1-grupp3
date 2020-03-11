@@ -24,8 +24,8 @@ public class wirlpool : MonoBehaviour
     float whirlCounter = 0f;
     float timeCounter = 0f;
     bool activated = false;
-    public GameObject leftPoint = null;
-    public GameObject rightPoint = null;
+    //public GameObject leftPoint = null;
+    //public GameObject rightPoint = null;
     bool direction = false;
 
     void Start()
@@ -62,26 +62,26 @@ public class wirlpool : MonoBehaviour
         //RotatingBoat();
     }
 
-    private void RotatingBoat()
-    {
-        if(leftPoint.transform.position == boat.transform.position)
-        {
-            direction = false;
-        }
-        else if(rightPoint.transform.position == boat.transform.position)
-        {
-            direction = true;
-        }
+    //private void RotatingBoat()
+    //{
+        //if(leftPoint.transform.position == boat.transform.position)
+        //{
+        //    direction = false;
+        //}
+        //else if(rightPoint.transform.position == boat.transform.position)
+        //{
+        //    direction = true;
+        //}
 
-        if (direction)
-        {
-            boat.transform.position = Vector3.MoveTowards(boat.transform.position, leftPoint.transform.position, insideWhirlSpeed * Time.deltaTime);
-        }
-        else
-        {
-            boat.transform.position = Vector3.MoveTowards(boat.transform.position, rightPoint.transform.position, insideWhirlSpeed * Time.deltaTime);
-        }
-    }
+        //if (direction)
+        //{
+        //    boat.transform.position = Vector3.MoveTowards(boat.transform.position, leftPoint.transform.position, insideWhirlSpeed * Time.deltaTime);
+        //}
+        //else
+        //{
+        //    boat.transform.position = Vector3.MoveTowards(boat.transform.position, rightPoint.transform.position, insideWhirlSpeed * Time.deltaTime);
+        //}
+    //}
 
     private void CountClicks()
     {

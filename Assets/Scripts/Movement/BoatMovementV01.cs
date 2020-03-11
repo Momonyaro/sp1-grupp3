@@ -42,10 +42,10 @@ public class BoatMovementV01 : MonoBehaviour
     [Space]
     [Tooltip("Vilken riktning tile-knockbacken pushar grodan")]
     //public bool knockbackDirection = false;
-    //Hit hit;
-    //Shaker shaker;
     private Vector3 _oldVelocity;
     private Vector3 _oldPosition;
+    [SerializeField] float originOffsetX = 0.5f;
+    [SerializeField] float originOffsetY = 0.7f;
 
     public bool GameOver = false;
 
@@ -145,7 +145,7 @@ public class BoatMovementV01 : MonoBehaviour
 
         _timer -= Time.deltaTime;
 
-        _oldVelocity = (transform.position - _oldPosition) * 30;
+        _oldVelocity = (transform.position - _oldPosition) * 100;
         _oldPosition = transform.position;
     }
 
@@ -160,9 +160,6 @@ public class BoatMovementV01 : MonoBehaviour
             Instantiate(hurtEffect, transform.position, Quaternion.identity);
         }
         InsertFreezeFrames(freezeFrames);
-
-        
-        //FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.BoatCrash);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -187,33 +184,42 @@ public class BoatMovementV01 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.gameObject.layer == 8)
+        {
+            if (Physics2D.Raycast(transform.position, Vector2.left, -originOffsetX))
+            {
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.left) * 10, Color.yellow);
+                Debug.Log("Did Hit");
+            }
+            else
+            {
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
+                Debug.Log("Did not Hit");
+            }
 
+        }
 
         //Knockback(collision);
-        if (collision.transform.CompareTag("Tilemap"))
-        {
-            ////knockbackTime -= Time.deltaTime;
-            Debug.Log("Knocked into the tilemap");
-            if (collision.transform.position.x <= transform.position.x)
-            {
-                Knockback(false);
-                //    Debug.Log("In first one");
-                //    StartCoroutine(TilemapKnockback(true));
-                //    //knockbackDirection = true;
-                //    //rigidb.AddForce(new Vector2(pushbackPower, -pushbackPower));
-                //    //rigidb.velocity = new Vector2(-pushbackPower, -pushbackPower);
-            }
-            else //if(collision.transform.position.x > transform.position.x)
-            {
-                Knockback(true);
-                //    Debug.Log("In second one");
-                //    StartCoroutine(TilemapKnockback(false));
+        //if (collision.transform.CompareTag("Tilemap"))
+        //{
+        //    //knockbackTime -= Time.deltaTime;
+        //    Debug.Log("Knocked into the tilemap");
+        //    if (collision.transform.position.x <= transform.position.x)
+        //    {
+        //        Knockback(false);
+        //        //    StartCoroutine(TilemapKnockback(true));
+        //        //    //rigidb.AddForce(new Vector2(pushbackPower, -pushbackPower));
+        //        //    //rigidb.velocity = new Vector2(-pushbackPower, -pushbackPower);
+        //    }
+        //    else //if(collision.transform.position.x > transform.position.x)
+        //    {
+        //        Knockback(true);
+        //        //    StartCoroutine(TilemapKnockback(false));
 
-                //    //knockbackDirection = false;
-                //    //rigidb.AddForce(new Vector2(pushbackPower, -pushbackPower));
-                //    //rigidb.velocity = new Vector2(pushbackPower, -pushbackPower);
-            }
-        }
+        //        //    //rigidb.AddForce(new Vector2(pushbackPower, -pushbackPower));
+        //        //    //rigidb.velocity = new Vector2(pushbackPower, -pushbackPower);
+        //    }
+        //}
 
     }
 
@@ -289,4 +295,11 @@ public class BoatMovementV01 : MonoBehaviour
         Debug.Log("[Za Warudo] Froze time for " + amount + " frames.");
         _freezeFrames = amount;
     }
+
+    //private void OnDrawGizmos()
+    //{
+    //    Gizmos.color = Color.black;
+    //    Gizmos.DrawLine(new Vector2(transform.position.x + originOffsetX, transform.position.y), new Vector2(transform.position.x - originOffsetX, transform.position.y));
+    //    Gizmos.DrawLine(new Vector2(transform.position.x, transform.position.y + originOffsetY), new Vector2(transform.position.x, transform.position.y - originOffsetY));
+    //}
 }
