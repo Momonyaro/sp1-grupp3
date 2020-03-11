@@ -34,10 +34,19 @@ public class BoatMovementV01 : MonoBehaviour
     public static int currentHealth;
     public SignalThingy playerHealthSignal;
     public SpriteRenderer headRenderer;
+    public float pushbackPower = 2f;
     private Hit _hit;
     private Shaker _shaker;
     private int _freezeFrames = 0;
     private const float DangerKnockbackTimer = 1;
+    [Space]
+    [Tooltip("Vilken riktning tile-knockbacken pushar grodan")]
+    //public bool knockbackDirection = false;
+    //Hit hit;
+    //Shaker shaker;
+    private Vector3 _oldVelocity;
+    private Vector3 _oldPosition;
+
     public bool GameOver = false;
 
     private bool _pressedS = false;
@@ -51,6 +60,8 @@ public class BoatMovementV01 : MonoBehaviour
         _hit = FindObjectOfType<Hit>();
         _shaker = FindObjectOfType<Shaker>();
         currentHealth = maxHealth;
+        _oldVelocity = rigidb.velocity;
+        _oldPosition = transform.position;
         //GetComponent<Collider2D>().enabled = true;
     }
 
@@ -133,6 +144,9 @@ public class BoatMovementV01 : MonoBehaviour
         }
 
         _timer -= Time.deltaTime;
+
+        _oldVelocity = (transform.position - _oldPosition) * 30;
+        _oldPosition = transform.position;
     }
 
     public void LostHealth()
@@ -173,21 +187,78 @@ public class BoatMovementV01 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Knockback(collision);
+
+
+        //Knockback(collision);
+        if (collision.transform.CompareTag("Tilemap"))
+        {
+            ////knockbackTime -= Time.deltaTime;
+            Debug.Log("Knocked into the tilemap");
+            if (collision.transform.position.x <= transform.position.x)
+            {
+                Knockback(false);
+                //    Debug.Log("In first one");
+                //    StartCoroutine(TilemapKnockback(true));
+                //    //knockbackDirection = true;
+                //    //rigidb.AddForce(new Vector2(pushbackPower, -pushbackPower));
+                //    //rigidb.velocity = new Vector2(-pushbackPower, -pushbackPower);
+            }
+            else //if(collision.transform.position.x > transform.position.x)
+            {
+                Knockback(true);
+                //    Debug.Log("In second one");
+                //    StartCoroutine(TilemapKnockback(false));
+
+                //    //knockbackDirection = false;
+                //    //rigidb.AddForce(new Vector2(pushbackPower, -pushbackPower));
+                //    //rigidb.velocity = new Vector2(pushbackPower, -pushbackPower);
+            }
+        }
+
     }
 
-    public void Knockback(Collision2D danger)
+    //IEnumerator TilemapKnockback(bool direction)
+    //{
+    //    stopBoat = true;
+    //    if (direction)
+    //    {
+    //        rigidb.velocity = new Vector2(-pushbackPower, -transform.position.y);
+    //    }
+    //    else
+    //    {
+    //        rigidb.velocity = new Vector2(pushbackPower, transform.position.y);
+    //    }
+    //    yield return new WaitForSeconds(.5f);
+    //    stopBoat = false;
+    //}
+
+    public void Knockback(bool direction)
     {
         if (_timer < 0)
         {
             knockback = true;
-            var newDistance = GetComponent<Rigidbody2D>().transform.position - danger.transform.position;
-            StartCoroutine(AccurateKnockback(newDistance));
+            Vector3 vel = _oldVelocity;
+            vel = vel * -1;
+            StartCoroutine(TilemapKnockback(vel));
+            //var newDistance = GetComponent<Rigidbody2D>().transform.position - danger.transform.position;
+            //StartCoroutine(AccurateKnockback(newDistance));
             StartCoroutine(_shaker.Shake());
 
             _timer = .3f;
         }
     }
+
+    IEnumerator TilemapKnockback(Vector3 velocity)
+    {
+        velocity.Normalize();
+        Debug.Log("rigidb velocity = " + rigidb.velocity + " | inverted velocity = " + velocity);
+        rigidb.AddForce(velocity * pushbackPower);
+        //rigidb.velocity = velocity * pushbackPower;
+        yield return new WaitForSeconds(.1f);
+        knockback = false;
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+    }
+
 
     public void KnockbackDangers(Collider2D danger)
     {
