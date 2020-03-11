@@ -237,10 +237,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -249,10 +249,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -271,6 +271,30 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -278,10 +302,10 @@ TextureImporter:
       name: "H\xE4ger idle_0"
       rect:
         serializedVersion: 2
-        x: 367
-        y: 11253
-        width: 333
-        height: 680
+        x: 0
+        y: 11200
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,7 +313,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 748821be0585bb94d9425bbe5ab352bf
+      spriteID: 87635d5f8a59d3d48b52c1a8b34b7891
       internalID: 5735016858463030032
       vertices: []
       indices: 
@@ -299,10 +323,10 @@ TextureImporter:
       name: "H\xE4ger idle_1"
       rect:
         serializedVersion: 2
-        x: 1169
-        y: 11253
-        width: 334
-        height: 680
+        x: 800
+        y: 11200
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,7 +334,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e68e740bf60ecc4ab976dada7dba25f
+      spriteID: a17acccd0ae12e4409790dda25573787
       internalID: -123011119641493234
       vertices: []
       indices: 
@@ -320,10 +344,10 @@ TextureImporter:
       name: "H\xE4ger idle_2"
       rect:
         serializedVersion: 2
-        x: 1967
-        y: 11253
-        width: 333
-        height: 680
+        x: 1600
+        y: 11200
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -331,7 +355,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afe20539725242e42baf9cf8a7754f8a
+      spriteID: bfde6a9b514eef3489b24dc16a4cdcb5
       internalID: -3557790367920008053
       vertices: []
       indices: 
@@ -341,10 +365,10 @@ TextureImporter:
       name: "H\xE4ger idle_3"
       rect:
         serializedVersion: 2
-        x: 2769
-        y: 11253
-        width: 334
-        height: 680
+        x: 2400
+        y: 11200
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -352,7 +376,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c6ae3fad97a6344f8dbaeaef381961a
+      spriteID: 4482350d72ca36447b39165723c664da
       internalID: 1240753366015150138
       vertices: []
       indices: 
@@ -362,10 +386,10 @@ TextureImporter:
       name: "H\xE4ger idle_4"
       rect:
         serializedVersion: 2
-        x: 366
-        y: 10456
-        width: 334
-        height: 679
+        x: 0
+        y: 10400
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -373,7 +397,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c79410f9a2515ec4caf072e4da08f8c2
+      spriteID: 7afb025a36f5db94b80adf577a30d2fa
       internalID: 5983554170227998157
       vertices: []
       indices: 
@@ -383,10 +407,10 @@ TextureImporter:
       name: "H\xE4ger idle_5"
       rect:
         serializedVersion: 2
-        x: 1165
-        y: 10456
-        width: 338
-        height: 674
+        x: 800
+        y: 10400
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -394,7 +418,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37bb7a925f9a2c049a9f30d6fc5e4dfd
+      spriteID: bfa3874d934012b45afc13fec7c6fa6b
       internalID: -5632324442753306800
       vertices: []
       indices: 
@@ -404,10 +428,10 @@ TextureImporter:
       name: "H\xE4ger idle_6"
       rect:
         serializedVersion: 2
-        x: 1966
-        y: 10456
-        width: 334
-        height: 674
+        x: 1600
+        y: 10400
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -415,7 +439,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab8d723ce178eb441a88582e32707e13
+      spriteID: 029790baa5453a44a8ef5523ae335fff
       internalID: 3977137134913287587
       vertices: []
       indices: 
@@ -425,10 +449,10 @@ TextureImporter:
       name: "H\xE4ger idle_7"
       rect:
         serializedVersion: 2
-        x: 2764
-        y: 10456
-        width: 339
-        height: 674
+        x: 2400
+        y: 10400
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -436,7 +460,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 635491dac26ccb84f803b261962d2151
+      spriteID: 834dd775ae845de44984d282192c8a5f
       internalID: 3969275968498612826
       vertices: []
       indices: 
@@ -446,10 +470,10 @@ TextureImporter:
       name: "H\xE4ger idle_8"
       rect:
         serializedVersion: 2
-        x: 366
-        y: 9654
-        width: 337
-        height: 678
+        x: 0
+        y: 9600
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -457,7 +481,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 847360bf4a3ff4e459c01aaa36abac22
+      spriteID: 2126c71de64799240b39a1eafcea1a50
       internalID: -3569910495511380372
       vertices: []
       indices: 
@@ -467,10 +491,10 @@ TextureImporter:
       name: "H\xE4ger idle_9"
       rect:
         serializedVersion: 2
-        x: 1164
-        y: 9654
-        width: 339
-        height: 673
+        x: 800
+        y: 9600
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -478,7 +502,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a9cfffdeacccf34d88f308088c6a52d
+      spriteID: 9a60d9248b9f74a4c87e8d7340205675
       internalID: -1207363038753112172
       vertices: []
       indices: 
@@ -488,10 +512,10 @@ TextureImporter:
       name: "H\xE4ger idle_10"
       rect:
         serializedVersion: 2
-        x: 1966
-        y: 9654
-        width: 340
-        height: 673
+        x: 1600
+        y: 9600
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -499,7 +523,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08bf296d57724d24e85522c2794bc546
+      spriteID: 95c1be6dd3381664bbed7ba28edd3efd
       internalID: 4909903352833179358
       vertices: []
       indices: 
@@ -509,10 +533,10 @@ TextureImporter:
       name: "H\xE4ger idle_11"
       rect:
         serializedVersion: 2
-        x: 2764
-        y: 9654
-        width: 339
-        height: 673
+        x: 2400
+        y: 9600
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -520,7 +544,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50d507496e38ece4e84d6386830049bc
+      spriteID: ba3f41d9540251e41929a0147ed9c6a8
       internalID: 7260077775622595546
       vertices: []
       indices: 
@@ -530,10 +554,10 @@ TextureImporter:
       name: "H\xE4ger idle_12"
       rect:
         serializedVersion: 2
-        x: 364
-        y: 8856
-        width: 342
-        height: 673
+        x: 0
+        y: 8800
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -541,7 +565,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a57c07251a80014eaba20939f179261
+      spriteID: 9e7f6815b4a9be342b72f2e70e5df3c2
       internalID: 3424260609403697858
       vertices: []
       indices: 
@@ -551,10 +575,10 @@ TextureImporter:
       name: "H\xE4ger idle_13"
       rect:
         serializedVersion: 2
-        x: 1163
-        y: 8856
-        width: 340
-        height: 668
+        x: 800
+        y: 8800
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -562,7 +586,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a75217107e5908247b8b41605ea03fe1
+      spriteID: c01e6a889360be24991d9aef6af73e7d
       internalID: -3237614096976002702
       vertices: []
       indices: 
@@ -572,10 +596,10 @@ TextureImporter:
       name: "H\xE4ger idle_14"
       rect:
         serializedVersion: 2
-        x: 1962
-        y: 8856
-        width: 344
-        height: 668
+        x: 1600
+        y: 8800
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -583,7 +607,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7541949d9d6dc4b4b9fc71c706c8c6a6
+      spriteID: 7f20fbfe118285344b68bbbb952dc2cd
       internalID: -5018855516319010880
       vertices: []
       indices: 
@@ -593,10 +617,10 @@ TextureImporter:
       name: "H\xE4ger idle_15"
       rect:
         serializedVersion: 2
-        x: 2763
-        y: 8856
-        width: 340
-        height: 668
+        x: 2400
+        y: 8800
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -604,7 +628,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f26b58ec94ffe2740a312c1709cb197f
+      spriteID: eb55d5efc1c35204693e22ec44478444
       internalID: 6531200199424477732
       vertices: []
       indices: 
@@ -614,10 +638,10 @@ TextureImporter:
       name: "H\xE4ger idle_16"
       rect:
         serializedVersion: 2
-        x: 361
-        y: 8054
-        width: 345
-        height: 668
+        x: 0
+        y: 8000
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -625,7 +649,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b081ff28992027a4fb1a1e7d0924b742
+      spriteID: a0364ea946a155641a6bda9907ce7348
       internalID: -7083261804473831011
       vertices: []
       indices: 
@@ -635,10 +659,10 @@ TextureImporter:
       name: "H\xE4ger idle_17"
       rect:
         serializedVersion: 2
-        x: 1163
-        y: 8054
-        width: 340
-        height: 668
+        x: 800
+        y: 8000
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -646,7 +670,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b995d6af1d09614ea1e2364fb739cf2
+      spriteID: ee27c7fec58a77046a49c0f622cfc0d7
       internalID: 7491879381320069100
       vertices: []
       indices: 
@@ -656,10 +680,10 @@ TextureImporter:
       name: "H\xE4ger idle_18"
       rect:
         serializedVersion: 2
-        x: 1961
-        y: 8054
-        width: 345
-        height: 668
+        x: 1600
+        y: 8000
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -667,7 +691,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c102d144fbc90aa43b1c276179a8ca39
+      spriteID: e6bfdda40a2853e49ba4c43dcfc45a6f
       internalID: 5266811313698742481
       vertices: []
       indices: 
@@ -677,10 +701,10 @@ TextureImporter:
       name: "H\xE4ger idle_19"
       rect:
         serializedVersion: 2
-        x: 2763
-        y: 8054
-        width: 343
-        height: 668
+        x: 2400
+        y: 8000
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -688,7 +712,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2494b0d7896339c4698b3ea52f78b6e1
+      spriteID: f3af31672262cc54b815dd9329e8cdd2
       internalID: -4984718610147286600
       vertices: []
       indices: 
@@ -698,10 +722,10 @@ TextureImporter:
       name: "H\xE4ger idle_20"
       rect:
         serializedVersion: 2
-        x: 361
-        y: 7257
-        width: 345
-        height: 662
+        x: 0
+        y: 7200
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -709,7 +733,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7478218a35aba049b8c89de1c0334ea
+      spriteID: fa80db2de622b254dbebefcee5cfa7bd
       internalID: -7305326520889601067
       vertices: []
       indices: 
@@ -719,10 +743,10 @@ TextureImporter:
       name: "H\xE4ger idle_21"
       rect:
         serializedVersion: 2
-        x: 1163
-        y: 7257
-        width: 345
-        height: 662
+        x: 800
+        y: 7200
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -730,7 +754,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cd39bc4676936a40acf53c79cbcff54
+      spriteID: 641eb9406c409e441b484122dac15fac
       internalID: 8810127386272940897
       vertices: []
       indices: 
@@ -740,10 +764,10 @@ TextureImporter:
       name: "H\xE4ger idle_22"
       rect:
         serializedVersion: 2
-        x: 1961
-        y: 7257
-        width: 345
-        height: 662
+        x: 1600
+        y: 7200
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -751,7 +775,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f64d9604d36eee9409a94ca76cfb7f5e
+      spriteID: d46ddc59c15ad8f4d988cac8d39d5e45
       internalID: -7604907407401604457
       vertices: []
       indices: 
@@ -761,10 +785,10 @@ TextureImporter:
       name: "H\xE4ger idle_23"
       rect:
         serializedVersion: 2
-        x: 2763
-        y: 7257
-        width: 346
-        height: 662
+        x: 2400
+        y: 7200
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -772,7 +796,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c54042587c362454891ed0631d789464
+      spriteID: 65df6d2497ec88a43acabb87e07fefba
       internalID: 5947344975634674271
       vertices: []
       indices: 
@@ -782,10 +806,10 @@ TextureImporter:
       name: "H\xE4ger idle_24"
       rect:
         serializedVersion: 2
-        x: 361
-        y: 6454
-        width: 345
-        height: 662
+        x: 0
+        y: 6400
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -793,7 +817,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f230173703cf194c85935ea173ec743
+      spriteID: b6c686fa5f5ac5b478440daf291c8ca9
       internalID: -7488454746962819272
       vertices: []
       indices: 
@@ -803,10 +827,10 @@ TextureImporter:
       name: "H\xE4ger idle_25"
       rect:
         serializedVersion: 2
-        x: 1163
-        y: 6454
-        width: 346
-        height: 662
+        x: 800
+        y: 6400
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -814,7 +838,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ce38b6e116b8464da887a81b2179778
+      spriteID: 88d9c2364984c2a4ea9ffceb68de50b4
       internalID: 8103720499505579341
       vertices: []
       indices: 
@@ -824,10 +848,10 @@ TextureImporter:
       name: "H\xE4ger idle_26"
       rect:
         serializedVersion: 2
-        x: 1961
-        y: 6454
-        width: 345
-        height: 662
+        x: 1600
+        y: 6400
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -835,7 +859,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9eb6036b4ab1a54ea1b7cdca7a58887
+      spriteID: 22abd426d0dafe24ea1d536b2104ed27
       internalID: 6924858755647282218
       vertices: []
       indices: 
@@ -845,10 +869,10 @@ TextureImporter:
       name: "H\xE4ger idle_27"
       rect:
         serializedVersion: 2
-        x: 2763
-        y: 6454
-        width: 346
-        height: 662
+        x: 2400
+        y: 6400
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -856,7 +880,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5eeb78a8c40d6c240904d6fe4adf4720
+      spriteID: 2008579a213398a41820d9d6e5cb5b51
       internalID: -896774174847432240
       vertices: []
       indices: 
@@ -866,10 +890,10 @@ TextureImporter:
       name: "H\xE4ger idle_28"
       rect:
         serializedVersion: 2
-        x: 361
-        y: 5655
-        width: 345
-        height: 658
+        x: 0
+        y: 5600
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -877,7 +901,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51213f4b5a435384b87a9239d22afb64
+      spriteID: 4a1687e10890dcb42a5de3f1d73eb026
       internalID: -4586381170534464513
       vertices: []
       indices: 
@@ -887,10 +911,10 @@ TextureImporter:
       name: "H\xE4ger idle_29"
       rect:
         serializedVersion: 2
-        x: 1163
-        y: 5655
-        width: 346
-        height: 658
+        x: 800
+        y: 5600
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -898,7 +922,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6df0f1c2a79eeaf45b9bd6f3072ca769
+      spriteID: 09872091f45e6694794ea52ac5cde884
       internalID: -4138729966357766900
       vertices: []
       indices: 
@@ -908,10 +932,10 @@ TextureImporter:
       name: "H\xE4ger idle_30"
       rect:
         serializedVersion: 2
-        x: 1961
-        y: 5655
-        width: 345
-        height: 658
+        x: 1600
+        y: 5600
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -919,7 +943,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac4806a8445b7cb4c8a435f766c11942
+      spriteID: 3f956a7c175cb244883dad6aa628da73
       internalID: 661430857885847325
       vertices: []
       indices: 
@@ -929,10 +953,10 @@ TextureImporter:
       name: "H\xE4ger idle_31"
       rect:
         serializedVersion: 2
-        x: 2763
-        y: 5655
-        width: 346
-        height: 658
+        x: 2400
+        y: 5600
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -940,7 +964,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 085629c156b66b64db8c801fd68c79cb
+      spriteID: 2aa4e8ee56da89d42a15c2a1144b7795
       internalID: -337167964443039000
       vertices: []
       indices: 
@@ -950,10 +974,10 @@ TextureImporter:
       name: "H\xE4ger idle_32"
       rect:
         serializedVersion: 2
-        x: 361
-        y: 4855
-        width: 345
-        height: 661
+        x: 0
+        y: 4800
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -961,7 +985,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7faea3fe36c5ebe4a810f90e9b29b728
+      spriteID: eca4f4ded4f00104d87eb6bd35c2cd65
       internalID: 1328230904801891893
       vertices: []
       indices: 
@@ -971,10 +995,10 @@ TextureImporter:
       name: "H\xE4ger idle_33"
       rect:
         serializedVersion: 2
-        x: 1163
-        y: 4855
-        width: 346
-        height: 661
+        x: 800
+        y: 4800
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -982,7 +1006,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e66a0fcb8f6ddf42a7400502b47c4d1
+      spriteID: 3bfe19d2b5237ff4db769f1460206a28
       internalID: 6144037614255425641
       vertices: []
       indices: 
@@ -992,10 +1016,10 @@ TextureImporter:
       name: "H\xE4ger idle_34"
       rect:
         serializedVersion: 2
-        x: 1961
-        y: 4855
-        width: 345
-        height: 662
+        x: 1600
+        y: 4800
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1003,7 +1027,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 122afe76387a27f49954e26cf096824c
+      spriteID: 56305106e49396248a84cb2a7adc624c
       internalID: 5387601704026517950
       vertices: []
       indices: 
@@ -1013,10 +1037,10 @@ TextureImporter:
       name: "H\xE4ger idle_35"
       rect:
         serializedVersion: 2
-        x: 2763
-        y: 4855
-        width: 346
-        height: 662
+        x: 2400
+        y: 4800
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1024,7 +1048,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71d0c96c5c0d8fa45bb485580e0e2dfd
+      spriteID: 57f29dc594e86094e9c73d7de031163e
       internalID: 1850908885091416954
       vertices: []
       indices: 
@@ -1034,10 +1058,10 @@ TextureImporter:
       name: "H\xE4ger idle_36"
       rect:
         serializedVersion: 2
-        x: 361
-        y: 4053
-        width: 345
-        height: 666
+        x: 0
+        y: 4000
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1045,7 +1069,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d477e5af33e2ff418d4dfae38fb6023
+      spriteID: b6c84db1d98fbd24085c4bf31107a3aa
       internalID: -5254949419733461848
       vertices: []
       indices: 
@@ -1055,10 +1079,10 @@ TextureImporter:
       name: "H\xE4ger idle_37"
       rect:
         serializedVersion: 2
-        x: 1163
-        y: 4053
-        width: 346
-        height: 666
+        x: 800
+        y: 4000
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1066,7 +1090,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ca943031d970ee499c54c83cfff2aa5
+      spriteID: 38402fe0813dfda40bc7b5d4dd84b1ab
       internalID: -3122652732019015135
       vertices: []
       indices: 
@@ -1076,10 +1100,10 @@ TextureImporter:
       name: "H\xE4ger idle_38"
       rect:
         serializedVersion: 2
-        x: 1961
-        y: 4053
-        width: 345
-        height: 667
+        x: 1600
+        y: 4000
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1087,7 +1111,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65fefc76ac5eadc438e6e84be4290f73
+      spriteID: 8300887b6a6ee5242aefee70f813f25e
       internalID: 7355934895482904711
       vertices: []
       indices: 
@@ -1097,10 +1121,10 @@ TextureImporter:
       name: "H\xE4ger idle_39"
       rect:
         serializedVersion: 2
-        x: 2763
-        y: 4053
-        width: 345
-        height: 667
+        x: 2400
+        y: 4000
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1108,7 +1132,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eaaba2e1f22f19d41ad0a1b0dd116d53
+      spriteID: ac6f513f98e266c45a38c613945ec489
       internalID: -6402843443636360974
       vertices: []
       indices: 
@@ -1118,10 +1142,10 @@ TextureImporter:
       name: "H\xE4ger idle_40"
       rect:
         serializedVersion: 2
-        x: 361
-        y: 3255
-        width: 345
-        height: 667
+        x: 0
+        y: 3200
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1129,7 +1153,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b2d8c312bafe6f4b98d62de3b5337b6
+      spriteID: 96be9577497928a45af6b8f5ebdbc83c
       internalID: -7576155493053437508
       vertices: []
       indices: 
@@ -1139,10 +1163,10 @@ TextureImporter:
       name: "H\xE4ger idle_41"
       rect:
         serializedVersion: 2
-        x: 1163
-        y: 3255
-        width: 343
-        height: 668
+        x: 800
+        y: 3200
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1150,7 +1174,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33d76cb2130ed8749856359163292237
+      spriteID: 5c0929bb104c697438f7df5b59231e98
       internalID: -4136762748154838190
       vertices: []
       indices: 
@@ -1160,10 +1184,10 @@ TextureImporter:
       name: "H\xE4ger idle_42"
       rect:
         serializedVersion: 2
-        x: 1961
-        y: 3255
-        width: 345
-        height: 668
+        x: 1600
+        y: 3200
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1171,7 +1195,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1480543b10274da4997c4e99ccb94365
+      spriteID: 6f77be880c25bd74ab3963f104a5ea82
       internalID: -6387428444727413329
       vertices: []
       indices: 
@@ -1181,10 +1205,10 @@ TextureImporter:
       name: "H\xE4ger idle_43"
       rect:
         serializedVersion: 2
-        x: 2763
-        y: 3255
-        width: 340
-        height: 668
+        x: 2400
+        y: 3200
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1192,7 +1216,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a2e6aa5b2ecf6c4e84dd8e58af44144
+      spriteID: e8208dfeb07086e4b99b7bbd25d7e3ee
       internalID: -7699768774568590142
       vertices: []
       indices: 
@@ -1202,10 +1226,10 @@ TextureImporter:
       name: "H\xE4ger idle_44"
       rect:
         serializedVersion: 2
-        x: 361
-        y: 2453
-        width: 345
-        height: 673
+        x: 0
+        y: 2400
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1213,7 +1237,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f74239ce847eeb443a3c6161e86a98bb
+      spriteID: ea416224942b2594d8018e6f4d886349
       internalID: -191195057253334032
       vertices: []
       indices: 
@@ -1223,10 +1247,10 @@ TextureImporter:
       name: "H\xE4ger idle_45"
       rect:
         serializedVersion: 2
-        x: 1163
-        y: 2453
-        width: 340
-        height: 673
+        x: 800
+        y: 2400
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1234,7 +1258,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d506432e892c854bb82983c0d6ff1c0
+      spriteID: 815de39eb974b6c4c9a846364784e9e8
       internalID: -608600075200323616
       vertices: []
       indices: 
@@ -1244,10 +1268,10 @@ TextureImporter:
       name: "H\xE4ger idle_46"
       rect:
         serializedVersion: 2
-        x: 1962
-        y: 2453
-        width: 344
-        height: 673
+        x: 1600
+        y: 2400
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1255,7 +1279,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52f683a9cbb7eb74a957c45be583085a
+      spriteID: 88e2c8e8f918ac8468af117489e7dccb
       internalID: 6332372630908338688
       vertices: []
       indices: 
@@ -1265,10 +1289,10 @@ TextureImporter:
       name: "H\xE4ger idle_47"
       rect:
         serializedVersion: 2
-        x: 2763
-        y: 2453
-        width: 340
-        height: 673
+        x: 2400
+        y: 2400
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1276,7 +1300,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3826eeb135d4ca8409a325301a41b9c7
+      spriteID: 8d91c162ad2cafc4d9fb6c7fdba4bbeb
       internalID: 1048583493552560979
       vertices: []
       indices: 
@@ -1286,10 +1310,10 @@ TextureImporter:
       name: "H\xE4ger idle_48"
       rect:
         serializedVersion: 2
-        x: 364
-        y: 1655
-        width: 342
-        height: 674
+        x: 0
+        y: 1600
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1297,7 +1321,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75b4914122273484c9100835436ead14
+      spriteID: e9de7f6ec4471cd43a0a070fd7afaf98
       internalID: 2970036659973777690
       vertices: []
       indices: 
@@ -1307,10 +1331,10 @@ TextureImporter:
       name: "H\xE4ger idle_49"
       rect:
         serializedVersion: 2
-        x: 1163
-        y: 1655
-        width: 340
-        height: 674
+        x: 800
+        y: 1600
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1318,7 +1342,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca785f1d0346aba4bbbed53e699b23fb
+      spriteID: 31e0ba1f920173f4daf16c26b30b5f6f
       internalID: 1681623959202150615
       vertices: []
       indices: 
@@ -1328,10 +1352,10 @@ TextureImporter:
       name: "H\xE4ger idle_50"
       rect:
         serializedVersion: 2
-        x: 1966
-        y: 1655
-        width: 339
-        height: 674
+        x: 1600
+        y: 1600
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1339,7 +1363,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 549ba115d7132384d9c2eed225f129a2
+      spriteID: 007dc56e6d8598b45a54898d23896ed2
       internalID: -1561038751434752769
       vertices: []
       indices: 
@@ -1349,10 +1373,10 @@ TextureImporter:
       name: "H\xE4ger idle_51"
       rect:
         serializedVersion: 2
-        x: 2764
-        y: 1655
-        width: 339
-        height: 674
+        x: 2400
+        y: 1600
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1360,7 +1384,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d69dc1711182c24fbabd147fec94bcf
+      spriteID: 0288c16947e2bb8498727931772dbd71
       internalID: -7424023060300446636
       vertices: []
       indices: 
@@ -1370,10 +1394,10 @@ TextureImporter:
       name: "H\xE4ger idle_52"
       rect:
         serializedVersion: 2
-        x: 366
-        y: 853
-        width: 338
-        height: 679
+        x: 0
+        y: 800
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1381,7 +1405,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e525c26e9b408da48819d6721291532c
+      spriteID: 86b8ddc6c0f13f44fa81bd5a76407641
       internalID: -6827658555396592374
       vertices: []
       indices: 
@@ -1391,10 +1415,10 @@ TextureImporter:
       name: "H\xE4ger idle_53"
       rect:
         serializedVersion: 2
-        x: 1164
-        y: 853
-        width: 339
-        height: 679
+        x: 800
+        y: 800
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1402,7 +1426,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a9b0d44887f6bc49ad76d53a8dbdaa2
+      spriteID: 739374e0e904a8f4eb5451f7e22ec932
       internalID: -1725970659461245023
       vertices: []
       indices: 
@@ -1412,10 +1436,10 @@ TextureImporter:
       name: "H\xE4ger idle_54"
       rect:
         serializedVersion: 2
-        x: 1966
-        y: 853
-        width: 334
-        height: 679
+        x: 1600
+        y: 800
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1423,7 +1447,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b543c5f338854d84e90001f28afb96eb
+      spriteID: d40cf9afa53010c4f8aa57bc3b41c798
       internalID: 3739830594258626657
       vertices: []
       indices: 
@@ -1433,10 +1457,10 @@ TextureImporter:
       name: "H\xE4ger idle_55"
       rect:
         serializedVersion: 2
-        x: 2765
-        y: 853
-        width: 338
-        height: 679
+        x: 2400
+        y: 800
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1444,7 +1468,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e14bec68425ef0b4ba8d6d4c09f086fa
+      spriteID: de3a775cecc5aaa4ab63c8c5d7503a79
       internalID: -7507409436816220907
       vertices: []
       indices: 
@@ -1454,10 +1478,10 @@ TextureImporter:
       name: "H\xE4ger idle_56"
       rect:
         serializedVersion: 2
-        x: 366
-        y: 56
-        width: 334
-        height: 679
+        x: 0
+        y: 0
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1465,7 +1489,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c35a5998044e7424a88b96c1bba47344
+      spriteID: dfa942a265b6ce24e899cea4389f0517
       internalID: 7711552276927721261
       vertices: []
       indices: 
@@ -1475,10 +1499,10 @@ TextureImporter:
       name: "H\xE4ger idle_57"
       rect:
         serializedVersion: 2
-        x: 1169
-        y: 56
-        width: 334
-        height: 679
+        x: 800
+        y: 0
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1486,7 +1510,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70fcff49d3d1e6b4c93334377014a661
+      spriteID: fbb7db164d3cca34a9d1e06f2bab70ad
       internalID: 1097583442499792084
       vertices: []
       indices: 
@@ -1496,10 +1520,10 @@ TextureImporter:
       name: "H\xE4ger idle_58"
       rect:
         serializedVersion: 2
-        x: 1967
-        y: 56
-        width: 333
-        height: 679
+        x: 1600
+        y: 0
+        width: 800
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1507,7 +1531,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d42d259d4b75709449a04b63ba595064
+      spriteID: 8dc901b08ade9f8498607468baa5ef8c
       internalID: 3575413848716708545
       vertices: []
       indices: 
