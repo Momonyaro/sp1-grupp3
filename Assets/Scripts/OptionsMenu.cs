@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class OptionsMenu : MonoBehaviour
 {
     public GameObject optionsMenu;
+    public GameObject optionsButton;
 
     public static bool gameIsPaused = false;
 
@@ -15,7 +16,12 @@ public class OptionsMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (FinishLine.reachedGoal)
+        {
+            optionsButton.SetActive(false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape) && !FinishLine.reachedGoal)
         {
             if(gameIsPaused)
             {
@@ -44,6 +50,7 @@ public class OptionsMenu : MonoBehaviour
 
     public void Restart()
     {
+        FinishLine.reachedGoal = false;
         Time.timeScale = 1f;
         SceneManager.LoadScene(sceneName);
     }
