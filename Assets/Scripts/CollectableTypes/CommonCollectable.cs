@@ -10,6 +10,7 @@ public class CommonCollectable : Collectable
         if (other.tag == "Player")
         {
             FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.TongueCatch);
+            Instantiate(pickupEffect, transform.position, Quaternion.identity);
             TextManager.score += collectableScore;
             Destroy(gameObject);
         }
