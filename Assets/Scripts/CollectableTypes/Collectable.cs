@@ -14,6 +14,8 @@ public class Collectable : MonoBehaviour
     public GameObject shine;
     public float shineRotationSpeed = 70f;
 
+    public GameObject pickupEffect;
+
     private void Update()
     {
         transform.Rotate(new Vector3(0, 0, 1) * rotationSpeed * Time.deltaTime);
