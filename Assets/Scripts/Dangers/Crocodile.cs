@@ -16,6 +16,10 @@ public class Crocodile : MonoBehaviour
     public bool direction = false;
     float crocTimer = 0.5f;
 
+    public GameObject target;
+    public float distance;
+    public float chaseTime = 2f;
+
     void Start()
     {
         hit = FindObjectOfType<Hit>();
@@ -24,6 +28,7 @@ public class Crocodile : MonoBehaviour
 
     void Update()
     {
+        distance = Vector3.Distance(target.transform.position, transform.position);
         crocTimer -= Time.deltaTime;
         Move();
     }
@@ -51,6 +56,13 @@ public class Crocodile : MonoBehaviour
         else
         {
             transform.Translate(Vector2.right * (Time.deltaTime * crocSpeed), 0);
+        }
+
+        if(distance <= 5 && chaseTime > 0)
+        {
+            chaseTime -= Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, crocSpeed * Time.deltaTime);
+
         }
     }
 
