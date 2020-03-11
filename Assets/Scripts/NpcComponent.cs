@@ -23,7 +23,8 @@ public class NpcComponent : MonoBehaviour
     public Sprite missionSprite;
     public Sprite missionInteractSprite;
     private Animator _animator;
-    
+
+    private const bool debug = true;
     private const float CompletedAlpha = 0.9f;
 
     private void Awake()
@@ -35,11 +36,14 @@ public class NpcComponent : MonoBehaviour
 
     private void Update()
     {
+
+#if true
         if (Input.GetKeyDown(KeyCode.L))
             OptionManager.SetIntPreference(missionComponent.targetSceneName, 1);
         if (Input.GetKeyDown(KeyCode.K))
             OptionManager.ClearSavedInfo();
-        
+#endif
+
         if (Input.GetKeyDown(KeyCode.E) && _canTalk)
         {
             if (OptionManager.GetIntIfExists(missionComponent.targetSceneName) != 1 &&
@@ -60,6 +64,7 @@ public class NpcComponent : MonoBehaviour
         }
         
         conversationComponent.Update();
+        missionComponent.Update();
         if (hasSeveralIdleAnims)
             CheckToAlternateAnimation();
     }
