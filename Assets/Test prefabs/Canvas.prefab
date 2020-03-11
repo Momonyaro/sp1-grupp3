@@ -358,7 +358,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &831616231
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3792,6 +3792,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3691900803514275982}
   - component: {fileID: 4833565626212728937}
+  - component: {fileID: 5508871780327296668}
   m_Layer: 5
   m_Name: VolumeSlider
   m_TagString: Untagged
@@ -3882,8 +3883,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5508871780327296668}
+        m_MethodName: ChangeVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &5508871780327296668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4153212381112657671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98780683825d0fe4a9e548b786da43b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4534407805156128617
 GameObject:
   m_ObjectHideFlags: 0

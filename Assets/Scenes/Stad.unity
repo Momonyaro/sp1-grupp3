@@ -1429,7 +1429,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320161729}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.38564, y: 134.13898, z: -10}
+  m_LocalPosition: {x: 7.3854985, y: 134.1652, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459601753}
@@ -2708,6 +2708,11 @@ PrefabInstance:
         type: 3}
       propertyPath: maxMagicNumbers
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209380639140842795, guid: 271875a139ba76840bbc68102f381647,
+        type: 3}
+      propertyPath: conversationComponent.npcName
+      value: "H\xE4ger [INDEV]"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 271875a139ba76840bbc68102f381647, type: 3}
