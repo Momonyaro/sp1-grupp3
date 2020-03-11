@@ -7,6 +7,12 @@ public class VolumeEventSlave : MonoBehaviour
     VolumeEventMaster _master;
     bool _lockedToEvent = false;
 
+    private void Awake()
+    {
+        if (OptionManager.GetFloatIfExists("soundVolume") != float.MinValue)
+        GetComponent<AudioSource>().volume = OptionManager.GetFloatIfExists("soundVolume");
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -28,6 +34,7 @@ public class VolumeEventSlave : MonoBehaviour
 
     private void OnDestroy()
     {
-        _master.onVolumeChange -= OnVolumeChange;
+        if (_master != null)
+            _master.onVolumeChange -= OnVolumeChange;
     }
 }
