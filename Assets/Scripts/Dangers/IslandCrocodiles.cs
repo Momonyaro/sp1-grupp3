@@ -41,7 +41,9 @@ public class IslandCrocodiles : MonoBehaviour
 
     void Update()
     {
-        distance = Vector3.Distance(target.transform.position, transform.position);
+        if(target != null)
+            distance = Vector3.Distance(target.transform.position, transform.position);
+        
 
         timer -= Time.deltaTime;
         
