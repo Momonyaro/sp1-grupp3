@@ -29,6 +29,8 @@ namespace Managers
         private void Awake()
         {
             requestSoundDelegate = AttemptToPlaySound;
+            if (OptionManager.GetFloatIfExists("soundVolume") != float.MinValue)
+                generalVolume = OptionManager.GetFloatIfExists("soundVolume");
         }
 
         private void AttemptToPlaySound(Sounds sound)

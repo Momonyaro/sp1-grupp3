@@ -17,7 +17,7 @@ public class FinishLine : MonoBehaviour
     [SerializeField] float timeChecker = 0;
 
     private bool finished = false;
-    private bool reachedGoal = false;
+    public static bool reachedGoal = false;
 
     public AudioSource goalJingle;
 
@@ -39,6 +39,7 @@ public class FinishLine : MonoBehaviour
     private void Start()
     {
         textm = FindObjectOfType<TextManager>();
+        finished = false;
     }
 
     private void Update()
@@ -60,14 +61,14 @@ public class FinishLine : MonoBehaviour
 
                 if (goalType == GoalType.ReachGoal)
                 {
-                    successText.SetActive(true);
+                    ShowSuccessText();
                 }
 
                 if (goalType == GoalType.CollectMission)
                 {
                     if (textm.requiredMissionAmount <= TextManager.missionAmount)
                     {
-                        successText.SetActive(true);
+                        ShowSuccessText();
                         Debug.Log(textm.requiredMissionAmount);
                     }
                     else if (textm.requiredMissionAmount > TextManager.missionAmount)
@@ -80,7 +81,7 @@ public class FinishLine : MonoBehaviour
                 {
                     if(textm.requiredPlankAmount <= TextManager.plankAmount)
                     {
-                        successText.SetActive(true);
+                        ShowSuccessText();
                         Debug.Log(textm.requiredPlankAmount);
                     }
                     else if (textm.requiredPlankAmount > TextManager.plankAmount)
@@ -88,23 +89,12 @@ public class FinishLine : MonoBehaviour
                         lostText.SetActive(true);
                     }
                 }
-                
-
                 finished = true;
             }
         }
-        if (finished)
-        {
-            Time.timeScale = 0.3f;
-        }
-        if (finished && Input.anyKeyDown)
-        {
-            timeChecker = 0;
-            Debug.Log("Set the saved state of scene [" + SceneManager.GetActiveScene().name + "] to 1");
-            OptionManager.SetIntPreference(SceneManager.GetActiveScene().name, 1);
-            SceneManager.LoadScene(loadScene);
-            Time.timeScale = 1f;
-        }
+
+        //Time.timeScale = (finished) ? .3f : 1;
+       
     }
 
     public void LoadMap(string mapName)
@@ -125,5 +115,12 @@ public class FinishLine : MonoBehaviour
             }
             reachedGoal = true;
         }
+    }
+
+    private void ShowSuccessText()
+    {
+        successText.SetActive(true);
+        Time.timeScale = 0.3f;
+        OptionManager.SetIntPreference(SceneManager.GetActiveScene().name, 1);
     }
 }

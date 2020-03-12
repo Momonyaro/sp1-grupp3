@@ -7,6 +7,7 @@ public class SwitchScene : MonoBehaviour
 {
     public void LoadingScene(string scene)
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(scene);
     }
 
