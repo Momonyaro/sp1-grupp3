@@ -461,18 +461,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 7435
-        width: 769
-        height: 235
+        x: 0
+        y: 7200
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0be367a56ac36445a677739e52ff1e8
+      spriteID: e2d1f43b780190d4497f57d4690a47fc
       internalID: -3723592232122362836
       vertices: []
       indices: 
@@ -482,18 +482,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_1
       rect:
         serializedVersion: 2
-        x: 809
-        y: 7445
-        width: 768
-        height: 220
+        x: 800
+        y: 7200
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d3b66cf16981904cbf4b8764ff6cec1
+      spriteID: 82271a6d47ce5544f88b8e7cf1b05fbc
       internalID: -8339586909611909631
       vertices: []
       indices: 
@@ -503,18 +503,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_2
       rect:
         serializedVersion: 2
-        x: 1606
-        y: 7449
-        width: 777
-        height: 216
+        x: 1600
+        y: 7200
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: add6e3d2f914d714fb90e0b59a51e182
+      spriteID: 2f19e6f1da4c5274b90d473fec39ae06
       internalID: -1430127604420740689
       vertices: []
       indices: 
@@ -524,18 +524,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_3
       rect:
         serializedVersion: 2
-        x: 2407
-        y: 7450
-        width: 778
-        height: 215
+        x: 2400
+        y: 7200
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c0bacf56c6ec124d952a45e53c62a07
+      spriteID: 8082ba1b4f3140843ad60a5789c265bb
       internalID: -4242687123145981457
       vertices: []
       indices: 
@@ -545,18 +545,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_4
       rect:
         serializedVersion: 2
-        x: 3209
-        y: 7450
-        width: 778
-        height: 215
+        x: 3200
+        y: 7200
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 760622b10afa71e4891d84d4cd9859cc
+      spriteID: 164087d0022f5eb469ec5b4ca014dbbb
       internalID: 6302356971292952025
       vertices: []
       indices: 
@@ -566,18 +566,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_5
       rect:
         serializedVersion: 2
-        x: 4006
-        y: 7449
-        width: 782
-        height: 220
+        x: 4000
+        y: 7200
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 897ae075cd3d6f84a989016140562244
+      spriteID: 744171746c0cf234b98ff566c9bf0db0
       internalID: 9196856925180910362
       vertices: []
       indices: 
@@ -587,18 +587,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_6
       rect:
         serializedVersion: 2
-        x: 4807
-        y: 7449
-        width: 783
-        height: 221
+        x: 4800
+        y: 7200
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df84916af60d2cb4890fe538cdbbcf75
+      spriteID: 5c26861327ddd00438e2c2d39fa569b2
       internalID: -2260072846369579638
       vertices: []
       indices: 
@@ -608,18 +608,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_7
       rect:
         serializedVersion: 2
-        x: 5609
-        y: 7449
-        width: 782
-        height: 221
+        x: 5600
+        y: 7200
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c79533574dca2864499794968e1f1a5a
+      spriteID: 526121e7bc6ed4e47b4d5ea0d36d8fbb
       internalID: -6911792648253063246
       vertices: []
       indices: 
@@ -629,18 +629,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_8
       rect:
         serializedVersion: 2
-        x: 6410
-        y: 7449
-        width: 778
-        height: 221
+        x: 6400
+        y: 7200
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 957dd09064de95c42a06567d932dd9f6
+      spriteID: 43f1b7490c32011498808fbe9da50945
       internalID: -921273462264400376
       vertices: []
       indices: 
@@ -650,18 +650,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_9
       rect:
         serializedVersion: 2
-        x: 7212
-        y: 7449
-        width: 778
-        height: 225
+        x: 7200
+        y: 7200
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e060338d9f8407408dc578a64237b92
+      spriteID: cb8ae68d915996946a1f016bc9119c51
       internalID: 4408205836971118928
       vertices: []
       indices: 
@@ -671,18 +671,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_10
       rect:
         serializedVersion: 2
-        x: 8013
-        y: 7450
-        width: 778
-        height: 224
+        x: 8000
+        y: 7200
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce9c908f78f7ecd4f923a90ae28bdf42
+      spriteID: b1b4d84ac888da7429d8a48bb7a98ce7
       internalID: 2692737193981702101
       vertices: []
       indices: 
@@ -692,18 +692,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_11
       rect:
         serializedVersion: 2
-        x: 8815
-        y: 7454
-        width: 777
-        height: 220
+        x: 8800
+        y: 7200
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac4abeba12300704d9ad310580063f0f
+      spriteID: 8481a5badcc81b0428a6001297b2bb8c
       internalID: 4575457449211357310
       vertices: []
       indices: 
@@ -713,18 +713,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_12
       rect:
         serializedVersion: 2
-        x: 16
-        y: 6653
-        width: 774
-        height: 229
+        x: 0
+        y: 6400
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51d22134dd860ea4aa3363bb9e6b0fa6
+      spriteID: 52aa8ada3cfc0874ea34e0ac2a028f93
       internalID: -6204888814137222844
       vertices: []
       indices: 
@@ -734,18 +734,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_13
       rect:
         serializedVersion: 2
-        x: 818
-        y: 6655
-        width: 773
-        height: 237
+        x: 800
+        y: 6400
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0798ebad84a23cc4387348617b19da78
+      spriteID: 7da1f4564f65f91429f633cca08e40c3
       internalID: -7416473802088287776
       vertices: []
       indices: 
@@ -755,18 +755,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_14
       rect:
         serializedVersion: 2
-        x: 1620
-        y: 6657
-        width: 770
-        height: 244
+        x: 1600
+        y: 6400
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f05b5bfdd3d5d8041933b07a3be6f5d4
+      spriteID: eb98338e4eb0924418ff6686c69cd272
       internalID: -8519446741997381343
       vertices: []
       indices: 
@@ -776,18 +776,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_15
       rect:
         serializedVersion: 2
-        x: 2421
-        y: 6657
-        width: 769
-        height: 249
+        x: 2400
+        y: 6400
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e64c46863d3db0041ba3953bc5b9a2fe
+      spriteID: e13d794b98d401a49878270f8b0a4b13
       internalID: 4393210510293422969
       vertices: []
       indices: 
@@ -797,18 +797,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_16
       rect:
         serializedVersion: 2
-        x: 3223
-        y: 6658
-        width: 768
-        height: 252
+        x: 3200
+        y: 6400
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c2ae8424d3932e4ab8ca7d85391d31c
+      spriteID: 889a3b891a0ca294b9037b0bf41b8c70
       internalID: 418655759378223496
       vertices: []
       indices: 
@@ -818,18 +818,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_17
       rect:
         serializedVersion: 2
-        x: 4024
-        y: 6662
-        width: 764
-        height: 258
+        x: 4000
+        y: 6400
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6cff4eed53da102458eab991247ad97c
+      spriteID: c7e1490323e046b4bb9d92ad6c541c99
       internalID: 8170910801880858599
       vertices: []
       indices: 
@@ -839,18 +839,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_18
       rect:
         serializedVersion: 2
-        x: 4821
-        y: 6662
-        width: 769
-        height: 262
+        x: 4800
+        y: 6400
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f19e3bcbcfbf0be4ebc60c8a5dd25a1e
+      spriteID: 02cc8e47d1a8e164aabf1841adc2ed6f
       internalID: -4617863892601458881
       vertices: []
       indices: 
@@ -860,18 +860,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_19
       rect:
         serializedVersion: 2
-        x: 5623
-        y: 6662
-        width: 767
-        height: 267
+        x: 5600
+        y: 6400
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b068569a92741b43871ac015c30b0f6
+      spriteID: 4871c77273d76cf4f98d51641a7cdda0
       internalID: 3323958136913907625
       vertices: []
       indices: 
@@ -881,18 +881,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_20
       rect:
         serializedVersion: 2
-        x: 6424
-        y: 6667
-        width: 764
-        height: 267
+        x: 6400
+        y: 6400
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f5ab49bf6258f64d87eec4fc4a2761a
+      spriteID: 26b6bdc84c5dca040a51a27344c1097d
       internalID: -7935245273569534317
       vertices: []
       indices: 
@@ -902,18 +902,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_21
       rect:
         serializedVersion: 2
-        x: 7221
-        y: 6667
-        width: 769
-        height: 271
+        x: 7200
+        y: 6400
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bc412ffceb09c74eb7b0959c79b039b
+      spriteID: 04ae14373c93ce44c9f0ea05986f968d
       internalID: -8997794941822482069
       vertices: []
       indices: 
@@ -923,18 +923,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_22
       rect:
         serializedVersion: 2
-        x: 8023
-        y: 6671
-        width: 764
-        height: 272
+        x: 8000
+        y: 6400
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8fb84a03529aa84c8cf585d21595530
+      spriteID: cf9097218a88da944b75adf8e42735df
       internalID: -6799247881281494776
       vertices: []
       indices: 
@@ -944,18 +944,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_23
       rect:
         serializedVersion: 2
-        x: 8824
-        y: 6671
-        width: 764
-        height: 277
+        x: 8800
+        y: 6400
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66eabdc2bed7b1e4ea6ce99e2b14ce18
+      spriteID: 56da7334b3a0bfa48a695d573e941ac4
       internalID: -3519631799500358319
       vertices: []
       indices: 
@@ -965,18 +965,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_24
       rect:
         serializedVersion: 2
-        x: 21
-        y: 5875
-        width: 768
-        height: 276
+        x: 0
+        y: 5600
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2e6f42744bcbf7458a8dfc38b4333e7
+      spriteID: 920d280d298d01a469147bf9c586b25f
       internalID: 1360197383149379806
       vertices: []
       indices: 
@@ -986,18 +986,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_25
       rect:
         serializedVersion: 2
-        x: 823
-        y: 5875
-        width: 764
-        height: 276
+        x: 800
+        y: 5600
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33ec920772de0db4da95e760be9b8d08
+      spriteID: 968120358badc5c4bb074b4298c5554d
       internalID: 6366517262209112176
       vertices: []
       indices: 
@@ -1007,18 +1007,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_26
       rect:
         serializedVersion: 2
-        x: 1624
-        y: 5879
-        width: 764
-        height: 277
+        x: 1600
+        y: 5600
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab3f49fb032ec434ea106c3e329f1d29
+      spriteID: d943273ef7c8ba741a7d5a214e72a1f9
       internalID: 8465347822639804659
       vertices: []
       indices: 
@@ -1028,18 +1028,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_27
       rect:
         serializedVersion: 2
-        x: 2421
-        y: 5880
-        width: 766
-        height: 280
+        x: 2400
+        y: 5600
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be0071b09a7151b4e956754b8237bd22
+      spriteID: c57a139167a0d8b42ac7e898b43c3d05
       internalID: 2944269204759455472
       vertices: []
       indices: 
@@ -1049,18 +1049,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_28
       rect:
         serializedVersion: 2
-        x: 3223
-        y: 5884
-        width: 764
-        height: 276
+        x: 3200
+        y: 5600
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1805dae1969923448bfe920298c9f1ad
+      spriteID: 27d7c291b9b83774e9339fdfaa00d331
       internalID: -562203460062743254
       vertices: []
       indices: 
@@ -1070,18 +1070,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_29
       rect:
         serializedVersion: 2
-        x: 4024
-        y: 5889
-        width: 764
-        height: 276
+        x: 4000
+        y: 5600
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50b9e0270452d9d478382411950d35a6
+      spriteID: 11fcec490f76ad84b96e19e3c718025a
       internalID: -3078971139551290146
       vertices: []
       indices: 
@@ -1091,18 +1091,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_30
       rect:
         serializedVersion: 2
-        x: 4821
-        y: 5893
-        width: 764
-        height: 272
+        x: 4800
+        y: 5600
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1edba0982b65181438a1c5d4889a885d
+      spriteID: 3eb559ba92181fe44906ef75f15d01b3
       internalID: 4789839416051895753
       vertices: []
       indices: 
@@ -1112,18 +1112,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_31
       rect:
         serializedVersion: 2
-        x: 5623
-        y: 5893
-        width: 764
-        height: 277
+        x: 5600
+        y: 5600
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d27a6dcfd61409341aee465a0288db9d
+      spriteID: c83d071d992e1084aa9c4f03cfbfcbd3
       internalID: -2457153511253138457
       vertices: []
       indices: 
@@ -1133,18 +1133,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_32
       rect:
         serializedVersion: 2
-        x: 6424
-        y: 5893
-        width: 764
-        height: 277
+        x: 6400
+        y: 5600
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b3aa498c20c9c24696b3ca21e22c2ef
+      spriteID: 13025d975319c134d92cbf451030a3ce
       internalID: -2776267413907037898
       vertices: []
       indices: 
@@ -1154,18 +1154,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_33
       rect:
         serializedVersion: 2
-        x: 7221
-        y: 5893
-        width: 769
-        height: 281
+        x: 7200
+        y: 5600
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de34e06b22e82ab4983c444cef351d3c
+      spriteID: 5a4cde1836d0ae042b21c09b0b2375a3
       internalID: 1026103612685054189
       vertices: []
       indices: 
@@ -1175,18 +1175,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_34
       rect:
         serializedVersion: 2
-        x: 8023
-        y: 5893
-        width: 768
-        height: 282
+        x: 8000
+        y: 5600
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8fc723e2a196e8458063cc5f876c77b
+      spriteID: b3bd08cad384ea747adac29a31a95cd1
       internalID: 3813347666819721772
       vertices: []
       indices: 
@@ -1196,18 +1196,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_35
       rect:
         serializedVersion: 2
-        x: 8824
-        y: 5893
-        width: 768
-        height: 283
+        x: 8800
+        y: 5600
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e85404ad050993540b7e3db6fde02fa2
+      spriteID: da0f50bc266394f48a98ffd52b7c64a7
       internalID: -7601374614971782949
       vertices: []
       indices: 
@@ -1217,18 +1217,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_36
       rect:
         serializedVersion: 2
-        x: 21
-        y: 5092
-        width: 769
-        height: 286
+        x: 0
+        y: 4800
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30ac63e8647afe141842920839bc730b
+      spriteID: 92ffae2ff01752447a6c6b4b13826458
       internalID: 6698534906517593505
       vertices: []
       indices: 
@@ -1238,18 +1238,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_37
       rect:
         serializedVersion: 2
-        x: 823
-        y: 5093
-        width: 768
-        height: 289
+        x: 800
+        y: 4800
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39326b3fee1eb0c4c8837f9e74bd78d8
+      spriteID: 89ef55e9f58526d4b861bb77c917ea7f
       internalID: 5993840969869487816
       vertices: []
       indices: 
@@ -1259,18 +1259,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_38
       rect:
         serializedVersion: 2
-        x: 1624
-        y: 5097
-        width: 766
-        height: 286
+        x: 1600
+        y: 4800
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a04c06c8c47f614893f2048d5923ab8
+      spriteID: 1518dcf14ec085849b0d7bbf1315d4c6
       internalID: 2304462569919727473
       vertices: []
       indices: 
@@ -1280,18 +1280,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_39
       rect:
         serializedVersion: 2
-        x: 2421
-        y: 5097
-        width: 769
-        height: 286
+        x: 2400
+        y: 4800
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7573c79a7eab9aa42ac996045bc767fb
+      spriteID: 076b5fedce8d42c4b97c1dd7dbcceac8
       internalID: 8765095207222057667
       vertices: []
       indices: 
@@ -1301,18 +1301,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_40
       rect:
         serializedVersion: 2
-        x: 3223
-        y: 5097
-        width: 768
-        height: 290
+        x: 3200
+        y: 4800
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92e86e37655c584459df98c2a40f545b
+      spriteID: 2a835a07b17a62a4e9fcb1f8e0c93580
       internalID: -8790364947500894320
       vertices: []
       indices: 
@@ -1322,18 +1322,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_41
       rect:
         serializedVersion: 2
-        x: 4024
-        y: 5097
-        width: 764
-        height: 290
+        x: 4000
+        y: 4800
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 847996e10492825448b76e0d4d4254d7
+      spriteID: 6f0076dde252a384c867f3880c2d1654
       internalID: -1375509478612101644
       vertices: []
       indices: 
@@ -1343,18 +1343,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_42
       rect:
         serializedVersion: 2
-        x: 4821
-        y: 5097
-        width: 769
-        height: 290
+        x: 4800
+        y: 4800
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfbb02b731e97004094909d50383f16e
+      spriteID: 10bb4a3f9035f904a910c2dc7eaa9c70
       internalID: -3035914383930342420
       vertices: []
       indices: 
@@ -1364,18 +1364,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_43
       rect:
         serializedVersion: 2
-        x: 5623
-        y: 5097
-        width: 764
-        height: 295
+        x: 5600
+        y: 4800
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3df12e836eac81144b3d53a37e1d395a
+      spriteID: f476af6c1390ed5408c35aae3c7d82f9
       internalID: -5260309702994019472
       vertices: []
       indices: 
@@ -1385,18 +1385,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_44
       rect:
         serializedVersion: 2
-        x: 6424
-        y: 5097
-        width: 764
-        height: 295
+        x: 6400
+        y: 4800
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16257d62517acda4f955f4cc9a0c24bf
+      spriteID: cdc1e5b55b234ec4f8fa59bcf0e994db
       internalID: -5816810859100476145
       vertices: []
       indices: 
@@ -1406,18 +1406,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_45
       rect:
         serializedVersion: 2
-        x: 7221
-        y: 5099
-        width: 764
-        height: 293
+        x: 7200
+        y: 4800
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db57910db8bfa7947a5e8860452a902a
+      spriteID: 5e8c50ceb3b0c4848ae4c31ebca3eb08
       internalID: -5931411945772986654
       vertices: []
       indices: 
@@ -1427,18 +1427,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_46
       rect:
         serializedVersion: 2
-        x: 8023
-        y: 5101
-        width: 763
-        height: 296
+        x: 8000
+        y: 4800
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 345a2203b8f587f4e8f2128ba233524b
+      spriteID: 5fa82629b01f6c14687e0108d2ec36c9
       internalID: 1032874887781297903
       vertices: []
       indices: 
@@ -1448,18 +1448,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_47
       rect:
         serializedVersion: 2
-        x: 8824
-        y: 5101
-        width: 760
-        height: 296
+        x: 8800
+        y: 4800
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17c2d585fa20d3c4f8bb0550cfb6f4a8
+      spriteID: cae0cccccae314d458fda2beae9acfa2
       internalID: -6504110243004667448
       vertices: []
       indices: 
@@ -1469,18 +1469,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_48
       rect:
         serializedVersion: 2
-        x: 21
-        y: 4300
-        width: 762
-        height: 300
+        x: 0
+        y: 4000
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9979b30163a2c504f870c9a21eedb2ec
+      spriteID: 6c7c789f95d9bc9438e8fe033dec1363
       internalID: 9081450779205378236
       vertices: []
       indices: 
@@ -1490,18 +1490,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_49
       rect:
         serializedVersion: 2
-        x: 823
-        y: 4305
-        width: 759
-        height: 295
+        x: 800
+        y: 4000
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea01db858edb5404f9916a6f4ef32985
+      spriteID: 1b5db3eacf55e0b40aa0eaaed5399e0e
       internalID: -7874421995996259058
       vertices: []
       indices: 
@@ -1511,18 +1511,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_50
       rect:
         serializedVersion: 2
-        x: 1624
-        y: 4305
-        width: 755
-        height: 295
+        x: 1600
+        y: 4000
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d35501f17b75eca44a52bed124f99338
+      spriteID: 8198d5a30799cc54c981acae29511d62
       internalID: -3660042425932543369
       vertices: []
       indices: 
@@ -1532,18 +1532,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_51
       rect:
         serializedVersion: 2
-        x: 2421
-        y: 4305
-        width: 759
-        height: 299
+        x: 2400
+        y: 4000
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ac3f5dcd237d7c47b6ba4b9155b4285
+      spriteID: 43864a3d18328d74a9b754a78bda64e3
       internalID: -840838495825818914
       vertices: []
       indices: 
@@ -1553,18 +1553,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_52
       rect:
         serializedVersion: 2
-        x: 3223
-        y: 4305
-        width: 754
-        height: 300
+        x: 3200
+        y: 4000
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee9517dfe42bb7441bd3eb1a268182c1
+      spriteID: a7af1a7c204566d4eb4d9cbce680afd1
       internalID: 6615910920540357853
       vertices: []
       indices: 
@@ -1574,18 +1574,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_53
       rect:
         serializedVersion: 2
-        x: 4024
-        y: 4306
-        width: 755
-        height: 299
+        x: 4000
+        y: 4000
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecc0a79d74a195c45b8f3035f28eeb14
+      spriteID: 75f5f6fdf6633d847a2d426ec7ce4526
       internalID: -1352213480092132320
       vertices: []
       indices: 
@@ -1595,18 +1595,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_54
       rect:
         serializedVersion: 2
-        x: 4821
-        y: 4309
-        width: 755
-        height: 300
+        x: 4800
+        y: 4000
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5449aba6fdcc6d418e6f73731767f2f
+      spriteID: 32d026d8c9d4e8548a86bb354e588cd2
       internalID: 6643870740992610415
       vertices: []
       indices: 
@@ -1616,18 +1616,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_55
       rect:
         serializedVersion: 2
-        x: 5623
-        y: 4309
-        width: 754
-        height: 300
+        x: 5600
+        y: 4000
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09f357d407188314a97129901e0eb916
+      spriteID: 96057157af7ffc441bf72356d220c0ef
       internalID: 4338617743011914192
       vertices: []
       indices: 
@@ -1637,18 +1637,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_56
       rect:
         serializedVersion: 2
-        x: 6424
-        y: 4309
-        width: 750
-        height: 300
+        x: 6400
+        y: 4000
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1de1e85f8748954fafa5f96e66a379e
+      spriteID: bf7991acb9f3ae84fb604461d7b3b17b
       internalID: 8422487947391658805
       vertices: []
       indices: 
@@ -1658,18 +1658,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_57
       rect:
         serializedVersion: 2
-        x: 7221
-        y: 4310
-        width: 755
-        height: 304
+        x: 7200
+        y: 4000
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3b3a00cc88a7ae42811d8720427a530
+      spriteID: 99ff78171dc1fb44d87dff6c30146cd9
       internalID: 5401477099807280014
       vertices: []
       indices: 
@@ -1679,18 +1679,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_58
       rect:
         serializedVersion: 2
-        x: 8023
-        y: 4314
-        width: 754
-        height: 300
+        x: 8000
+        y: 4000
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cef499ef67300964d9339e16225d69e5
+      spriteID: 7aa5e5c60837f8048b06350b58688259
       internalID: -3236677831223202871
       vertices: []
       indices: 
@@ -1700,18 +1700,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_59
       rect:
         serializedVersion: 2
-        x: 8824
-        y: 4314
-        width: 750
-        height: 300
+        x: 8800
+        y: 4000
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 317dd330c37111f4ca4a72ec074c3b94
+      spriteID: c38e1755e5037d84681965ddd10d56ab
       internalID: 4622505170997208516
       vertices: []
       indices: 
@@ -1721,18 +1721,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_60
       rect:
         serializedVersion: 2
-        x: 21
-        y: 3513
-        width: 755
-        height: 304
+        x: 0
+        y: 3200
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec171531f2959a84fb491d53820f25dd
+      spriteID: 7d45b9e5ecea76c4fb9f86c4f59aa1c6
       internalID: -1798516901432942573
       vertices: []
       indices: 
@@ -1742,18 +1742,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_61
       rect:
         serializedVersion: 2
-        x: 823
-        y: 3517
-        width: 754
-        height: 300
+        x: 800
+        y: 3200
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1bf1e86792a1cc744b7a9b4968b1675c
+      spriteID: bc1b844b53560c942bad78ffc418c9c7
       internalID: -1852891571916331213
       vertices: []
       indices: 
@@ -1763,18 +1763,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_62
       rect:
         serializedVersion: 2
-        x: 1624
-        y: 3517
-        width: 759
-        height: 300
+        x: 1600
+        y: 3200
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f124b237fe0df54fba6732b19a6d6cc
+      spriteID: da8323df39f09b741bcb0d609931be2c
       internalID: 8055109725507199916
       vertices: []
       indices: 
@@ -1784,18 +1784,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_63
       rect:
         serializedVersion: 2
-        x: 2421
-        y: 3517
-        width: 764
-        height: 300
+        x: 2400
+        y: 3200
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ab108cfb03bc69448d30995329018e3
+      spriteID: 1630293d6501f394e8f983b7cb418ea7
       internalID: 633440738886600450
       vertices: []
       indices: 
@@ -1805,18 +1805,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_64
       rect:
         serializedVersion: 2
-        x: 3223
-        y: 3517
-        width: 763
-        height: 300
+        x: 3200
+        y: 3200
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10b03f25c773a704ba80e7239e5aaaa9
+      spriteID: f22c609ffc9247c4eadf5be461726a5e
       internalID: -9134683208552508848
       vertices: []
       indices: 
@@ -1826,18 +1826,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_65
       rect:
         serializedVersion: 2
-        x: 4024
-        y: 3513
-        width: 764
-        height: 304
+        x: 4000
+        y: 3200
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 437bac3e64c51f14aa73c2cf08753808
+      spriteID: 43ae5300d85b67343bb617841c9aea80
       internalID: -4199889663372156322
       vertices: []
       indices: 
@@ -1847,18 +1847,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_66
       rect:
         serializedVersion: 2
-        x: 4821
-        y: 3513
-        width: 768
-        height: 300
+        x: 4800
+        y: 3200
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcc6480ef474a954e8d51055db78b3fc
+      spriteID: f5b618f1c546c264687caf07e7724b4f
       internalID: 2630875153256652048
       vertices: []
       indices: 
@@ -1868,18 +1868,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_67
       rect:
         serializedVersion: 2
-        x: 5623
-        y: 3505
-        width: 764
-        height: 303
+        x: 5600
+        y: 3200
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1c8293b59ccee948bdf8a8192252697
+      spriteID: c2766ca3ba69f0243a49eccf8f0331ea
       internalID: -7050378227092683874
       vertices: []
       indices: 
@@ -1889,18 +1889,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_68
       rect:
         serializedVersion: 2
-        x: 6424
-        y: 3494
-        width: 764
-        height: 304
+        x: 6400
+        y: 3200
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8702b9734687d8846bd5402474619c16
+      spriteID: cd1af80a5e49b4f48a6eba2335f09d7f
       internalID: 1454201350482257404
       vertices: []
       indices: 
@@ -1910,18 +1910,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_69
       rect:
         serializedVersion: 2
-        x: 7221
-        y: 3475
-        width: 769
-        height: 304
+        x: 7200
+        y: 3200
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fabb317174852f342b2e6d6d069d73f4
+      spriteID: b1761b36a4b584d46898152ef490ee67
       internalID: 110104917961606193
       vertices: []
       indices: 
@@ -1931,18 +1931,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_70
       rect:
         serializedVersion: 2
-        x: 8023
-        y: 3452
-        width: 768
-        height: 300
+        x: 8000
+        y: 3200
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 297a7edee00d1694f93368a9b7af4fb0
+      spriteID: 52fd5422d47abc04bb21d2b81f401544
       internalID: 6694468690382620647
       vertices: []
       indices: 
@@ -1952,18 +1952,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_71
       rect:
         serializedVersion: 2
-        x: 8810
-        y: 3424
-        width: 782
-        height: 215
+        x: 8800
+        y: 3200
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22bd74f78a5f6fb489aa359245e938a5
+      spriteID: a061b79fdb6ad124da23645684342553
       internalID: 9030955011385049492
       vertices: []
       indices: 
@@ -1973,18 +1973,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_72
       rect:
         serializedVersion: 2
-        x: 7
-        y: 2627
-        width: 783
-        height: 211
+        x: 0
+        y: 2400
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: caad8c96659be18458468da2838d2f2c
+      spriteID: a6c2e1671b066d8489c43a85f2260956
       internalID: -1504935203394800887
       vertices: []
       indices: 
@@ -1994,18 +1994,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_73
       rect:
         serializedVersion: 2
-        x: 809
-        y: 2636
-        width: 782
-        height: 206
+        x: 800
+        y: 2400
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fff6642f63c48a4395cd15f76d81bfd
+      spriteID: 46769adc0ca1bc94c91d3a768b8be409
       internalID: 7539696650201383313
       vertices: []
       indices: 
@@ -2015,18 +2015,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_74
       rect:
         serializedVersion: 2
-        x: 1606
-        y: 2641
-        width: 786
-        height: 211
+        x: 1600
+        y: 2400
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9de7036fd7af771469221f5e2f6322da
+      spriteID: a2d2f0a6faef092449e780db739e4165
       internalID: 6787828934299228037
       vertices: []
       indices: 
@@ -2036,18 +2036,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_75
       rect:
         serializedVersion: 2
-        x: 2407
-        y: 2650
-        width: 783
-        height: 206
+        x: 2400
+        y: 2400
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84a1bd619a50a224fa236eeaba9cad50
+      spriteID: 361f731f19adb464c9f23c5217bd5d5f
       internalID: -3670534249996848567
       vertices: []
       indices: 
@@ -2057,18 +2057,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_76
       rect:
         serializedVersion: 2
-        x: 3209
-        y: 2656
-        width: 782
-        height: 210
+        x: 3200
+        y: 2400
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2f39b6cc4df698429e6975b94a25032
+      spriteID: 1bc1c6f9561a3ed4fbe60804fdac4da2
       internalID: -5665271644796147748
       vertices: []
       indices: 
@@ -2078,18 +2078,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_77
       rect:
         serializedVersion: 2
-        x: 4006
-        y: 2664
-        width: 784
-        height: 207
+        x: 4000
+        y: 2400
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f0edc1136ab8404d8a96af506eb9c0f
+      spriteID: f6842716ed8def54282d914cb038553b
       internalID: -5578585780127089182
       vertices: []
       indices: 
@@ -2099,18 +2099,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_78
       rect:
         serializedVersion: 2
-        x: 4807
-        y: 2669
-        width: 783
-        height: 211
+        x: 4800
+        y: 2400
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea9b48d5623595643b65e58fac388085
+      spriteID: 5f61c0b6b1d3b54468b3242fea325e39
       internalID: -8967061520150873273
       vertices: []
       indices: 
@@ -2120,18 +2120,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_79
       rect:
         serializedVersion: 2
-        x: 5609
-        y: 2678
-        width: 782
-        height: 207
+        x: 5600
+        y: 2400
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8dbac7f3b53d4641a4cc038e6f85ff8
+      spriteID: afa35eb7a8fe4c44f8b331dc1c9510d4
       internalID: 1995094034904131001
       vertices: []
       indices: 
@@ -2141,18 +2141,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_80
       rect:
         serializedVersion: 2
-        x: 6406
-        y: 2683
-        width: 782
-        height: 206
+        x: 6400
+        y: 2400
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4aad5c7bce6c50546b37b8cd1f47d596
+      spriteID: e5b99602842b9d44a8c38a5273411de8
       internalID: -6079789641167838642
       vertices: []
       indices: 
@@ -2162,18 +2162,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_81
       rect:
         serializedVersion: 2
-        x: 7207
-        y: 2688
-        width: 783
-        height: 206
+        x: 7200
+        y: 2400
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 495c32f65d7a5964c844e517dc08b54c
+      spriteID: 3a2601d1b614f9c4fb2086950e82fd14
       internalID: -3682081784297879785
       vertices: []
       indices: 
@@ -2183,18 +2183,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_82
       rect:
         serializedVersion: 2
-        x: 8009
-        y: 2688
-        width: 780
-        height: 211
+        x: 8000
+        y: 2400
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ada136275c54bb345bfff37c738ecd0c
+      spriteID: 4fbdfaa50840ea54abe0c25cde38e046
       internalID: -7953943370726675157
       vertices: []
       indices: 
@@ -2204,18 +2204,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_83
       rect:
         serializedVersion: 2
-        x: 8806
-        y: 2692
-        width: 782
-        height: 207
+        x: 8800
+        y: 2400
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad5e112b6b11cf14f924ef7d4e7825ef
+      spriteID: 9b8d2b649c944be42b01d3078583fdba
       internalID: -1164612295868630879
       vertices: []
       indices: 
@@ -2225,18 +2225,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_84
       rect:
         serializedVersion: 2
-        x: 7
-        y: 1892
-        width: 783
-        height: 210
+        x: 0
+        y: 1600
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cc8bc6973219284c86a0085d9f57af6
+      spriteID: df12a2664c5adb840bb2db33c9e97d29
       internalID: 8732861483270196130
       vertices: []
       indices: 
@@ -2246,18 +2246,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_85
       rect:
         serializedVersion: 2
-        x: 809
-        y: 1894
-        width: 778
-        height: 208
+        x: 800
+        y: 1600
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 677403b6ddb03f54b867c4ac87fd36c5
+      spriteID: 61c0a1ddef299c44a8eca4933a9bc852
       internalID: -7105270929907761487
       vertices: []
       indices: 
@@ -2267,18 +2267,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_86
       rect:
         serializedVersion: 2
-        x: 1607
-        y: 1891
-        width: 781
-        height: 211
+        x: 1600
+        y: 1600
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ee3079dcc6189947b02b891b51a7a1f
+      spriteID: 1e8ca517640f7bf41b9d49cf9b41b23e
       internalID: 7313251938273033328
       vertices: []
       indices: 
@@ -2288,18 +2288,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_87
       rect:
         serializedVersion: 2
-        x: 2407
-        y: 1891
-        width: 781
-        height: 206
+        x: 2400
+        y: 1600
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93751af7b9a024f4a9cd3814a2f4bf4e
+      spriteID: a3c7dfae86d8357409a029ac646a4427
       internalID: 5938830816749014840
       vertices: []
       indices: 
@@ -2309,18 +2309,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_88
       rect:
         serializedVersion: 2
-        x: 3209
-        y: 1886
-        width: 778
-        height: 207
+        x: 3200
+        y: 1600
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afbe1d3cd2568244c82b7dd43422e51b
+      spriteID: 757a6a55a28daee4d8781a2c9f4c42a0
       internalID: 7284603029084704380
       vertices: []
       indices: 
@@ -2330,18 +2330,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_89
       rect:
         serializedVersion: 2
-        x: 4010
-        y: 1882
-        width: 778
-        height: 206
+        x: 4000
+        y: 1600
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4167c6b62f252d46a98eb430020e42e
+      spriteID: 40a9cbfc0a13ef048b0b59614b550852
       internalID: -6135267690049977720
       vertices: []
       indices: 
@@ -2351,18 +2351,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_90
       rect:
         serializedVersion: 2
-        x: 4807
-        y: 1872
-        width: 778
-        height: 211
+        x: 4800
+        y: 1600
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1dfc4bff1608e9142ab776d552df17b6
+      spriteID: bf5cb64b43b64f14d817abccfff92b8b
       internalID: -4792326612290866533
       vertices: []
       indices: 
@@ -2372,18 +2372,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_91
       rect:
         serializedVersion: 2
-        x: 5609
-        y: 1863
-        width: 778
-        height: 211
+        x: 5600
+        y: 1600
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9929eb6fb2bd02d498b4fc4b107d04bf
+      spriteID: ee464b77913bad34e99ac5eb3921af6e
       internalID: -773345845191732891
       vertices: []
       indices: 
@@ -2393,18 +2393,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_92
       rect:
         serializedVersion: 2
-        x: 6406
-        y: 1858
-        width: 782
-        height: 211
+        x: 6400
+        y: 1600
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3db83e76c6d22a746bc95d0f168a2f44
+      spriteID: 006f9e2582e6c1c4b8e7002adec749cb
       internalID: -5068430720802646446
       vertices: []
       indices: 
@@ -2414,18 +2414,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_93
       rect:
         serializedVersion: 2
-        x: 7207
-        y: 1849
-        width: 783
-        height: 220
+        x: 7200
+        y: 1600
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f55d8262db4416b4a9cc10fcd02fb0dc
+      spriteID: bec426ab145a7e34c858b3d98eb5c365
       internalID: -7736815307286451102
       vertices: []
       indices: 
@@ -2435,18 +2435,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_94
       rect:
         serializedVersion: 2
-        x: 8009
-        y: 1844
-        width: 782
-        height: 222
+        x: 8000
+        y: 1600
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 174a1ad6e8df7fd46b66e8a61cd9b8de
+      spriteID: a1bf01af29df8d24c9d3349837eeefe8
       internalID: -7734026281478427501
       vertices: []
       indices: 
@@ -2456,18 +2456,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_95
       rect:
         serializedVersion: 2
-        x: 8810
-        y: 1840
-        width: 782
-        height: 224
+        x: 8800
+        y: 1600
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb04927ce4ba66346b75f18e9da4b1de
+      spriteID: 132b9f73b504da045bdeeb664b1b389f
       internalID: -8778714211164248924
       vertices: []
       indices: 
@@ -2477,18 +2477,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_96
       rect:
         serializedVersion: 2
-        x: 12
-        y: 1038
-        width: 778
-        height: 225
+        x: 0
+        y: 800
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e442eecbca0bd6940a5499c29a5b06de
+      spriteID: c8488fa70a65dac4eb73683a79a2b973
       internalID: 1865443251635198692
       vertices: []
       indices: 
@@ -2498,18 +2498,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_97
       rect:
         serializedVersion: 2
-        x: 809
-        y: 1038
-        width: 782
-        height: 220
+        x: 800
+        y: 800
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2b86fa91d073ba44ac0e725d7cfcc4d
+      spriteID: c43d0ca0222b305469a62f912a2e341d
       internalID: 7416323830372069741
       vertices: []
       indices: 
@@ -2519,18 +2519,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_98
       rect:
         serializedVersion: 2
-        x: 1610
-        y: 1033
-        width: 780
-        height: 225
+        x: 1600
+        y: 800
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a4b396d5721c9d4d9de699782ee15b9
+      spriteID: fef52b375defdcc40b98f96a328c219c
       internalID: -3804654379371364670
       vertices: []
       indices: 
@@ -2540,18 +2540,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_99
       rect:
         serializedVersion: 2
-        x: 2412
-        y: 1029
-        width: 778
-        height: 229
+        x: 2400
+        y: 800
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 730ee67096810c74eb03b866007d7bfc
+      spriteID: c166f588036c6cc43be88832f061055a
       internalID: -134438709647860950
       vertices: []
       indices: 
@@ -2561,18 +2561,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_100
       rect:
         serializedVersion: 2
-        x: 3209
-        y: 1029
-        width: 782
-        height: 225
+        x: 3200
+        y: 800
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a5267c8f7771c3438a6038b8fad14d4
+      spriteID: 9593a8627e73b7a4684365866f65755a
       internalID: 574897605699719864
       vertices: []
       indices: 
@@ -2582,18 +2582,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_101
       rect:
         serializedVersion: 2
-        x: 4010
-        y: 1024
-        width: 778
-        height: 230
+        x: 4000
+        y: 800
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b0efdf58f676d94eb063de0fdc3db77
+      spriteID: 521b8ba57e1741845bf14708123ae560
       internalID: 8662994919621726729
       vertices: []
       indices: 
@@ -2603,18 +2603,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_102
       rect:
         serializedVersion: 2
-        x: 4808
-        y: 1024
-        width: 782
-        height: 230
+        x: 4800
+        y: 800
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89784ffe6b0208d4ebbffbb0059ecee9
+      spriteID: 0eac15a250e4e584a982d1a72562dcb5
       internalID: 3618158801512903474
       vertices: []
       indices: 
@@ -2624,18 +2624,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_103
       rect:
         serializedVersion: 2
-        x: 5609
-        y: 1024
-        width: 778
-        height: 230
+        x: 5600
+        y: 800
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be3852ea22f91e640adadd24c155e584
+      spriteID: 8b556b5ec80a0cb459481c4eecb072b6
       internalID: -1708192056344469403
       vertices: []
       indices: 
@@ -2645,18 +2645,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_104
       rect:
         serializedVersion: 2
-        x: 6410
-        y: 1024
-        width: 778
-        height: 230
+        x: 6400
+        y: 800
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0aff51123d824eb43868d04fcbfc5d9c
+      spriteID: 731f88ae11835764bb6cec268eb7d2d8
       internalID: 3767779576397268219
       vertices: []
       indices: 
@@ -2666,18 +2666,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_105
       rect:
         serializedVersion: 2
-        x: 7207
-        y: 1022
-        width: 778
-        height: 232
+        x: 7200
+        y: 800
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f83bd765218acdf41926762c697c3b54
+      spriteID: 2c87e6c89a49e154986a75d46e15dfd1
       internalID: -626703325165339599
       vertices: []
       indices: 
@@ -2687,18 +2687,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_106
       rect:
         serializedVersion: 2
-        x: 8009
-        y: 1021
-        width: 777
-        height: 233
+        x: 8000
+        y: 800
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 707c7d1f9735ed84182a1fe45d083bb3
+      spriteID: 92d46d858c115e542804daf0eb408bb4
       internalID: 4488455664382088944
       vertices: []
       indices: 
@@ -2708,18 +2708,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_107
       rect:
         serializedVersion: 2
-        x: 8806
-        y: 1022
-        width: 778
-        height: 232
+        x: 8800
+        y: 800
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29d35a0722c26544291165044655ea6b
+      spriteID: cb3075d43962d044789d38087da7ba81
       internalID: 7757838844306751558
       vertices: []
       indices: 
@@ -2729,18 +2729,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_108
       rect:
         serializedVersion: 2
-        x: 7
-        y: 223
-        width: 776
-        height: 229
+        x: 0
+        y: 0
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c11c29d1270a03e4693ae0b0dee63132
+      spriteID: 9e3fd9a46d3ae68438a149ce66181a64
       internalID: 7074490523235964640
       vertices: []
       indices: 
@@ -2750,18 +2750,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_109
       rect:
         serializedVersion: 2
-        x: 809
-        y: 223
-        width: 773
-        height: 229
+        x: 800
+        y: 0
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42a8ae2340a31ae43b30d0d7c6118bf2
+      spriteID: 1e3bcae87ded1a9469665c694c5710d9
       internalID: -7613254477629310008
       vertices: []
       indices: 
@@ -2771,18 +2771,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_110
       rect:
         serializedVersion: 2
-        x: 1606
-        y: 223
-        width: 773
-        height: 229
+        x: 1600
+        y: 0
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4dcb8cea6afc974280feb1734beb805
+      spriteID: f7a5d1ce1f42329469a6bdbaaab590af
       internalID: -2914543342621194509
       vertices: []
       indices: 
@@ -2792,18 +2792,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_111
       rect:
         serializedVersion: 2
-        x: 2407
-        y: 223
-        width: 773
-        height: 229
+        x: 2400
+        y: 0
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dafd1ccc46de2e2409a7b3a6ce795a27
+      spriteID: 1292bb60bc552974a960e35e0a5c1daa
       internalID: -4741735380635468066
       vertices: []
       indices: 
@@ -2813,18 +2813,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_112
       rect:
         serializedVersion: 2
-        x: 3209
-        y: 225
-        width: 768
-        height: 232
+        x: 3200
+        y: 0
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1232834acf9c9f489e721db7329333e
+      spriteID: 4c25e7ce0dea67b4fa24e14f78dc078e
       internalID: -4402316304263744641
       vertices: []
       indices: 
@@ -2834,18 +2834,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_113
       rect:
         serializedVersion: 2
-        x: 4006
-        y: 227
-        width: 773
-        height: 230
+        x: 4000
+        y: 0
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a309c1e93ed59b4c8c6b96b625c3449
+      spriteID: 440dc5a36b34f0a4e92640b71977115d
       internalID: -1896590648986281971
       vertices: []
       indices: 
@@ -2855,18 +2855,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_114
       rect:
         serializedVersion: 2
-        x: 4807
-        y: 227
-        width: 769
-        height: 230
+        x: 4800
+        y: 0
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fcbac24d1aad114eba823b5c4a1d71e
+      spriteID: 9bff17c0e3987904bbcaa4f234aab34b
       internalID: 7486342199730080452
       vertices: []
       indices: 
@@ -2876,18 +2876,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_115
       rect:
         serializedVersion: 2
-        x: 5609
-        y: 227
-        width: 768
-        height: 234
+        x: 5600
+        y: 0
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3fbd67e3c68e8040a50a34b57c99107
+      spriteID: 0a6306c96efe0bd49839bdd292243de3
       internalID: -758329012855398617
       vertices: []
       indices: 
@@ -2897,18 +2897,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_116
       rect:
         serializedVersion: 2
-        x: 6406
-        y: 229
-        width: 768
-        height: 233
+        x: 6400
+        y: 0
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 317b65576c80dc24cbe83e334ecc9950
+      spriteID: 8546112bd22707f4dad3ad1b33eb2568
       internalID: 9152090036527293759
       vertices: []
       indices: 
@@ -2918,18 +2918,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_117
       rect:
         serializedVersion: 2
-        x: 7207
-        y: 232
-        width: 769
-        height: 234
+        x: 7200
+        y: 0
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 150c9500971919b4281f495de1425b59
+      spriteID: 27e23e7192d7a67458c011a96eee9d1f
       internalID: -3048099995788040298
       vertices: []
       indices: 
@@ -2939,18 +2939,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_118
       rect:
         serializedVersion: 2
-        x: 8009
-        y: 232
-        width: 768
-        height: 234
+        x: 8000
+        y: 0
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4735e23148664b44aa3c01d6174a1468
+      spriteID: 4850e841a28202a4a819774b38797967
       internalID: 3512393066544720036
       vertices: []
       indices: 
@@ -2960,18 +2960,18 @@ TextureImporter:
       name: Crocodile_Attack_Spritesheet_119
       rect:
         serializedVersion: 2
-        x: 8806
-        y: 232
-        width: 768
-        height: 239
+        x: 8800
+        y: 0
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf404185ed5845746ad3de91c0297656
+      spriteID: d275a01c06ebc5f439889e65d41f5ba9
       internalID: -8787517083781846051
       vertices: []
       indices: 
