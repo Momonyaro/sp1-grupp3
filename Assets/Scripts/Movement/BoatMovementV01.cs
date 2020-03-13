@@ -5,172 +5,149 @@ using Managers;
 
 public class BoatMovementV01 : MonoBehaviour
 {
-    public float autoSpeed = 3.0f;
+    public float defaultAutoSpeed = 3.0f;
     public float tiltSpeed = 5.0f;
     public float breakSpeed = 1.0f;
     public float rowSpeed = 8.0f;
-    public float rowPower = 500.0f;
-    [SerializeField] float currentSpeedY = 0;
     [Tooltip("How long after a collision the frog will be immortal (in seconds)")]
     public float immortalTime = 1f;
     public float knockbackTime = .5f;
     [SerializeField] float knockbackPower = 300f;
-    bool knockback = false;
-    bool stunned = false;
-    bool shield = false;
-    bool stopBoat = false;
+    public bool knockback = false;
+    public bool stunned = false;
+    public bool shield = false;
+    public bool stopBoat = false;
+    public int freezeFrames = 6;
 
     public Color hurtColor = Color.red;
     public Color defaultColor = Color.green;
     public Color deadColor = Color.gray;
 
     public GameObject hurtEffect;
-    bool gotHit = false;
-    float counter = 0f;
-    float timer = .5f;
+    private bool _gotHit = false;
+    private float _counter = 0f;
+    private float _timer = .5f;
+    private float _autoSpeed;
     [Tooltip("Only between 1 and 5 so far. Consult Teo for upgrades")]
     [Range(1, 5)]
     public int maxHealth = 3;
     public static int currentHealth;
     public SignalThingy playerHealthSignal;
     public SpriteRenderer headRenderer;
-    Hit hit;
-    Shaker shaker;
-    private int freezeFrames = 0;
+    public float pushbackPower = 2f;
+    private Hit _hit;
+    private Shaker _shaker;
+    private int _freezeFrames = 0;
+    private const float DangerKnockbackTimer = 1;
+    [Space]
+    [Tooltip("Vilken riktning tile-knockbacken pushar grodan")]
+    //public bool knockbackDirection = false;
+    //Hit hit;
+    //Shaker shaker;
+    private Vector3 _oldVelocity;
+    private Vector3 _oldPosition;
 
     public bool GameOver = false;
+
+    private bool _pressedS = false;
+    private bool _pressedW = false;
 
     Rigidbody2D rigidb;
 
     void Start()
     {
         rigidb = GetComponent<Rigidbody2D>();
-        hit = FindObjectOfType<Hit>();
-        shaker = FindObjectOfType<Shaker>();
+        _hit = FindObjectOfType<Hit>();
+        _shaker = FindObjectOfType<Shaker>();
         currentHealth = maxHealth;
+        _oldVelocity = rigidb.velocity;
+        _oldPosition = transform.position;
         //GetComponent<Collider2D>().enabled = true;
     }
 
     void Update()
     {
-        if (freezeFrames > 0)
+        if (_freezeFrames > 0)
         {
             Time.timeScale = 0;
-            freezeFrames--;
+            _freezeFrames--;
         }
-        else if (freezeFrames == 0)
+        else if (_freezeFrames == 0)
         {
             Time.timeScale = 1;
-            freezeFrames--;
+            _freezeFrames--;
         }
         
-        if (!GameOver && knockback == false)
+        if (!GameOver && !knockback)
         {
             float horizontal = Input.GetAxis("Horizontal");
-            currentSpeedY = rigidb.velocity.y;
 
-            if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow) && stunned == false)
+            _autoSpeed = stopBoat || GameOver ? 0 : defaultAutoSpeed;
+            
+            if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) && !stunned)
             {
-                FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.Brake);
-            }
-            else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) && stunned == false)
-            {
-                FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.Dash);
-            }
-
-            if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) && stunned == false)
-            {
-                autoSpeed = breakSpeed;
-            }
-            else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) && stunned == false)
-            {
-                autoSpeed = rowSpeed;
+                if (!_pressedS)
+                {
+                    _pressedS = true;
+                    FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.Brake);
+                }
+                
+                _autoSpeed = breakSpeed;
             }
             else
+                _pressedS = false;
+
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) && !stunned)
             {
-                autoSpeed = 3.0f;
+                if (!_pressedW)
+                {
+                    _pressedW = true;
+                    FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.Dash);
+                }
+                
+                _autoSpeed = rowSpeed;
             }
+            else
+                _pressedW = false;
 
             Vector2 position = transform.position;
+            position.y += + 1.0f * _autoSpeed * Time.deltaTime;
+            position.x += + tiltSpeed * horizontal * Time.deltaTime;
 
             if(stunned)
             {
-                position.x = position.x + tiltSpeed * -horizontal * Time.deltaTime;
+                position.x += + tiltSpeed * -horizontal * Time.deltaTime;
             }
-            else
-            {
-                position.x = position.x + tiltSpeed * horizontal * Time.deltaTime;
-            }
-
-            position.y = position.y + 1.0f * autoSpeed * Time.deltaTime;
 
             rigidb.MovePosition(position);
         }
 
-        if (currentHealth <= 0)
-        {
-            GameOver = true;
-        }
-        else
-        {
-            GameOver = false;
-        }
+        GameOver = currentHealth <= 0;
+        TextManager.gameOver = GameOver;
 
         if (GameOver)
         {
-            TextManager.gameOver = true;
-            autoSpeed = 0;
+            headRenderer.color = deadColor;
+            GetComponent<SpriteRenderer>().color = deadColor;
             GetComponent<Collider2D>().enabled = false;
         }
-        else
+
+        if (_counter > immortalTime)
         {
-            TextManager.gameOver = false;
-        }
-        if (stopBoat)
-        {
-            autoSpeed = 0;
-        }
-        if (gotHit)
-        {
-            counter += Time.deltaTime;
-        }
-        if (counter > immortalTime)
-        {
-            gotHit = false;
-            counter = 0f;
+            _gotHit = false;
+            _counter = 0f;
             headRenderer.color = defaultColor;
             GetComponent<SpriteRenderer>().color = defaultColor;
         }
-        if (currentHealth <= 0)
+        else if (_gotHit)
         {
-            headRenderer.color = deadColor;
-            GetComponent<SpriteRenderer>().color = deadColor;
+            _counter += Time.deltaTime;
         }
 
-        timer -= Time.deltaTime;
-    }
+        _timer -= Time.deltaTime;
 
-    public void StopBoatSwitchBool()
-    {
-        stopBoat = !stopBoat;
-    }
-
-    public void SetKnockbackBool(bool set)
-    {
-        knockback = set;
-    }
-    public void ShieldBoolTrue()
-    {
-        shield = true;
-    }
-
-    public bool StunStatus()
-    {
-        return stunned;
-    }
-    public void StunnedBoolSwitch()
-    {
-        stunned = !stunned;
+        _oldVelocity = (transform.position - _oldPosition) * 30;
+        _oldPosition = transform.position;
     }
 
     public void LostHealth()
@@ -183,7 +160,7 @@ public class BoatMovementV01 : MonoBehaviour
         {
             Instantiate(hurtEffect, transform.position, Quaternion.identity);
         }
-        InsertFreezeFrames(6);
+        InsertFreezeFrames(freezeFrames);
 
         
         //FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.BoatCrash);
@@ -191,57 +168,119 @@ public class BoatMovementV01 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Dangerous" && shield == false && gotHit == false)
+        if (other.CompareTag("Dangerous") && !_gotHit)
         {
-            playerHealthSignal.Raise();
-            gotHit = true;
-            LostHealth();
-        }
-
-        else if (other.tag == "Dangerous" && shield && gotHit == false)
-        {
-            shield = false;
-            gotHit = true;
-            hit.ShieldSwitchBool();
-            KnockbackDangers(other);
+            if (!shield)
+            {
+                playerHealthSignal.Raise();
+                _gotHit = true;
+                LostHealth();
+            }
+            else
+            {
+                shield = false;
+                _gotHit = true;
+                _hit.ShieldSwitchBool();
+                KnockbackDangers(other);
+            }
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Knockback(collision);
+
+
+        //Knockback(collision);
+        if (collision.transform.CompareTag("Tilemap"))
+        {
+            ////knockbackTime -= Time.deltaTime;
+            Debug.Log("Knocked into the tilemap");
+            if (collision.transform.position.x <= transform.position.x)
+            {
+                Knockback(false);
+                //    Debug.Log("In first one");
+                //    StartCoroutine(TilemapKnockback(true));
+                //    //knockbackDirection = true;
+                //    //rigidb.AddForce(new Vector2(pushbackPower, -pushbackPower));
+                //    //rigidb.velocity = new Vector2(-pushbackPower, -pushbackPower);
+            }
+            else //if(collision.transform.position.x > transform.position.x)
+            {
+                Knockback(true);
+                //    Debug.Log("In second one");
+                //    StartCoroutine(TilemapKnockback(false));
+
+                //    //knockbackDirection = false;
+                //    //rigidb.AddForce(new Vector2(pushbackPower, -pushbackPower));
+                //    //rigidb.velocity = new Vector2(pushbackPower, -pushbackPower);
+            }
+        }
+
     }
 
-    public void Knockback(Collision2D danger)
-    {
-        if (timer < 0)
-        {
-            timer = .3f;
-            StartCoroutine(shaker.Shake());
-            var newDistance = GetComponent<Rigidbody2D>().transform.position - danger.transform.position;
-            knockback = true;
-            StartCoroutine(AccurateKnockback(newDistance));
+    //IEnumerator TilemapKnockback(bool direction)
+    //{
+    //    stopBoat = true;
+    //    if (direction)
+    //    {
+    //        rigidb.velocity = new Vector2(-pushbackPower, -transform.position.y);
+    //    }
+    //    else
+    //    {
+    //        rigidb.velocity = new Vector2(pushbackPower, transform.position.y);
+    //    }
+    //    yield return new WaitForSeconds(.5f);
+    //    stopBoat = false;
+    //}
 
+    public void Knockback(bool direction)
+    {
+        if (_timer < 0)
+        {
+            knockback = true;
+            Vector3 vel = _oldVelocity;
+            vel = vel * -1;
+            StartCoroutine(TilemapKnockback(vel));
+            //var newDistance = GetComponent<Rigidbody2D>().transform.position - danger.transform.position;
+            //StartCoroutine(AccurateKnockback(newDistance));
+            StartCoroutine(_shaker.Shake());
+
+            _timer = .3f;
         }
     }
 
+    IEnumerator TilemapKnockback(Vector3 velocity)
+    {
+        velocity.Normalize();
+        Debug.Log("rigidb velocity = " + rigidb.velocity + " | inverted velocity = " + velocity);
+        rigidb.AddForce(velocity * pushbackPower);
+        //rigidb.velocity = velocity * pushbackPower;
+        yield return new WaitForSeconds(.1f);
+        knockback = false;
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+    }
+
+
     public void KnockbackDangers(Collider2D danger)
     {
-        if (timer < 0)
+        if (_timer < 0)
         {
-            timer = 1f;
-            StartCoroutine(shaker.Shake());
-            var newDistance = GetComponent<Rigidbody2D>().transform.position - danger.transform.position;
             knockback = true;
+            var newDistance = GetComponent<Rigidbody2D>().transform.position - danger.transform.position;
             StartCoroutine(AccurateKnockback(newDistance));
+            StartCoroutine(_shaker.Shake());
 
+            _timer = DangerKnockbackTimer;
         }
     }
 
     public IEnumerator AccurateKnockback(Vector3 newDistance)
     {
         GetComponent<Rigidbody2D>().AddForce(newDistance.normalized * knockbackPower);
+        
+        //Vänta lite innan man nollar hastigheten.
         yield return new WaitForSeconds(knockbackTime);
+        
         knockback = false;
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
@@ -249,6 +288,6 @@ public class BoatMovementV01 : MonoBehaviour
     private void InsertFreezeFrames(int amount)
     {
         Debug.Log("[Za Warudo] Froze time for " + amount + " frames.");
-        freezeFrames = amount;
+        _freezeFrames = amount;
     }
 }

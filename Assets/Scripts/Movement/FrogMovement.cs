@@ -9,7 +9,13 @@ public class FrogMovement : MonoBehaviour
     string horizontal = "Horizontal";
     public static bool frozen = false;
     float x;
-    
+
+
+    private void Awake()
+    {
+        Time.timeScale = 1;
+        frozen = false;
+    }
 
     void Update()
     {

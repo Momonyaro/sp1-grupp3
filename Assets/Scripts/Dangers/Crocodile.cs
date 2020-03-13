@@ -16,14 +16,25 @@ public class Crocodile : MonoBehaviour
     public bool direction = false;
     float crocTimer = 0.5f;
 
+    public GameObject target;
+    public float distance;
+    public float chaseTime = 2f;
+    private float chaseTimeCheck;
+    public float chaseCooldown = 3f;
+    private float chaseCooldownCheck;
+    public float eyeSight = 5;
+
     void Start()
     {
         hit = FindObjectOfType<Hit>();
         boat = FindObjectOfType<BoatMovementV01>();
+        chaseTimeCheck = chaseTime;
+        chaseCooldownCheck = chaseCooldown;
     }
 
     void Update()
     {
+        distance = Vector3.Distance(target.transform.position, transform.position);
         crocTimer -= Time.deltaTime;
         Move();
     }
@@ -35,7 +46,6 @@ public class Crocodile : MonoBehaviour
             direction = true;
             transform.Rotate(0, 180, 0);
             crocTimer = 0.5f;
-            
         }
         if (transform.position.x <= smallerPointX && crocTimer <= 0f)
         {
@@ -51,6 +61,34 @@ public class Crocodile : MonoBehaviour
         else
         {
             transform.Translate(Vector2.right * (Time.deltaTime * crocSpeed), 0);
+        }
+
+        if(distance <= eyeSight && chaseTimeCheck > 0 && chaseCooldown >= chaseCooldownCheck)
+        {
+            Chase();
+        }
+    }
+
+    private void Chase()
+    {
+        if (distance <= eyeSight && chaseTimeCheck > 0 && chaseCooldown >= chaseCooldownCheck)
+        {
+            chaseTime -= Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, crocSpeed * Time.deltaTime);
+        }
+        else if(chaseTimeCheck <= 0)
+        {
+            chaseCooldown -= Time.deltaTime;
+            Move();
+        }
+        else if(chaseCooldownCheck >= chaseCooldown)
+        {
+            chaseTimeCheck = chaseTime;
+            Move();
+        }
+        else
+        {
+            Move();
         }
     }
 

@@ -13,12 +13,16 @@ public class HealthCollectable : Collectable
         if (other.tag == "Player")
         {
             FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.PickupFly);
+            if (pickupEffect != null)
+            {
+                Instantiate(pickupEffect, transform.position, Quaternion.identity);
+            }
             boatMv = other.GetComponent<BoatMovementV01>();
 
             if(BoatMovementV01.currentHealth < boatMv.maxHealth)
             {
                 BoatMovementV01.currentHealth += healing;
-                Debug.Log("Heald for one. Current health;" + BoatMovementV01.currentHealth);
+                Debug.Log("Healed for one. Current health;" + BoatMovementV01.currentHealth);
             }
 
             Destroy(gameObject);

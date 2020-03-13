@@ -57,9 +57,9 @@ public class wirlpool : MonoBehaviour
     {
         //FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.Whirlpool);
 
-        //boat.transform.position = Vector3.MoveTowards(boat.transform.position, transform.position, intoWhirlSpeed * Time.deltaTime);
-        boat.transform.Rotate(new Vector3(0, 0, rotateSpeed));
-        RotatingBoat();
+        boat.transform.position = Vector3.MoveTowards(boat.transform.position, transform.position, intoWhirlSpeed * Time.deltaTime);
+        boat.transform.Rotate(new Vector3(0, 0, rotateSpeed * Time.deltaTime));
+        //RotatingBoat();
     }
 
     private void RotatingBoat()
@@ -119,7 +119,7 @@ public class wirlpool : MonoBehaviour
         if (collision.tag == "Player")
         {
             activated = true;
-            boat.SetKnockbackBool(true);
+            boat.knockback = true;
         }
     }
 
@@ -127,7 +127,9 @@ public class wirlpool : MonoBehaviour
     {
         boat.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, knockForwardPower));
         yield return new WaitForSeconds(knockForwardTime);
-        boat.SetKnockbackBool(false);
+        boat.knockback = false;
         boat.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        boat.GetComponent<SpriteRenderer>().color = boat.defaultColor;
+        boat.headRenderer.color = boat.defaultColor;
     }
 }

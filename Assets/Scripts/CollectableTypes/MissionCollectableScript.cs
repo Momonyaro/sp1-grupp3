@@ -5,23 +5,28 @@ using UnityEngine;
 
 public class MissionCollectableScript : Collectable
 {
-    public GameObject fullHealthImage;
-    public GameObject emptyHealthImage;
+    public GameObject fullMissionImage;
+    public GameObject emptyMissionImage;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
             FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.PickupEgg);
-            if(fullHealthImage && emptyHealthImage != null)
+            if(pickupEffect != null)
             {
-                fullHealthImage.SetActive(true);
-                emptyHealthImage.SetActive(false);
+                Instantiate(pickupEffect, transform.position, Quaternion.identity);
+            }
+
+            if (fullMissionImage && emptyMissionImage != null)
+            {
+                fullMissionImage.SetActive(true);
+                emptyMissionImage.SetActive(false);
             }
             else
             {
-                fullHealthImage = Resources.Load<GameObject>("stop");
-                emptyHealthImage = Resources.Load<GameObject>("stop");
+                fullMissionImage = Resources.Load<GameObject>("stop");
+                emptyMissionImage = Resources.Load<GameObject>("stop");
             }
             TextManager.missionAmount += 1;
             Destroy(gameObject);

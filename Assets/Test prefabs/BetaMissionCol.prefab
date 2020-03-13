@@ -72,8 +72,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: d9b5a0c40f598a5459a5bd6a7a11b5d7, type: 3}
-  m_Color: {r: 0.43787825, g: 0.44924268, b: 0.4528302, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 588fb5523205117419a9a630be1432e8, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -100,7 +100,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.7500001, y: 1.2501222}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -145,5 +145,9 @@ MonoBehaviour:
   collectSound: {fileID: 0}
   collectableScore: 1
   rotationSpeed: 0
-  fullHealthImage: {fileID: 0}
-  emptyHealthImage: {fileID: 0}
+  holy: 0
+  shine: {fileID: 0}
+  shineRotationSpeed: 70
+  pickupEffect: {fileID: 0}
+  fullMissionImage: {fileID: 0}
+  emptyMissionImage: {fileID: 0}
