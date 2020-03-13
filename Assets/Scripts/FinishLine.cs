@@ -90,6 +90,7 @@ public class FinishLine : MonoBehaviour
                     }
                 }
                 finished = true;
+                reachedGoal = false;
             }
         }
 
