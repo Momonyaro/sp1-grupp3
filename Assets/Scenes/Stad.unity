@@ -500,7 +500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2812,7 +2812,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320161729}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.3857746, y: 134.11343, z: -10}
+  m_LocalPosition: {x: -13.434414, y: 134.05362, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459601753}
@@ -3574,10 +3574,12 @@ MonoBehaviour:
   startsMission: 1
   missionComponent:
     englishInfo:
-      missionName: Locate the missing painting!
-      missionDescription: A painting done by Sebastian's father was washed away during
-        the flood and would like my help in retriving it; or what's left of it at
-        least...
+      missionName: Find the missing tools!
+      missionDescription: 'Some tools necessary to rebuild the dam were washed away
+        with the flood. Get them back to the workers.
+
+        (Developer''s note: we don''t have pictures for tools yet so just pick up
+        the eggs)'
     swedishInfo:
       missionName: "Hitta den bortspolade m\xE5lningen!"
       missionDescription: "En m\xE5lning som Sebastians pappa m\xE5lat spolades bort
@@ -3585,7 +3587,7 @@ MonoBehaviour:
         vad som \xE4r kvar i alla fall..."
     missionPortrait: {fileID: -1725970659461245023, guid: 173bb3f8133e72c49becb5132778958d,
       type: 3}
-    targetSceneName: Level0_tutorial
+    targetSceneName: Level1_Verktyg
     missionBox: {fileID: 0}
   alertSprite: {fileID: 1874925251}
   missionSprite: {fileID: 21300000, guid: a06d86e190a17bf4ab755db69efd68aa, type: 3}
@@ -3801,7 +3803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4340,7 +4342,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1997493447}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.4, y: 131.46, z: -10}
+  m_LocalPosition: {x: -14.15, y: 129.68, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1439601}
@@ -4550,57 +4552,12 @@ Transform:
   m_Father: {fileID: 1333554120}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2128705196 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 107333433656236114, guid: 3592f7aaf17322944a0bcda616b221b4,
-    type: 3}
-  m_PrefabInstance: {fileID: 8269094466909689155}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2128705197 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6698166186060580094, guid: 3592f7aaf17322944a0bcda616b221b4,
     type: 3}
   m_PrefabInstance: {fileID: 8269094466909689155}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2128705198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2128705196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c51ee83021759634ca00be5d503b1103, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  frogSpeedX: 12
---- !u!61 &2128705202
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2128705196}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.009322926, y: 0.0683683}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.6666667, y: 0.6666667}
-    newSize: {x: 0.2, y: 0.2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.54857576, y: 0.48020682}
-  m_EdgeRadius: 0
 --- !u!1001 &260566685521355980
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4853,7 +4810,7 @@ MonoBehaviour:
   maxMagicNumbers: 10
   timeBetweenAnimCheck: 1
   conversationComponent:
-    npcName: Sebastian
+    npcName: Svan [INDEV]
     voiceClips:
     - {fileID: 8300000, guid: f70829441f645264c9feb313379698b3, type: 3}
     - {fileID: 8300000, guid: 28244cabadc1b56419a9b859a1335ba4, type: 3}
@@ -4906,18 +4863,17 @@ MonoBehaviour:
   startsMission: 1
   missionComponent:
     englishInfo:
-      missionName: Locate the missing painting!
-      missionDescription: A painting done by Sebastian's father was washed away during
-        the flood and would like my help in retriving it; or what's left of it at
-        least...
+      missionName: Locate the lost eggs!
+      missionDescription: A worried mother lost her eggs when the flood swept through
+        town. Fetch them back before she gets sick with worry.
     swedishInfo:
       missionName: "Hitta den bortspolade m\xE5lningen!"
       missionDescription: "En m\xE5lning som Sebastians pappa m\xE5lat spolades bort
         under \xF6versv\xE4mningen och skulle vilja ha hj\xE4lp att hitta den; eller
         vad som \xE4r kvar i alla fall..."
-    missionPortrait: {fileID: 6346041710244282177, guid: 40605aadca547ac45a05549bcaed56cd,
+    missionPortrait: {fileID: 7920353964247980387, guid: 1c5e01b3e59595f4b8607153d3ca78d9,
       type: 3}
-    targetSceneName: Level1_Verktyg
+    targetSceneName: Level2_Eggs_LIMBO
     missionBox: {fileID: 0}
   alertSprite: {fileID: 1209380639707927586}
   missionSprite: {fileID: 21300000, guid: a06d86e190a17bf4ab755db69efd68aa, type: 3}
@@ -5153,7 +5109,7 @@ MonoBehaviour:
   maxMagicNumbers: 10
   timeBetweenAnimCheck: 1
   conversationComponent:
-    npcName: Sebastian
+    npcName: "B\xE4ver [INDEV]"
     voiceClips:
     - {fileID: 8300000, guid: f70829441f645264c9feb313379698b3, type: 3}
     - {fileID: 8300000, guid: 28244cabadc1b56419a9b859a1335ba4, type: 3}
@@ -5206,18 +5162,18 @@ MonoBehaviour:
   startsMission: 1
   missionComponent:
     englishInfo:
-      missionName: Locate the missing painting!
-      missionDescription: A painting done by Sebastian's father was washed away during
-        the flood and would like my help in retriving it; or what's left of it at
-        least...
+      missionName: Get some wood from the river!
+      missionDescription: The workers are low on materials for the dam and need more
+        wood. You should be able to find some planks or logs floating down that river.
+        10 pieces should be enough.
     swedishInfo:
       missionName: "Hitta den bortspolade m\xE5lningen!"
       missionDescription: "En m\xE5lning som Sebastians pappa m\xE5lat spolades bort
         under \xF6versv\xE4mningen och skulle vilja ha hj\xE4lp att hitta den; eller
         vad som \xE4r kvar i alla fall..."
-    missionPortrait: {fileID: 6346041710244282177, guid: 40605aadca547ac45a05549bcaed56cd,
+    missionPortrait: {fileID: -5253806036087939296, guid: dec34d38e7373764f8e7e0d4b16fbcd8,
       type: 3}
-    targetSceneName: Level2_Eggs_LIMBO
+    targetSceneName: Level3_Planks
     missionBox: {fileID: 0}
   alertSprite: {fileID: 1209380639931474946}
   missionSprite: {fileID: 21300000, guid: a06d86e190a17bf4ab755db69efd68aa, type: 3}
@@ -5592,12 +5548,12 @@ PrefabInstance:
     - target: {fileID: 6698166186060580094, guid: 3592f7aaf17322944a0bcda616b221b4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.4
+      value: -14.15
       objectReference: {fileID: 0}
     - target: {fileID: 6698166186060580094, guid: 3592f7aaf17322944a0bcda616b221b4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 131.46
+      value: 129.68
       objectReference: {fileID: 0}
     - target: {fileID: 6698166186060580094, guid: 3592f7aaf17322944a0bcda616b221b4,
         type: 3}
@@ -5642,52 +5598,6 @@ PrefabInstance:
     - target: {fileID: 6698166186060580094, guid: 3592f7aaf17322944a0bcda616b221b4,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6698166186060580094, guid: 3592f7aaf17322944a0bcda616b221b4,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6698166186060580094, guid: 3592f7aaf17322944a0bcda616b221b4,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6269134306925974789, guid: 3592f7aaf17322944a0bcda616b221b4,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6269134306925974789, guid: 3592f7aaf17322944a0bcda616b221b4,
-        type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6269134306925974789, guid: 3592f7aaf17322944a0bcda616b221b4,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6269134306925974789, guid: 3592f7aaf17322944a0bcda616b221b4,
-        type: 3}
-      propertyPath: m_GravityScale
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 982840010188799718, guid: 3592f7aaf17322944a0bcda616b221b4,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 982840010188799718, guid: 3592f7aaf17322944a0bcda616b221b4,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 7345f12a06caf7f4e95502cea56192bb,
-        type: 3}
-    - target: {fileID: 4991164330549740739, guid: 3592f7aaf17322944a0bcda616b221b4,
-        type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
