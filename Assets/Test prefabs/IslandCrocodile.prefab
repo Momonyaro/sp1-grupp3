@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3646256276902541414}
   - component: {fileID: 3646256276902541415}
   - component: {fileID: 3646256276902541400}
-  - component: {fileID: 2830236060090982022}
+  - component: {fileID: 584573887}
   m_Layer: 0
   m_Name: IslandCrocodile
   m_TagString: Dangerous
@@ -148,7 +148,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!95 &2830236060090982022
+--- !u!95 &584573887
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -158,7 +158,7 @@ Animator:
   m_GameObject: {fileID: 3646256276902541402}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9a28fbc5618b6e344bf0b180dcb955a5, type: 2}
+  m_Controller: {fileID: 9100000, guid: ab470f24a73d2af489c1ea299bd2f51c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
