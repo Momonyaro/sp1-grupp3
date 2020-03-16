@@ -42,10 +42,10 @@ public class BoatMovementV01 : MonoBehaviour
     [Space]
     [Tooltip("Vilken riktning tile-knockbacken pushar grodan")]
     //public bool knockbackDirection = false;
-    //Hit hit;
-    //Shaker shaker;
     private Vector3 _oldVelocity;
     private Vector3 _oldPosition;
+    [SerializeField] float originOffsetX = 0.5f;
+    [SerializeField] float originOffsetY = 0.7f;
 
     public bool GameOver = false;
 
@@ -147,7 +147,7 @@ public class BoatMovementV01 : MonoBehaviour
 
         _timer -= Time.deltaTime;
 
-        _oldVelocity = (transform.position - _oldPosition) * 30;
+        _oldVelocity = (transform.position - _oldPosition) * 100;
         _oldPosition = transform.position;
     }
 
@@ -162,9 +162,6 @@ public class BoatMovementV01 : MonoBehaviour
             Instantiate(hurtEffect, transform.position, Quaternion.identity);
         }
         InsertFreezeFrames(freezeFrames);
-
-        
-        //FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.BoatCrash);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -190,49 +187,24 @@ public class BoatMovementV01 : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
+        Debug.Log(collision.transform.position);
 
-        //Knockback(collision);
-        if (collision.transform.CompareTag("Tilemap"))
-        {
-            ////knockbackTime -= Time.deltaTime;
-            Debug.Log("Knocked into the tilemap");
-            if (collision.transform.position.x <= transform.position.x)
-            {
-                Knockback(false);
-                //    Debug.Log("In first one");
-                //    StartCoroutine(TilemapKnockback(true));
-                //    //knockbackDirection = true;
-                //    //rigidb.AddForce(new Vector2(pushbackPower, -pushbackPower));
-                //    //rigidb.velocity = new Vector2(-pushbackPower, -pushbackPower);
-            }
-            else //if(collision.transform.position.x > transform.position.x)
-            {
-                Knockback(true);
-                //    Debug.Log("In second one");
-                //    StartCoroutine(TilemapKnockback(false));
 
-                //    //knockbackDirection = false;
-                //    //rigidb.AddForce(new Vector2(pushbackPower, -pushbackPower));
-                //    //rigidb.velocity = new Vector2(pushbackPower, -pushbackPower);
-            }
-        }
+        //if(collision.gameObject.layer == 8)
+        //{
+        //    if (Physics2D.Raycast(transform.position, Vector2.left, -originOffsetX))
+        //    {
+        //        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.left) * 10, Color.yellow);
+        //        Debug.Log("Did Hit");
+        //    }
+        //    else
+        //    {
+        //        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
+        //        Debug.Log("Did not Hit");
+        //    }
 
+        //}
     }
-
-    //IEnumerator TilemapKnockback(bool direction)
-    //{
-    //    stopBoat = true;
-    //    if (direction)
-    //    {
-    //        rigidb.velocity = new Vector2(-pushbackPower, -transform.position.y);
-    //    }
-    //    else
-    //    {
-    //        rigidb.velocity = new Vector2(pushbackPower, transform.position.y);
-    //    }
-    //    yield return new WaitForSeconds(.5f);
-    //    stopBoat = false;
-    //}
 
     public void Knockback(bool direction)
     {
@@ -242,8 +214,6 @@ public class BoatMovementV01 : MonoBehaviour
             Vector3 vel = _oldVelocity;
             vel = vel * -1;
             StartCoroutine(TilemapKnockback(vel));
-            //var newDistance = GetComponent<Rigidbody2D>().transform.position - danger.transform.position;
-            //StartCoroutine(AccurateKnockback(newDistance));
             StartCoroutine(_shaker.Shake());
 
             _timer = .3f;
@@ -255,7 +225,6 @@ public class BoatMovementV01 : MonoBehaviour
         velocity.Normalize();
         Debug.Log("rigidb velocity = " + rigidb.velocity + " | inverted velocity = " + velocity);
         rigidb.AddForce(velocity * pushbackPower);
-        //rigidb.velocity = velocity * pushbackPower;
         yield return new WaitForSeconds(.1f);
         knockback = false;
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
