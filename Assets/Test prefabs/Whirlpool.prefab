@@ -133,10 +133,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
-  m_Sprite: {fileID: -1486319213350029729, guid: cee05d1a67d368642b47045e4f350a21,
-    type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 70dd7d01b7224864883ff51a103023e4, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -158,11 +157,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09f08bc011b40940af61bdb46679b4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intoWhirlSpeed: 3
-  knockForwardTime: 0.25
-  knockForwardPower: 300
-  rotateSpeed: 350
-  insideWhirlSpeed: 4
+  intoWhirlSpeed: 8
+  knockForwardTime: 1
+  knockForwardPower: 100
   clicksForRelease: 5
   clicksClicked: 0
   secLimit: 1
