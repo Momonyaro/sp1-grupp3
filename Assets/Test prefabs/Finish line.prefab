@@ -120,4 +120,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f975a8b2cd502d4d826e29c760d1aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadScene: SampleScene
+  loadScene: Stad

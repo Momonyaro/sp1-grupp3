@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class MissionBox : MonoBehaviour
@@ -11,8 +12,13 @@ public class MissionBox : MonoBehaviour
     public Text missionDescBox;
     public Text npcNameBox;
     public Image missionPortraitFrame;
-    public string NextSceneName = "NULL";
+    [FormerlySerializedAs("NextSceneName")] public string nextSceneName = "NULL";
 
+    private void Start()
+    {
+        SetWindowVisibility(false);
+    }
+    
     public void SetWindowVisibility(bool active)
     {
         panel.SetActive(active);
@@ -23,7 +29,7 @@ public class MissionBox : MonoBehaviour
         missionTitleBox.text = missionTitle;
         missionDescBox.text = missionDescription;
         missionPortraitFrame.sprite = portrait;
-        NextSceneName = targetScene;
+        nextSceneName = targetScene;
         npcNameBox.text = npcName;
         SetWindowVisibility(true);
     }

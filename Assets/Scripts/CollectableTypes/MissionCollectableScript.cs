@@ -1,30 +1,34 @@
-﻿using System.Collections;
+﻿using Managers;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MissionCollectableScript : Collectable
 {
-    public GameObject fullHealthImage;
-    public GameObject emptyHealthImage;
+    public GameObject fullMissionImage;
+    public GameObject emptyMissionImage;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
-            if (collectSound != null)
+            FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.PickupEgg);
+            if(pickupEffect != null)
             {
-                collectSound.Play();
+                Instantiate(pickupEffect, transform.position, Quaternion.identity);
             }
-            if(fullHealthImage && emptyHealthImage != null)
+
+            if (fullMissionImage && emptyMissionImage != null)
             {
-                fullHealthImage.SetActive(true);
-                emptyHealthImage.SetActive(false);
+                fullMissionImage.SetActive(true);
+                emptyMissionImage.SetActive(false);
             }
             else
             {
-                fullHealthImage = Resources.Load<GameObject>("stop");
-                emptyHealthImage = Resources.Load<GameObject>("stop");
+                fullMissionImage = Resources.Load<GameObject>("stop");
+                emptyMissionImage = Resources.Load<GameObject>("stop");
             }
+            TextManager.missionAmount += 1;
             Destroy(gameObject);
         }
     }

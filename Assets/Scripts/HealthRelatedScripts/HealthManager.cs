@@ -8,19 +8,27 @@ public class HealthManager : MonoBehaviour
     public Image[] healthIcons;
     public Sprite fullContainer;
     public Sprite emptyContainer;
+    public ParticleSystem popEffect;
     [HideInInspector] public int healthAmount;
-    //[HideInInspector] public int playerCurrentHealth;
+    BoatMovementV01 boatMv;
+    private readonly UIShake _uiShake = new UIShake();
+    private int _oldHealth;
 
     void Start()
     {
-        healthAmount = BoatMovementV01.maxHealth;
+        boatMv = FindObjectOfType<BoatMovementV01>();
+        healthAmount = boatMv.maxHealth;
         CreateHealth();
     }
 
     private void Update()
     {
         healthAmount = BoatMovementV01.currentHealth;
-        UpdateContainers();
+        if (_oldHealth != healthAmount)
+        {
+            UpdateContainers();
+        }
+        _uiShake.Update();
     }
 
     public void CreateHealth()
@@ -30,6 +38,8 @@ public class HealthManager : MonoBehaviour
             healthIcons[i].gameObject.SetActive(true);
             healthIcons[i].sprite = fullContainer;
         }
+
+        _oldHealth = healthAmount;
     }
 
     public void UpdateContainers()
@@ -42,5 +52,10 @@ public class HealthManager : MonoBehaviour
         {
             healthIcons[i].sprite = fullContainer;
         }
+
+        Vector3 oldPos = transform.position;
+        _uiShake.BlinkAndMove(gameObject, new Vector3(oldPos.x + 20, oldPos.y, oldPos.x));
+
+        _oldHealth = healthAmount;
     }
 }

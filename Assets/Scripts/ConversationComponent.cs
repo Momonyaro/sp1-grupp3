@@ -5,6 +5,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public enum Language
 {
@@ -24,6 +25,7 @@ public enum PortraitExpression
 public class ConversationComponent
 {
     public string npcName;
+    public List<AudioClip> voiceClips = new List<AudioClip>();
     public Language currentDialogueLanguage = Language.English;
     [FormerlySerializedAs("ScrollSpeed")]
     [Range(0, 0.4f)]
@@ -40,8 +42,9 @@ public class ConversationComponent
     private Text _textBox;
     private Text _nameBox;
     private Image _portraitFrame;
+    public AudioSource vocalSource;
 
-
+    private const float vocalChance = .4f;
     private const string PlayerCharName = "Poly";
 
     public void Update()
@@ -53,7 +56,7 @@ public class ConversationComponent
         }
         else
         {
-            _timer -= Time.deltaTime;
+            _timer -= Time.unscaledDeltaTime;
         }
     }
 
@@ -63,15 +66,31 @@ public class ConversationComponent
         if (_dialogueComplete == false)
         {
             StartBuildingNextString();
+            FrogMovement.frozen = true;
             return true;
         }
         else
         {
             textBoxObject.SetDialogueWindowVisibility(false);
             ResetDialogue();
+            FrogMovement.frozen = false;
             return false;
         }
         
+    }
+
+    private AudioClip GetRandomVocal()
+    {
+        while (true)
+        {
+            foreach (var voiceClip in voiceClips)
+            {
+                if (vocalChance > Random.value)
+                {
+                    return voiceClip;
+                }
+            }
+        }
     }
 
     public void TetherToTextbox(TextBox textBoxObject)
@@ -87,6 +106,7 @@ public class ConversationComponent
     public void StartBuildingNextString()
     {
         Debug.Log("Starting new string");
+        
         if (_currentLineIndex < npcLines.Count)
         {
             ClearTextBox();
@@ -99,6 +119,8 @@ public class ConversationComponent
             {
                 _nameBox.text = npcName;
                 _portraitFrame.sprite = FetchPortrait(npcLines[_currentLineIndex].portraitExpression);
+                if (!npcLines[_currentLineIndex].swedishText.StartsWith("."))  
+                    vocalSource.PlayOneShot(GetRandomVocal()); 
             }
             if (currentDialogueLanguage == Language.English) _currentString = npcLines[_currentLineIndex].englishText;
             else if (currentDialogueLanguage == Language.Swedish) _currentString = npcLines[_currentLineIndex].swedishText;
@@ -109,6 +131,9 @@ public class ConversationComponent
         if (_currentLineIndex >= npcLines.Count)
         {
             _dialogueComplete = true;
+            _finishedBuilding = true;
+            _currentLineIndex = 0;
+            _stringIndex = 0;
         }
     }
 

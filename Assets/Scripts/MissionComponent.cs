@@ -25,6 +25,19 @@ public class MissionComponent
         else 
             this.missionBox.CreateMissionScreen(englishInfo.missionName, englishInfo.missionDescription, missionPortrait, targetSceneName, npcName);
     }
+
+    public void Update()
+    {
+        if (missionBox != null)
+        {
+            FrogMovement.frozen = missionBox.panel.activeInHierarchy;
+        }
+    }
+
+    public bool MissionBoxActive()
+    {
+        return missionBox != null && missionBox.panel.activeInHierarchy;
+    }
 }
 
 [System.Serializable]
