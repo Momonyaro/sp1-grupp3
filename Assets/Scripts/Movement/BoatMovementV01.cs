@@ -52,6 +52,11 @@ public class BoatMovementV01 : MonoBehaviour
     private bool _pressedS = false;
     private bool _pressedW = false;
 
+    [SerializeField] Collider2D upperRightCol = null;
+    [SerializeField] Collider2D upperLeftCol = null;
+    [SerializeField] Collider2D downRightCol = null;
+    [SerializeField] Collider2D downLeftCol = null;
+
     Rigidbody2D rigidb;
 
     void Start()
