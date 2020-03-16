@@ -28,6 +28,8 @@ public class wirlpool : MonoBehaviour
     //public GameObject rightPoint = null;
     bool direction = false;
 
+    private const float deltaScale = 100;
+
     void Start()
     {
         boat = FindObjectOfType<BoatMovementV01>();
@@ -58,30 +60,9 @@ public class wirlpool : MonoBehaviour
         //FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.Whirlpool);
 
         boat.transform.position = Vector3.MoveTowards(boat.transform.position, transform.position, intoWhirlSpeed * Time.deltaTime);
-        boat.transform.Rotate(new Vector3(0, 0, rotateSpeed * Time.deltaTime));
+        boat.transform.Rotate(new Vector3(0, 0, rotateSpeed * Time.deltaTime * deltaScale));
         //RotatingBoat();
     }
-
-    //private void RotatingBoat()
-    //{
-        //if(leftPoint.transform.position == boat.transform.position)
-        //{
-        //    direction = false;
-        //}
-        //else if(rightPoint.transform.position == boat.transform.position)
-        //{
-        //    direction = true;
-        //}
-
-        //if (direction)
-        //{
-        //    boat.transform.position = Vector3.MoveTowards(boat.transform.position, leftPoint.transform.position, insideWhirlSpeed * Time.deltaTime);
-        //}
-        //else
-        //{
-        //    boat.transform.position = Vector3.MoveTowards(boat.transform.position, rightPoint.transform.position, insideWhirlSpeed * Time.deltaTime);
-        //}
-    //}
 
     private void CountClicks()
     {
