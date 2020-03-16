@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1340922252388265275}
   - component: {fileID: 1340922252388265272}
   - component: {fileID: 1340922252388265273}
+  - component: {fileID: 6097613594727733341}
   m_Layer: 0
   m_Name: Crocodile
   m_TagString: Dangerous
@@ -124,5 +125,28 @@ MonoBehaviour:
   smallerPointX: -10
   biggerPointX: 8
   direction: 1
+  gnawEffect: {fileID: 0}
   target: {fileID: 1066851939220517693, guid: 2826b3b5b346ef644b5063c5c6631bca, type: 3}
   distance: 0
+  chaseTime: 2
+  chaseCooldown: 3
+  eyeSight: 5
+--- !u!95 &6097613594727733341
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340922252388265671}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ab470f24a73d2af489c1ea299bd2f51c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

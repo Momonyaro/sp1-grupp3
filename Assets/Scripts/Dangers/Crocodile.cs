@@ -16,6 +16,7 @@ public class Crocodile : MonoBehaviour
     public bool direction = false;
     float crocTimer = 0.5f;
 
+    public ParticleSystem gnawEffect;
     public GameObject target;
     public float distance;
     public float chaseTime = 2f;
@@ -65,32 +66,10 @@ public class Crocodile : MonoBehaviour
 
         if(distance <= eyeSight && chaseTimeCheck > 0 && chaseCooldown >= chaseCooldownCheck)
         {
-            Chase();
+            
         }
     }
-
-    private void Chase()
-    {
-        if (distance <= eyeSight && chaseTimeCheck > 0 && chaseCooldown >= chaseCooldownCheck)
-        {
-            chaseTime -= Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, crocSpeed * Time.deltaTime);
-        }
-        else if(chaseTimeCheck <= 0)
-        {
-            chaseCooldown -= Time.deltaTime;
-            Move();
-        }
-        else if(chaseCooldownCheck >= chaseCooldown)
-        {
-            chaseTimeCheck = chaseTime;
-            Move();
-        }
-        else
-        {
-            Move();
-        }
-    }
+    
 
     private void MakingSounds()
     {

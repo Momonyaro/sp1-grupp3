@@ -1,0 +1,1543 @@
+fileFormatVersion: 2
+guid: 9270116cbc4aa7e428614036fd00a926
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7942697890302684835
+    second: Crocodile_Idle_Spritesheet_final_0
+  - first:
+      213: -2564081222373975880
+    second: Crocodile_Idle_Spritesheet_final_1
+  - first:
+      213: -9055101789088334269
+    second: Crocodile_Idle_Spritesheet_final_2
+  - first:
+      213: -414749227723901864
+    second: Crocodile_Idle_Spritesheet_final_3
+  - first:
+      213: 5635156650925357868
+    second: Crocodile_Idle_Spritesheet_final_4
+  - first:
+      213: -638293022299461017
+    second: Crocodile_Idle_Spritesheet_final_5
+  - first:
+      213: 2915574396962002136
+    second: Crocodile_Idle_Spritesheet_final_6
+  - first:
+      213: -4858818606420465841
+    second: Crocodile_Idle_Spritesheet_final_7
+  - first:
+      213: 3199068940121258289
+    second: Crocodile_Idle_Spritesheet_final_8
+  - first:
+      213: 1304673339509730746
+    second: Crocodile_Idle_Spritesheet_final_9
+  - first:
+      213: -4536471555709439976
+    second: Crocodile_Idle_Spritesheet_final_10
+  - first:
+      213: 1244612934662903906
+    second: Crocodile_Idle_Spritesheet_final_11
+  - first:
+      213: 3458744608188231814
+    second: Crocodile_Idle_Spritesheet_final_12
+  - first:
+      213: -5482940101261298591
+    second: Crocodile_Idle_Spritesheet_final_13
+  - first:
+      213: 2923706830157263659
+    second: Crocodile_Idle_Spritesheet_final_14
+  - first:
+      213: 6925315064856193886
+    second: Crocodile_Idle_Spritesheet_final_15
+  - first:
+      213: 2907731578445577668
+    second: Crocodile_Idle_Spritesheet_final_16
+  - first:
+      213: 85071525249333094
+    second: Crocodile_Idle_Spritesheet_final_17
+  - first:
+      213: 7882093088445244700
+    second: Crocodile_Idle_Spritesheet_final_18
+  - first:
+      213: 44974090990122224
+    second: Crocodile_Idle_Spritesheet_final_19
+  - first:
+      213: -329948649678411443
+    second: Crocodile_Idle_Spritesheet_final_20
+  - first:
+      213: 4564537159017746138
+    second: Crocodile_Idle_Spritesheet_final_21
+  - first:
+      213: 6400410894904978298
+    second: Crocodile_Idle_Spritesheet_final_22
+  - first:
+      213: -1390848426121339185
+    second: Crocodile_Idle_Spritesheet_final_23
+  - first:
+      213: 8218789658204037779
+    second: Crocodile_Idle_Spritesheet_final_24
+  - first:
+      213: -1756839546329812938
+    second: Crocodile_Idle_Spritesheet_final_25
+  - first:
+      213: -4150515381640979626
+    second: Crocodile_Idle_Spritesheet_final_26
+  - first:
+      213: 9036378343941432478
+    second: Crocodile_Idle_Spritesheet_final_27
+  - first:
+      213: 1285201124751568333
+    second: Crocodile_Idle_Spritesheet_final_28
+  - first:
+      213: 6170681534402724755
+    second: Crocodile_Idle_Spritesheet_final_29
+  - first:
+      213: 1175621355390729386
+    second: Crocodile_Idle_Spritesheet_final_30
+  - first:
+      213: 210800098343941236
+    second: Crocodile_Idle_Spritesheet_final_31
+  - first:
+      213: -8751086856386825133
+    second: Crocodile_Idle_Spritesheet_final_32
+  - first:
+      213: -743809621180976138
+    second: Crocodile_Idle_Spritesheet_final_33
+  - first:
+      213: 7077453344785391071
+    second: Crocodile_Idle_Spritesheet_final_34
+  - first:
+      213: -2927193922186858021
+    second: Crocodile_Idle_Spritesheet_final_35
+  - first:
+      213: -51605835075900108
+    second: Crocodile_Idle_Spritesheet_final_36
+  - first:
+      213: 8511366965318159687
+    second: Crocodile_Idle_Spritesheet_final_37
+  - first:
+      213: 9013042059543294068
+    second: Crocodile_Idle_Spritesheet_final_38
+  - first:
+      213: -2277935134469554543
+    second: Crocodile_Idle_Spritesheet_final_39
+  - first:
+      213: -4639510286194765476
+    second: Crocodile_Idle_Spritesheet_final_40
+  - first:
+      213: -6041798518957086221
+    second: Crocodile_Idle_Spritesheet_final_41
+  - first:
+      213: -485849240327885281
+    second: Crocodile_Idle_Spritesheet_final_42
+  - first:
+      213: -4795745947521847739
+    second: Crocodile_Idle_Spritesheet_final_43
+  - first:
+      213: 4901994650506055619
+    second: Crocodile_Idle_Spritesheet_final_44
+  - first:
+      213: -3980548803146521138
+    second: Crocodile_Idle_Spritesheet_final_45
+  - first:
+      213: -1390879237996562700
+    second: Crocodile_Idle_Spritesheet_final_46
+  - first:
+      213: -2354037110457847348
+    second: Crocodile_Idle_Spritesheet_final_47
+  - first:
+      213: -5235021326676105586
+    second: Crocodile_Idle_Spritesheet_final_48
+  - first:
+      213: -7645732195831951676
+    second: Crocodile_Idle_Spritesheet_final_49
+  - first:
+      213: 5947211881063155327
+    second: Crocodile_Idle_Spritesheet_final_50
+  - first:
+      213: -9187552077831437754
+    second: Crocodile_Idle_Spritesheet_final_51
+  - first:
+      213: -4985621041981108927
+    second: Crocodile_Idle_Spritesheet_final_52
+  - first:
+      213: 4629999609704910276
+    second: Crocodile_Idle_Spritesheet_final_53
+  - first:
+      213: -8828198665020298090
+    second: Crocodile_Idle_Spritesheet_final_54
+  - first:
+      213: -3054044674715804051
+    second: Crocodile_Idle_Spritesheet_final_55
+  - first:
+      213: 3316323062763728799
+    second: Crocodile_Idle_Spritesheet_final_56
+  - first:
+      213: -4156114058273630804
+    second: Crocodile_Idle_Spritesheet_final_57
+  - first:
+      213: 3598372350755564744
+    second: Crocodile_Idle_Spritesheet_final_58
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1936
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a176009926334594abf3d9747f1834f1
+      internalID: 7942697890302684835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_1
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 1936
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28aef9988ceae9c44833718b2fcbf549
+      internalID: -2564081222373975880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_2
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 1936
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ca27b2d7ae9153488362f559825a497
+      internalID: -9055101789088334269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_3
+      rect:
+        serializedVersion: 2
+        x: 2460
+        y: 1936
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 841570b96b09c384e8b28c6d019fa86e
+      internalID: -414749227723901864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_4
+      rect:
+        serializedVersion: 2
+        x: 3280
+        y: 1936
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dff7e921c8b24a46925304ac644df50
+      internalID: 5635156650925357868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_5
+      rect:
+        serializedVersion: 2
+        x: 4100
+        y: 1936
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6040d42c05af5cd4a81e64e039906382
+      internalID: -638293022299461017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_6
+      rect:
+        serializedVersion: 2
+        x: 4920
+        y: 1936
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c75f80834a7748b40ab2fd38899ad347
+      internalID: 2915574396962002136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_7
+      rect:
+        serializedVersion: 2
+        x: 5740
+        y: 1936
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c043f1471c30334385329a086999b65
+      internalID: -4858818606420465841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_8
+      rect:
+        serializedVersion: 2
+        x: 6560
+        y: 1936
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 196b7a8dac5061349a6777b2bc9f2f62
+      internalID: 3199068940121258289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_9
+      rect:
+        serializedVersion: 2
+        x: 7380
+        y: 1936
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00577611dfbcfab4ea78853b9c58bfad
+      internalID: 1304673339509730746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_10
+      rect:
+        serializedVersion: 2
+        x: 8200
+        y: 1936
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c002f32de4a03c40890cbb34ad83383
+      internalID: -4536471555709439976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_11
+      rect:
+        serializedVersion: 2
+        x: 9020
+        y: 1936
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3550b7a01e084b544b25e9e458c93b71
+      internalID: 1244612934662903906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1452
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4d6a29aa41cec94cb6d5df5019211c8
+      internalID: 3458744608188231814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_13
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 1452
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00dec389253f1f1439f4146193917093
+      internalID: -5482940101261298591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_14
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 1452
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df179f36f4ec32a44a5228eb4b5c0bd2
+      internalID: 2923706830157263659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_15
+      rect:
+        serializedVersion: 2
+        x: 2460
+        y: 1452
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e75d196c23ee9469b3d0345a1014fa
+      internalID: 6925315064856193886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_16
+      rect:
+        serializedVersion: 2
+        x: 3280
+        y: 1452
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 301890cd85b5d03418bcfb1ab10fa729
+      internalID: 2907731578445577668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_17
+      rect:
+        serializedVersion: 2
+        x: 4100
+        y: 1452
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 300fbf9b6f4f06e47ac483dc3d592491
+      internalID: 85071525249333094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_18
+      rect:
+        serializedVersion: 2
+        x: 4920
+        y: 1452
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45c089a2f1d0474d8bef911a96c4a9c
+      internalID: 7882093088445244700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_19
+      rect:
+        serializedVersion: 2
+        x: 5740
+        y: 1452
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8bc0ab2f90dd345846767645c020c5
+      internalID: 44974090990122224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_20
+      rect:
+        serializedVersion: 2
+        x: 6560
+        y: 1452
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbf60dbc5a4e1a348825dbaa2ede712d
+      internalID: -329948649678411443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_21
+      rect:
+        serializedVersion: 2
+        x: 7380
+        y: 1452
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68ea4ed5aa620e644be9b582f0721d50
+      internalID: 4564537159017746138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_22
+      rect:
+        serializedVersion: 2
+        x: 8200
+        y: 1452
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171faf4f1d580d14690e2a84410ec309
+      internalID: 6400410894904978298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_23
+      rect:
+        serializedVersion: 2
+        x: 9020
+        y: 1452
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1561f1e52f24bb419e78a7655e7a91e
+      internalID: -1390848426121339185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 968
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4f1b9ff6a6acb148a2f843c748c8410
+      internalID: 8218789658204037779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_25
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 968
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2d86b11e9b1c0d4195a6acbb75028d1
+      internalID: -1756839546329812938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_26
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 968
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca33b19aa3bb1bc4aaa72759159bd5e4
+      internalID: -4150515381640979626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_27
+      rect:
+        serializedVersion: 2
+        x: 2460
+        y: 968
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 141b31f2ab33c4947b8d3e214c63ac15
+      internalID: 9036378343941432478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_28
+      rect:
+        serializedVersion: 2
+        x: 3280
+        y: 968
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa90ba3a059c34342a3f5396035095b2
+      internalID: 1285201124751568333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_29
+      rect:
+        serializedVersion: 2
+        x: 4100
+        y: 968
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf7a3e97dffdb540843c0b2e7d76c38
+      internalID: 6170681534402724755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_30
+      rect:
+        serializedVersion: 2
+        x: 4920
+        y: 968
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: def3632907c400b4ab0e0fb26b60d292
+      internalID: 1175621355390729386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_31
+      rect:
+        serializedVersion: 2
+        x: 5740
+        y: 968
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5840b8f8d65350b479d1534ed5b37a05
+      internalID: 210800098343941236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_32
+      rect:
+        serializedVersion: 2
+        x: 6560
+        y: 968
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 159eabe1699121348b7e8848398b8123
+      internalID: -8751086856386825133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_33
+      rect:
+        serializedVersion: 2
+        x: 7380
+        y: 968
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7de09d305bcc54e8454edababbea3f
+      internalID: -743809621180976138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_34
+      rect:
+        serializedVersion: 2
+        x: 8200
+        y: 968
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43b1cc6ae42d7784d8bea362adea0034
+      internalID: 7077453344785391071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_35
+      rect:
+        serializedVersion: 2
+        x: 9020
+        y: 968
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3696cd9e580b6de4b8787fceaf43b8ce
+      internalID: -2927193922186858021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 484
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2b6fb6c6b6bba942977d14936289617
+      internalID: -51605835075900108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_37
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 484
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b676ba832a8614cb23f18de0651c1d
+      internalID: 8511366965318159687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_38
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 484
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84064e29103cdb347a0530d5527056b3
+      internalID: 9013042059543294068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_39
+      rect:
+        serializedVersion: 2
+        x: 2460
+        y: 484
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b1966256ab0e042847e0dba1759fb6
+      internalID: -2277935134469554543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_40
+      rect:
+        serializedVersion: 2
+        x: 3280
+        y: 484
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8570f107636fc040971d66d3140ca26
+      internalID: -4639510286194765476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_41
+      rect:
+        serializedVersion: 2
+        x: 4100
+        y: 484
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b98db8f8d09b64994bf057bef8b71f
+      internalID: -6041798518957086221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_42
+      rect:
+        serializedVersion: 2
+        x: 4920
+        y: 484
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2b10d2fe2521fe4fa6aa36a820855bc
+      internalID: -485849240327885281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_43
+      rect:
+        serializedVersion: 2
+        x: 5740
+        y: 484
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dd01756689b6964d83b2d230aeb45f1
+      internalID: -4795745947521847739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_44
+      rect:
+        serializedVersion: 2
+        x: 6560
+        y: 484
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c1393694f82a864488b4e8158a24b1a
+      internalID: 4901994650506055619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_45
+      rect:
+        serializedVersion: 2
+        x: 7380
+        y: 484
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62af27e908567634e9964758f1c35fce
+      internalID: -3980548803146521138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_46
+      rect:
+        serializedVersion: 2
+        x: 8200
+        y: 484
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f533ed96ccc349547a93404a9f64531a
+      internalID: -1390879237996562700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_47
+      rect:
+        serializedVersion: 2
+        x: 9020
+        y: 484
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e293f620bf9b346a7cf5d5e216e802
+      internalID: -2354037110457847348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c52c8f8bceb03f34992e19bae617d9f2
+      internalID: -5235021326676105586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_49
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 0
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac0942d7e64d710409d73259070b2064
+      internalID: -7645732195831951676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_50
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 0
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5da0de689cee1f949ab799638403806f
+      internalID: 5947211881063155327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_51
+      rect:
+        serializedVersion: 2
+        x: 2460
+        y: 0
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd437073e5ac1e44ca9bb99488044163
+      internalID: -9187552077831437754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_52
+      rect:
+        serializedVersion: 2
+        x: 3280
+        y: 0
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1b08134b8e42ac418cb51e24ff14984
+      internalID: -4985621041981108927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_53
+      rect:
+        serializedVersion: 2
+        x: 4100
+        y: 0
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab259c742f78064ab4d92e6d7d73424
+      internalID: 4629999609704910276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_54
+      rect:
+        serializedVersion: 2
+        x: 4920
+        y: 0
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d64f5bdcfd0eb3488682cc83e3075e8
+      internalID: -8828198665020298090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_55
+      rect:
+        serializedVersion: 2
+        x: 5740
+        y: 0
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c27cc7b2a08855247a67302cecea79d2
+      internalID: -3054044674715804051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_56
+      rect:
+        serializedVersion: 2
+        x: 6560
+        y: 0
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d40109f6659b62f498b4263aaa18e783
+      internalID: 3316323062763728799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_57
+      rect:
+        serializedVersion: 2
+        x: 7380
+        y: 0
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3faea90c0755015469f0b8dd16671b73
+      internalID: -4156114058273630804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crocodile_Idle_Spritesheet_final_58
+      rect:
+        serializedVersion: 2
+        x: 8200
+        y: 0
+        width: 820
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73d323dfdc6c2ed4693c68c791163da5
+      internalID: 3598372350755564744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

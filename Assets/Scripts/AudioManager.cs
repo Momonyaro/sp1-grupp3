@@ -10,9 +10,9 @@ namespace Managers
     {
         BoatCrash, StoneCrash,
         CrocodileGrowl, CrocodileBite, Whirlpool,
-        PickupEgg, PickupPlank, PickupFly,
+        PickupEgg, PickupPlank, PickupFly, CoinPickup,
         Tongue, TongueCatch,
-        Dash, Brake,
+        Dash, Brake, Achievement,
     }
 
     public delegate void RequestSoundDelegate(Sounds sound);
