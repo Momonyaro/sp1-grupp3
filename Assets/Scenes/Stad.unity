@@ -2812,7 +2812,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320161729}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.434414, y: 134.05362, z: -10}
+  m_LocalPosition: {x: -14.173291, y: 134.02347, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459601753}
@@ -3591,7 +3591,7 @@ MonoBehaviour:
     missionBox: {fileID: 0}
   alertSprite: {fileID: 1874925251}
   missionSprite: {fileID: 21300000, guid: a06d86e190a17bf4ab755db69efd68aa, type: 3}
-  missionInteractSprite: {fileID: 21300000, guid: c01a99d968ecb2146b0294fb241e42a8,
+  missionInteractSprite: {fileID: 21300000, guid: 8b59bbd7d6bead14e98d08ad8c6f992d,
     type: 3}
 --- !u!4 &1735822891
 Transform:
@@ -4877,7 +4877,7 @@ MonoBehaviour:
     missionBox: {fileID: 0}
   alertSprite: {fileID: 1209380639707927586}
   missionSprite: {fileID: 21300000, guid: a06d86e190a17bf4ab755db69efd68aa, type: 3}
-  missionInteractSprite: {fileID: 21300000, guid: c01a99d968ecb2146b0294fb241e42a8,
+  missionInteractSprite: {fileID: 21300000, guid: 8b59bbd7d6bead14e98d08ad8c6f992d,
     type: 3}
 --- !u!61 &1209380639853317324
 BoxCollider2D:
@@ -5177,7 +5177,7 @@ MonoBehaviour:
     missionBox: {fileID: 0}
   alertSprite: {fileID: 1209380639931474946}
   missionSprite: {fileID: 21300000, guid: a06d86e190a17bf4ab755db69efd68aa, type: 3}
-  missionInteractSprite: {fileID: 21300000, guid: c01a99d968ecb2146b0294fb241e42a8,
+  missionInteractSprite: {fileID: 21300000, guid: 8b59bbd7d6bead14e98d08ad8c6f992d,
     type: 3}
 --- !u!61 &1209380640075431148
 BoxCollider2D:
