@@ -54,6 +54,11 @@ public class BoatMovementV01 : MonoBehaviour
 
     Rigidbody2D rigidb;
 
+    private void Awake()
+    {
+        Time.timeScale = 1;
+    }
+
     void Start()
     {
         rigidb = GetComponent<Rigidbody2D>();
@@ -62,6 +67,7 @@ public class BoatMovementV01 : MonoBehaviour
         currentHealth = maxHealth;
         _oldVelocity = rigidb.velocity;
         _oldPosition = transform.position;
+        _autoSpeed = defaultAutoSpeed;
         //GetComponent<Collider2D>().enabled = true;
     }
 
@@ -111,13 +117,8 @@ public class BoatMovementV01 : MonoBehaviour
                 _pressedW = false;
 
             Vector2 position = transform.position;
-            position.y += + 1.0f * _autoSpeed * Time.deltaTime;
-            position.x += + tiltSpeed * horizontal * Time.deltaTime;
-
-            if(stunned)
-            {
-                position.x += + tiltSpeed * -horizontal * Time.deltaTime;
-            }
+            position.y += 1.0f * _autoSpeed * Time.deltaTime;
+            position.x += tiltSpeed * horizontal * Time.deltaTime;
 
             rigidb.MovePosition(position);
         }
