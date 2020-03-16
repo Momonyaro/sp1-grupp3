@@ -185,59 +185,25 @@ public class BoatMovementV01 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.layer == 8)
-        {
-            if (Physics2D.Raycast(transform.position, Vector2.left, -originOffsetX))
-            {
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.left) * 10, Color.yellow);
-                Debug.Log("Did Hit");
-            }
-            else
-            {
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
-                Debug.Log("Did not Hit");
-            }
 
-        }
+        Debug.Log(collision.transform.position);
 
-        //Knockback(collision);
-        //if (collision.transform.CompareTag("Tilemap"))
+
+        //if(collision.gameObject.layer == 8)
         //{
-        //    //knockbackTime -= Time.deltaTime;
-        //    Debug.Log("Knocked into the tilemap");
-        //    if (collision.transform.position.x <= transform.position.x)
+        //    if (Physics2D.Raycast(transform.position, Vector2.left, -originOffsetX))
         //    {
-        //        Knockback(false);
-        //        //    StartCoroutine(TilemapKnockback(true));
-        //        //    //rigidb.AddForce(new Vector2(pushbackPower, -pushbackPower));
-        //        //    //rigidb.velocity = new Vector2(-pushbackPower, -pushbackPower);
+        //        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.left) * 10, Color.yellow);
+        //        Debug.Log("Did Hit");
         //    }
-        //    else //if(collision.transform.position.x > transform.position.x)
+        //    else
         //    {
-        //        Knockback(true);
-        //        //    StartCoroutine(TilemapKnockback(false));
+        //        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
+        //        Debug.Log("Did not Hit");
+        //    }
 
-        //        //    //rigidb.AddForce(new Vector2(pushbackPower, -pushbackPower));
-        //        //    //rigidb.velocity = new Vector2(pushbackPower, -pushbackPower);
-        //    }
         //}
-
     }
-
-    //IEnumerator TilemapKnockback(bool direction)
-    //{
-    //    stopBoat = true;
-    //    if (direction)
-    //    {
-    //        rigidb.velocity = new Vector2(-pushbackPower, -transform.position.y);
-    //    }
-    //    else
-    //    {
-    //        rigidb.velocity = new Vector2(pushbackPower, transform.position.y);
-    //    }
-    //    yield return new WaitForSeconds(.5f);
-    //    stopBoat = false;
-    //}
 
     public void Knockback(bool direction)
     {
@@ -247,8 +213,6 @@ public class BoatMovementV01 : MonoBehaviour
             Vector3 vel = _oldVelocity;
             vel = vel * -1;
             StartCoroutine(TilemapKnockback(vel));
-            //var newDistance = GetComponent<Rigidbody2D>().transform.position - danger.transform.position;
-            //StartCoroutine(AccurateKnockback(newDistance));
             StartCoroutine(_shaker.Shake());
 
             _timer = .3f;
@@ -260,7 +224,6 @@ public class BoatMovementV01 : MonoBehaviour
         velocity.Normalize();
         Debug.Log("rigidb velocity = " + rigidb.velocity + " | inverted velocity = " + velocity);
         rigidb.AddForce(velocity * pushbackPower);
-        //rigidb.velocity = velocity * pushbackPower;
         yield return new WaitForSeconds(.1f);
         knockback = false;
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
@@ -296,11 +259,4 @@ public class BoatMovementV01 : MonoBehaviour
         Debug.Log("[Za Warudo] Froze time for " + amount + " frames.");
         _freezeFrames = amount;
     }
-
-    //private void OnDrawGizmos()
-    //{
-    //    Gizmos.color = Color.black;
-    //    Gizmos.DrawLine(new Vector2(transform.position.x + originOffsetX, transform.position.y), new Vector2(transform.position.x - originOffsetX, transform.position.y));
-    //    Gizmos.DrawLine(new Vector2(transform.position.x, transform.position.y + originOffsetY), new Vector2(transform.position.x, transform.position.y - originOffsetY));
-    //}
 }
