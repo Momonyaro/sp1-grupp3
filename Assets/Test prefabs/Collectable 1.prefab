@@ -145,3 +145,7 @@ MonoBehaviour:
   collectSound: {fileID: 0}
   collectableScore: 1
   rotationSpeed: 0
+  holy: 0
+  shine: {fileID: 0}
+  shineRotationSpeed: 70
+  pickupEffect: {fileID: 0}

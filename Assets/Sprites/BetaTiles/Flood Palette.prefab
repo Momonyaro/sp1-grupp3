@@ -85,6 +85,15 @@ Tilemap:
   m_GameObject: {fileID: 2012295183278198704}
   m_Enabled: 1
   m_Tiles:
+  - first: {x: 6, y: -6, z: 0}
+    second:
+      m_TileIndex: 49
+      m_TileSpriteIndex: 52
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: -2, y: -5, z: 0}
     second:
       m_TileIndex: 30
@@ -121,6 +130,15 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 0
+  - first: {x: 6, y: -5, z: 0}
+    second:
+      m_TileIndex: 50
+      m_TileSpriteIndex: 51
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: -2, y: -4, z: 0}
     second:
       m_TileIndex: 24
@@ -644,10 +662,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 45e097d1251f5402aa96c16ee7a74710, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: b5366824d5fe543289a945be1f4990c5, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: b8774e7f8e646f24e97570ea3aee22ac, type: 2}
   - m_RefCount: 1
@@ -833,8 +851,14 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: -4749138304174051318, guid: 51e6aac23afcc19429dc71094c2d1632,
       type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 6967095560574621048, guid: 48b42f69590228145a74c1e5da1446be,
+      type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 6377341124459736482, guid: 48b42f69590228145a74c1e5da1446be,
+      type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 51
+  - m_RefCount: 53
     m_Data:
       e00: 1
       e01: 0
@@ -853,7 +877,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 51
+  - m_RefCount: 53
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 0
     m_Data: {r: 8.214691, g: 8.214691, b: 8.214691, a: 8.214691}
