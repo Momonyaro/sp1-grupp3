@@ -10,9 +10,9 @@ namespace Managers
     {
         BoatCrash, StoneCrash,
         CrocodileGrowl, CrocodileBite, Whirlpool,
-        PickupEgg, PickupPlank, PickupFly,
+        PickupEgg, PickupPlank, PickupFly, CoinPickup,
         Tongue, TongueCatch,
-        Dash, Brake,
+        Dash, Brake, Achievement,
     }
 
     public delegate void RequestSoundDelegate(Sounds sound);
@@ -29,6 +29,8 @@ namespace Managers
         private void Awake()
         {
             requestSoundDelegate = AttemptToPlaySound;
+            if (OptionManager.GetFloatIfExists("soundVolume") != float.MinValue)
+                generalVolume = OptionManager.GetFloatIfExists("soundVolume");
         }
 
         private void AttemptToPlaySound(Sounds sound)

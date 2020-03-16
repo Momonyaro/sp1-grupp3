@@ -99,7 +99,7 @@ MonoBehaviour:
   intoWhirlSpeed: 3
   knockForwardTime: 0.25
   knockForwardPower: 300
-  rotateSpeed: 6
+  rotateSpeed: 350
   insideWhirlSpeed: 4
   clicksForRelease: 5
   clicksClicked: 0

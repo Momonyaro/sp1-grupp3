@@ -131,6 +131,9 @@ public class ConversationComponent
         if (_currentLineIndex >= npcLines.Count)
         {
             _dialogueComplete = true;
+            _finishedBuilding = true;
+            _currentLineIndex = 0;
+            _stringIndex = 0;
         }
     }
 
