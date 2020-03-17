@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5594716247155866689}
   - component: {fileID: 5594716247155866688}
+  - component: {fileID: 6045012508375504326}
   m_Layer: 0
   m_Name: Flod
   m_TagString: Untagged
@@ -127,3 +128,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6045012508375504326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5594716247155866695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9462c506be978f47bc3b450d10022f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

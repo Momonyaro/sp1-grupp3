@@ -10,9 +10,9 @@ namespace Managers
     {
         BoatCrash, StoneCrash,
         CrocodileGrowl, CrocodileBite, Whirlpool,
-        PickupEgg, PickupPlank, PickupFly,
+        PickupEgg, PickupPlank, PickupFly, CoinPickup,
         Tongue, TongueCatch,
-        Dash, Brake,
+        Dash, Brake, Achievement,
     }
 
     public delegate void RequestSoundDelegate(Sounds sound);
@@ -23,9 +23,14 @@ namespace Managers
         [SerializeField] public List<GameObject> audioChannels = new List<GameObject>();
         public RequestSoundDelegate requestSoundDelegate;
 
+        [Range(0, 1)]
+        public float generalVolume = 1f;
+
         private void Awake()
         {
             requestSoundDelegate = AttemptToPlaySound;
+            if (OptionManager.GetFloatIfExists("soundVolume") != float.MinValue)
+                generalVolume = OptionManager.GetFloatIfExists("soundVolume");
         }
 
         private void AttemptToPlaySound(Sounds sound)
@@ -59,10 +64,15 @@ namespace Managers
         {
             if (channelSource != null)
             {
-                channelSource.volume = soundObject.soundVolume;
+                channelSource.volume = soundObject.soundVolume * generalVolume;
                 channelSource.clip = soundObject.soundClip;
                 channelSource.Play();
             }
+        }
+
+        public void SetVolume(float newVolume)
+        {
+            generalVolume = newVolume;
         }
     }
 

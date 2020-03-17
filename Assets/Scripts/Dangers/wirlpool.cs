@@ -24,9 +24,11 @@ public class wirlpool : MonoBehaviour
     float whirlCounter = 0f;
     float timeCounter = 0f;
     bool activated = false;
-    public GameObject leftPoint = null;
-    public GameObject rightPoint = null;
+    //public GameObject leftPoint = null;
+    //public GameObject rightPoint = null;
     bool direction = false;
+
+    private const float deltaScale = 100;
 
     void Start()
     {
@@ -57,30 +59,9 @@ public class wirlpool : MonoBehaviour
     {
         //FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.Whirlpool);
 
-        //boat.transform.position = Vector3.MoveTowards(boat.transform.position, transform.position, intoWhirlSpeed * Time.deltaTime);
-        boat.transform.Rotate(new Vector3(0, 0, rotateSpeed));
-        RotatingBoat();
-    }
-
-    private void RotatingBoat()
-    {
-        if(leftPoint.transform.position == boat.transform.position)
-        {
-            direction = false;
-        }
-        else if(rightPoint.transform.position == boat.transform.position)
-        {
-            direction = true;
-        }
-
-        if (direction)
-        {
-            boat.transform.position = Vector3.MoveTowards(boat.transform.position, leftPoint.transform.position, insideWhirlSpeed * Time.deltaTime);
-        }
-        else
-        {
-            boat.transform.position = Vector3.MoveTowards(boat.transform.position, rightPoint.transform.position, insideWhirlSpeed * Time.deltaTime);
-        }
+        boat.transform.position = Vector3.MoveTowards(boat.transform.position, transform.position, intoWhirlSpeed * Time.deltaTime);
+        boat.transform.Rotate(new Vector3(0, 0, rotateSpeed * Time.deltaTime * deltaScale));
+        //RotatingBoat();
     }
 
     private void CountClicks()
@@ -129,5 +110,7 @@ public class wirlpool : MonoBehaviour
         yield return new WaitForSeconds(knockForwardTime);
         boat.knockback = false;
         boat.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        boat.GetComponent<SpriteRenderer>().color = boat.defaultColor;
+        boat.headRenderer.color = boat.defaultColor;
     }
 }

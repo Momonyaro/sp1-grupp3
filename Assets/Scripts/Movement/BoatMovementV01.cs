@@ -34,16 +34,35 @@ public class BoatMovementV01 : MonoBehaviour
     public static int currentHealth;
     public SignalThingy playerHealthSignal;
     public SpriteRenderer headRenderer;
+    public float pushbackPower = 2f;
     private Hit _hit;
     private Shaker _shaker;
     private int _freezeFrames = 0;
     private const float DangerKnockbackTimer = 1;
+    [Space]
+    [Tooltip("Vilken riktning tile-knockbacken pushar grodan")]
+    //public bool knockbackDirection = false;
+    private Vector3 _oldVelocity;
+    private Vector3 _oldPosition;
+    [SerializeField] float originOffsetX = 0.5f;
+    [SerializeField] float originOffsetY = 0.7f;
+
     public bool GameOver = false;
 
     private bool _pressedS = false;
     private bool _pressedW = false;
 
+    [SerializeField] Collider2D upperRightCol = null;
+    [SerializeField] Collider2D upperLeftCol = null;
+    [SerializeField] Collider2D downRightCol = null;
+    [SerializeField] Collider2D downLeftCol = null;
+
     Rigidbody2D rigidb;
+
+    private void Awake()
+    {
+        Time.timeScale = 1;
+    }
 
     void Start()
     {
@@ -51,6 +70,9 @@ public class BoatMovementV01 : MonoBehaviour
         _hit = FindObjectOfType<Hit>();
         _shaker = FindObjectOfType<Shaker>();
         currentHealth = maxHealth;
+        _oldVelocity = rigidb.velocity;
+        _oldPosition = transform.position;
+        _autoSpeed = defaultAutoSpeed;
         //GetComponent<Collider2D>().enabled = true;
     }
 
@@ -80,32 +102,28 @@ public class BoatMovementV01 : MonoBehaviour
                     _pressedS = true;
                     FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.Brake);
                 }
-                else
-                    _pressedS = false;
                 
                 _autoSpeed = breakSpeed;
             }
-            else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) && !stunned)
+            else
+                _pressedS = false;
+
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) && !stunned)
             {
                 if (!_pressedW)
                 {
                     _pressedW = true;
                     FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.Dash);
                 }
-                else
-                    _pressedW = false;
                 
                 _autoSpeed = rowSpeed;
             }
+            else
+                _pressedW = false;
 
             Vector2 position = transform.position;
-            position.y += + 1.0f * _autoSpeed * Time.deltaTime;
-            position.x += + tiltSpeed * horizontal * Time.deltaTime;
-
-            if(stunned)
-            {
-                position.x += + tiltSpeed * -horizontal * Time.deltaTime;
-            }
+            position.y += 1.0f * _autoSpeed * Time.deltaTime;
+            position.x += tiltSpeed * horizontal * Time.deltaTime;
 
             rigidb.MovePosition(position);
         }
@@ -133,6 +151,9 @@ public class BoatMovementV01 : MonoBehaviour
         }
 
         _timer -= Time.deltaTime;
+
+        _oldVelocity = (transform.position - _oldPosition) * 100;
+        _oldPosition = transform.position;
     }
 
     public void LostHealth()
@@ -146,9 +167,6 @@ public class BoatMovementV01 : MonoBehaviour
             Instantiate(hurtEffect, transform.position, Quaternion.identity);
         }
         InsertFreezeFrames(freezeFrames);
-
-        
-        //FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.BoatCrash);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -173,21 +191,50 @@ public class BoatMovementV01 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Knockback(collision);
+
+        Debug.Log(collision.transform.position);
+
+
+        //if(collision.gameObject.layer == 8)
+        //{
+        //    if (Physics2D.Raycast(transform.position, Vector2.left, -originOffsetX))
+        //    {
+        //        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.left) * 10, Color.yellow);
+        //        Debug.Log("Did Hit");
+        //    }
+        //    else
+        //    {
+        //        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
+        //        Debug.Log("Did not Hit");
+        //    }
+
+        //}
     }
 
-    public void Knockback(Collision2D danger)
+    public void Knockback(bool direction)
     {
         if (_timer < 0)
         {
             knockback = true;
-            var newDistance = GetComponent<Rigidbody2D>().transform.position - danger.transform.position;
-            StartCoroutine(AccurateKnockback(newDistance));
+            Vector3 vel = _oldVelocity;
+            vel = vel * -1;
+            StartCoroutine(TilemapKnockback(vel));
             StartCoroutine(_shaker.Shake());
 
             _timer = .3f;
         }
     }
+
+    IEnumerator TilemapKnockback(Vector3 velocity)
+    {
+        velocity.Normalize();
+        Debug.Log("rigidb velocity = " + rigidb.velocity + " | inverted velocity = " + velocity);
+        rigidb.AddForce(velocity * pushbackPower);
+        yield return new WaitForSeconds(.1f);
+        knockback = false;
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+    }
+
 
     public void KnockbackDangers(Collider2D danger)
     {
