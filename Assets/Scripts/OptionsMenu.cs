@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class OptionsMenu : MonoBehaviour
 {
@@ -13,7 +14,24 @@ public class OptionsMenu : MonoBehaviour
     [Tooltip("Write the name of the current scene")]
     public string sceneName;
 
-    // Update is called once per frame
+    public GameObject toggle;
+
+    private void Awake()
+    {
+        if (OptionManager.GetIntIfExists("language") != int.MinValue)
+        {
+            switch (OptionManager.GetIntIfExists("language"))
+            {
+                case 0: //Swedish
+                    toggle.GetComponent<Toggle>().isOn = false;
+                    break;
+                case 1: //English
+                    toggle.GetComponent<Toggle>().isOn = true;
+                    break;
+            }
+        }
+    }
+
     void Update()
     {
         if (FinishLine.reachedGoal)
@@ -21,7 +39,13 @@ public class OptionsMenu : MonoBehaviour
             optionsButton.SetActive(false);
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape) && !FinishLine.reachedGoal)
+        bool optionLock = false;
+        if (optionsButton.activeInHierarchy && optionsButton.GetComponent<Button>().interactable)
+        {
+            optionLock = true;
+        }
+
+        if (optionLock && Input.GetKeyDown(KeyCode.Escape) && !FinishLine.reachedGoal)
         {
             if(gameIsPaused)
             {
@@ -70,5 +94,17 @@ public class OptionsMenu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void LanguageTog(bool value)
+    {
+        if (value)
+        {
+            OptionManager.SetIntPreference("language", 1);
+        }
+        else
+        {
+            OptionManager.SetIntPreference("language", 0);
+        }
     }
 }
