@@ -12046,36 +12046,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BetaMissionCol (1)
       objectReference: {fileID: 0}
-    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
-        type: 3}
-      propertyPath: fullHealthImage
-      value: 
-      objectReference: {fileID: 819753117}
-    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
-        type: 3}
-      propertyPath: emptyHealthImage
-      value: 
-      objectReference: {fileID: 1334033230}
-    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
-        type: 3}
-      propertyPath: fullMissionImage
-      value: 
-      objectReference: {fileID: 819753117}
-    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
-        type: 3}
-      propertyPath: emptyMissionImage
-      value: 
-      objectReference: {fileID: 1334033230}
-    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
-        type: 3}
-      propertyPath: holy
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
-        type: 3}
-      propertyPath: shine
-      value: 
-      objectReference: {fileID: 56602720}
     - target: {fileID: 8890016668769801934, guid: 83ede395178d90246bc7e8c0a0295da9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12131,6 +12101,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
+        type: 3}
+      propertyPath: fullHealthImage
+      value: 
+      objectReference: {fileID: 819753117}
+    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
+        type: 3}
+      propertyPath: emptyHealthImage
+      value: 
+      objectReference: {fileID: 1334033230}
+    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
+        type: 3}
+      propertyPath: fullMissionImage
+      value: 
+      objectReference: {fileID: 819753117}
+    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
+        type: 3}
+      propertyPath: emptyMissionImage
+      value: 
+      objectReference: {fileID: 1334033230}
+    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
+        type: 3}
+      propertyPath: holy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
+        type: 3}
+      propertyPath: shine
+      value: 
+      objectReference: {fileID: 56602720}
     - target: {fileID: 6258954502600056379, guid: 83ede395178d90246bc7e8c0a0295da9,
         type: 3}
       propertyPath: m_Sprite
@@ -12308,41 +12308,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BetaMissionCol
       objectReference: {fileID: 0}
-    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
-        type: 3}
-      propertyPath: fullHealthImage
-      value: 
-      objectReference: {fileID: 59429088}
-    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
-        type: 3}
-      propertyPath: emptyHealthImage
-      value: 
-      objectReference: {fileID: 1081182491}
-    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
-        type: 3}
-      propertyPath: holy
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
-        type: 3}
-      propertyPath: shineRotationSpeed
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
-        type: 3}
-      propertyPath: shine
-      value: 
-      objectReference: {fileID: 576044718}
-    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
-        type: 3}
-      propertyPath: fullMissionImage
-      value: 
-      objectReference: {fileID: 59429088}
-    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
-        type: 3}
-      propertyPath: emptyMissionImage
-      value: 
-      objectReference: {fileID: 1081182491}
     - target: {fileID: 8890016668769801934, guid: 83ede395178d90246bc7e8c0a0295da9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12398,6 +12363,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
+        type: 3}
+      propertyPath: fullHealthImage
+      value: 
+      objectReference: {fileID: 59429088}
+    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
+        type: 3}
+      propertyPath: emptyHealthImage
+      value: 
+      objectReference: {fileID: 1081182491}
+    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
+        type: 3}
+      propertyPath: holy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
+        type: 3}
+      propertyPath: shineRotationSpeed
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
+        type: 3}
+      propertyPath: shine
+      value: 
+      objectReference: {fileID: 576044718}
+    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
+        type: 3}
+      propertyPath: fullMissionImage
+      value: 
+      objectReference: {fileID: 59429088}
+    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
+        type: 3}
+      propertyPath: emptyMissionImage
+      value: 
+      objectReference: {fileID: 1081182491}
     - target: {fileID: 6258954502600056379, guid: 83ede395178d90246bc7e8c0a0295da9,
         type: 3}
       propertyPath: m_Sprite
@@ -13200,36 +13200,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BetaMissionCol (2)
       objectReference: {fileID: 0}
-    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
-        type: 3}
-      propertyPath: fullHealthImage
-      value: 
-      objectReference: {fileID: 1054673309}
-    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
-        type: 3}
-      propertyPath: emptyHealthImage
-      value: 
-      objectReference: {fileID: 1736833454}
-    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
-        type: 3}
-      propertyPath: fullMissionImage
-      value: 
-      objectReference: {fileID: 1054673309}
-    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
-        type: 3}
-      propertyPath: emptyMissionImage
-      value: 
-      objectReference: {fileID: 1736833454}
-    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
-        type: 3}
-      propertyPath: holy
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
-        type: 3}
-      propertyPath: shine
-      value: 
-      objectReference: {fileID: 1119454419}
     - target: {fileID: 8890016668769801934, guid: 83ede395178d90246bc7e8c0a0295da9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13285,6 +13255,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
+        type: 3}
+      propertyPath: fullHealthImage
+      value: 
+      objectReference: {fileID: 1054673309}
+    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
+        type: 3}
+      propertyPath: emptyHealthImage
+      value: 
+      objectReference: {fileID: 1736833454}
+    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
+        type: 3}
+      propertyPath: fullMissionImage
+      value: 
+      objectReference: {fileID: 1054673309}
+    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
+        type: 3}
+      propertyPath: emptyMissionImage
+      value: 
+      objectReference: {fileID: 1736833454}
+    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
+        type: 3}
+      propertyPath: holy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6498718299154928866, guid: 83ede395178d90246bc7e8c0a0295da9,
+        type: 3}
+      propertyPath: shine
+      value: 
+      objectReference: {fileID: 1119454419}
     - target: {fileID: 6258954502600056379, guid: 83ede395178d90246bc7e8c0a0295da9,
         type: 3}
       propertyPath: m_Sprite
@@ -13917,7 +13917,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2119894242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.670534, y: 0.854157, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 134787903}
@@ -14064,6 +14064,31 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 931771134}
+    - target: {fileID: 5361927527481942289, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5361927527481942289, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5361927527481942289, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1937858258510464731, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1937858258510464731, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba1bd1b28b3a5904b8a89e80c645f3d8, type: 3}
 --- !u!1 &4590974683353048897 stripped
