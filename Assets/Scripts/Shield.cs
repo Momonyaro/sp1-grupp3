@@ -7,7 +7,7 @@ public class Shield : MonoBehaviour
 {
     BoatMovementV01 boat;
     Hit hit;
-    public static int coinCount = 0;
+    public static int coinCount;
 
     void Start()
     {
@@ -17,8 +17,9 @@ public class Shield : MonoBehaviour
 
     private void Update()
     {
-        if(coinCount >= 10)
+        if(coinCount == 10)
         {
+            Debug.Log("Shield activated");
             ActivateShield();
         }
     }
