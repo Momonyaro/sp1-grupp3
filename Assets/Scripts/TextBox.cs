@@ -10,6 +10,7 @@ public class TextBox : MonoBehaviour
     public Text nameBox;
     public Text textBox;
     public Image portraitFrame;
+    public Button optionsButton;
 
     private void Start()
     {
@@ -18,6 +19,7 @@ public class TextBox : MonoBehaviour
 
     public void SetDialogueWindowVisibility(bool active)
     {
+        optionsButton.interactable = !active;
         panel.SetActive(active);
         portraitFrame.gameObject.SetActive(active);
     }
