@@ -62,6 +62,18 @@ public class ConversationComponent
 
     public bool StartConversation(TextBox textBoxObject)
     {
+        if (OptionManager.GetIntIfExists("language") != int.MinValue)
+        {
+            switch (OptionManager.GetIntIfExists("language"))
+            {
+                case 0: //Swedish
+                    currentDialogueLanguage = Language.Swedish;
+                    break;
+                case 1: //English
+                    currentDialogueLanguage = Language.English;
+                    break;
+            }
+        }
         TetherToTextbox(textBoxObject);
         if (_dialogueComplete == false)
         {

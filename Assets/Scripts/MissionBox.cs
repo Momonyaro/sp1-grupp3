@@ -14,6 +14,8 @@ public class MissionBox : MonoBehaviour
     public Image missionPortraitFrame;
     [FormerlySerializedAs("NextSceneName")] public string nextSceneName = "NULL";
 
+    public Button optionsButton;
+
     private void Start()
     {
         SetWindowVisibility(false);
@@ -21,6 +23,7 @@ public class MissionBox : MonoBehaviour
     
     public void SetWindowVisibility(bool active)
     {
+        optionsButton.interactable = !active;
         panel.SetActive(active);
     }
 

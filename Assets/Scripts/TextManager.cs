@@ -19,6 +19,9 @@ public class TextManager : MonoBehaviour
     public static int missionAmount;
     public int requiredMissionAmount = 3;
 
+    public GameObject shieldCoinsText;
+    public static int shieldCoinsAmount = 0;
+
     private void Start()
     {
         if (plankRequiredText != null)
@@ -43,5 +46,7 @@ public class TextManager : MonoBehaviour
 
         if (plankText != null)
             plankText.GetComponent<Text>().text = "" + plankAmount;
+
+        shieldCoinsText.GetComponent<Text>().text = "" + shieldCoinsAmount;
     }
 }

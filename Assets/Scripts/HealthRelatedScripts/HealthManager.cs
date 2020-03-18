@@ -8,7 +8,6 @@ public class HealthManager : MonoBehaviour
     public Image[] healthIcons;
     public Sprite fullContainer;
     public Sprite emptyContainer;
-    public ParticleSystem popEffect;
     [HideInInspector] public int healthAmount;
     BoatMovementV01 boatMv;
     private readonly UIShake _uiShake = new UIShake();
