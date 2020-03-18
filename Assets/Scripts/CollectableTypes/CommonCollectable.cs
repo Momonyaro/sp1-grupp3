@@ -15,6 +15,8 @@ public class CommonCollectable : Collectable
                 Instantiate(pickupEffect, transform.position, Quaternion.identity);
             }
             TextManager.score += collectableScore;
+            TextManager.shieldCoinsAmount += 1;
+            Shield.coinCount += 1;
             Destroy(gameObject);
         }
     }
