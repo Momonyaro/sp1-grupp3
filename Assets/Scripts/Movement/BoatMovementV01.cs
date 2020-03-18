@@ -35,17 +35,18 @@ public class BoatMovementV01 : MonoBehaviour
     public SignalThingy playerHealthSignal;
     public SpriteRenderer headRenderer;
     public float pushbackPower = 2f;
+
     private Hit _hit;
     private Shaker _shaker;
     private int _freezeFrames = 0;
     private const float DangerKnockbackTimer = 1;
-    [Space]
-    [Tooltip("Vilken riktning tile-knockbacken pushar grodan")]
+    //[Space]
+    //[Tooltip("Vilken riktning tile-knockbacken pushar grodan")]
     //public bool knockbackDirection = false;
     private Vector3 _oldVelocity;
     private Vector3 _oldPosition;
-    [SerializeField] float originOffsetX = 0.5f;
-    [SerializeField] float originOffsetY = 0.7f;
+    //[SerializeField] float originOffsetX = 0.5f;
+    //[SerializeField] float originOffsetY = 0.7f;
 
     public bool GameOver = false;
 
@@ -188,6 +189,7 @@ public class BoatMovementV01 : MonoBehaviour
             {
                 shield = false;
                 _gotHit = true;
+                Shield.coinCount = 0;
                 _hit.ShieldSwitchBool();
                 KnockbackDangers(other);
             }
@@ -196,8 +198,32 @@ public class BoatMovementV01 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        ContactPoint[] points = new ContactPoint[4];
 
-        Debug.Log(collision.transform.position);
+        for (int i = 0; i < points.Length; i++)
+        {
+            if(Vector2.Distance(points[i].point, upRight.position) < 6f)
+            {
+                Debug.Log("Up Right Hit");
+            }
+            if(Vector2.Distance(points[i].point, upLeft.position) < 6f)
+            {
+                Debug.Log("Up Left Hit");
+            }
+            if(Vector2.Distance(points[i].point, downRight.position) < 6f)
+            {
+                Debug.Log("Down Right Hit");
+            }
+            if(Vector2.Distance(points[i].point, downLeft.position) < 6f)
+            {
+                Debug.Log("Down Left Hit");
+            }
+        }
+
+        //if (Vector2.Distance(collision.GetContact(points), upRight.position) < .2f)
+        //{
+        //    Debug.Log("upRight touch");
+        //}
 
 
         //if(collision.gameObject.layer == 8)

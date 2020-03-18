@@ -7,6 +7,7 @@ public class Shield : MonoBehaviour
 {
     BoatMovementV01 boat;
     Hit hit;
+    public static int coinCount = 0;
 
     void Start()
     {
@@ -14,13 +15,26 @@ public class Shield : MonoBehaviour
         hit = FindObjectOfType<Hit>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Update()
     {
-        if (collision.tag == "Player")
+        if(coinCount >= 10)
         {
-            boat.shield = true;
-            hit.ShieldSwitchBool();
-            Destroy(gameObject);
+            ActivateShield();
         }
     }
+
+    public void ActivateShield()
+    {
+        boat.shield = true;
+        hit.ShieldSwitchBool();
+    }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.tag == "Player")
+    //    {
+    //        boat.shield = true;
+    //        hit.ShieldSwitchBool();
+    //        Destroy(gameObject);
+    //    }
+    //}
 }
