@@ -14,6 +14,7 @@ public class BoatMovementV01 : MonoBehaviour
     public float immortalTime = 1.2f;
     public float knockbackTime = .5f;
     [SerializeField] float knockbackPower = 300f;
+    [SerializeField] float landKnockbackPower = 200f;
     public bool knockback = false;
     public bool stunned = false;
     public bool shield = false;
@@ -216,7 +217,7 @@ public class BoatMovementV01 : MonoBehaviour
 
     IEnumerator LandKnockback(Vector2 vec2)
     {
-        GetComponent<Rigidbody2D>().AddForce(vec2 * knockbackPower);
+        GetComponent<Rigidbody2D>().AddForce(vec2 * landKnockbackPower);
 
         //Vänta lite innan man nollar hastigheten.
         yield return new WaitForSeconds(knockbackTime);
