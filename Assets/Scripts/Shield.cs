@@ -17,7 +17,7 @@ public class Shield : MonoBehaviour
 
     private void Update()
     {
-        if(coinCount == 10)
+        if(coinCount >= 10)
         {
             Debug.Log("Shield activated");
             ActivateShield();
@@ -27,7 +27,7 @@ public class Shield : MonoBehaviour
     public void ActivateShield()
     {
         boat.shield = true;
-        hit.ShieldSwitchBool();
+        hit.ShieldSwitchBool(true);
     }
     //private void OnTriggerEnter2D(Collider2D collision)
     //{

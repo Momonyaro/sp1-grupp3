@@ -190,7 +190,8 @@ public class BoatMovementV01 : MonoBehaviour
                 shield = false;
                 _gotHit = true;
                 Shield.coinCount = 0;
-                _hit.ShieldSwitchBool();
+                TextManager.shieldCoinsAmount = 0;
+                _hit.ShieldSwitchBool(false);
                 KnockbackDangers(other);
             }
         }
