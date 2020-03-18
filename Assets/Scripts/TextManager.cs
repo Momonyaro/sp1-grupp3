@@ -20,7 +20,7 @@ public class TextManager : MonoBehaviour
     public int requiredMissionAmount = 3;
 
     public GameObject shieldCoinsText;
-    public static int shieldCoinsAmount;
+    public static int shieldCoinsAmount = 0;
 
     private void Start()
     {
