@@ -5,6 +5,7 @@ using UnityEngine;
 public class CollisionCorner : MonoBehaviour
 {
     CollisionHandeler ch;
+    [Tooltip("When in doubt, skriv samma nummer som står i namnet")]
     [SerializeField] int number;
 
     private void Start()
@@ -13,7 +14,6 @@ public class CollisionCorner : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("collision");
         ch.KnockingBack(number);
     }
 }
