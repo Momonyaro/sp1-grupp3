@@ -14,6 +14,7 @@ public class BoatMovementV01 : MonoBehaviour
     public float immortalTime = 1.2f;
     public float knockbackTime = .5f;
     [SerializeField] float knockbackPower = 300f;
+    [SerializeField] float landKnockbackPower = 200f;
     public bool knockback = false;
     public bool stunned = false;
     public bool shield = false;
@@ -185,122 +186,45 @@ public class BoatMovementV01 : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void KnockbackLand(int i)
     {
-        //ContactPoint[] points = new ContactPoint[4];
+        knockback = true;
+        float x = 1; float y = 1;
+        StartCoroutine(_shaker.Shake());
 
-        //for (int i = 0; i < points.Length; i++)
-        //{
-        //    if(Vector2.Distance(points[i].point, upRight.position) < 6f)
-        //    {
-        //        collidingInto = 1;
-        //        collided = true;
-        //        //StartCoroutine(_shaker.Shake());
-
-        //        Debug.Log("Up Right Hit");
-        //    }
-        //    else if(Vector2.Distance(points[i].point, upLeft.position) < 6f)
-        //    {
-        //        collidingInto = 2;
-        //        collided = true;
-        //        //StartCoroutine(_shaker.Shake());
-
-        //        Debug.Log("Up Left Hit");
-        //    }
-        //    else if(Vector2.Distance(points[i].point, downRight.position) < 6f)
-        //    {
-        //        collidingInto = 3;
-        //        collided = true;
-        //        //StartCoroutine(Knockbacking(3));
-        //        //StartCoroutine(_shaker.Shake());
-
-        //        Debug.Log("Down Right Hit");
-        //    }
-        //    else if(Vector2.Distance(points[i].point, downLeft.position) < 6f)
-        //    {
-        //        collidingInto = 4;
-        //        collided = true;
-        //        //knockback = true;
-        //        //StartCoroutine(Knockbacking(4));
-        //        //StartCoroutine(_shaker.Shake());
-
-        //        Debug.Log("Down Left Hit");
-        //    }
-        //}
-
-    }
-
-    //void HandelingKnockback()
-    //{
-    //    if (collided /*&& _timer < 0*/)
-    //    {
-    //        Debug.Log("collided = " + collided);
-    //        if(collidingInto == 1)
-    //        {
-    //            Debug.Log("collidingInfo = " + collidingInto);
-    //            collided = false;
-    //            //StartCoroutine(Knockbacking(1));
-    //        }
-    //        else if(collidingInto == 2)
-    //        {
-    //            Debug.Log("collidingInfo = " + collidingInto);
-    //            collided = false;
-    //            //StartCoroutine(Knockbacking(1));
-    //        }
-    //        else if(collidingInto == 3)
-    //        {
-    //            Debug.Log("collidingInfo = " + collidingInto);
-    //            collided = false;
-    //            //StartCoroutine(Knockbacking(1));
-    //        }
-    //        else if(collidingInto == 4)
-    //        {
-    //            Debug.Log("collidingInfo = " + collidingInto);
-    //            collided = false;
-    //            //StartCoroutine(Knockbacking(1));
-    //        }
-    //    }
-    //}
-
-    //IEnumerator Knockbacking(int i)
-    //{
-    //    if (_timer < 0)
-    //    {
-    //        knockback = true;
-    //        Vector3 vel = _oldVelocity;
-    //        vel = vel * -1;
-    //        StartCoroutine(TilemapKnockback(vel));
-    //        StartCoroutine(_shaker.Shake());
-
-    //        _timer = .3f;
-    //    }
-
-    //}
-
-    public void Knockback(bool direction)
-    {
-        if (_timer < 0)
+        if (i == 1)
         {
-            knockback = true;
-            Vector3 vel = _oldVelocity;
-            vel = vel * -1;
-            StartCoroutine(TilemapKnockback(vel));
-            StartCoroutine(_shaker.Shake());
-
-            _timer = .3f;
+            x = -1; y = -1;
+            StartCoroutine(LandKnockback(new Vector2(x, y)));
         }
+        else if (i == 2)
+        {
+            y = -1;
+            StartCoroutine(LandKnockback(new Vector2(x, y)));
+        }
+        else if (i == 3)
+        {
+            StartCoroutine(LandKnockback(new Vector2(x, y)));
+        }
+        else if (i == 4)
+        {
+            x = -1;
+            StartCoroutine(LandKnockback(new Vector2(x, y)));
+
+        }
+
     }
 
-    IEnumerator TilemapKnockback(Vector3 velocity)
+    IEnumerator LandKnockback(Vector2 vec2)
     {
-        velocity.Normalize();
-        Debug.Log("rigidb velocity = " + rigidb.velocity + " | inverted velocity = " + velocity);
-        rigidb.AddForce(velocity * pushbackPower);
-        yield return new WaitForSeconds(.1f);
+        GetComponent<Rigidbody2D>().AddForce(vec2 * landKnockbackPower);
+
+        //Vänta lite innan man nollar hastigheten.
+        yield return new WaitForSeconds(knockbackTime);
         knockback = false;
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-    }
 
+    }
 
     public void KnockbackDangers(Collider2D danger)
     {

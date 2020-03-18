@@ -13,7 +13,6 @@ public class CollisionCorner : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("collision");
         ch.KnockingBack(number);
     }
 }
