@@ -17,6 +17,18 @@ public class MissionComponent
 
     public void TetherAndSetNewMission(MissionBox newMissionBox, string npcName)
     {
+        if (OptionManager.GetIntIfExists("language") != int.MinValue)
+        {
+            switch (OptionManager.GetIntIfExists("language"))
+            {
+                case 0: //Swedish
+                    currentLanguage = Language.Swedish;
+                    break;
+                case 1: //English
+                    currentLanguage = Language.English;
+                    break;
+            }
+        }
         if (newMissionBox != null)
             this.missionBox = newMissionBox;
         
