@@ -424,6 +424,7 @@ GameObject:
   - component: {fileID: 1066851939220517664}
   - component: {fileID: 1066851939220517692}
   - component: {fileID: 40799159}
+  - component: {fileID: 699774944}
   m_Layer: 0
   m_Name: BetaBoat
   m_TagString: Player
@@ -518,6 +519,7 @@ MonoBehaviour:
   immortalTime: 0.8
   knockbackTime: 0.2
   knockbackPower: 300
+  landKnockbackPower: 200
   knockback: 0
   stunned: 0
   shield: 0
@@ -526,8 +528,9 @@ MonoBehaviour:
   hurtColor: {r: 1, g: 0, b: 0, a: 1}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   deadColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  hurtEffect: {fileID: 0}
-  maxHealth: 5
+  hurtEffect: {fileID: 4793634037549316343, guid: 395de6f823f5cbe40a9502c9ae5f94eb,
+    type: 3}
+  maxHealth: 3
   playerHealthSignal: {fileID: 11400000, guid: 364592fee10a0de4db165cb72b4afe91, type: 2}
   headRenderer: {fileID: 7837907146340304967}
   pushbackPower: 2
@@ -579,6 +582,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.3, y: 6.2}
   m_EdgeRadius: 0
+--- !u!114 &699774944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066851939220517693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c336a4e1587a1144a4783fb80651a33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1497626236337491424
 GameObject:
   m_ObjectHideFlags: 0

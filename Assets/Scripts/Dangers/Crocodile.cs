@@ -64,7 +64,7 @@ public class Crocodile : MonoBehaviour
             transform.Translate(Vector2.right * (Time.deltaTime * crocSpeed), 0);
         }
 
-        if(distance <= eyeSight && chaseTimeCheck > 0 && chaseCooldown >= chaseCooldownCheck)
+        if(distance <= eyeSight)
         {
             
         }
