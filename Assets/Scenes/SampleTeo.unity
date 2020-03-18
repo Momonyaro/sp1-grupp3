@@ -12738,7 +12738,7 @@ PrefabInstance:
         type: 3}
       propertyPath: healthParent
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1762951875}
     - target: {fileID: 30915994852092669, guid: c72708d1cbc1f5e439b7ce098f8bfaeb,
         type: 3}
       propertyPath: successText
@@ -13526,7 +13526,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 20
+  m_SortingOrder: 11
   m_Sprite: {fileID: 21300000, guid: d9b5a0c40f598a5459a5bd6a7a11b5d7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -14622,6 +14622,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 467411381}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1762951875 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4590974684312613597, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 4590974683353048896}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1770906376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15641,6 +15647,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7602787948047073311, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4590974683630779378, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15786,6 +15797,18 @@ PrefabInstance:
       propertyPath: shieldCoinsText
       value: 
       objectReference: {fileID: 746463071}
+    - target: {fileID: 5176501075543688120, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Shield coins
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176501075543688120, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba1bd1b28b3a5904b8a89e80c645f3d8, type: 3}
 --- !u!1 &4590974683353048897 stripped
