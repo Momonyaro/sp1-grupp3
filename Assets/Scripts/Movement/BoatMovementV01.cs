@@ -10,7 +10,7 @@ public class BoatMovementV01 : MonoBehaviour
     public float breakSpeed = 1.0f;
     public float rowSpeed = 8.0f;
     [Tooltip("How long after a collision the frog will be immortal (in seconds)")]
-    public float immortalTime = 1f;
+    public float immortalTime = 1.2f;
     public float knockbackTime = .5f;
     [SerializeField] float knockbackPower = 300f;
     public bool knockback = false;
@@ -52,10 +52,15 @@ public class BoatMovementV01 : MonoBehaviour
     private bool _pressedS = false;
     private bool _pressedW = false;
 
-    [SerializeField] Collider2D upperRightCol = null;
-    [SerializeField] Collider2D upperLeftCol = null;
-    [SerializeField] Collider2D downRightCol = null;
-    [SerializeField] Collider2D downLeftCol = null;
+    [SerializeField] Transform upRight;
+    [SerializeField] Transform upLeft;
+    [SerializeField] Transform downLeft;
+    [SerializeField] Transform downRight;
+
+    //[SerializeField] Collider2D upperRightCol = null;
+    //[SerializeField] Collider2D upperLeftCol = null;
+    //[SerializeField] Collider2D downRightCol = null;
+    //[SerializeField] Collider2D downLeftCol = null;
 
     Rigidbody2D rigidb;
 
