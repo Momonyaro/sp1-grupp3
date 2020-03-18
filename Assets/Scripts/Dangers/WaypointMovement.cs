@@ -7,10 +7,10 @@ public class WaypointMovement : MonoBehaviour
     [SerializeField] List<Transform> waypoints;
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] GameObject path = null;
-    [SerializeField] AudioClip biteClipSound = null;
+    //[SerializeField] AudioClip biteClipSound = null;
     int currentWaypoint = 0;
     int lastWaypoint;
-    float timer = 0f;
+    //float timer = 0f;
     bool rotating = false;
 
     void Start()
