@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Managers;
+using System;
 
 public class BoatMovementV01 : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class BoatMovementV01 : MonoBehaviour
     public bool shield = false;
     public bool stopBoat = false;
     public int freezeFrames = 6;
+    int collidingInto = 0;
+    bool collided = false;
 
     public Color hurtColor = Color.red;
     public Color defaultColor = Color.green;
@@ -40,28 +43,13 @@ public class BoatMovementV01 : MonoBehaviour
     private Shaker _shaker;
     private int _freezeFrames = 0;
     private const float DangerKnockbackTimer = 1;
-    //[Space]
-    //[Tooltip("Vilken riktning tile-knockbacken pushar grodan")]
-    //public bool knockbackDirection = false;
     private Vector3 _oldVelocity;
     private Vector3 _oldPosition;
-    //[SerializeField] float originOffsetX = 0.5f;
-    //[SerializeField] float originOffsetY = 0.7f;
 
     public bool GameOver = false;
 
     private bool _pressedS = false;
     private bool _pressedW = false;
-
-    [SerializeField] Transform upRight;
-    [SerializeField] Transform upLeft;
-    [SerializeField] Transform downLeft;
-    [SerializeField] Transform downRight;
-
-    //[SerializeField] Collider2D upperRightCol = null;
-    //[SerializeField] Collider2D upperLeftCol = null;
-    //[SerializeField] Collider2D downRightCol = null;
-    //[SerializeField] Collider2D downLeftCol = null;
 
     Rigidbody2D rigidb;
 
@@ -199,49 +187,95 @@ public class BoatMovementV01 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        ContactPoint[] points = new ContactPoint[4];
+        //ContactPoint[] points = new ContactPoint[4];
 
-        for (int i = 0; i < points.Length; i++)
-        {
-            if(Vector2.Distance(points[i].point, upRight.position) < 6f)
-            {
-                Debug.Log("Up Right Hit");
-            }
-            if(Vector2.Distance(points[i].point, upLeft.position) < 6f)
-            {
-                Debug.Log("Up Left Hit");
-            }
-            if(Vector2.Distance(points[i].point, downRight.position) < 6f)
-            {
-                Debug.Log("Down Right Hit");
-            }
-            if(Vector2.Distance(points[i].point, downLeft.position) < 6f)
-            {
-                Debug.Log("Down Left Hit");
-            }
-        }
-
-        //if (Vector2.Distance(collision.GetContact(points), upRight.position) < .2f)
+        //for (int i = 0; i < points.Length; i++)
         //{
-        //    Debug.Log("upRight touch");
+        //    if(Vector2.Distance(points[i].point, upRight.position) < 6f)
+        //    {
+        //        collidingInto = 1;
+        //        collided = true;
+        //        //StartCoroutine(_shaker.Shake());
+
+        //        Debug.Log("Up Right Hit");
+        //    }
+        //    else if(Vector2.Distance(points[i].point, upLeft.position) < 6f)
+        //    {
+        //        collidingInto = 2;
+        //        collided = true;
+        //        //StartCoroutine(_shaker.Shake());
+
+        //        Debug.Log("Up Left Hit");
+        //    }
+        //    else if(Vector2.Distance(points[i].point, downRight.position) < 6f)
+        //    {
+        //        collidingInto = 3;
+        //        collided = true;
+        //        //StartCoroutine(Knockbacking(3));
+        //        //StartCoroutine(_shaker.Shake());
+
+        //        Debug.Log("Down Right Hit");
+        //    }
+        //    else if(Vector2.Distance(points[i].point, downLeft.position) < 6f)
+        //    {
+        //        collidingInto = 4;
+        //        collided = true;
+        //        //knockback = true;
+        //        //StartCoroutine(Knockbacking(4));
+        //        //StartCoroutine(_shaker.Shake());
+
+        //        Debug.Log("Down Left Hit");
+        //    }
         //}
 
-
-        //if(collision.gameObject.layer == 8)
-        //{
-        //    if (Physics2D.Raycast(transform.position, Vector2.left, -originOffsetX))
-        //    {
-        //        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.left) * 10, Color.yellow);
-        //        Debug.Log("Did Hit");
-        //    }
-        //    else
-        //    {
-        //        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
-        //        Debug.Log("Did not Hit");
-        //    }
-
-        //}
     }
+
+    //void HandelingKnockback()
+    //{
+    //    if (collided /*&& _timer < 0*/)
+    //    {
+    //        Debug.Log("collided = " + collided);
+    //        if(collidingInto == 1)
+    //        {
+    //            Debug.Log("collidingInfo = " + collidingInto);
+    //            collided = false;
+    //            //StartCoroutine(Knockbacking(1));
+    //        }
+    //        else if(collidingInto == 2)
+    //        {
+    //            Debug.Log("collidingInfo = " + collidingInto);
+    //            collided = false;
+    //            //StartCoroutine(Knockbacking(1));
+    //        }
+    //        else if(collidingInto == 3)
+    //        {
+    //            Debug.Log("collidingInfo = " + collidingInto);
+    //            collided = false;
+    //            //StartCoroutine(Knockbacking(1));
+    //        }
+    //        else if(collidingInto == 4)
+    //        {
+    //            Debug.Log("collidingInfo = " + collidingInto);
+    //            collided = false;
+    //            //StartCoroutine(Knockbacking(1));
+    //        }
+    //    }
+    //}
+
+    //IEnumerator Knockbacking(int i)
+    //{
+    //    if (_timer < 0)
+    //    {
+    //        knockback = true;
+    //        Vector3 vel = _oldVelocity;
+    //        vel = vel * -1;
+    //        StartCoroutine(TilemapKnockback(vel));
+    //        StartCoroutine(_shaker.Shake());
+
+    //        _timer = .3f;
+    //    }
+
+    //}
 
     public void Knockback(bool direction)
     {
