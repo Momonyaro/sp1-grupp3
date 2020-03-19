@@ -16,6 +16,8 @@ public class Crocodile : MonoBehaviour
     public bool direction = false;
     float crocTimer = 0.5f;
 
+    public Animator animator;
+
     public ParticleSystem gnawEffect;
     public GameObject target;
     public float distance;
@@ -64,9 +66,13 @@ public class Crocodile : MonoBehaviour
             transform.Translate(Vector2.right * (Time.deltaTime * crocSpeed), 0);
         }
 
-        if(distance <= eyeSight && chaseTimeCheck > 0 && chaseCooldown >= chaseCooldownCheck)
+        if(distance <= eyeSight)
         {
-            
+            animator.SetBool("Biting", true);
+        }
+        else
+        {
+            animator.SetBool("Biting", false);
         }
     }
     
