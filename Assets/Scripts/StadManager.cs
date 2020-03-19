@@ -19,18 +19,16 @@ public class StadManager : MonoBehaviour
             NpcComponent npc = gameObject.GetComponent<NpcComponent>();
             if (npc.startsMission && canAddNPCs)
             {
-                if (OptionManager.GetIntIfExists(npc.missionComponent.targetSceneName) != int.MinValue)
+                //if the level is completed then go on to check the next npcs
+                if (OptionManager.GetIntIfExists(npc.missionComponent.targetSceneName) != int.MinValue && OptionManager.GetIntIfExists(npc.missionComponent.targetSceneName) == 1)
                 {
-                    //if the level is completed then go on to check the next npcs
-                    if (OptionManager.GetIntIfExists(npc.missionComponent.targetSceneName) == 1)
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        SetActActive(firstActNpcs);
-                        canAddNPCs = false;
-                    }
+                    break;
+                }
+                else
+                {
+                    Debug.Log("Set first act visible");
+                    SetActActive(firstActNpcs);
+                    canAddNPCs = false;
                 }
             }
         }
@@ -39,18 +37,16 @@ public class StadManager : MonoBehaviour
             NpcComponent npc = gameObject.GetComponent<NpcComponent>();
             if (npc.startsMission && canAddNPCs)
             {
-                if (OptionManager.GetIntIfExists(npc.missionComponent.targetSceneName) != int.MinValue)
+                //if the level is completed then go on to check the next npcs
+                if (OptionManager.GetIntIfExists(npc.missionComponent.targetSceneName) != int.MinValue || OptionManager.GetIntIfExists(npc.missionComponent.targetSceneName) == 1)
                 {
-                    //if the level is completed then go on to check the next npcs
-                    if (OptionManager.GetIntIfExists(npc.missionComponent.targetSceneName) == 1)
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        SetActActive(secondActNpcs);
-                        canAddNPCs = false;
-                    }
+                    break;
+                }
+                else
+                {
+                    Debug.Log("Set second act visible");
+                    SetActActive(secondActNpcs);
+                    canAddNPCs = false;
                 }
             }
         }
@@ -59,18 +55,16 @@ public class StadManager : MonoBehaviour
             NpcComponent npc = gameObject.GetComponent<NpcComponent>();
             if (npc.startsMission && canAddNPCs)
             {
-                if (OptionManager.GetIntIfExists(npc.missionComponent.targetSceneName) != int.MinValue)
+                //if the level is completed then go on to check the next npcs
+                if (OptionManager.GetIntIfExists(npc.missionComponent.targetSceneName) != int.MinValue || OptionManager.GetIntIfExists(npc.missionComponent.targetSceneName) == 1)
                 {
-                    //if the level is completed then go on to check the next npcs
-                    if (OptionManager.GetIntIfExists(npc.missionComponent.targetSceneName) == 1)
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        SetActActive(thirdActNpcs);
-                        canAddNPCs = false;
-                    }
+                    break;
+                }
+                else
+                {
+                    Debug.Log("Set third act visible");
+                    SetActActive(thirdActNpcs);
+                    canAddNPCs = false;
                 }
             }
         }

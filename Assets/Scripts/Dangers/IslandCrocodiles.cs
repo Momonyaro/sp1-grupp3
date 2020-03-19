@@ -17,6 +17,9 @@ public class IslandCrocodiles : MonoBehaviour
     bool rotating = false;
     public GameObject target;
     public float distance;
+    public float eyeSight = 5;
+
+    public Animator animator;
 
     void Start()
     {
@@ -48,6 +51,15 @@ public class IslandCrocodiles : MonoBehaviour
         timer -= Time.deltaTime;
         
         Move();
+
+        if (distance <= eyeSight)
+        {
+            animator.SetBool("Biting", true);
+        }
+        else
+        {
+            animator.SetBool("Biting", false);
+        }
     }
 
     private void Move()
