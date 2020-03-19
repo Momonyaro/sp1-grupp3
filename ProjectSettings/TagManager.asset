@@ -7,6 +7,7 @@ TagManager:
   - Dangerous
   - TextBox
   - Tilemap
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - 
   - Ground
   - Stone
-  - 
-  - 
+  - Decore
+  - Player
   - 
   - 
   - 
