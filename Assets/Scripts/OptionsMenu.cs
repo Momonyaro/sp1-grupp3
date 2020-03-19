@@ -18,6 +18,8 @@ public class OptionsMenu : MonoBehaviour
 
     private void Awake()
     {
+        sceneName = SceneManager.GetActiveScene().name;
+
         if (OptionManager.GetIntIfExists("language") != int.MinValue)
         {
             switch (OptionManager.GetIntIfExists("language"))
