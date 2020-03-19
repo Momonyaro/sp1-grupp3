@@ -8227,7 +8227,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320161729}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: -13.446749, y: 134.05348, z: -10}
+=======
+  m_LocalPosition: {x: -13.463095, y: 134.0533, z: -10}
+>>>>>>> dev
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459601753}
@@ -10827,7 +10831,7 @@ MonoBehaviour:
       portraitExpression: 2
     textBoxObject: {fileID: 0}
     vocalSource: {fileID: 0}
-  startsMission: 1
+  startsMission: 0
   missionComponent:
     englishInfo:
       missionName: Find the missing tools!
@@ -14247,7 +14251,7 @@ MonoBehaviour:
       portraitExpression: 2
     textBoxObject: {fileID: 0}
     vocalSource: {fileID: 0}
-  startsMission: 1
+  startsMission: 0
   missionComponent:
     englishInfo:
       missionName: Get some wood from the river!
