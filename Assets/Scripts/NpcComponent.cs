@@ -48,7 +48,7 @@ public class NpcComponent : MonoBehaviour
         {
             if (OptionManager.GetIntIfExists(missionComponent.targetSceneName) != 1 &&
                 !missionComponent.MissionBoxActive() &&
-                !conversationComponent.StartConversation(FindObjectOfType<TextBox>()))
+                !conversationComponent.StartConversation(FindObjectOfType<TextBox>()) && startsMission)
                 missionComponent.TetherAndSetNewMission(FindObjectOfType<MissionBox>(), conversationComponent.npcName);
         }
         
