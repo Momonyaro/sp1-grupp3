@@ -314,7 +314,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 23864083}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.12832057, y: -2.1562333, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 786850013}
@@ -2651,7 +2651,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2675,7 +2675,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 676672769}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.12832057, y: -2.1562333, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 358828291}
@@ -40310,10 +40310,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d638e29a943a8b4387aaf9f3f5ede38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swedishTitle: "Polly \xE4r en hora"
-  englishTitle: Polly is a bitch
-  swedishText: "Det \xE4r hon verkligen"
-  englishText: 'She really is
+  swedishTitle: "Polly \xE4r inte en groda"
+  englishTitle: Polly is not actually a frog
+  swedishText: "Hon \xE4r en padda"
+  englishText: 'She is a toad
 
 '
 --- !u!1 &1968962612
