@@ -4590,7 +4590,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4967822868234895637
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5742,40 +5742,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundObjects:
   - soundClip: {fileID: 8300000, guid: a9e3e6b97c676e84ba363f89d07b4945, type: 3}
-    soundVolume: 0.5
+    soundVolume: 0.2
     soundName: 0
   - soundClip: {fileID: 8300000, guid: afc408fec5782ce4f83172d58f0a18ca, type: 3}
     soundVolume: 0.2
     soundName: 5
-  - soundClip: {fileID: 8300000, guid: 94d8e9f1b3d22124bbb4adf13f24c9f9, type: 3}
+  - soundClip: {fileID: 8300000, guid: a726d05146b9dc94eae3d28364a19cb0, type: 3}
     soundVolume: 0.2
     soundName: 7
   - soundClip: {fileID: 8300000, guid: 08df77eae6178ee42826c691d06b0626, type: 3}
     soundVolume: 0.2
     soundName: 6
   - soundClip: {fileID: 8300000, guid: 3495ffdb942cf0347a2a836d66027079, type: 3}
-    soundVolume: 0.2
-    soundName: 10
-  - soundClip: {fileID: 8300000, guid: 83008187bec7eb64c9948d0b32b45b76, type: 3}
-    soundVolume: 0.2
+    soundVolume: 0.5
     soundName: 11
+  - soundClip: {fileID: 8300000, guid: 83008187bec7eb64c9948d0b32b45b76, type: 3}
+    soundVolume: 0.5
+    soundName: 12
   - soundClip: {fileID: 8300000, guid: 424fa0b5f7848ae4cad0d2fbb476d184, type: 3}
     soundVolume: 0.2
     soundName: 3
   - soundClip: {fileID: 8300000, guid: 6e39f5e01e196e94eae98bd2e058483c, type: 3}
-    soundVolume: 0.848
+    soundVolume: 0.7
     soundName: 1
   - soundClip: {fileID: 8300000, guid: ac4d80bd2046860429748c88d91bce87, type: 3}
-    soundVolume: 0.2
+    soundVolume: 0.4
     soundName: 4
   - soundClip: {fileID: 8300000, guid: 824f69c54a5b1844288fb4603e5c4acd, type: 3}
     soundVolume: 0.2
-    soundName: 8
+    soundName: 9
   - soundClip: {fileID: 8300000, guid: a7c18cc1399acd54aa5f4f93dbb3f554, type: 3}
     soundVolume: 0.2
-    soundName: 9
+    soundName: 10
   - soundClip: {fileID: 8300000, guid: ab3e5f8fa864ca744af76dccdb72a6bc, type: 3}
-    soundVolume: 1
+    soundVolume: 0.1
     soundName: 8
   - soundClip: {fileID: 8300000, guid: 99d731e44d8ed1a4d84be379d1a5a430, type: 3}
     soundVolume: 0.2
