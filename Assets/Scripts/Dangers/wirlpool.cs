@@ -56,7 +56,7 @@ public class wirlpool : MonoBehaviour
     private void CountClicks()
     {
         whirlCounter += Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.anyKeyDown)
         {
             clicksClicked++;
             Debug.Log("clicks clicked: " + clicksClicked);
