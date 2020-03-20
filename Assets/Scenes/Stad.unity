@@ -8227,7 +8227,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320161729}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.446749, y: 134.05348, z: -10}
+  m_LocalPosition: {x: -13.442701, y: 134.05353, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459601753}
@@ -10777,7 +10777,7 @@ MonoBehaviour:
   maxMagicNumbers: 10
   timeBetweenAnimCheck: 1
   conversationComponent:
-    npcName: "H\xE4ger [INDEV]"
+    npcName: Oz
     voiceClips:
     - {fileID: 8300000, guid: f70829441f645264c9feb313379698b3, type: 3}
     - {fileID: 8300000, guid: 28244cabadc1b56419a9b859a1335ba4, type: 3}
@@ -10797,50 +10797,29 @@ MonoBehaviour:
       portraitSprite: {fileID: 6346041710244282177, guid: 40605aadca547ac45a05549bcaed56cd,
         type: 3}
     npcLines:
-    - swedishText: '...'
-      englishText: '...'
-      playerSays: 0
-      portraitExpression: 0
-    - swedishText: "Urs\xE4kta mig?"
-      englishText: Excuse me?
-      playerSays: 1
-      portraitExpression: 0
-    - swedishText: Ahhh!
-      englishText: Ahhh!
-      playerSays: 0
-      portraitExpression: 3
-    - swedishText: "Skr\xE4m mig inte s\xE5! H\xF6ll p\xE5 att f\xE5 en hj\xE4rtattack!"
-      englishText: Don't scare me like that, I almost had a heart attack!
+    - swedishText: "Mina verktyg fl\xF6t iv\xE4g i \xF6versv\xE4mningen och utan dem
+        kan jag inte hj\xE4lpa dig fixa din r\xF6ra."
+      englishText: "The flood washed my tools away, and without them I can\u2019t
+        help fix your mess."
       playerSays: 0
       portraitExpression: 1
-    - swedishText: "F\xF6rl\xE5t men jag f\xF6rs\xF6ker hj\xE4lpa alla nu efter \xF6versv\xE4mningen...
-        Du s\xE5g lite distant ut s\xE5 jag t\xE4nkte kolla hur du l\xE5g till."
-      englishText: I'm sorry but I am trying to help everyone after the flood... You
-        looked a bit distant so I was just making sure you were okay.
+    - swedishText: "Du beh\xF6ver h\xE4mta min hammare, skruvmejsel och s\xE5g."
+      englishText: I need you to gather up my hammer, screwdriver and saw.
       playerSays: 1
-      portraitExpression: 0
-    - swedishText: "\xC5h. Ja jag f\xF6rlorade en av min pappas sista m\xE5lningar
-        till str\xF6mmen och jag vet inte riktigt vad jag ska ta mig \xE5t."
-      englishText: Oh. I lost one of my father's last paintings to the stream and
-        I don't really know what to do.
-      playerSays: 0
-      portraitExpression: 2
+      portraitExpression: 1
     textBoxObject: {fileID: 0}
     vocalSource: {fileID: 0}
   startsMission: 1
   missionComponent:
     englishInfo:
-      missionName: Find the missing tools!
-      missionDescription: 'Some tools necessary to rebuild the dam were washed away
-        with the flood. Get them back to the workers.
-
-        (Developer''s note: we don''t have pictures for tools yet so just pick up
-        the eggs)'
+      missionName: "Gather Sir Oz\u2019s tools"
+      missionDescription: Sir Oz's tools, that are necessary to rebuild the dam, were
+        washed away with the flood. Gather them up for him.
     swedishInfo:
-      missionName: "Hitta den bortspolade m\xE5lningen!"
-      missionDescription: "En m\xE5lning som Sebastians pappa m\xE5lat spolades bort
-        under \xF6versv\xE4mningen och skulle vilja ha hj\xE4lp att hitta den; eller
-        vad som \xE4r kvar i alla fall..."
+      missionName: Hitta Herr Ozs verktyg
+      missionDescription: "Herr Ozs verktyg, som \xE4r n\xF6dv\xE4ndiga f\xF6r att
+        bygga upp dammen igen, blev bortspolade i \xF6versv\xE4mningen. H\xE4mta dem
+        \xE5t honom."
     missionPortrait: {fileID: -1725970659461245023, guid: 173bb3f8133e72c49becb5132778958d,
       type: 3}
     targetSceneName: Level1_Verktyg
@@ -13898,7 +13877,7 @@ MonoBehaviour:
   maxMagicNumbers: 10
   timeBetweenAnimCheck: 1
   conversationComponent:
-    npcName: Svan [INDEV]
+    npcName: 
     voiceClips:
     - {fileID: 8300000, guid: f70829441f645264c9feb313379698b3, type: 3}
     - {fileID: 8300000, guid: 28244cabadc1b56419a9b859a1335ba4, type: 3}
@@ -14197,7 +14176,7 @@ MonoBehaviour:
   maxMagicNumbers: 10
   timeBetweenAnimCheck: 1
   conversationComponent:
-    npcName: "B\xE4ver [INDEV]"
+    npcName: Berta
     voiceClips:
     - {fileID: 8300000, guid: f70829441f645264c9feb313379698b3, type: 3}
     - {fileID: 8300000, guid: 28244cabadc1b56419a9b859a1335ba4, type: 3}
@@ -14217,34 +14196,14 @@ MonoBehaviour:
       portraitSprite: {fileID: 6346041710244282177, guid: 40605aadca547ac45a05549bcaed56cd,
         type: 3}
     npcLines:
-    - swedishText: '...'
-      englishText: '...'
-      playerSays: 0
-      portraitExpression: 0
-    - swedishText: "Urs\xE4kta mig?"
-      englishText: Excuse me?
-      playerSays: 1
-      portraitExpression: 0
-    - swedishText: Ahhh!
-      englishText: Ahhh!
+    - swedishText: "Saru n\xE5t?"
+      englishText: Did you say somethin?
       playerSays: 0
       portraitExpression: 3
-    - swedishText: "Skr\xE4m mig inte s\xE5! H\xF6ll p\xE5 att f\xE5 en hj\xE4rtattack!"
-      englishText: Don't scare me like that, I almost had a heart attack!
-      playerSays: 0
-      portraitExpression: 1
-    - swedishText: "F\xF6rl\xE5t men jag f\xF6rs\xF6ker hj\xE4lpa alla nu efter \xF6versv\xE4mningen...
-        Du s\xE5g lite distant ut s\xE5 jag t\xE4nkte kolla hur du l\xE5g till."
-      englishText: I'm sorry but I am trying to help everyone after the flood... You
-        looked a bit distant so I was just making sure you were okay.
+    - swedishText: "G\xE5 \xE5 hj\xE4lp Herr Oz \xE5 st\xE5 inte h\xE4r \xE5 glo."
+      englishText: "Go help Sir. Oz don\u2019t just stand around glaring."
       playerSays: 1
-      portraitExpression: 0
-    - swedishText: "\xC5h. Ja jag f\xF6rlorade en av min pappas sista m\xE5lningar
-        till str\xF6mmen och jag vet inte riktigt vad jag ska ta mig \xE5t."
-      englishText: Oh. I lost one of my father's last paintings to the stream and
-        I don't really know what to do.
-      playerSays: 0
-      portraitExpression: 2
+      portraitExpression: 1
     textBoxObject: {fileID: 0}
     vocalSource: {fileID: 0}
   startsMission: 1
