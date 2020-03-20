@@ -33,7 +33,7 @@ public class CloudMovement : MonoBehaviour
         if (direction)
         {
             transform.position = Vector2.MoveTowards(transform.position, rightPoint.transform.position, speed * Time.deltaTime);
-            if(transform.position == rightPoint.transform.position)
+            if(transform.position.x == rightPoint.transform.position.x)
             {
                 transform.position = leftPoint.transform.position;
             }
@@ -41,7 +41,7 @@ public class CloudMovement : MonoBehaviour
         else
         {
             transform.position = Vector2.MoveTowards(transform.position, leftPoint.transform.position, speed * Time.deltaTime);
-            if (transform.position == leftPoint.transform.position)
+            if (transform.position.x == leftPoint.transform.position.x)
             {
                 transform.position = rightPoint.transform.position;
             }
