@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 23263083}
   - component: {fileID: 23263085}
   - component: {fileID: 23263084}
+  - component: {fileID: 149291568}
   m_Layer: 0
   m_Name: trail
   m_TagString: Untagged
@@ -42,7 +43,7 @@ Animator:
   m_GameObject: {fileID: 23263082}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2c36f0224b2642e45ab1d310d83ac958, type: 2}
+  m_Controller: {fileID: 9100000, guid: f0c267a423936ce48877bbda16913c70, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -100,6 +101,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &149291568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23263082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 215a38b409aff4349a67c4a89a9e9037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &75322635
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,7 +647,7 @@ MonoBehaviour:
   maxHealth: 3
   playerHealthSignal: {fileID: 11400000, guid: 364592fee10a0de4db165cb72b4afe91, type: 2}
   headRenderer: {fileID: 7837907146340304967}
-  pushbackPower: 2
+  pushbackPower: 100
   GameOver: 0
 --- !u!50 &1066851939220517692
 Rigidbody2D:

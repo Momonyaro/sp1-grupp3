@@ -24,9 +24,6 @@ public class wirlpool : MonoBehaviour
     float whirlCounter = 0f;
     float timeCounter = 0f;
     bool activated = false;
-    //public GameObject leftPoint = null;
-    //public GameObject rightPoint = null;
-    bool direction = false;
 
     private const float deltaScale = 100;
 
@@ -50,24 +47,14 @@ public class wirlpool : MonoBehaviour
         }
     }
 
-    IEnumerator Sound()
-    {
-        FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.Whirlpool);
-        yield return new WaitForSeconds(1f);
-    }
     public void MoveBoat()
     {
-        //FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.Whirlpool);
-
         boat.transform.position = Vector3.MoveTowards(boat.transform.position, transform.position, intoWhirlSpeed * Time.deltaTime);
         boat.transform.Rotate(new Vector3(0, 0, rotateSpeed * Time.deltaTime * deltaScale));
-        //RotatingBoat();
     }
 
     private void CountClicks()
     {
-        //FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.Whirlpool);
-
         whirlCounter += Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -85,6 +72,7 @@ public class wirlpool : MonoBehaviour
         {
             StartCoroutine(PushOut());
             activated = false;
+            FindObjectOfType<BoatTail>().BoatTrail(true);
             boat.transform.rotation = Quaternion.identity;
             boat.LostHealth();
         }
@@ -92,6 +80,8 @@ public class wirlpool : MonoBehaviour
         {
             StartCoroutine(PushOut());
             activated = false;
+            FindObjectOfType<BoatTail>().BoatTrail(true);
+
             boat.transform.rotation = Quaternion.Euler(0,0,0);
         }
     }
@@ -100,6 +90,7 @@ public class wirlpool : MonoBehaviour
         if (collision.tag == "Player")
         {
             activated = true;
+            FindObjectOfType<BoatTail>().BoatTrail(false);
             boat.knockback = true;
         }
     }

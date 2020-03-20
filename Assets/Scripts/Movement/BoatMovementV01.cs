@@ -128,6 +128,7 @@ public class BoatMovementV01 : MonoBehaviour
 
         if (GameOver)
         {
+            FindObjectOfType<BoatTail>().BoatTrail(false);
             headRenderer.color = deadColor;
             GetComponent<SpriteRenderer>().color = deadColor;
             GetComponent<Collider2D>().enabled = false;
