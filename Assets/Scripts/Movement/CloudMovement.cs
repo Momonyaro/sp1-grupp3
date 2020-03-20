@@ -32,7 +32,21 @@ public class CloudMovement : MonoBehaviour
     {
         if (direction)
         {
-            transform.position = Vector2
+            transform.position = Vector2.MoveTowards(transform.position, rightPoint.transform.position, speed * Time.deltaTime);
+            if(transform.position == rightPoint.transform.position)
+            {
+                transform.position = leftPoint.transform.position;
+            }
         }
+        else
+        {
+            transform.position = Vector2.MoveTowards(transform.position, leftPoint.transform.position, speed * Time.deltaTime);
+            if (transform.position == leftPoint.transform.position)
+            {
+                transform.position = rightPoint.transform.position;
+            }
+        }
+
+        
     }
 }
