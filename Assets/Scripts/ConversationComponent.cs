@@ -118,7 +118,7 @@ public class ConversationComponent
     public void StartBuildingNextString()
     {
         Debug.Log("Starting new string");
-        
+
         if (_currentLineIndex < npcLines.Count)
         {
             ClearTextBox();
@@ -131,8 +131,11 @@ public class ConversationComponent
             {
                 _nameBox.text = npcName;
                 _portraitFrame.sprite = FetchPortrait(npcLines[_currentLineIndex].portraitExpression);
-                if (!npcLines[_currentLineIndex].swedishText.StartsWith("."))  
-                    vocalSource.PlayOneShot(GetRandomVocal()); 
+                if (!npcLines[_currentLineIndex].swedishText.StartsWith("."))
+                {
+                    vocalSource.clip = GetRandomVocal();
+                    vocalSource.Play();
+                }
             }
             if (currentDialogueLanguage == Language.English) _currentString = npcLines[_currentLineIndex].englishText;
             else if (currentDialogueLanguage == Language.Swedish) _currentString = npcLines[_currentLineIndex].swedishText;
@@ -143,7 +146,6 @@ public class ConversationComponent
         if (_currentLineIndex >= npcLines.Count)
         {
             _dialogueComplete = true;
-            _finishedBuilding = true;
             _currentLineIndex = 0;
             _stringIndex = 0;
         }
@@ -180,7 +182,8 @@ public class ConversationComponent
     {
         if (_currentString != null && _stringIndex < _currentString.Length)
         {
-            _textBox.text += GetNextChar(_stringIndex);
+            string nextChar = GetNextChar(_stringIndex);
+            _textBox.text += nextChar;
         }
         else
         {
