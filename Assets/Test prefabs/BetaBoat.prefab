@@ -5485,6 +5485,7 @@ MonoBehaviour:
   headRenderer: {fileID: 7837907146340304967}
   goldBoat: {fileID: 91506723727653442}
   pushbackPower: 100
+  goldVersion: {fileID: 1709449430553966389}
   GameOver: 0
 --- !u!50 &1066851939220517692
 Rigidbody2D:

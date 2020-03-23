@@ -40,6 +40,7 @@ public class BoatMovementV01 : MonoBehaviour
     public SpriteRenderer headRenderer;
     public SpriteRenderer goldBoat;
     public float pushbackPower = 2f;
+    public GameObject goldVersion;
 
     private Hit _hit;
     private Shaker _shaker;
@@ -69,7 +70,6 @@ public class BoatMovementV01 : MonoBehaviour
         _oldVelocity = rigidb.velocity;
         _oldPosition = transform.position;
         _autoSpeed = defaultAutoSpeed;
-        //GetComponent<Collider2D>().enabled = true;
     }
 
     void Update()
@@ -173,6 +173,20 @@ public class BoatMovementV01 : MonoBehaviour
         InsertFreezeFrames(freezeFrames);
     }
 
+    public void GoldVersion(bool b)
+    {
+        if (b)
+        {
+            Debug.Log("Gold version activated");
+            goldVersion.SetActive(true);
+        }
+        else
+        {
+            Debug.Log("Gold version deactivated");
+            goldVersion.SetActive(false);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Dangerous") && !_gotHit)
@@ -219,9 +233,7 @@ public class BoatMovementV01 : MonoBehaviour
         {
             x = -1;
             StartCoroutine(LandKnockback(new Vector2(x, y)));
-
         }
-
     }
 
     IEnumerator LandKnockback(Vector2 vec2)
