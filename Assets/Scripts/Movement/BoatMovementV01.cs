@@ -38,6 +38,7 @@ public class BoatMovementV01 : MonoBehaviour
     public static int currentHealth;
     public SignalThingy playerHealthSignal;
     public SpriteRenderer headRenderer;
+    public SpriteRenderer goldBoat;
     public float pushbackPower = 2f;
 
     private Hit _hit;
@@ -108,13 +109,17 @@ public class BoatMovementV01 : MonoBehaviour
                 if (!_pressedW)
                 {
                     _pressedW = true;
+                    FindObjectOfType<BoatTail>().BoatTrail(true);
                     FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.Dash);
                 }
                 
                 _autoSpeed = rowSpeed;
             }
             else
+            {
                 _pressedW = false;
+                FindObjectOfType<BoatTail>().BoatTrail(false);
+            }
 
             Vector2 position = transform.position;
             position.y += 1.0f * _autoSpeed * Time.deltaTime;
@@ -131,6 +136,7 @@ public class BoatMovementV01 : MonoBehaviour
             FindObjectOfType<BoatTail>().BoatTrail(false);
             headRenderer.color = deadColor;
             GetComponent<SpriteRenderer>().color = deadColor;
+            goldBoat.color = deadColor;
             GetComponent<Collider2D>().enabled = false;
         }
 
@@ -139,6 +145,7 @@ public class BoatMovementV01 : MonoBehaviour
             _gotHit = false;
             _counter = 0f;
             headRenderer.color = defaultColor;
+            goldBoat.color = defaultColor;
             GetComponent<SpriteRenderer>().color = defaultColor;
         }
         else if (_gotHit)
@@ -158,6 +165,7 @@ public class BoatMovementV01 : MonoBehaviour
         Debug.Log("Lost health. Current health:" + currentHealth);
         GetComponent<SpriteRenderer>().color = hurtColor;
         headRenderer.color = hurtColor;
+        goldBoat.color = hurtColor;
         if(hurtEffect != null)
         {
             Instantiate(hurtEffect, transform.position, Quaternion.identity);
