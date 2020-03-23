@@ -5483,6 +5483,7 @@ MonoBehaviour:
   maxHealth: 3
   playerHealthSignal: {fileID: 11400000, guid: 364592fee10a0de4db165cb72b4afe91, type: 2}
   headRenderer: {fileID: 7837907146340304967}
+  goldBoat: {fileID: 91506723727653442}
   pushbackPower: 100
   GameOver: 0
 --- !u!50 &1066851939220517692
@@ -10442,7 +10443,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4220666466953463610
 Transform:
   m_ObjectHideFlags: 0

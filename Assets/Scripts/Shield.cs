@@ -8,6 +8,7 @@ public class Shield : MonoBehaviour
     BoatMovementV01 boat;
     Hit hit;
     public static int coinCount;
+    public GameObject goldVersion;
 
     void Start()
     {
@@ -21,6 +22,11 @@ public class Shield : MonoBehaviour
         {
             Debug.Log("Shield activated");
             ActivateShield();
+            goldVersion.SetActive(true);
+        }
+        else
+        {
+            goldVersion.SetActive(false);
         }
     }
 
