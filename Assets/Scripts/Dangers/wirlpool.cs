@@ -75,6 +75,7 @@ public class wirlpool : MonoBehaviour
             //FindObjectOfType<BoatTail>().BoatTrail(true);
             boat.transform.rotation = Quaternion.identity;
             boat.LostHealth();
+            boat.GoldVersion(false);
         }
         if (clicksClicked >= clicksForRelease)
         {
