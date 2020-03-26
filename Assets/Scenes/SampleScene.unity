@@ -2273,38 +2273,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7217510374742159600, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
         type: 3}
-      propertyPath: soundObjects.Array.data[0].soundVolume
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7217510374742159600, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
-        type: 3}
-      propertyPath: soundObjects.Array.data[4].soundName
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7217510374742159600, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
-        type: 3}
-      propertyPath: soundObjects.Array.data[5].soundName
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 7217510374742159600, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
-        type: 3}
-      propertyPath: soundObjects.Array.data[3].soundName
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7217510374742159600, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
-        type: 3}
-      propertyPath: soundObjects.Array.data[2].soundName
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7217510374742159600, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
-        type: 3}
-      propertyPath: soundObjects.Array.data[1].soundName
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7217510374742159600, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
-        type: 3}
-      propertyPath: soundObjects.Array.data[7].soundVolume
-      value: 0.2
+      propertyPath: soundObjects.Array.size
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6554719871652771920, guid: ba1bd1b28b3a5904b8a89e80c645f3d8,
         type: 3}
@@ -2464,7 +2434,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 811710907}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.73, y: -2.8802977, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 288044531}

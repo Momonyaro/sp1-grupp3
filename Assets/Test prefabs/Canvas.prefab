@@ -5753,17 +5753,17 @@ MonoBehaviour:
   - soundClip: {fileID: 8300000, guid: 08df77eae6178ee42826c691d06b0626, type: 3}
     soundVolume: 0.2
     soundName: 6
-  - soundClip: {fileID: 8300000, guid: 3495ffdb942cf0347a2a836d66027079, type: 3}
-    soundVolume: 0.5
-    soundName: 11
-  - soundClip: {fileID: 8300000, guid: 83008187bec7eb64c9948d0b32b45b76, type: 3}
+  - soundClip: {fileID: 8300000, guid: 103a4fbd3e187794ea5a52e54db935fa, type: 3}
     soundVolume: 0.5
     soundName: 12
+  - soundClip: {fileID: 8300000, guid: f115518b2c414bf40b295549c17dc349, type: 3}
+    soundVolume: 0.5
+    soundName: 11
   - soundClip: {fileID: 8300000, guid: 424fa0b5f7848ae4cad0d2fbb476d184, type: 3}
     soundVolume: 0.2
     soundName: 3
   - soundClip: {fileID: 8300000, guid: 6e39f5e01e196e94eae98bd2e058483c, type: 3}
-    soundVolume: 0.7
+    soundVolume: 0.2
     soundName: 1
   - soundClip: {fileID: 8300000, guid: ac4d80bd2046860429748c88d91bce87, type: 3}
     soundVolume: 0.4
@@ -5780,6 +5780,9 @@ MonoBehaviour:
   - soundClip: {fileID: 8300000, guid: 99d731e44d8ed1a4d84be379d1a5a430, type: 3}
     soundVolume: 0.2
     soundName: 13
+  - soundClip: {fileID: 8300000, guid: 103a4fbd3e187794ea5a52e54db935fa, type: 3}
+    soundVolume: 0.2
+    soundName: 12
   audioChannels:
   - {fileID: 3690241972359736703}
   - {fileID: 3954890251404529007}
