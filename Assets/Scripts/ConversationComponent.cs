@@ -85,6 +85,7 @@ public class ConversationComponent
         {
             textBoxObject.SetDialogueWindowVisibility(false);
             ResetDialogue();
+            UntetherTextbox();
             FrogMovement.frozen = false;
             return false;
         }
@@ -113,6 +114,11 @@ public class ConversationComponent
         this._portraitFrame = textBoxObject.portraitFrame;
         _timer = scrollSpeed;
         textBoxObject.SetDialogueWindowVisibility(true);
+    }
+
+    public void UntetherTextbox()
+    {
+        this.textBoxObject = null;
     }
 
     public void StartBuildingNextString()
