@@ -72,7 +72,7 @@ public class wirlpool : MonoBehaviour
         {
             StartCoroutine(PushOut());
             activated = false;
-            FindObjectOfType<BoatTail>().BoatTrail(true);
+            //FindObjectOfType<BoatTail>().BoatTrail(true);
             boat.transform.rotation = Quaternion.identity;
             boat.LostHealth();
         }
@@ -80,7 +80,7 @@ public class wirlpool : MonoBehaviour
         {
             StartCoroutine(PushOut());
             activated = false;
-            FindObjectOfType<BoatTail>().BoatTrail(true);
+            //FindObjectOfType<BoatTail>().BoatTrail(true);
 
             boat.transform.rotation = Quaternion.Euler(0,0,0);
         }
@@ -103,5 +103,6 @@ public class wirlpool : MonoBehaviour
         boat.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         boat.GetComponent<SpriteRenderer>().color = boat.defaultColor;
         boat.headRenderer.color = boat.defaultColor;
+        boat.goldBoat.color = boat.defaultColor;
     }
 }
