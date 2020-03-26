@@ -77,9 +77,14 @@ public class NpcComponent : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        _canTalk = other.CompareTag("Player");
-        if (_canTalk)
+        //_canTalk = other.CompareTag("Player");
+        //if (_canTalk)
+        //    alertSprite.GetComponent<SpriteRenderer>().sprite = missionInteractSprite;
+        if (other.CompareTag("Player"))
+        {
+            _canTalk = true;
             alertSprite.GetComponent<SpriteRenderer>().sprite = missionInteractSprite;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)

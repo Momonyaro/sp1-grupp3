@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -6764202012771357854, guid: ef0aee8616e587e4e9b9a3915bfea9ca,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -117,7 +117,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 30
-  scream: {fileID: 0}
+  AAAAAFrequency: 1
+  scream: {fileID: 1385517185125179617, guid: 787cf537459e1f84f8453d52e5b99669, type: 3}
 --- !u!50 &484906875703947657
 Rigidbody2D:
   serializedVersion: 4
@@ -133,7 +134,7 @@ Rigidbody2D:
   m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
