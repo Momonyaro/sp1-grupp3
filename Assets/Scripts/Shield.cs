@@ -14,13 +14,14 @@ public class Shield : MonoBehaviour
     {
         boat = FindObjectOfType<BoatMovementV01>();
         hit = FindObjectOfType<Hit>();
+        coinCount = 0;
     }
 
     private void Update()
     {
         if(coinCount >= 10)
         {
-            Debug.Log("Shield activated");
+            //Debug.Log("Shield activated");
             ActivateShield();
             boat.GoldVersion(true);
         }

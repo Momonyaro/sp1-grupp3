@@ -30,7 +30,7 @@ public class Hit : MonoBehaviour
     public void ShieldSwitchBool(bool shieldOn)
     {
         shield = shieldOn;
-        Debug.Log(shieldSprite.name);
+        //Debug.Log(shieldSprite.name);
         shieldSprite.SetActive(shield);
     }
 }
