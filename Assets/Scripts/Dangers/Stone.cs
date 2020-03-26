@@ -39,7 +39,7 @@ public class Stone : MonoBehaviour
 
     private void Hit()
     {
-        Debug.Log("Stone should get destroyed");
+        //Debug.Log("Stone should get destroyed");
         Sound();
         anim.SetBool("Hit", true);
         Destroy(GetComponent<Collider2D>());
