@@ -51,14 +51,18 @@ public class IslandCrocodiles : MonoBehaviour
         
         Move();
 
-        if (distance <= eyeSight)
+        if(animator != null)
         {
-            animator.SetBool("Biting", true);
+            if (distance <= eyeSight)
+            {
+                animator.SetBool("Biting", true);
+            }
+            else
+            {
+                animator.SetBool("Biting", false);
+            }
         }
-        else
-        {
-            animator.SetBool("Biting", false);
-        }
+       
     }
 
     private void Move()
