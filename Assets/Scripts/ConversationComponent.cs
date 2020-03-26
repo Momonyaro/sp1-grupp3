@@ -49,7 +49,7 @@ public class ConversationComponent
 
     public void Update()
     {
-        if (_timer <= 0 && !_finishedBuilding)
+        if (_timer <= 0 && !_finishedBuilding && CheckIfTethered())
         {
             PlaceNextChar();
             _timer = scrollSpeed;
@@ -119,6 +119,18 @@ public class ConversationComponent
     public void UntetherTextbox()
     {
         this.textBoxObject = null;
+        this._textBox = null;
+        this._nameBox = null;
+        this._portraitFrame = null;
+    }
+
+    private bool CheckIfTethered()
+    {
+        if (textBoxObject != null && _textBox != null &&
+            _nameBox != null && _portraitFrame != null)
+            return true;
+        else 
+            return false;
     }
 
     public void StartBuildingNextString()
