@@ -4912,7 +4912,7 @@ MonoBehaviour:
   startsMission: 0
   missionComponent:
     englishInfo:
-      missionName: "Gather Sir Oz\u2019s tools"
+      missionName: "Gather sir Oz\u2019s Tools"
       missionDescription: Sir Oz's tools, that are necessary to rebuild the dam, were
         washed away with the flood. Gather them up for him.
     swedishInfo:
@@ -10276,7 +10276,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320161729}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.487253, y: 134.05305, z: -10}
+  m_LocalPosition: {x: -13.448379, y: 134.05347, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459601753}
@@ -13122,7 +13122,7 @@ MonoBehaviour:
       playerSays: 0
       portraitExpression: 1
     - swedishText: "Du beh\xF6ver h\xE4mta min hammare, skruvmejsel och s\xE5g."
-      englishText: I need you to gather up my hammer, screwdriver and saw.
+      englishText: I need you to find up my hammer, screwdriver and saw.
       playerSays: 0
       portraitExpression: 1
     textBoxObject: {fileID: 0}
@@ -13130,7 +13130,7 @@ MonoBehaviour:
   startsMission: 1
   missionComponent:
     englishInfo:
-      missionName: "Gather Sir Oz\u2019s tools"
+      missionName: "Gather sir Oz\u2019s Tools"
       missionDescription: Sir Oz's tools, that are necessary to rebuild the dam, were
         washed away with the flood. Gather them up for him.
     swedishInfo:
@@ -16392,9 +16392,9 @@ MonoBehaviour:
       englishText: Did you say somethin?
       playerSays: 0
       portraitExpression: 3
-    - swedishText: "G\xE5 \xE5 hj\xE4lp Herr Oz \xE5 st\xE5 inte h\xE4r \xE5 glo."
-      englishText: "Go help Sir. Oz don\u2019t just stand around glaring."
-      playerSays: 1
+    - swedishText: "G\xE5 \xE5 hj\xE4lp Herr Oz! st\xE5 ba inte h\xE4r \xE5 glo."
+      englishText: "Go help sir Oz! Don\u2019t just stand around glaring."
+      playerSays: 0
       portraitExpression: 1
     textBoxObject: {fileID: 0}
     vocalSource: {fileID: 0}
