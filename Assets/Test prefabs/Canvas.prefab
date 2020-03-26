@@ -3681,6 +3681,7 @@ GameObject:
   - component: {fileID: 810341297495575643}
   - component: {fileID: 3205583560742060074}
   - component: {fileID: 5176501075543688120}
+  - component: {fileID: 8964724138013333875}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -3749,6 +3750,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Shield coins
+--- !u!114 &8964724138013333875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2971425988229984001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &3003494469060932283
 GameObject:
   m_ObjectHideFlags: 0
@@ -5543,6 +5559,7 @@ GameObject:
   - component: {fileID: 4590974683585428359}
   - component: {fileID: 4590974683585428361}
   - component: {fileID: 4590974683585428360}
+  - component: {fileID: 1858967280404261059}
   m_Layer: 5
   m_Name: CommonAmountText
   m_TagString: Untagged
@@ -5611,6 +5628,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Amount
+--- !u!114 &1858967280404261059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4590974683585428358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &4590974683630779374
 GameObject:
   m_ObjectHideFlags: 0
@@ -6833,7 +6865,7 @@ MonoBehaviour:
   - {fileID: 4590974684330441811}
   - {fileID: 4590974684790849709}
   fullContainer: {fileID: 21300000, guid: 8adf2fcfd7a93e046850b5476910eba9, type: 3}
-  emptyContainer: {fileID: 21300000, guid: d2a50e17608b3db4ea4a23b7c1818c66, type: 3}
+  emptyContainer: {fileID: 21300000, guid: a6c34a67e0d94d749a6b9962c33296d3, type: 3}
   healthAmount: 0
 --- !u!1 &4756009235963634863
 GameObject:
