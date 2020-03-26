@@ -9,6 +9,7 @@ public class PlankCollectableScript : Collectable
     {
         if (other.tag == "Player")
         {
+            Destroy(GetComponent<Collider2D>());
             FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.PickupPlank);
             if (pickupEffect != null)
             {
