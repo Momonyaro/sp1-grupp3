@@ -2411,31 +2411,30 @@ MonoBehaviour:
   conversationComponent:
     npcName: Berta
     voiceClips:
-    - {fileID: 8300000, guid: f70829441f645264c9feb313379698b3, type: 3}
+    - {fileID: 8300000, guid: 6dacf763d29bab040a2e949f1498f704, type: 3}
     - {fileID: 8300000, guid: 28244cabadc1b56419a9b859a1335ba4, type: 3}
+    - {fileID: 8300000, guid: 0adede3c8f7b14842a05ad460b62d864, type: 3}
     currentDialogueLanguage: 1
     scrollSpeed: 0.006
     portraits:
     - portraitExpression: 0
-      portraitSprite: {fileID: 6069553380104649068, guid: 40605aadca547ac45a05549bcaed56cd,
-        type: 3}
+      portraitSprite: {fileID: 21300000, guid: 18038e90c760f5f448f5747dbda4a8c5, type: 3}
     - portraitExpression: 1
-      portraitSprite: {fileID: -1597837895231669957, guid: 40605aadca547ac45a05549bcaed56cd,
-        type: 3}
+      portraitSprite: {fileID: 21300000, guid: 50a8889c43157d64bb4eb0066817f3ce, type: 3}
     - portraitExpression: 2
-      portraitSprite: {fileID: 5707561616188705196, guid: 40605aadca547ac45a05549bcaed56cd,
-        type: 3}
+      portraitSprite: {fileID: 21300000, guid: 221f9e875cb83bd429a749cca0699d48, type: 3}
     - portraitExpression: 3
-      portraitSprite: {fileID: 6346041710244282177, guid: 40605aadca547ac45a05549bcaed56cd,
-        type: 3}
+      portraitSprite: {fileID: 21300000, guid: e12df6be75674664383c6c111b5de3b0, type: 3}
     npcLines:
-    - swedishText: "Saru n\xE5t?"
-      englishText: Did you say somethin?
+    - swedishText: "Nu n\xE4r du hj\xE4lp Herr Oz g\xE5 \xE5 hj\xE4lp Frank Svansson."
+      englishText: "Now that you\u2019ve helped Sir Oz go an\u2019 help Frank Swanson."
       playerSays: 0
-      portraitExpression: 3
-    - swedishText: "G\xE5 \xE5 hj\xE4lp Herr Oz \xE5 st\xE5 inte h\xE4r \xE5 glo."
-      englishText: "Go help Sir. Oz don\u2019t just stand around glaring."
-      playerSays: 1
+      portraitExpression: 0
+    - swedishText: "Du trodde la inte att din krasch ba drabbade Oz eller? De finns
+        mer att g\xF6 h\xE4r."
+      englishText: Ye don't just think yer crashin' just affected Oz did ya? There
+        is mo to do 'er.
+      playerSays: 0
       portraitExpression: 1
     textBoxObject: {fileID: 0}
     vocalSource: {fileID: 0}
@@ -2453,7 +2452,7 @@ MonoBehaviour:
         vad som \xE4r kvar i alla fall..."
     missionPortrait: {fileID: -5253806036087939296, guid: dec34d38e7373764f8e7e0d4b16fbcd8,
       type: 3}
-    targetSceneName: Level3_Planks
+    targetSceneName: 
     missionBox: {fileID: 0}
   alertSprite: {fileID: 1557714718}
   missionSprite: {fileID: 21300000, guid: a06d86e190a17bf4ab755db69efd68aa, type: 3}
@@ -4879,34 +4878,31 @@ MonoBehaviour:
   conversationComponent:
     npcName: Oz
     voiceClips:
-    - {fileID: 8300000, guid: f70829441f645264c9feb313379698b3, type: 3}
-    - {fileID: 8300000, guid: 28244cabadc1b56419a9b859a1335ba4, type: 3}
+    - {fileID: 8300000, guid: 91b106c544f933a4dab59d4d82b12393, type: 3}
+    - {fileID: 8300000, guid: f8dbb08c8dcaf254dbc3ba5d53b31c18, type: 3}
+    - {fileID: 8300000, guid: 5405e0abce0f4ff4c9075b80e702bac6, type: 3}
     currentDialogueLanguage: 1
     scrollSpeed: 0.006
     portraits:
     - portraitExpression: 0
-      portraitSprite: {fileID: 6069553380104649068, guid: 40605aadca547ac45a05549bcaed56cd,
-        type: 3}
+      portraitSprite: {fileID: 21300000, guid: 3acf0e0de21e5f54b925259180c6796d, type: 3}
     - portraitExpression: 1
-      portraitSprite: {fileID: -1597837895231669957, guid: 40605aadca547ac45a05549bcaed56cd,
-        type: 3}
+      portraitSprite: {fileID: 21300000, guid: 4749e00ded7b9744dacdd5a1befe7b87, type: 3}
     - portraitExpression: 2
-      portraitSprite: {fileID: 5707561616188705196, guid: 40605aadca547ac45a05549bcaed56cd,
-        type: 3}
+      portraitSprite: {fileID: 21300000, guid: b1a91fba33204724aae1e518797fba48, type: 3}
     - portraitExpression: 3
-      portraitSprite: {fileID: 6346041710244282177, guid: 40605aadca547ac45a05549bcaed56cd,
-        type: 3}
+      portraitSprite: {fileID: 21300000, guid: df90b74018f8a6442a38536ba09f4cdd, type: 3}
     npcLines:
-    - swedishText: "Mina verktyg fl\xF6t iv\xE4g i \xF6versv\xE4mningen och utan dem
-        kan jag inte hj\xE4lpa dig fixa din r\xF6ra."
-      englishText: "The flood washed my tools away, and without them I can\u2019t
-        help fix your mess."
+    - swedishText: "Forts\xE4tt det h\xE4r arbetet unge amfibie."
+      englishText: Keep up the good work young amphibian.
       playerSays: 0
-      portraitExpression: 1
-    - swedishText: "Du beh\xF6ver h\xE4mta min hammare, skruvmejsel och s\xE5g."
-      englishText: I need you to gather up my hammer, screwdriver and saw.
-      playerSays: 1
-      portraitExpression: 1
+      portraitExpression: 0
+    - swedishText: "G\xE5 och se Herr Svansson h\xE4rn\xE4st. Han \xE4r s\xE5 orolig
+        \xF6ver sina \xE4gg att han v\xE4grar komma tillbaka f\xF6r att jobba."
+      englishText: Go see Mr. Swanson next. He is so worried about his eggs that he
+        absolutely refuses to come back to work.
+      playerSays: 0
+      portraitExpression: 2
     textBoxObject: {fileID: 0}
     vocalSource: {fileID: 0}
   startsMission: 0
@@ -4922,7 +4918,7 @@ MonoBehaviour:
         \xE5t honom."
     missionPortrait: {fileID: -1725970659461245023, guid: 173bb3f8133e72c49becb5132778958d,
       type: 3}
-    targetSceneName: Level1_Verktyg
+    targetSceneName: 
     missionBox: {fileID: 0}
   alertSprite: {fileID: 61744555}
   missionSprite: {fileID: 21300000, guid: a06d86e190a17bf4ab755db69efd68aa, type: 3}
@@ -6874,54 +6870,43 @@ MonoBehaviour:
   maxMagicNumbers: 10
   timeBetweenAnimCheck: 1
   conversationComponent:
-    npcName: 
+    npcName: Frank
     voiceClips:
-    - {fileID: 8300000, guid: f70829441f645264c9feb313379698b3, type: 3}
-    - {fileID: 8300000, guid: 28244cabadc1b56419a9b859a1335ba4, type: 3}
+    - {fileID: 8300000, guid: 42e44705f7e72f644b2dda96a2064aef, type: 3}
+    - {fileID: 8300000, guid: d7210466bdd7ece48bf1330315c4660d, type: 3}
+    - {fileID: 8300000, guid: 027e4486c91205041b71bcb153f50c5d, type: 3}
     currentDialogueLanguage: 1
     scrollSpeed: 0.006
     portraits:
     - portraitExpression: 0
-      portraitSprite: {fileID: 6069553380104649068, guid: 40605aadca547ac45a05549bcaed56cd,
-        type: 3}
+      portraitSprite: {fileID: 21300000, guid: 0170f02294329b14e8c480e06468dd4a, type: 3}
     - portraitExpression: 1
-      portraitSprite: {fileID: -1597837895231669957, guid: 40605aadca547ac45a05549bcaed56cd,
-        type: 3}
+      portraitSprite: {fileID: 21300000, guid: 58fd393361a496b4a90f82d282bfdaa4, type: 3}
     - portraitExpression: 2
-      portraitSprite: {fileID: 5707561616188705196, guid: 40605aadca547ac45a05549bcaed56cd,
-        type: 3}
+      portraitSprite: {fileID: 21300000, guid: 60e3b605d0e6b1344a3abd82ae4d7a04, type: 3}
     - portraitExpression: 3
-      portraitSprite: {fileID: 6346041710244282177, guid: 40605aadca547ac45a05549bcaed56cd,
-        type: 3}
+      portraitSprite: {fileID: 21300000, guid: 217fa51206a73b942b93a011a717442c, type: 3}
     npcLines:
-    - swedishText: '...'
-      englishText: '...'
+    - swedishText: "Tack s\xE5 otroligt mycket f\xF6r att du hittade mina \xE4gg.
+        Jag trodde verkligen dem var omelett."
+      englishText: Thank you so much for finding my eggs, I really thought they were
+        poached.
       playerSays: 0
       portraitExpression: 0
-    - swedishText: "Urs\xE4kta mig?"
-      englishText: Excuse me?
-      playerSays: 1
-      portraitExpression: 0
-    - swedishText: Ahhh!
-      englishText: Ahhh!
-      playerSays: 0
-      portraitExpression: 3
-    - swedishText: "Skr\xE4m mig inte s\xE5! H\xF6ll p\xE5 att f\xE5 en hj\xE4rtattack!"
-      englishText: Don't scare me like that, I almost had a heart attack!
-      playerSays: 0
-      portraitExpression: 1
-    - swedishText: "F\xF6rl\xE5t men jag f\xF6rs\xF6ker hj\xE4lpa alla nu efter \xF6versv\xE4mningen...
-        Du s\xE5g lite distant ut s\xE5 jag t\xE4nkte kolla hur du l\xE5g till."
-      englishText: I'm sorry but I am trying to help everyone after the flood... You
-        looked a bit distant so I was just making sure you were okay.
-      playerSays: 1
-      portraitExpression: 0
-    - swedishText: "\xC5h. Ja jag f\xF6rlorade en av min pappas sista m\xE5lningar
-        till str\xF6mmen och jag vet inte riktigt vad jag ska ta mig \xE5t."
-      englishText: Oh. I lost one of my father's last paintings to the stream and
-        I don't really know what to do.
+    - swedishText: "Och f\xF6rl\xE5t att jag tj\xF6t \xE5t dig, jag m\xE5 ha varit
+        lite \xE4gg-oistisk men du m\xE5ste f\xF6rst\xE5 att jag var r\xE4dd att mina
+        \xE4gg blivit skadade eller var f\xF6rsvunna f\xF6r evigt."
+      englishText: "And I\u2019m sorry that I yelled at you, I may have been a bit
+        egg-centric but you must understand that I was terribly scared that my eggs
+        were injured or were lost forever."
       playerSays: 0
       portraitExpression: 2
+    - swedishText: "Jag k\xE4nner mig kokt, det \xE4r inte alltid enkelt att h\xE5lla
+        hoppet uppe, och inte bli bl\xE5."
+      englishText: "I\u2019m eggs-hausted, it isn\u2019t always easy to stay sunny-side
+        up."
+      playerSays: 0
+      portraitExpression: 3
     textBoxObject: {fileID: 0}
     vocalSource: {fileID: 0}
   startsMission: 0
@@ -6937,7 +6922,7 @@ MonoBehaviour:
         vad som \xE4r kvar i alla fall..."
     missionPortrait: {fileID: 7920353964247980387, guid: 1c5e01b3e59595f4b8607153d3ca78d9,
       type: 3}
-    targetSceneName: Level2_Eggs_LIMBO
+    targetSceneName: 
     missionBox: {fileID: 0}
   alertSprite: {fileID: 498239218}
   missionSprite: {fileID: 21300000, guid: a06d86e190a17bf4ab755db69efd68aa, type: 3}
@@ -7785,30 +7770,31 @@ MonoBehaviour:
     voiceClips:
     - {fileID: 8300000, guid: f70829441f645264c9feb313379698b3, type: 3}
     - {fileID: 8300000, guid: 28244cabadc1b56419a9b859a1335ba4, type: 3}
+    - {fileID: 8300000, guid: 0adede3c8f7b14842a05ad460b62d864, type: 3}
     currentDialogueLanguage: 1
     scrollSpeed: 0.006
     portraits:
     - portraitExpression: 0
-      portraitSprite: {fileID: 6069553380104649068, guid: 40605aadca547ac45a05549bcaed56cd,
-        type: 3}
+      portraitSprite: {fileID: 21300000, guid: 18038e90c760f5f448f5747dbda4a8c5, type: 3}
     - portraitExpression: 1
-      portraitSprite: {fileID: -1597837895231669957, guid: 40605aadca547ac45a05549bcaed56cd,
-        type: 3}
+      portraitSprite: {fileID: 21300000, guid: 50a8889c43157d64bb4eb0066817f3ce, type: 3}
     - portraitExpression: 2
-      portraitSprite: {fileID: 5707561616188705196, guid: 40605aadca547ac45a05549bcaed56cd,
-        type: 3}
+      portraitSprite: {fileID: 21300000, guid: 221f9e875cb83bd429a749cca0699d48, type: 3}
     - portraitExpression: 3
-      portraitSprite: {fileID: 6346041710244282177, guid: 40605aadca547ac45a05549bcaed56cd,
-        type: 3}
+      portraitSprite: {fileID: 21300000, guid: e12df6be75674664383c6c111b5de3b0, type: 3}
     npcLines:
-    - swedishText: "Saru n\xE5t?"
-      englishText: Did you say somethin?
+    - swedishText: "Hur g\xE5re?"
+      englishText: "How\u2019s it goin?"
       playerSays: 0
-      portraitExpression: 3
-    - swedishText: "G\xE5 \xE5 hj\xE4lp Herr Oz \xE5 st\xE5 inte h\xE4r \xE5 glo."
-      englishText: "Go help Sir. Oz don\u2019t just stand around glaring."
-      playerSays: 1
-      portraitExpression: 1
+      portraitExpression: 0
+    - swedishText: "\xC4, vet du va?"
+      englishText: You know what?
+      playerSays: 0
+      portraitExpression: 2
+    - swedishText: "Ser ju att du g\xF6r saker s\xE5 forts\xE4tt m\xE4re."
+      englishText: "I can see you\u2019r doin\u2019 things so keep it going."
+      playerSays: 0
+      portraitExpression: 0
     textBoxObject: {fileID: 0}
     vocalSource: {fileID: 0}
   startsMission: 1
@@ -9783,34 +9769,33 @@ MonoBehaviour:
   conversationComponent:
     npcName: Oz
     voiceClips:
-    - {fileID: 8300000, guid: f70829441f645264c9feb313379698b3, type: 3}
-    - {fileID: 8300000, guid: 28244cabadc1b56419a9b859a1335ba4, type: 3}
+    - {fileID: 8300000, guid: 91b106c544f933a4dab59d4d82b12393, type: 3}
+    - {fileID: 8300000, guid: f8dbb08c8dcaf254dbc3ba5d53b31c18, type: 3}
+    - {fileID: 8300000, guid: 5405e0abce0f4ff4c9075b80e702bac6, type: 3}
     currentDialogueLanguage: 1
     scrollSpeed: 0.006
     portraits:
     - portraitExpression: 0
-      portraitSprite: {fileID: 6069553380104649068, guid: 40605aadca547ac45a05549bcaed56cd,
-        type: 3}
+      portraitSprite: {fileID: 21300000, guid: 3acf0e0de21e5f54b925259180c6796d, type: 3}
     - portraitExpression: 1
-      portraitSprite: {fileID: -1597837895231669957, guid: 40605aadca547ac45a05549bcaed56cd,
-        type: 3}
+      portraitSprite: {fileID: 21300000, guid: 4749e00ded7b9744dacdd5a1befe7b87, type: 3}
     - portraitExpression: 2
-      portraitSprite: {fileID: 5707561616188705196, guid: 40605aadca547ac45a05549bcaed56cd,
-        type: 3}
+      portraitSprite: {fileID: 21300000, guid: b1a91fba33204724aae1e518797fba48, type: 3}
     - portraitExpression: 3
-      portraitSprite: {fileID: 6346041710244282177, guid: 40605aadca547ac45a05549bcaed56cd,
-        type: 3}
+      portraitSprite: {fileID: 21300000, guid: df90b74018f8a6442a38536ba09f4cdd, type: 3}
     npcLines:
-    - swedishText: "Mina verktyg fl\xF6t iv\xE4g i \xF6versv\xE4mningen och utan dem
-        kan jag inte hj\xE4lpa dig fixa din r\xF6ra."
-      englishText: "The flood washed my tools away, and without them I can\u2019t
-        help fix your mess."
+    - swedishText: "Du \xE4r n\xE4stan klar, det \xE4r bara Berta kvar."
+      englishText: "You\u2019re almost done, it\u2019s just Ms. McLog left."
       playerSays: 0
-      portraitExpression: 1
-    - swedishText: "Du beh\xF6ver h\xE4mta min hammare, skruvmejsel och s\xE5g."
-      englishText: I need you to gather up my hammer, screwdriver and saw.
-      playerSays: 1
-      portraitExpression: 1
+      portraitExpression: 0
+    - swedishText: "Kom ih\xE5g, hon m\xE5 verka h\xE5rd men hon \xE4r en mjukis."
+      englishText: Remember, she may seem hard, but she is a softy.
+      playerSays: 0
+      portraitExpression: 0
+    - swedishText: "Hon \xE4r bara lite dramatisk ibland."
+      englishText: "She\u2019s just a bit dramatic at times."
+      playerSays: 0
+      portraitExpression: 3
     textBoxObject: {fileID: 0}
     vocalSource: {fileID: 0}
   startsMission: 0
@@ -9826,7 +9811,7 @@ MonoBehaviour:
         \xE5t honom."
     missionPortrait: {fileID: -1725970659461245023, guid: 173bb3f8133e72c49becb5132778958d,
       type: 3}
-    targetSceneName: Level1_Verktyg
+    targetSceneName: 
     missionBox: {fileID: 0}
   alertSprite: {fileID: 1023322871}
   missionSprite: {fileID: 21300000, guid: a06d86e190a17bf4ab755db69efd68aa, type: 3}
@@ -16073,67 +16058,51 @@ MonoBehaviour:
   maxMagicNumbers: 10
   timeBetweenAnimCheck: 1
   conversationComponent:
-    npcName: 
+    npcName: Frank
     voiceClips:
-    - {fileID: 8300000, guid: f70829441f645264c9feb313379698b3, type: 3}
-    - {fileID: 8300000, guid: 28244cabadc1b56419a9b859a1335ba4, type: 3}
+    - {fileID: 8300000, guid: 42e44705f7e72f644b2dda96a2064aef, type: 3}
+    - {fileID: 8300000, guid: d7210466bdd7ece48bf1330315c4660d, type: 3}
+    - {fileID: 8300000, guid: 027e4486c91205041b71bcb153f50c5d, type: 3}
     currentDialogueLanguage: 1
     scrollSpeed: 0.006
     portraits:
     - portraitExpression: 0
-      portraitSprite: {fileID: 6069553380104649068, guid: 40605aadca547ac45a05549bcaed56cd,
-        type: 3}
+      portraitSprite: {fileID: 21300000, guid: 0170f02294329b14e8c480e06468dd4a, type: 3}
     - portraitExpression: 1
-      portraitSprite: {fileID: -1597837895231669957, guid: 40605aadca547ac45a05549bcaed56cd,
-        type: 3}
+      portraitSprite: {fileID: 21300000, guid: 58fd393361a496b4a90f82d282bfdaa4, type: 3}
     - portraitExpression: 2
-      portraitSprite: {fileID: 5707561616188705196, guid: 40605aadca547ac45a05549bcaed56cd,
-        type: 3}
+      portraitSprite: {fileID: 21300000, guid: 60e3b605d0e6b1344a3abd82ae4d7a04, type: 3}
     - portraitExpression: 3
-      portraitSprite: {fileID: 6346041710244282177, guid: 40605aadca547ac45a05549bcaed56cd,
-        type: 3}
+      portraitSprite: {fileID: 21300000, guid: 217fa51206a73b942b93a011a717442c, type: 3}
     npcLines:
-    - swedishText: '...'
-      englishText: '...'
-      playerSays: 0
-      portraitExpression: 0
-    - swedishText: "Urs\xE4kta mig?"
-      englishText: Excuse me?
-      playerSays: 1
-      portraitExpression: 0
-    - swedishText: Ahhh!
-      englishText: Ahhh!
+    - swedishText: "MINA \xC4GG!"
+      englishText: MY EGGS!
       playerSays: 0
       portraitExpression: 3
-    - swedishText: "Skr\xE4m mig inte s\xE5! H\xF6ll p\xE5 att f\xE5 en hj\xE4rtattack!"
-      englishText: Don't scare me like that, I almost had a heart attack!
+    - swedishText: "VART \xC4R MINA \xC4GG!!!"
+      englishText: WHERE ARE MY EGGS!!!
       playerSays: 0
       portraitExpression: 1
-    - swedishText: "F\xF6rl\xE5t men jag f\xF6rs\xF6ker hj\xE4lpa alla nu efter \xF6versv\xE4mningen...
-        Du s\xE5g lite distant ut s\xE5 jag t\xE4nkte kolla hur du l\xE5g till."
-      englishText: I'm sorry but I am trying to help everyone after the flood... You
-        looked a bit distant so I was just making sure you were okay.
-      playerSays: 1
-      portraitExpression: 0
-    - swedishText: "\xC5h. Ja jag f\xF6rlorade en av min pappas sista m\xE5lningar
-        till str\xF6mmen och jag vet inte riktigt vad jag ska ta mig \xE5t."
-      englishText: Oh. I lost one of my father's last paintings to the stream and
-        I don't really know what to do.
+    - swedishText: JAG KAN INTE HITTA DEM
+      englishText: I CAN'T FIND THEM
       playerSays: 0
       portraitExpression: 2
+    - swedishText: "DU!! HJ\xC4LP MIG HITTA MINA \xC4GG!!"
+      englishText: YOU!! HELP ME FIND MY EGGS!!
+      playerSays: 0
+      portraitExpression: 1
     textBoxObject: {fileID: 0}
     vocalSource: {fileID: 0}
   startsMission: 1
   missionComponent:
     englishInfo:
       missionName: Locate the lost eggs!
-      missionDescription: A worried mother lost her eggs when the flood swept through
-        town. Fetch them back before she gets sick with worry.
+      missionDescription: A worried father lost his eggs when the flood swept through
+        town. Fetch them back before he gets sick with worry.
     swedishInfo:
-      missionName: "Hitta den bortspolade m\xE5lningen!"
-      missionDescription: "En m\xE5lning som Sebastians pappa m\xE5lat spolades bort
-        under \xF6versv\xE4mningen och skulle vilja ha hj\xE4lp att hitta den; eller
-        vad som \xE4r kvar i alla fall..."
+      missionName: "Hitta de bortspolade \xE4ggen!"
+      missionDescription: "En oroad pappa f\xF6rlorade sina \xE4gg n\xE4r floden svepte
+        staden! Hitta dem innan han blir \xE4nnu mer panikslagen"
     missionPortrait: {fileID: 7920353964247980387, guid: 1c5e01b3e59595f4b8607153d3ca78d9,
       type: 3}
     targetSceneName: Level2_Eggs_LIMBO
