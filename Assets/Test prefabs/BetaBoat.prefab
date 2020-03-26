@@ -5468,8 +5468,8 @@ MonoBehaviour:
   rowSpeed: 5
   immortalTime: 0.8
   knockbackTime: 0.2
-  knockbackPower: 300
-  landKnockbackPower: 200
+  knockbackPower: 100
+  landKnockbackPower: 50
   knockback: 0
   stunned: 0
   shield: 0
