@@ -16,7 +16,7 @@ public class Crocodile : MonoBehaviour
     public bool direction = false;
     float crocTimer = 0.5f;
 
-    public Animator animator;
+    Animator animator;
 
     public ParticleSystem gnawEffect;
     public GameObject target;
@@ -33,6 +33,7 @@ public class Crocodile : MonoBehaviour
         boat = FindObjectOfType<BoatMovementV01>();
         //chaseTimeCheck = chaseTime;
         //chaseCooldownCheck = chaseCooldown;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
