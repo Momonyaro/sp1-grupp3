@@ -236,6 +236,7 @@ public class BoatMovementV01 : MonoBehaviour
             x = -1;
             StartCoroutine(LandKnockback(new Vector2(x, y)));
         }
+        FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.BoatCrash);
     }
 
     IEnumerator LandKnockback(Vector2 vec2)
