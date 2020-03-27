@@ -40,11 +40,10 @@ namespace Slideshow
             if (_timer <= 0 && Input.anyKeyDown)
             {
                 if (slides[_currentSlideIndex] != null && !slides[_currentSlideIndex].GetComponent<SlideObject>().TickSlide())
-                    SlideExit(slides[_currentSlideIndex]);
-                else
                 {
-                    _timer = lockTime;
+                    SlideExit(slides[_currentSlideIndex]);
                 }
+                _timer = lockTime;
             }
             else if (_timer > 0)
                 _timer -= Time.deltaTime;
