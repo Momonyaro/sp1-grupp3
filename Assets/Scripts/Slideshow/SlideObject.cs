@@ -12,6 +12,16 @@ namespace Slideshow
 
         public bool TickSlide()
         {
+            for (int i = 0; i < immediateActions.Count; i++)
+            {
+                immediateActions[i].gameObject.SetActive(false);
+            }
+
+            for (int i = 0; i < _currentActionIndex; i++)
+            {
+                actions[i].gameObject.SetActive(false);
+            }
+
             if (_currentActionIndex >= actions.Count) return false;
             
             actions[_currentActionIndex].OnAction();
