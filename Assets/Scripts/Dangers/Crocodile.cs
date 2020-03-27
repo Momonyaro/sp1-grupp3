@@ -16,21 +16,24 @@ public class Crocodile : MonoBehaviour
     public bool direction = false;
     float crocTimer = 0.5f;
 
+    Animator animator;
+
     public ParticleSystem gnawEffect;
     public GameObject target;
     public float distance;
-    public float chaseTime = 2f;
-    private float chaseTimeCheck;
-    public float chaseCooldown = 3f;
-    private float chaseCooldownCheck;
+    //public float chaseTime = 2f;
+    //private float chaseTimeCheck;
+    //public float chaseCooldown = 3f;
+    //private float chaseCooldownCheck;
     public float eyeSight = 5;
 
     void Start()
     {
         hit = FindObjectOfType<Hit>();
         boat = FindObjectOfType<BoatMovementV01>();
-        chaseTimeCheck = chaseTime;
-        chaseCooldownCheck = chaseCooldown;
+        //chaseTimeCheck = chaseTime;
+        //chaseCooldownCheck = chaseCooldown;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -64,31 +67,16 @@ public class Crocodile : MonoBehaviour
             transform.Translate(Vector2.right * (Time.deltaTime * crocSpeed), 0);
         }
 
-        if(distance <= eyeSight && chaseTimeCheck > 0 && chaseCooldown >= chaseCooldownCheck)
+        if(distance <= eyeSight)
         {
-            
+            animator.SetBool("Biting", true);
+        }
+        else
+        {
+            animator.SetBool("Biting", false);
         }
     }
     
-
-    private void MakingSounds()
-    {
-        //basicTimer -= Time.deltaTime;
-        //if(basicTimer <= 0)
-        //{
-        //    basicTimer = 10f;
-        //    float timer = UnityEngine.Random.Range(1, 4); Debug.Log("Timer: " + timer);
-        //    timer -= Time.deltaTime;
-        //    Debug.Log("In first one");
-        //    if (timer <= 0)
-        //    {
-        //        Instantiate(growl, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
-        //        Destroy(growl, 3f);
-        //        Debug.Log("sound playing");
-        //    }
-        //}
-    }
-
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.magenta;

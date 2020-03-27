@@ -45,7 +45,7 @@ public class FrogTongue : MonoBehaviour
         }
 
 
-        if (Vector2.Distance(transform.position, tongueTip.transform.position) <= .2f)
+        if (Vector2.Distance(transform.position, tongueTip.transform.position) <= .2f && _thrownTongue)
         {
             _grabbedItem = false;
             _thrownTongue = false;

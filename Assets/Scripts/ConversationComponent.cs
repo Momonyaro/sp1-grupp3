@@ -49,7 +49,7 @@ public class ConversationComponent
 
     public void Update()
     {
-        if (_timer <= 0 && !_finishedBuilding)
+        if (_timer <= 0 && !_finishedBuilding && CheckIfTethered())
         {
             PlaceNextChar();
             _timer = scrollSpeed;
@@ -62,6 +62,18 @@ public class ConversationComponent
 
     public bool StartConversation(TextBox textBoxObject)
     {
+        if (OptionManager.GetIntIfExists("language") != int.MinValue)
+        {
+            switch (OptionManager.GetIntIfExists("language"))
+            {
+                case 0: //Swedish
+                    currentDialogueLanguage = Language.Swedish;
+                    break;
+                case 1: //English
+                    currentDialogueLanguage = Language.English;
+                    break;
+            }
+        }
         TetherToTextbox(textBoxObject);
         if (_dialogueComplete == false)
         {
@@ -73,6 +85,7 @@ public class ConversationComponent
         {
             textBoxObject.SetDialogueWindowVisibility(false);
             ResetDialogue();
+            UntetherTextbox();
             FrogMovement.frozen = false;
             return false;
         }
@@ -103,10 +116,27 @@ public class ConversationComponent
         textBoxObject.SetDialogueWindowVisibility(true);
     }
 
+    public void UntetherTextbox()
+    {
+        this.textBoxObject = null;
+        this._textBox = null;
+        this._nameBox = null;
+        this._portraitFrame = null;
+    }
+
+    private bool CheckIfTethered()
+    {
+        if (textBoxObject != null && _textBox != null &&
+            _nameBox != null && _portraitFrame != null)
+            return true;
+        else 
+            return false;
+    }
+
     public void StartBuildingNextString()
     {
         Debug.Log("Starting new string");
-        
+
         if (_currentLineIndex < npcLines.Count)
         {
             ClearTextBox();
@@ -119,8 +149,11 @@ public class ConversationComponent
             {
                 _nameBox.text = npcName;
                 _portraitFrame.sprite = FetchPortrait(npcLines[_currentLineIndex].portraitExpression);
-                if (!npcLines[_currentLineIndex].swedishText.StartsWith("."))  
-                    vocalSource.PlayOneShot(GetRandomVocal()); 
+                if (!npcLines[_currentLineIndex].swedishText.StartsWith("."))
+                {
+                    vocalSource.clip = GetRandomVocal();
+                    vocalSource.Play();
+                }
             }
             if (currentDialogueLanguage == Language.English) _currentString = npcLines[_currentLineIndex].englishText;
             else if (currentDialogueLanguage == Language.Swedish) _currentString = npcLines[_currentLineIndex].swedishText;
@@ -131,7 +164,6 @@ public class ConversationComponent
         if (_currentLineIndex >= npcLines.Count)
         {
             _dialogueComplete = true;
-            _finishedBuilding = true;
             _currentLineIndex = 0;
             _stringIndex = 0;
         }
@@ -168,7 +200,8 @@ public class ConversationComponent
     {
         if (_currentString != null && _stringIndex < _currentString.Length)
         {
-            _textBox.text += GetNextChar(_stringIndex);
+            string nextChar = GetNextChar(_stringIndex);
+            _textBox.text += nextChar;
         }
         else
         {

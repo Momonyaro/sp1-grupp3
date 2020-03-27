@@ -99,8 +99,10 @@ MonoBehaviour:
   waypoints: []
   moveSpeed: 5
   path: {fileID: 0}
-  target: {fileID: 0}
+  target: {fileID: 1066851939220517693, guid: 2826b3b5b346ef644b5063c5c6631bca, type: 3}
   distance: 0
+  eyeSight: 5
+  animator: {fileID: 584573887}
 --- !u!61 &3646256276902541415
 BoxCollider2D:
   m_ObjectHideFlags: 0

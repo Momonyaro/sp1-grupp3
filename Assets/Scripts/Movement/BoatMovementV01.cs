@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Managers;
+using System;
 
 public class BoatMovementV01 : MonoBehaviour
 {
@@ -10,14 +11,17 @@ public class BoatMovementV01 : MonoBehaviour
     public float breakSpeed = 1.0f;
     public float rowSpeed = 8.0f;
     [Tooltip("How long after a collision the frog will be immortal (in seconds)")]
-    public float immortalTime = 1f;
+    public float immortalTime = 1.2f;
     public float knockbackTime = .5f;
     [SerializeField] float knockbackPower = 300f;
+    [SerializeField] float landKnockbackPower = 200f;
     public bool knockback = false;
     public bool stunned = false;
     public bool shield = false;
     public bool stopBoat = false;
     public int freezeFrames = 6;
+    int collidingInto = 0;
+    bool collided = false;
 
     public Color hurtColor = Color.red;
     public Color defaultColor = Color.green;
@@ -34,28 +38,21 @@ public class BoatMovementV01 : MonoBehaviour
     public static int currentHealth;
     public SignalThingy playerHealthSignal;
     public SpriteRenderer headRenderer;
+    public SpriteRenderer goldBoat;
     public float pushbackPower = 2f;
+    public GameObject goldVersion;
+
     private Hit _hit;
     private Shaker _shaker;
     private int _freezeFrames = 0;
     private const float DangerKnockbackTimer = 1;
-    [Space]
-    [Tooltip("Vilken riktning tile-knockbacken pushar grodan")]
-    //public bool knockbackDirection = false;
     private Vector3 _oldVelocity;
     private Vector3 _oldPosition;
-    [SerializeField] float originOffsetX = 0.5f;
-    [SerializeField] float originOffsetY = 0.7f;
 
     public bool GameOver = false;
 
     private bool _pressedS = false;
     private bool _pressedW = false;
-
-    [SerializeField] Collider2D upperRightCol = null;
-    [SerializeField] Collider2D upperLeftCol = null;
-    [SerializeField] Collider2D downRightCol = null;
-    [SerializeField] Collider2D downLeftCol = null;
 
     Rigidbody2D rigidb;
 
@@ -73,7 +70,6 @@ public class BoatMovementV01 : MonoBehaviour
         _oldVelocity = rigidb.velocity;
         _oldPosition = transform.position;
         _autoSpeed = defaultAutoSpeed;
-        //GetComponent<Collider2D>().enabled = true;
     }
 
     void Update()
@@ -113,13 +109,17 @@ public class BoatMovementV01 : MonoBehaviour
                 if (!_pressedW)
                 {
                     _pressedW = true;
+                    FindObjectOfType<BoatTail>().BoatTrail(true);
                     FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.Dash);
                 }
                 
                 _autoSpeed = rowSpeed;
             }
             else
+            {
                 _pressedW = false;
+                FindObjectOfType<BoatTail>().BoatTrail(false);
+            }
 
             Vector2 position = transform.position;
             position.y += 1.0f * _autoSpeed * Time.deltaTime;
@@ -133,8 +133,10 @@ public class BoatMovementV01 : MonoBehaviour
 
         if (GameOver)
         {
+            FindObjectOfType<BoatTail>().BoatTrail(false);
             headRenderer.color = deadColor;
             GetComponent<SpriteRenderer>().color = deadColor;
+            goldBoat.color = deadColor;
             GetComponent<Collider2D>().enabled = false;
         }
 
@@ -143,6 +145,7 @@ public class BoatMovementV01 : MonoBehaviour
             _gotHit = false;
             _counter = 0f;
             headRenderer.color = defaultColor;
+            goldBoat.color = defaultColor;
             GetComponent<SpriteRenderer>().color = defaultColor;
         }
         else if (_gotHit)
@@ -162,11 +165,26 @@ public class BoatMovementV01 : MonoBehaviour
         Debug.Log("Lost health. Current health:" + currentHealth);
         GetComponent<SpriteRenderer>().color = hurtColor;
         headRenderer.color = hurtColor;
+        goldBoat.color = hurtColor;
         if(hurtEffect != null)
         {
             Instantiate(hurtEffect, transform.position, Quaternion.identity);
         }
         InsertFreezeFrames(freezeFrames);
+    }
+
+    public void GoldVersion(bool b)
+    {
+        if (b)
+        {
+            //Debug.Log("Gold version activated");
+            goldVersion.SetActive(true);
+        }
+        else
+        {
+            //Debug.Log("Gold version deactivated");
+            goldVersion.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -183,58 +201,51 @@ public class BoatMovementV01 : MonoBehaviour
             {
                 shield = false;
                 _gotHit = true;
-                _hit.ShieldSwitchBool();
+                Shield.coinCount = 0;
+                TextManager.shieldCoinsAmount = 0;
+                _hit.ShieldSwitchBool(false);
                 KnockbackDangers(other);
             }
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void KnockbackLand(int i)
     {
+        knockback = true;
+        float x = 1; float y = 1;
+        StartCoroutine(_shaker.Shake());
 
-        Debug.Log(collision.transform.position);
-
-
-        //if(collision.gameObject.layer == 8)
-        //{
-        //    if (Physics2D.Raycast(transform.position, Vector2.left, -originOffsetX))
-        //    {
-        //        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.left) * 10, Color.yellow);
-        //        Debug.Log("Did Hit");
-        //    }
-        //    else
-        //    {
-        //        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
-        //        Debug.Log("Did not Hit");
-        //    }
-
-        //}
-    }
-
-    public void Knockback(bool direction)
-    {
-        if (_timer < 0)
+        if (i == 1)
         {
-            knockback = true;
-            Vector3 vel = _oldVelocity;
-            vel = vel * -1;
-            StartCoroutine(TilemapKnockback(vel));
-            StartCoroutine(_shaker.Shake());
-
-            _timer = .3f;
+            x = -1; y = -1;
+            StartCoroutine(LandKnockback(new Vector2(x, y)));
+        }
+        else if (i == 2)
+        {
+            y = -1;
+            StartCoroutine(LandKnockback(new Vector2(x, y)));
+        }
+        else if (i == 3)
+        {
+            StartCoroutine(LandKnockback(new Vector2(x, y)));
+        }
+        else if (i == 4)
+        {
+            x = -1;
+            StartCoroutine(LandKnockback(new Vector2(x, y)));
         }
     }
 
-    IEnumerator TilemapKnockback(Vector3 velocity)
+    IEnumerator LandKnockback(Vector2 vec2)
     {
-        velocity.Normalize();
-        Debug.Log("rigidb velocity = " + rigidb.velocity + " | inverted velocity = " + velocity);
-        rigidb.AddForce(velocity * pushbackPower);
-        yield return new WaitForSeconds(.1f);
+        GetComponent<Rigidbody2D>().AddForce(vec2 * landKnockbackPower);
+
+        //Vänta lite innan man nollar hastigheten.
+        yield return new WaitForSeconds(knockbackTime);
         knockback = false;
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-    }
 
+    }
 
     public void KnockbackDangers(Collider2D danger)
     {

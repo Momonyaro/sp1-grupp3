@@ -9,7 +9,6 @@ public class Hit : MonoBehaviour
     [Tooltip("In seconds")]
     [SerializeField] float knockbackTime = 2f;
     [SerializeField] GameObject shieldSprite = null;
-    GameObject myShield;
 
     BoatMovementV01 boat;
     string player = "Player";
@@ -24,21 +23,14 @@ public class Hit : MonoBehaviour
     {
         if (shield)
         {
-            myShield.transform.position = boat.transform.position;
+            shieldSprite.transform.position = boat.transform.position;
         }
     }
 
-    public void ShieldSwitchBool()
+    public void ShieldSwitchBool(bool shieldOn)
     {
-        shield = !shield;
-        if (shield)
-        {
-            myShield = Instantiate(shieldSprite, boat.transform.position, Quaternion.identity);
-        }
-        else if (!shield)
-        {
-            Destroy(myShield);
-            Debug.Log("Shield destroyed");
-        }
+        shield = shieldOn;
+        //Debug.Log(shieldSprite.name);
+        shieldSprite.SetActive(shield);
     }
 }

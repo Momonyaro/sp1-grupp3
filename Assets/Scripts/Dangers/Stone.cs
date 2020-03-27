@@ -9,6 +9,7 @@ public class Stone : MonoBehaviour
     BoatMovementV01 boat;
     [Tooltip("How long until deleted after the falling animation is triggered")]
     public float deleteTimer = 1f;
+    bool triggered = false;
 
     void Start()
     {
@@ -16,19 +17,37 @@ public class Stone : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+    private void Update()
+    {
+        if(triggered)
+            Hit();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
         {
-            Sound();
-            anim.SetBool("Hit", true);
-            Destroy(GetComponent<Collider2D>());
-            Destroy(gameObject, deleteTimer);
-            boat.KnockbackDangers(GetComponent<Collider2D>());
-            Debug.Log("Hit stone");
+            triggered = true;
+            //Debug.Log("Stone should get destroyed");
+            //Sound();
+            //anim.SetBool("Hit", true);
+            //Destroy(GetComponent<Collider2D>());
+            //Destroy(gameObject, deleteTimer);
+            //boat.KnockbackDangers(GetComponent<Collider2D>());
+            //Debug.Log("Hit stone");
         }
     }
 
+    private void Hit()
+    {
+        //Debug.Log("Stone should get destroyed");
+        Sound();
+        anim.SetBool("Hit", true);
+        Destroy(GetComponent<Collider2D>());
+        Destroy(gameObject, deleteTimer);
+        boat.KnockbackDangers(GetComponent<Collider2D>());
+        Debug.Log("Hit stone");
+        triggered = false;
+    }
     private void Sound()
     {
         FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.StoneCrash);

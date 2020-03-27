@@ -7,20 +7,42 @@ public class Shield : MonoBehaviour
 {
     BoatMovementV01 boat;
     Hit hit;
+    public static int coinCount;
+    //public GameObject goldVersion;
 
     void Start()
     {
         boat = FindObjectOfType<BoatMovementV01>();
         hit = FindObjectOfType<Hit>();
+        coinCount = 0;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Update()
     {
-        if (collision.tag == "Player")
+        if(coinCount >= 10)
         {
-            boat.shield = true;
-            hit.ShieldSwitchBool();
-            Destroy(gameObject);
+            //Debug.Log("Shield activated");
+            ActivateShield();
+            boat.GoldVersion(true);
+        }
+        else
+        {
+            boat.GoldVersion(false);
         }
     }
+
+    public void ActivateShield()
+    {
+        boat.shield = true;
+        hit.ShieldSwitchBool(true);
+    }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.tag == "Player")
+    //    {
+    //        boat.shield = true;
+    //        hit.ShieldSwitchBool();
+    //        Destroy(gameObject);
+    //    }
+    //}
 }
