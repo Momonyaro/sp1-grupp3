@@ -324,10 +324,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundObjects:
   - soundClip: {fileID: 8300000, guid: f7311aff9c22dd94293b637cf05aeb0c, type: 3}
-    soundVolume: 0.5
+    soundVolume: 0.35
     soundName: 14
   - soundClip: {fileID: 8300000, guid: c15cf40870895654aafc843bcbcd97f7, type: 3}
-    soundVolume: 0.5
+    soundVolume: 0.35
     soundName: 15
   audioChannels:
   - {fileID: 1502687599}
