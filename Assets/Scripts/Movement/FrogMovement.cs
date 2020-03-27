@@ -54,11 +54,11 @@ public class FrogMovement : MonoBehaviour
                 }
             }
         }
-        if(Input.GetKeyDown(KeyCode.LeftArrow))
+        if(Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
         {
             FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.MoveLeft);
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
         {
             FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.MoveRight);
         }
