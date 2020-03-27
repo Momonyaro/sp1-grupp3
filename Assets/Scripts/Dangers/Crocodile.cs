@@ -16,23 +16,24 @@ public class Crocodile : MonoBehaviour
     public bool direction = false;
     float crocTimer = 0.5f;
 
-    public Animator animator;
+    Animator animator;
 
     public ParticleSystem gnawEffect;
     public GameObject target;
     public float distance;
-    public float chaseTime = 2f;
-    private float chaseTimeCheck;
-    public float chaseCooldown = 3f;
-    private float chaseCooldownCheck;
+    //public float chaseTime = 2f;
+    //private float chaseTimeCheck;
+    //public float chaseCooldown = 3f;
+    //private float chaseCooldownCheck;
     public float eyeSight = 5;
 
     void Start()
     {
         hit = FindObjectOfType<Hit>();
         boat = FindObjectOfType<BoatMovementV01>();
-        chaseTimeCheck = chaseTime;
-        chaseCooldownCheck = chaseCooldown;
+        //chaseTimeCheck = chaseTime;
+        //chaseCooldownCheck = chaseCooldown;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -76,25 +77,6 @@ public class Crocodile : MonoBehaviour
         }
     }
     
-
-    private void MakingSounds()
-    {
-        //basicTimer -= Time.deltaTime;
-        //if(basicTimer <= 0)
-        //{
-        //    basicTimer = 10f;
-        //    float timer = UnityEngine.Random.Range(1, 4); Debug.Log("Timer: " + timer);
-        //    timer -= Time.deltaTime;
-        //    Debug.Log("In first one");
-        //    if (timer <= 0)
-        //    {
-        //        Instantiate(growl, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
-        //        Destroy(growl, 3f);
-        //        Debug.Log("sound playing");
-        //    }
-        //}
-    }
-
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.magenta;

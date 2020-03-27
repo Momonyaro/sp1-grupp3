@@ -29,6 +29,12 @@ public class TextManager : MonoBehaviour
         score = 0;
         plankAmount = 0;
         missionAmount = 0;
+        shieldCoinsAmount = 0;
+    }
+
+    public void ResetCoinCount()
+    {
+        shieldCoinsAmount = 0;
     }
 
     private void Update()
