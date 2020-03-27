@@ -34,8 +34,6 @@ public class Shield : MonoBehaviour
     public void ResetCoinCounter()
     {
         coinCount = 0;
-        //boat.GoldVersion(false);
-        Debug.Log("coincount: " + coinCount + ".");
     }
 
     public void ActivateShield()

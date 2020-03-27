@@ -74,17 +74,14 @@ public class wirlpool : MonoBehaviour
         {
             StartCoroutine(PushOut());
             activated = false;
-            //FindObjectOfType<BoatTail>().BoatTrail(true);
             boat.transform.rotation = Quaternion.identity;
             boat.LostHealth();
             shield.ResetCoinCounter();
-            //.GoldVersion(false);
         }
         if (clicksClicked >= clicksForRelease)
         {
             StartCoroutine(PushOut());
             activated = false;
-            //FindObjectOfType<BoatTail>().BoatTrail(true);
 
             boat.transform.rotation = Quaternion.Euler(0,0,0);
         }
