@@ -179,9 +179,11 @@ public class BoatMovementV01 : MonoBehaviour
         {
             //Debug.Log("Gold version activated");
             goldVersion.SetActive(true);
+            //shield = true;
         }
         else
         {
+            //shield = false;
             //Debug.Log("Gold version deactivated");
             goldVersion.SetActive(false);
         }

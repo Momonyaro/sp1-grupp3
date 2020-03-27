@@ -31,6 +31,11 @@ public class Shield : MonoBehaviour
         }
     }
 
+    public void ResetCoinCounter()
+    {
+        coinCount = 0;
+    }
+
     public void ActivateShield()
     {
         boat.shield = true;
