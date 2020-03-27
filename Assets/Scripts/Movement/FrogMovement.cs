@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Managers;
 
 public class FrogMovement : MonoBehaviour
 {
@@ -53,6 +54,14 @@ public class FrogMovement : MonoBehaviour
                 }
             }
         }
+        if(Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.MoveLeft);
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.MoveRight);
+        }
     }
 
     private void Move()
@@ -60,6 +69,5 @@ public class FrogMovement : MonoBehaviour
         x = Input.GetAxis(horizontal) * Time.deltaTime * frogSpeedX;
         float newPosX = transform.position.x + x;
         transform.position = new Vector2(newPosX, transform.position.y);
-       
     }
 }

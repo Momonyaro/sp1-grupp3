@@ -12,7 +12,7 @@ namespace Managers
         CrocodileGrowl, CrocodileBite, Whirlpool,
         PickupEgg, PickupPlank, PickupFly, CoinPickup,
         Tongue, TongueCatch,
-        Dash, Brake, Achievement,
+        Dash, Brake, Achievement, MoveLeft, MoveRight,
     }
 
     public delegate void RequestSoundDelegate(Sounds sound);
