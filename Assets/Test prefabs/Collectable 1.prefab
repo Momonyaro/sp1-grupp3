@@ -148,4 +148,5 @@ MonoBehaviour:
   holy: 0
   shine: {fileID: 0}
   shineRotationSpeed: 70
-  pickupEffect: {fileID: 0}
+  pickupEffect: {fileID: 6609221841299662115, guid: 85f8a05eb1fd3b6488a5e72a4aa011c6,
+    type: 3}
