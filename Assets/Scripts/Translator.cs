@@ -5,11 +5,21 @@ using UnityEngine.UI;
 
 public class Translator : MonoBehaviour
 {
+    [TextArea(0, 5)]
     public string swedishText;
+    [TextArea(0, 5)]
     public string englishText;
 
     public Language language;
     public Text _text;
+
+    private void Awake()
+    {
+        if (GetComponent<Text>() != null)
+        {
+            _text = GetComponent<Text>();
+        }
+    }
 
     private void Update()
     {
