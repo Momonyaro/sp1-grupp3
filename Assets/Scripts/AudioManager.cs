@@ -10,7 +10,7 @@ namespace Managers
     {
         BoatCrash, StoneCrash,
         CrocodileGrowl, CrocodileBite, Whirlpool,
-        PickupEgg, PickupPlank, PickupFly, CoinPickup,
+        PickupEgg, PickupPlank, PickupFly, CoinPickup, ShieldPickup,
         Tongue, TongueCatch,
         Dash, Brake, Achievement, MoveLeft, MoveRight,
     }
