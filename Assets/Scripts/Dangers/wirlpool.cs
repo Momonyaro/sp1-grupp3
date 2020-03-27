@@ -27,9 +27,11 @@ public class wirlpool : MonoBehaviour
 
     private const float deltaScale = 100;
 
+    Shield shield;
     void Start()
     {
         boat = FindObjectOfType<BoatMovementV01>();
+        shield = FindObjectOfType<Shield>();
     }
 
     void Update()
@@ -75,7 +77,8 @@ public class wirlpool : MonoBehaviour
             //FindObjectOfType<BoatTail>().BoatTrail(true);
             boat.transform.rotation = Quaternion.identity;
             boat.LostHealth();
-            boat.GoldVersion(false);
+            shield.ResetCoinCounter();
+            //.GoldVersion(false);
         }
         if (clicksClicked >= clicksForRelease)
         {
