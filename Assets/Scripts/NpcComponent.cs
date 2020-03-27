@@ -52,17 +52,6 @@ public class NpcComponent : MonoBehaviour
                 missionComponent.TetherAndSetNewMission(FindObjectOfType<MissionBox>(), conversationComponent.npcName);
         }
         
-        if (OptionManager.GetIntIfExists(missionComponent.targetSceneName) == 1)
-        {
-            GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, CompletedAlpha);
-            alertSprite.SetActive(false);
-        }
-        else
-        {
-            GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
-            alertSprite.SetActive(true);
-        }
-        
         conversationComponent.Update();
         missionComponent.Update();
         if (hasSeveralIdleAnims)

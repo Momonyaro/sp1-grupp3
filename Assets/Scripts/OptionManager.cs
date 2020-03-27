@@ -49,8 +49,19 @@ public class OptionManager : MonoBehaviour
         return PlayerPrefs.HasKey(name) ? PlayerPrefs.GetString(name) : null;
     }
 
-    public static void ClearSavedInfo()
+    public static void ClearSavedInfo(bool keepConfig = true)
     {
+        int language = GetIntIfExists("language");
+        float volume = GetFloatIfExists("soundVolume");
+
         PlayerPrefs.DeleteAll();
+
+        if (keepConfig)
+        {
+            if (language != int.MinValue)
+                SetIntPreference("language", language);
+            if (volume != float.MinValue)
+                SetFloatPreference("soundVolume", volume);
+        }
     }
 }

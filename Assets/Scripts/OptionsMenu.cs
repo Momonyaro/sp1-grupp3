@@ -20,18 +20,6 @@ public class OptionsMenu : MonoBehaviour
     {
         sceneName = SceneManager.GetActiveScene().name;
 
-        if (OptionManager.GetIntIfExists("language") != int.MinValue)
-        {
-            switch (OptionManager.GetIntIfExists("language"))
-            {
-                case 0: //Swedish
-                    toggle.GetComponent<Toggle>().isOn = false;
-                    break;
-                case 1: //English
-                    toggle.GetComponent<Toggle>().isOn = true;
-                    break;
-            }
-        }
     }
 
     void Update()
@@ -72,6 +60,19 @@ public class OptionsMenu : MonoBehaviour
         optionsMenu.SetActive(true);
         Time.timeScale = 0f;
         gameIsPaused = true;
+
+        if (OptionManager.GetIntIfExists("language") != int.MinValue)
+        {
+            switch (OptionManager.GetIntIfExists("language"))
+            {
+                case 0: //Swedish
+                    toggle.GetComponent<Toggle>().isOn = false;
+                    break;
+                case 1: //English
+                    toggle.GetComponent<Toggle>().isOn = true;
+                    break;
+            }
+        }
     }
 
     public void Restart()
