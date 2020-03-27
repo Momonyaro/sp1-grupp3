@@ -32,6 +32,11 @@ public class TextManager : MonoBehaviour
         shieldCoinsAmount = 0;
     }
 
+    public void ResetCoinCount()
+    {
+        shieldCoinsAmount = 0;
+    }
+
     private void Update()
     {
         scoreText.GetComponent<Text>().text = ":" + score;
