@@ -16362,7 +16362,7 @@ MonoBehaviour:
       playerSays: 0
       portraitExpression: 3
     - swedishText: "G\xE5 \xE5 hj\xE4lp Herr Oz! st\xE5 ba inte h\xE4r \xE5 glo."
-      englishText: "Go help sir Oz! Don\u2019t just stand around glaring."
+      englishText: "Go help Sir Oz! Don\u2019t just stand around glaring."
       playerSays: 0
       portraitExpression: 1
     textBoxObject: {fileID: 0}
