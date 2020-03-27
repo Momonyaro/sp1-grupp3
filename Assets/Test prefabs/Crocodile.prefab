@@ -125,11 +125,10 @@ MonoBehaviour:
   smallerPointX: -10
   biggerPointX: 8
   direction: 1
+  animator: {fileID: 6097613594727733341}
   gnawEffect: {fileID: 0}
   target: {fileID: 1066851939220517693, guid: 2826b3b5b346ef644b5063c5c6631bca, type: 3}
   distance: 0
-  chaseTime: 2
-  chaseCooldown: 3
   eyeSight: 5
 --- !u!95 &6097613594727733341
 Animator:

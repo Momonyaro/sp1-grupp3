@@ -52,4 +52,17 @@ public class Kiwi : MonoBehaviour
                 transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            direction = direction * -1;
+
+            if (direction == 1)
+                transform.localRotation = Quaternion.Euler(0, 180, 0);
+            else
+                transform.localRotation = Quaternion.Euler(0, 0, 0);
+        }
+
+    }
 }

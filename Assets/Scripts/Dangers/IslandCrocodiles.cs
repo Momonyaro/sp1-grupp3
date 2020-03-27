@@ -18,7 +18,7 @@ public class IslandCrocodiles : MonoBehaviour
     public float distance;
     public float eyeSight = 5;
 
-    public Animator animator;
+    Animator animator;
 
     void Start()
     {
@@ -28,6 +28,7 @@ public class IslandCrocodiles : MonoBehaviour
             transform.position = waypoints[currentWaypoint].transform.position;
         }
         boat = FindObjectOfType<BoatMovementV01>();
+        animator = GetComponent<Animator>();
     }
 
     public void GetWaypoints()
