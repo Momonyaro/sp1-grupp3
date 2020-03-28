@@ -493,7 +493,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: a06d86e190a17bf4ab755db69efd68aa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7dca56580f3490d4ab155ed472f01be8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1831,6 +1831,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 148.21
       objectReference: {fileID: 0}
+    - target: {fileID: 8682214104466977001, guid: 6bf6d96105c3e1e499f33cb9f37d5542,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 8682214104466977003, guid: 6bf6d96105c3e1e499f33cb9f37d5542,
         type: 3}
       propertyPath: direction
@@ -1840,11 +1845,6 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8682214104466977001, guid: 6bf6d96105c3e1e499f33cb9f37d5542,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bf6d96105c3e1e499f33cb9f37d5542, type: 3}
@@ -2571,10 +2571,8 @@ MonoBehaviour:
       englishText: "Now that you\u2019ve helped Sir Oz go an\u2019 help Frank Swanson."
       playerSays: 0
       portraitExpression: 0
-    - swedishText: "Du trodde la inte att din krasch ba drabbade Oz eller? De finns
-        mer att g\xF6 h\xE4r."
-      englishText: Ye don't just think yer crashin' just affected Oz did ya? There
-        is mo to do 'er.
+    - swedishText: "Din krasch drabbade ju fler \xE4n Oz."
+      englishText: "Your krashin\u2019 affected more than just Oz."
       playerSays: 0
       portraitExpression: 1
     textBoxObject: {fileID: 0}
@@ -3444,6 +3442,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 6.6
       objectReference: {fileID: 0}
+    - target: {fileID: 8682214104466977001, guid: 6bf6d96105c3e1e499f33cb9f37d5542,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 8682214104466977003, guid: 6bf6d96105c3e1e499f33cb9f37d5542,
         type: 3}
       propertyPath: direction
@@ -3453,11 +3456,6 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8682214104466977001, guid: 6bf6d96105c3e1e499f33cb9f37d5542,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bf6d96105c3e1e499f33cb9f37d5542, type: 3}
@@ -4174,7 +4172,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: a06d86e190a17bf4ab755db69efd68aa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7dca56580f3490d4ab155ed472f01be8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7178,15 +7176,15 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 143.73
       objectReference: {fileID: 0}
-    - target: {fileID: 8682214104466977003, guid: 6bf6d96105c3e1e499f33cb9f37d5542,
-        type: 3}
-      propertyPath: direction
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8682214104466977001, guid: 6bf6d96105c3e1e499f33cb9f37d5542,
         type: 3}
       propertyPath: m_SortingOrder
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8682214104466977003, guid: 6bf6d96105c3e1e499f33cb9f37d5542,
+        type: 3}
+      propertyPath: direction
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bf6d96105c3e1e499f33cb9f37d5542, type: 3}
@@ -8282,7 +8280,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: a06d86e190a17bf4ab755db69efd68aa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7dca56580f3490d4ab155ed472f01be8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8699,6 +8697,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -33.69
       objectReference: {fileID: 0}
+    - target: {fileID: 8682214104466977001, guid: 6bf6d96105c3e1e499f33cb9f37d5542,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 8682214104466977003, guid: 6bf6d96105c3e1e499f33cb9f37d5542,
         type: 3}
       propertyPath: speed
@@ -8708,11 +8711,6 @@ PrefabInstance:
         type: 3}
       propertyPath: direction
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8682214104466977001, guid: 6bf6d96105c3e1e499f33cb9f37d5542,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bf6d96105c3e1e499f33cb9f37d5542, type: 3}
@@ -9015,15 +9013,13 @@ MonoBehaviour:
   startsMission: 1
   missionComponent:
     englishInfo:
-      missionName: Get some wood from the river!
-      missionDescription: The workers are low on materials for the dam and need more
-        wood. You should be able to find some planks or logs floating down that river.
-        10 pieces should be enough.
+      missionName: Find 15 wood!
+      missionDescription: The last missing part is the logs that were washed away
+        with the flood. Gather up the wood you can find.
     swedishInfo:
-      missionName: "Hitta den bortspolade m\xE5lningen!"
-      missionDescription: "En m\xE5lning som Sebastians pappa m\xE5lat spolades bort
-        under \xF6versv\xE4mningen och skulle vilja ha hj\xE4lp att hitta den; eller
-        vad som \xE4r kvar i alla fall..."
+      missionName: "Hitta 15 tr\xE4!"
+      missionDescription: "Nu saknas bara tr\xE4et som blev bortspolat under \xF6versv\xE4mningen.
+        H\xE4mta det som du kan hitta i floden."
     missionPortrait: {fileID: -5253806036087939296, guid: dec34d38e7373764f8e7e0d4b16fbcd8,
       type: 3}
     targetSceneName: Level3_Planks
@@ -11836,7 +11832,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320161729}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.173409, y: 134.04474, z: -10}
+  m_LocalPosition: {x: -13.478441, y: 134.05316, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459601753}
@@ -13121,7 +13117,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: a06d86e190a17bf4ab755db69efd68aa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7dca56580f3490d4ab155ed472f01be8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -18391,8 +18387,8 @@ MonoBehaviour:
       englishText: I CAN'T FIND THEM
       playerSays: 0
       portraitExpression: 2
-    - swedishText: "DU!! HJ\xC4LP MIG HITTA MINA \xC4GG!!"
-      englishText: YOU!! HELP ME FIND MY EGGS!!
+    - swedishText: "HJ\xC4LP MIG HITTA DEM!!"
+      englishText: HELP ME FIND THEM!!
       playerSays: 0
       portraitExpression: 1
     textBoxObject: {fileID: 0}
@@ -18401,12 +18397,12 @@ MonoBehaviour:
   missionComponent:
     englishInfo:
       missionName: Locate the lost eggs!
-      missionDescription: A worried father lost his eggs when the flood swept through
-        town. Fetch them back before he gets sick with worry.
+      missionDescription: A worried father whos eggs got washed away with the flood.
+        Find them and bring them back safe to Frank
     swedishInfo:
       missionName: "Hitta de bortspolade \xE4ggen!"
-      missionDescription: "En oroad pappa f\xF6rlorade sina \xE4gg n\xE4r floden svepte
-        staden! Hitta dem innan han blir \xE4nnu mer panikslagen"
+      missionDescription: "En oroad pappa vars \xE4gg blev bortspolade i \xF6versv\xE4mningen.
+        Hitta dem och h\xE4mta dem tillbaka till s\xE4kerhet, till Frank."
     missionPortrait: {fileID: 7920353964247980387, guid: 1c5e01b3e59595f4b8607153d3ca78d9,
       type: 3}
     targetSceneName: Level2_Eggs_LIMBO
@@ -18665,7 +18661,7 @@ MonoBehaviour:
       englishText: Did you say somethin?
       playerSays: 0
       portraitExpression: 3
-    - swedishText: "G\xE5 \xE5 hj\xE4lp Herr Oz! st\xE5 ba inte h\xE4r \xE5 glo."
+    - swedishText: "G\xE5 \xE5 hj\xE4lp Herr Oz! St\xE5 ba inte h\xE4r \xE5 glo."
       englishText: "Go help Sir Oz! Don\u2019t just stand around."
       playerSays: 0
       portraitExpression: 1
