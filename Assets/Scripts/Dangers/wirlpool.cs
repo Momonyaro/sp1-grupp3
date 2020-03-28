@@ -21,19 +21,26 @@ public class wirlpool : MonoBehaviour
     public int autoRelease = 4;
     [Tooltip("How many times the clock has reset")]
     public int autoReleaseCounter = 0;
+    public GameObject spacebarSwe;
+    public GameObject spacebarEng;
     float whirlCounter = 0f;
     float timeCounter = 0f;
     bool activated = false;
+
+    Translator tr;
 
     private const float deltaScale = 100;
 
     Shield shield;
     TextManager tm;
+
     void Start()
     {
         boat = FindObjectOfType<BoatMovementV01>();
         shield = FindObjectOfType<Shield>();
         tm = FindObjectOfType<TextManager>();
+        activated = false;
+        tr = FindObjectOfType<Translator>();
     }
 
     void Update()
@@ -41,6 +48,7 @@ public class wirlpool : MonoBehaviour
         if (activated)
         {
             MoveBoat();
+            Spacebar();
             CountClicks();
             timeCounter -= Time.deltaTime;
             if(timeCounter < 0)
@@ -48,6 +56,18 @@ public class wirlpool : MonoBehaviour
                 timeCounter = 1f;
                 FindObjectOfType<AudioManager>().requestSoundDelegate(Sounds.Whirlpool);
             }
+        }
+    }
+
+    private void Spacebar()
+    {
+        if (tr.language == Language.English)
+        {
+            spacebarEng.SetActive(true);
+        }
+        else
+        {
+            spacebarSwe.SetActive(true);
         }
     }
 
@@ -72,15 +92,31 @@ public class wirlpool : MonoBehaviour
             autoReleaseCounter++;
             Debug.Log("autoReleaseCounter: " + autoReleaseCounter + " / " + autoRelease);
         }
-        if(autoRelease <= autoReleaseCounter)
+        if(autoRelease <= autoReleaseCounter && boat.shield)
         {
             StartCoroutine(PushOut());
             activated = false;
             boat.transform.rotation = Quaternion.identity;
             //boat.LostHealth();
             shield.ResetCoinCounter();
+            boat.shield = false;
+            tm.ResetCoinCount();
+            spacebarEng.SetActive(false);
+            spacebarSwe.SetActive(false);
+
+            boat.shield = false;
+        }
+        else if(autoRelease <= autoReleaseCounter && !boat.shield)
+        {
+            StartCoroutine(PushOut());
+            activated = false;
+            boat.transform.rotation = Quaternion.identity;
+            boat.LostHealth();
+            shield.ResetCoinCounter();
             //boat.shield = false;
             tm.ResetCoinCount();
+            spacebarEng.SetActive(false);
+            spacebarSwe.SetActive(false);
 
             boat.shield = false;
         }
@@ -88,6 +124,8 @@ public class wirlpool : MonoBehaviour
         {
             StartCoroutine(PushOut());
             activated = false;
+            spacebarEng.SetActive(false);
+            spacebarSwe.SetActive(false);
 
             boat.transform.rotation = Quaternion.Euler(0,0,0);
         }
