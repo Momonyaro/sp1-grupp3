@@ -34,12 +34,18 @@ public class FinishLine : MonoBehaviour
     public GameObject commonResultPos;
     public GameObject missionResultPos;
     public GameObject plankResultPos;
+    public GameObject shield;
 
     TextManager textm;
     private void Start()
     {
         textm = FindObjectOfType<TextManager>();
         finished = false;
+        shield.SetActive(true);
+        commonParent.SetActive(true);
+        healthParent.SetActive(true);
+        missionParent.SetActive(true);
+        plankParent.SetActive(true);
     }
 
     private void Update()
@@ -116,6 +122,15 @@ public class FinishLine : MonoBehaviour
             }
             reachedGoal = true;
         }
+    }
+
+    public void GameOver()
+    {
+        shield.SetActive(false);
+        commonParent.SetActive(false);
+        healthParent.SetActive(false);
+        missionParent.SetActive(false);
+        plankParent.SetActive(false);
     }
 
     private void ShowSuccessText()
