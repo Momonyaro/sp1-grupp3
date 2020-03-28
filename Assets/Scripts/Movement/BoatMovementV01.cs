@@ -55,7 +55,7 @@ public class BoatMovementV01 : MonoBehaviour
     private bool _pressedW = false;
 
     Rigidbody2D rigidb;
-
+    FinishLine fl;
     private void Awake()
     {
         Time.timeScale = 1;
@@ -70,6 +70,7 @@ public class BoatMovementV01 : MonoBehaviour
         _oldVelocity = rigidb.velocity;
         _oldPosition = transform.position;
         _autoSpeed = defaultAutoSpeed;
+        fl = FindObjectOfType<FinishLine>();
     }
 
     void Update()
@@ -133,6 +134,7 @@ public class BoatMovementV01 : MonoBehaviour
 
         if (GameOver)
         {
+            fl.GameOver();
             FindObjectOfType<BoatTail>().BoatTrail(false);
             headRenderer.color = deadColor;
             GetComponent<SpriteRenderer>().color = deadColor;
