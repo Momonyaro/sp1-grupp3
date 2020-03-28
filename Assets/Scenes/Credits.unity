@@ -281,5 +281,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e958c612d6a74c645b6c9515b1bece42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  videoplayer: {fileID: 0}
+  videoplayer: {fileID: 1149310259}
   nextScene: MainMenu

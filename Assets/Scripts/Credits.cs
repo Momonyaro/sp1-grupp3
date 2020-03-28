@@ -7,7 +7,7 @@ public class Credits : MonoBehaviour
 {
     public VideoPlayer videoplayer;
     public string nextScene;
-    float countdown = 1f;
+    float countdown = 2f;
     void Start()
     {
         videoplayer = GetComponent<VideoPlayer>();
