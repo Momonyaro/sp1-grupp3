@@ -23,10 +23,11 @@ public class wirlpool : MonoBehaviour
     public int autoReleaseCounter = 0;
     public GameObject spacebarSwe;
     public GameObject spacebarEng;
-    public bool english = false;
     float whirlCounter = 0f;
     float timeCounter = 0f;
     bool activated = false;
+
+    Translator tr;
 
     private const float deltaScale = 100;
 
@@ -39,6 +40,7 @@ public class wirlpool : MonoBehaviour
         shield = FindObjectOfType<Shield>();
         tm = FindObjectOfType<TextManager>();
         activated = false;
+        tr = FindObjectOfType<Translator>();
     }
 
     void Update()
@@ -59,7 +61,7 @@ public class wirlpool : MonoBehaviour
 
     private void Spacebar()
     {
-        if (english)
+        if (tr.language == Language.English)
         {
             spacebarEng.SetActive(true);
         }
