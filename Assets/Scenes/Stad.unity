@@ -3181,7 +3181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.16037738, g: 0.14297795, b: 0.14297795, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3190,7 +3190,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -11836,7 +11836,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320161729}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.111261, y: 134.04636, z: -10}
+  m_LocalPosition: {x: -14.173409, y: 134.04474, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459601753}
@@ -15271,7 +15271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.96657693, b: 0, a: 1}
+  m_Color: {r: 0.6603774, g: 0.41673654, b: 0.17132434, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -18666,7 +18666,7 @@ MonoBehaviour:
       playerSays: 0
       portraitExpression: 3
     - swedishText: "G\xE5 \xE5 hj\xE4lp Herr Oz! st\xE5 ba inte h\xE4r \xE5 glo."
-      englishText: "Go help Sir Oz! Don\u2019t just stand around glaring."
+      englishText: "Go help Sir Oz! Don\u2019t just stand around."
       playerSays: 0
       portraitExpression: 1
     textBoxObject: {fileID: 0}
