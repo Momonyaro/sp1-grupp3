@@ -41,11 +41,6 @@ public class FinishLine : MonoBehaviour
     {
         textm = FindObjectOfType<TextManager>();
         finished = false;
-        shield.SetActive(true);
-        commonParent.SetActive(true);
-        healthParent.SetActive(true);
-        missionParent.SetActive(true);
-        plankParent.SetActive(true);
     }
 
     private void Update()
